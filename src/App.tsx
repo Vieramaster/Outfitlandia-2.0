@@ -19,15 +19,16 @@ function App() {
     const {
       currentTarget: { dataset: id },
     } = event;
-    console.log(id)
-    setSwapDiv(true)
+    console.log(id);
+    setSwapDiv(true);
   };
+
   return (
     <>
       <Header />
-      <main className="bg-red-300 grow flex justify-center items-center py-5">
+      <main className="bg-red-300 grow flex justify-center items-center py-5 relative mt-16">
         <MainSection images={imagesMainButtons} handleSubmit={handleSearch} />
-        <ChoiseSection isHidden={swapDiv}/>
+        <ChoiseSection isHidden={swapDiv} />
       </main>
       <Footer />
     </>

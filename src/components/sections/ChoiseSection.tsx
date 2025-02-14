@@ -3,9 +3,13 @@ interface Section {
 }
 
 export const ChoiseSection = ({ isHidden }: Section) => {
+
+    console.log(isHidden)
   return (
     <section
-      className={`${isHidden ? "w-0 h-0" : "grow-1 z-20 absolute"} bg-green-800`}
+      className={`${
+        isHidden ? "absolute w-full h-full" : "w-0 h-0 hidden"
+      } bg-green-800`}
     ></section>
   );
 };
