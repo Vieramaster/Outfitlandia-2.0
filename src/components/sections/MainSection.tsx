@@ -16,7 +16,7 @@ export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
   const CATEGORIES = ["top", "coat", "pants"];
 
   return (
-    <section className="w-full h-full  m-10 bg-amber-700 grid place-content-center">
+    <section className="bg-red-600 grow-1  lg:h-full lg:w-1/3  grid place-content-center px-16">
       <div className="grid grid-cols-2 gap-4 place-items-center bg-red-900 w-[21rem]">
         {Array.from({ length: 4 }).map((_, index) => {
           return index !== 3 ? (
