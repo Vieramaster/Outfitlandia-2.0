@@ -1,29 +1,16 @@
-import {
-  CardSize,
-  ShoesButtonSize,
-  BeltButtonSize,
-} from "../../data/ComponentSizes";
-
-const buttonType = {
-  normal: `${CardSize} bg-red-500`,
-  belt: BeltButtonSize,
-  shoes: ShoesButtonSize,
-};
+import { CardSize } from "../../data/ComponentSizes";
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
-  variant: "normal" | "belt" | "shoes";
   image: string;
 }
 
-export const ClothesButton = ({ variant, image, ...props }: ButtonProps) => {
-  const isShoes = variant === "shoes" ? "h-[90%] w-auto " : " w-[90%] h-auto";
-
+export const ClothesButton = ({ image, ...props }: ButtonProps) => {
   return (
     <button
-      className={`${buttonType[variant]} bg-green-800 flex justify-center items-center`}
+      className={`${CardSize} bg-green-800 flex justify-center items-center`}
       {...props}
     >
-      <img src={image} alt="Clothing item" className={isShoes} />
+      <img src={image} alt="Clothing item" className="w-5/6" />
     </button>
   );
 };
