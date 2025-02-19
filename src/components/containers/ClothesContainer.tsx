@@ -16,6 +16,7 @@ export const ClothesContainer = ({ style, image, altImage }: Props) => {
     <div
       className={`${divStyle[style]} flex items-center justify-center `}
       aria-labelledby={style}
+      id={style}
     >
       <img src={image} alt={altImage} className={`${isStyle}  `} />
     </div>
