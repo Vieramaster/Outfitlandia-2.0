@@ -14,10 +14,10 @@ export interface ClothesColor {
 }
 
 export interface Product {
+  id: number;
   garment: string;
   name: string;
   image: string;
-  css: string;
   style: string[];
   weather: string[];
   colors: ClothesColor[];

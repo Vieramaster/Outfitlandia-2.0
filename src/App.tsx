@@ -5,18 +5,21 @@ import { useFetch } from "./hooks/useFetch";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
-import { ClothesButton } from "./components/buttons/ClothesButton";
+import { ChoiseSection } from "./components/sections/ChoiseSection";
+import { WeatherSection } from "./components/sections/WeatherSection";
 
 //DATA
 import { DefaultImages } from "./data/Images";
 import "./data/types";
+import { Product } from "./data/types";
 
 function App() {
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
   const [showDivMobile, setShowDivMobile] = useState(false);
-  const [searchClothes, setSearchClothes] = useState<"top" | "coat" | "pants">(
-    "top"
-  );
+  const [searchClothes, setSearchClothes] = useState<
+    "top" | "coat" | "pants" | undefined
+  >(undefined);
+  const [ClothesChoise, setClothesChoise] = useState<Product[] | undefined>([]);
 
   const handleSearch: MouseEventHandler<HTMLButtonElement> = (event) => {
     const {
@@ -29,7 +32,7 @@ function App() {
     }
   };
 
-  const { data: dataGarments } = useFetch("clothes", searchClothes);
+  const { data: garmentsData } = useFetch("clothes", searchClothes);
 
   const handleResize = () => {
     if (window.innerWidth > 1024) {
@@ -38,7 +41,38 @@ function App() {
     }
   };
 
+  const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const {
+      currentTarget: { id },
+    } = event;
+
+    const lala = garmentsData?.filter(
+      (garment: Product) => garment.id === Number(id)
+    );
+
+    setClothesChoise(lala);
+  };
+
+  const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
+    const {
+      currentTarget: { id },
+    } = event;
+    setClothesChoise((prev) =>
+      prev?.filter((garment: Product) => {
+        return garment.colors?.filter((color) => color.colorName !== id);
+      })
+    );
+  };
+
+  console.log(ClothesChoise);
+  const resetState = () => {
+    setSearchClothes(undefined);
+    setShowDivMobile(false);
+    setImagesMainButtons(DefaultImages);
+  };
+
   useEffect(() => {
+    resetState();
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
@@ -49,33 +83,18 @@ function App() {
   return (
     <>
       <Header />
-      <main className="w-screen h-[calc(100vh-5rem)] min-h-[45rem]  flex flex-col  lg:flex-row">
+      <main className="relative w-full h-[calc(100vh-4rem)] min-h-[35rem] md:min-h-[45rem] flex flex-col  lg:flex-row">
         <MainSection handleSubmit={handleSearch} images={imagesMainButtons} />
 
-        <section
-          className={`${
-            showDivMobile ? "absolute" : "hidden"
-          } bg-orange-600 absolute w-screen min-h-[calc(100vh-5rem)] 
-           
-            grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))]  gap-4 place-items-center
+        <ChoiseSection
+          isHidden={showDivMobile}
+          arrayClothes={garmentsData}
+          arrayColors={ClothesChoise}
+          onGarmentSubmit={handleGarmentSubmit}
+          onColorsSubmit={handleColorsSubmit}
+        />
 
-
-            
-          lg:block lg:w-1/2 lg:h-full lg:relative lg:order-3 2xl:w-2/3  `}
-        >
-          {dataGarments?.map(({ garment, name, image }, index) => {
-            return (
-              <ClothesButton
-                key={index}
-                image={image}
-                data-id={garment}
-                aria-labelledby={name}
-              />
-            );
-          })}
-        </section>
-
-        <section className="bg-violet-600 w-full h-22 lg:w-1/12 lg:h-full"></section>
+        <WeatherSection />
       </main>
     </>
   );

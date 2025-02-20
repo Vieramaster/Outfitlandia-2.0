@@ -17,8 +17,8 @@ export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
   const CATEGORIES = ["top", "coat", "pants"];
 
   return (
-    <section className="bg-red-600 grow-1  lg:h-full lg:w-1/3  grid place-content-center px-16">
-      <div className="grid grid-cols-2 gap-4 place-items-center bg-red-900 w-[21rem] md:w-[27rem] lg:w-[21rem] 2xl:w-[27rem]">
+    <section className="bg-red-600 grow-1 w-full  lg:h-full lg:w-1/2  2xl:w-1/3 grid place-content-center">
+      <div className="grid grid-cols-2 gap-4 place-items-center bg-red-900 w-[19rem] md:w-[27rem]  ">
         {Array.from({ length: 4 }).map((_, index) => {
           return index !== 3 ? (
             <ClothesButton
@@ -26,7 +26,7 @@ export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
               image={imagesIndex[index]}
               id={CATEGORIES[index]}
               onClick={handleSubmit}
-              aria-braillelabel={CATEGORIES[index]}
+              aria-labelledby={CATEGORIES[index]}
             />
           ) : (
             <div

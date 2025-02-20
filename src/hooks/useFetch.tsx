@@ -3,18 +3,21 @@ import { Product } from "../data/types";
 
 export const useFetch = (
   product: "clothes" | "colors",
-  garment: "top" | "coat" | "pants" | null
+  garment: "top" | "coat" | "pants" | undefined
 ) => {
   const [data, setData] = useState<Product[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    if (!garment) return;
+    
     const controller = new AbortController();
     const { signal } = controller;
     setLoading(true);
 
-    const url = product === "clothes" ? "/garmentData.json" : "/combineColors.json";
+    const url =
+      product === "clothes" ? "/garmentData.json" : "/combineColors.json";
 
     fetch(url, { signal })
       .then((response) => {
@@ -24,7 +27,7 @@ export const useFetch = (
         return response.json();
       })
       .then((jsonData) => {
-        if (garment !== null) {
+        if (garment !== undefined) {
           const filteredData = jsonData.filter(
             (item: Product) => item.garment === garment
           );

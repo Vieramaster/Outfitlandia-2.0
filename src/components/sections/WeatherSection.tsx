@@ -1,13 +1,10 @@
-interface Weather {
-  isHidden: boolean;
-}
-
-export const WeatherSection = ({ isHidden }: Weather) => {
+export const WeatherSection = () => {
   return (
-    <section
-      className={`${
-        isHidden ? "hidden" : "block"
-      }order-3 w-screen h-32 lg:w-32 lg:h-screen lg:order-2 bg-orange-800`}
-    ></section>
+    <section className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col ">
+      <div className="size-14 bg-amber-400"></div>
+      <div className="size-14 bg-amber-400"></div>
+      <div className="size-14 bg-amber-400"></div>
+      <div className="size-14 bg-amber-400"></div>
+    </section>
   );
 };

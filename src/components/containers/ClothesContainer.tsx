@@ -1,6 +1,6 @@
 const divStyle = {
-  shoes: "w-full h-1/2",
-  belt: "w-1/2 h-full ",
+  shoes: "w-full h-1/2 bg-violet-900 ",
+  belt: "w-1/2 h-full bg-violet-900",
 };
 
 interface Props {
