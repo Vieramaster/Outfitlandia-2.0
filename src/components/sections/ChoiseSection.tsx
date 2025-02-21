@@ -1,10 +1,10 @@
 import { ClothesButton } from "../buttons/ClothesButton";
-import { Product } from "../../data/types";
+import { product } from "../../data/types";
 import { ColorButton } from "../buttons/ColorButton";
 interface Section {
   isHidden: boolean;
-  arrayClothes: Product[] | null;
-  arrayColors: Product[] | undefined;
+  arrayClothes: product[] | null;
+  arrayColors: product[] | undefined;
   onGarmentSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onColorsSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
