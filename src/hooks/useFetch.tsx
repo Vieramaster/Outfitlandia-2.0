@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Product } from "../data/types";
+import { productProps } from "../data/types";
 
 export const useFetch = (
   product: "clothes" | "colors",
-  garment: "top" | "coat" | "pants" | undefined
+  garment: "top" | "coat" | "pants" | null
 ) => {
-  const [data, setData] = useState<Product[] | null>(null);
+  const [data, setData] = useState<productProps[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -29,7 +29,7 @@ export const useFetch = (
       .then((jsonData) => {
         if (garment !== undefined) {
           const filteredData = jsonData.filter(
-            (item: Product) => item.garment === garment
+            (item: productProps) => item.garment === garment
           );
           setData(filteredData);
         } else setData(jsonData);

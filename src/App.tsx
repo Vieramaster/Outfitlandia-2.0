@@ -1,5 +1,5 @@
 //HOOKS
-import { MouseEventHandler, useEffect, useState } from "react";
+import { MouseEventHandler, useCallback, useEffect, useState } from "react";
 import { useFetch } from "./hooks/useFetch";
 
 //COMPONENTS
@@ -13,85 +13,117 @@ import { ColorList } from "./components/lists/ColorList";
 //DATA
 import { DefaultImages } from "./data/Images";
 import "./data/types";
-import { Product } from "./data/types";
+import { ColorProductProps, productProps } from "./data/types";
 
 function App() {
+  //UseStates
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
   const [hideSection, setHideSection] = useState(false);
   const [searchClothes, setSearchClothes] = useState<
-    "top" | "coat" | "pants" | undefined
-  >(undefined);
-  const [ClothesChoise, setClothesChoise] = useState<Product[] | undefined>([]);
+    "top" | "coat" | "pants" | null
+  >(null);
+  const [chosenClothes, setChosenClothes] = useState<productProps[] | null>([]);
+  const [hiddenList, setHiddenList] = useState(0);
 
+  //Reset the state of the app
   const resetState = () => {
-    setSearchClothes(undefined);
-    setShowDivMobile(false);
     setImagesMainButtons(DefaultImages);
-    setClothesChoise([]);
+    setHideSection(false);
+    setSearchClothes(null);
+    setChosenClothes([]);
+    setHiddenList(0);
   };
 
-  const handleSearch: MouseEventHandler<HTMLButtonElement> = (event) => {
-    resetState();
-    const {
-      currentTarget: { id },
-    } = event;
-    setSearchClothes(id as "top" | "coat" | "pants");
-
-    if (window.innerWidth < 1024) {
-      setShowDivMobile(true);
-    }
-  };
-
+  //Fetch the data
   const { data: garmentsData } = useFetch("clothes", searchClothes);
 
+  //Handle the resize of the window
   const handleResize = () => {
     if (window.innerWidth > 1024) {
-      setShowDivMobile(false);
+      setHideSection(false);
       setImagesMainButtons(DefaultImages);
     }
   };
 
-  const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
-    const {
-      currentTarget: { id },
-    } = event;
+  //Search the clothes
+  const handleSearch: MouseEventHandler<HTMLButtonElement> = useCallback(
+    (event) => {
+      resetState();
+      const {
+        currentTarget: { id },
+      } = event;
+      setSearchClothes(id as "top" | "coat" | "pants");
 
-    const garmentFilter = garmentsData?.filter(
-      (garment: Product) => garment.id === Number(id)
-    );
+      if (window.innerWidth < 1024) {
+        setHideSection(true);
+      }
+    },
+    []
+  );
 
-    setClothesChoise(garmentFilter);
-  };
+  //Overwrites the clothesChoise array with the designated garment
+  const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
+    (event) => {
+      const {
+        currentTarget: { id },
+      } = event;
+      const garmentFilter = garmentsData?.filter(
+        (garment: productProps) => garment.id === Number(id)
+      );
+      
+      if (garmentFilter) {
+        setChosenClothes(garmentFilter);
+      }
+      setHiddenList(2);
+    },
+    [garmentsData]
+  );
 
-  const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
-    const {
-      currentTarget: { id },
-    } = event;
-    const colorFilter = ClothesChoise?.[0]?.colors?.find((color) => {
-      return color.colorName === id;
-    });
+  //Overwrites the colors array of the selected item with the designated color
+  const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
+    (event) => {
+      const {
+        currentTarget: { id },
+      } = event;
+      const colorFilter = chosenClothes?.[0]?.colors?.find(
+        (color: ColorProductProps) => {
+          return color.colorName === id;
+        }
+      );
 
-    setClothesChoise((prevState) => {
-      return [
-        {
-          ...prevState?.[0],
+      setChosenClothes((prevState) => {
+        return [
+          {
+            ...prevState?.[0],
 
-          colors: [colorFilter],
-        },
-      ] as Product[];
-    });
-  };
+            colors: [colorFilter],
+          },
+        ] as productProps[];
+      });
+      setHiddenList(0);
+      setHideSection(false);
+    },
 
-  console.log(ClothesChoise);
+    [chosenClothes]
+  );
 
   useEffect(() => {
     resetState();
     handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (garmentsData && garmentsData.length > 0) {
+      setHiddenList(1);
+    }
+  }, [garmentsData]);
+
+  const isHideSection = hideSection ? "block" : "hidden";
 
   return (
     <>
@@ -99,11 +131,18 @@ function App() {
       <main className="relative w-full h-[calc(100vh-4rem)] min-h-[35rem] md:min-h-[45rem] flex flex-col  lg:flex-row">
         <MainSection handleSubmit={handleSearch} images={imagesMainButtons} />
         <section
-          className={`${hideSection} w-full h-[calc(100vh-4rem)]  bg-rose-200 rounded shadow-md grid place-content-center place-items-center lg:block lg:relative lg:w-1/2  lg:order-3 2xl:w-2/3`}
+          className={`${isHideSection} absolute w-full h-[calc(100vh-4rem)]  bg-rose-200 grid place-content-center place-items-center lg:block lg:relative lg:w-1/2  lg:order-3 2xl:w-2/3`}
         >
-          <GarmentList handleGarmentSubmit={handleGarmentSubmit}/>
-          <ColorList handleColorsSubmit={handleColorsSubmit}/>
-          <ColorList />
+          <GarmentList
+            isHidden={hiddenList === 1}
+            arrayClothes={garmentsData}
+            onGarmentSubmit={handleGarmentSubmit}
+          />
+          <ColorList
+            isHidden={hiddenList === 2}
+            arrayColors={chosenClothes}
+            onColorsSubmit={handleColorsSubmit}
+          />
         </section>
 
         <WeatherSection />
@@ -113,12 +152,3 @@ function App() {
 }
 
 export default App;
-/**
- *         <ChoiseSection
-          isHidden={showDivMobile}
-          arrayClothes={garmentsData}
-          arrayColors={ClothesChoise}
-          onGarmentSubmit={handleGarmentSubmit}
-          onColorsSubmit={handleColorsSubmit}
-        />
- */

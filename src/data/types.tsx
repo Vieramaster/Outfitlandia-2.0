@@ -6,19 +6,19 @@ export interface mainImages {
   shoes: string;
 }
 
-export interface clothesColor {
+export interface ColorProductProps {
   colorName: string;
   hex: string;
   title: string;
   imageColor: string;
 }
 
-export interface product {
+export interface productProps {
   id: number;
   garment: string;
   name: string;
   image: string;
   style: string[];
   weather: string[];
-  colors: clothesColor[];
+  colors: ColorProductProps[];
 }
