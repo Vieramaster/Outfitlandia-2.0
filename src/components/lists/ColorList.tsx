@@ -13,7 +13,9 @@ export const ColorList = ({
 }: Section) => {
   const hidden = isHidden ? "block" : "hidden";
   return (
-    <ul className={`${hidden} flex flex-wrap justify-center gap-2`}>
+    <ul
+      className={`${hidden} bg-red-800 w-[95%] h-[calc(100vh-8rem)] flex flex-wrap  justify-center content-center items-center gap-4  lg:h-[37rem] lg:w-[95%]`}
+    >
       {arrayColors?.map(({ colors }) =>
         colors?.map(({ hex, colorName, title }) => (
           <li key={colorName}>

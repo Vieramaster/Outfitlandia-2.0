@@ -4,6 +4,6 @@ interface ColorButton extends React.ComponentPropsWithoutRef<"button"> {
 
 export const ColorButton = ({ hex, ...props }: ColorButton) => {
   return (
-    <button className="size-10 cursor-pointer"  style={{ backgroundColor: hex }} {...props} />
+    <button className="w-20 h-10 cursor-pointer"  style={{ backgroundColor: hex }} {...props} />
   );
 };

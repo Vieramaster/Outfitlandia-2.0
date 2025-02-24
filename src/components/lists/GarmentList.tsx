@@ -13,7 +13,7 @@ export const GarmentList = ({
   onGarmentSubmit,
 }: Section) => {
   const hidden = isHidden ? "block" : "hidden";
-  console.log("section",arrayClothes);
+
   return (
     <ul
       className={`${hidden} bg-red-500 flex flex-wrap gap-8 w-full h-[calc(100vh-8rem)] overflow-y-scroll justify-center items-center lg:h-[37rem] lg:w-[95%]`}
