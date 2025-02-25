@@ -22,3 +22,13 @@ export interface productProps {
   weather: string[];
   colors: ColorProductProps[];
 }
+
+export interface combineColorsClothesProps {
+  top: string;
+  pants: string;
+  coat: string;
+}
+export interface combineColorsProps {
+  combineClothes: combineColorsClothesProps;
+  combineShoes:string[]
+}

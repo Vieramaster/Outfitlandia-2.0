@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import { productProps } from "../data/types";
 
-export const useFetch = (
+export const UseFetch = (
   product: "clothes" | "colors",
   garment: "top" | "coat" | "pants" | null
 ) => {
   const [data, setData] = useState<productProps[] | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    if (!garment) return;
-    
+    if (!product) return; 
     const controller = new AbortController();
     const { signal } = controller;
     setLoading(true);
@@ -27,12 +26,13 @@ export const useFetch = (
         return response.json();
       })
       .then((jsonData) => {
-        if (garment !== undefined) {
-          const filteredData = jsonData.filter(
-            (item: productProps) => item.garment === garment
+        if (product === "clothes" && garment) {
+          setData(
+            jsonData.filter((item: productProps) => item.garment === garment)
           );
-          setData(filteredData);
-        } else setData(jsonData);
+        } else {
+          setData(jsonData);
+        }
       })
       .catch((error) => {
         if (error.name !== "AbortError") {

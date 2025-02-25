@@ -2,16 +2,20 @@ import { ClothesButton } from "../buttons/ClothesButton";
 import { ChangeClothesButton } from "../buttons/ChangeClothesButton";
 import { mainImages } from "../../data/types";
 import { ClothesContainer } from "../containers/ClothesContainer";
-import { MouseEventHandler } from "react";
 import { CardSize } from "../../data/ComponentSizes";
 
 interface MainSectionProps {
   images: mainImages[];
-  handleSubmit: MouseEventHandler<HTMLButtonElement>;
+  onSearchCLothes: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onSearchOutfit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
-  const [{ top, coat, pants, belt, shoes }] = images;
+export const MainSection = ({
+  images,
+  onSearchCLothes,
+  onSearchOutfit,
+}: MainSectionProps) => {
+  const { top, coat, pants, belt, shoes } = images[0] || {};
 
   const imagesIndex = [top, coat, pants];
   const CATEGORIES = ["top", "coat", "pants"];
@@ -23,9 +27,9 @@ export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
           return index !== 3 ? (
             <ClothesButton
               key={index}
-              image={imagesIndex[index]}
+              image={imagesIndex[index] || ""}
               id={CATEGORIES[index]}
-              onClick={handleSubmit}
+              onClick={onSearchCLothes}
               aria-labelledby={CATEGORIES[index]}
             />
           ) : (
@@ -34,10 +38,20 @@ export const MainSection = ({ images, handleSubmit }: MainSectionProps) => {
               key={"shoes & belt"}
             >
               <div className="w-full h-1/2 bg-red-500 flex gap-4">
-                <ClothesContainer style="belt" image={belt} altImage="belt" />
-                <ChangeClothesButton>hola</ChangeClothesButton>
+                <ClothesContainer
+                  style="belt"
+                  image={belt || ""}
+                  altImage="belt"
+                />
+                <ChangeClothesButton onClick={onSearchOutfit}>
+                  hola
+                </ChangeClothesButton>
               </div>
-              <ClothesContainer style="shoes" image={shoes} altImage="shoes" />
+              <ClothesContainer
+                style="shoes"
+                image={shoes || ""}
+                altImage="shoes"
+              />
             </div>
           );
         })}

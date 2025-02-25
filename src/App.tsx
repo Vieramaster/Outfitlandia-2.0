@@ -1,12 +1,18 @@
+//HOOKS
 import { MouseEventHandler, useEffect, useState } from "react";
-import { useFetch } from "./hooks/useFetch";
+import { UseFetch } from "./hooks/UseFetch";
+
+//DATA
+import { DefaultImages } from "./data/Images";
+import { productProps } from "./data/types";
+
+
+//COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
 import { WeatherSection } from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import { DefaultImages } from "./data/Images";
-import { productProps } from "./data/types";
 
 function App() {
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
@@ -25,7 +31,7 @@ function App() {
     setHiddenList(0);
   };
 
-  const { data: garmentsData } = useFetch("clothes", searchClothes);
+  const { data: garmentsData } = UseFetch("clothes", searchClothes);
 
   const handleResize = () => {
     if (window.innerWidth > 1024) {
@@ -34,7 +40,7 @@ function App() {
     }
   };
 
-  const handleSearch: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const handleSearchCLothes: MouseEventHandler<HTMLButtonElement> = (event) => {
     resetState();
     const { id } = event.currentTarget;
     setSearchClothes(id as "top" | "coat" | "pants");
@@ -69,7 +75,9 @@ function App() {
     if (!selectedGarment || !colorFilter) return;
 
     setChosenClothes((prevState) =>
-      prevState.length > 0 ? [{ ...prevState[0], colors: [colorFilter] }] : []
+      prevState.length > 0 && prevState[0]
+        ? [{ ...prevState[0], colors: [colorFilter] }]
+        : []
     );
 
     setHiddenList(0);
@@ -78,10 +86,12 @@ function App() {
     setImagesMainButtons((prevState) =>
       prevState.map((item) => ({
         ...item,
-        [selectedGarment]: colorFilter.imageColor || item[selectedGarment],
+        [selectedGarment]: colorFilter.imageColor,
       }))
     );
   };
+
+  const handleSearchOutfit = () => {};
 
   useEffect(() => {
     handleResize();
@@ -95,13 +105,40 @@ function App() {
     }
   }, [garmentsData]);
 
+  //DATAAAAAAAAAA
+
+  if (chosenClothes) {
+    const chosenClothesID = chosenClothes[0]?.id;
+    const chosenClothesGARMENT = chosenClothes[0]?.garment;
+    const chosenClothesNAME = chosenClothes[0]?.name;
+    const chosenClothesIMAGE = chosenClothes[0]?.image;
+    const chosenClothesSTYLE = chosenClothes[0]?.style;
+    const chosenClothesWEATHER = chosenClothes[0]?.weather;
+    const chosenClothesCOLORS = chosenClothes[0]?.colors;
+    const chosenClothesCOLORSNAME = chosenClothes[0]?.colors[0]?.colorName;
+
+    const { data: fetchData } = UseFetch("clothes", null);
+    const { data: fetchColors } = UseFetch("colors", null);
+
+
+    const garmentFilter = fetchData?.filter(
+      (item) => item.garment !== chosenClothesGARMENT
+    );
+
+    const findColorMatch = fetchColors?.filter((item) => chosenClothesCOLORSNAME.)
+  }
+
   const isHideSection = hideSection ? "block" : "hidden";
 
   return (
     <>
       <Header />
       <main className="relative w-full h-[calc(100vh-4rem)] min-h-[35rem] md:min-h-[45rem] flex flex-col lg:flex-row">
-        <MainSection handleSubmit={handleSearch} images={imagesMainButtons} />
+        <MainSection
+          images={imagesMainButtons}
+          onSearchCLothes={handleSearchCLothes}
+          onSearchOutfit={handleSearchOutfit}
+        />
         <section
           className={`${isHideSection} absolute w-full h-[calc(100vh-4rem)] bg-rose-200 grid place-content-center place-items-center lg:block lg:relative lg:w-1/2 lg:order-3 2xl:w-2/3`}
         >
