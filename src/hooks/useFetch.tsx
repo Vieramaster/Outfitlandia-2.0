@@ -1,22 +1,38 @@
-import { useEffect, useState } from "react";
-import { productProps } from "../data/types";
+import { useEffect, useState, useMemo } from "react";
+import { ClothesProps, CombineColorsProps, WeatherProps } from "../data/types";
 
-export const UseFetch = (
-  product: "clothes" | "colors",
-  garment: "top" | "coat" | "pants" | null
-) => {
-  const [data, setData] = useState<productProps[] | null>(null);
-  const [loading, setLoading] = useState(false);
+type FetchDataProps<T extends "clothes" | "colors" | "weather"> =
+  T extends "clothes"
+    ? ClothesProps
+    : T extends "colors"
+    ? CombineColorsProps
+    : WeatherProps;
+
+interface FetchState<T> {
+  data: T[] | undefined;
+  loading: boolean;
+  error: Error | null;
+}
+
+export const useFetch = <T extends "clothes" | "colors" | "weather">(
+  product: T
+): FetchState<FetchDataProps<T>> => {
+  const [data, setData] = useState<FetchDataProps<T>[] | undefined>(undefined);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    if (!product) return; 
+    if (!product) return;
     const controller = new AbortController();
     const { signal } = controller;
     setLoading(true);
 
     const url =
-      product === "clothes" ? "/garmentData.json" : "/combineColors.json";
+      product === "clothes"
+        ? "/garmentData.json"
+        : product === "colors"
+        ? "/combineColors.json"
+        : "/weather.json"; // New API
 
     fetch(url, { signal })
       .then((response) => {
@@ -25,16 +41,10 @@ export const UseFetch = (
         }
         return response.json();
       })
-      .then((jsonData) => {
-        if (product === "clothes" && garment) {
-          setData(
-            jsonData.filter((item: productProps) => item.garment === garment)
-          );
-        } else {
-          setData(jsonData);
-        }
+      .then((jsonData: FetchDataProps<T>[]) => {
+        setData(jsonData);
       })
-      .catch((error) => {
+      .catch((error: Error) => {
         if (error.name !== "AbortError") {
           setError(error);
         }
@@ -46,7 +56,10 @@ export const UseFetch = (
     return () => {
       controller.abort();
     };
-  }, [product, garment]);
+  }, [product]);
 
-  return { data, loading, error };
+  return useMemo(
+    () => ({ data, loading, error } as const),
+    [data, error, loading]
+  );
 };

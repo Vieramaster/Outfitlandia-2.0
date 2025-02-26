@@ -1,11 +1,11 @@
 import { ClothesButton } from "../buttons/ClothesButton";
 import { ChangeClothesButton } from "../buttons/ChangeClothesButton";
-import { mainImages } from "../../data/types";
+import { MainButtonsProps } from "../../data/types";
 import { ClothesContainer } from "../containers/ClothesContainer";
 import { CardSize } from "../../data/ComponentSizes";
 
 interface MainSectionProps {
-  images: mainImages[];
+  images: MainButtonsProps[];
   onSearchCLothes: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onSearchOutfit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

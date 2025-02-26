@@ -1,9 +1,9 @@
 import { ClothesButton } from "../buttons/ClothesButton";
-import { productProps } from "../../data/types";
+import { ClothesProps } from "../../data/types";
 
 interface Section {
   isHidden: boolean;
-  arrayClothes: productProps[] | null;
+  arrayClothes: ClothesProps[] | undefined;
   onGarmentSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

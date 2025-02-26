@@ -1,11 +1,9 @@
 //HOOKS
 import { MouseEventHandler, useEffect, useState } from "react";
-import { UseFetch } from "./hooks/UseFetch";
-
+import { useFetch } from "./hooks/UseFetch";
 //DATA
-import { DefaultImages } from "./data/Images";
-import { productProps } from "./data/types";
-
+import { DefaultImages } from "./data/ImageDefaultButtons";
+import { ClothesProps } from "./data/types";
 
 //COMPONENTS
 import { Header } from "./components/layout/Header";
@@ -18,20 +16,20 @@ function App() {
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
   const [hideSection, setHideSection] = useState(false);
   const [searchClothes, setSearchClothes] = useState<
-    "top" | "coat" | "pants" | null
-  >(null);
-  const [chosenClothes, setChosenClothes] = useState<productProps[]>([]);
+    "top" | "coat" | "pants" | undefined
+  >(undefined);
+  const [chosenClothes, setChosenClothes] = useState<ClothesProps[]>([]);
   const [hiddenList, setHiddenList] = useState(0);
 
   const resetState = () => {
     setImagesMainButtons(DefaultImages);
     setHideSection(false);
-    setSearchClothes(null);
+    setSearchClothes(undefined);
     setChosenClothes([]);
     setHiddenList(0);
   };
 
-  const { data: garmentsData } = UseFetch("clothes", searchClothes);
+  const { data: garmentsData } = useFetch("clothes");
 
   const handleResize = () => {
     if (window.innerWidth > 1024) {
@@ -40,6 +38,8 @@ function App() {
     }
   };
 
+  console.log(searchClothes)
+  
   const handleSearchCLothes: MouseEventHandler<HTMLButtonElement> = (event) => {
     resetState();
     const { id } = event.currentTarget;
@@ -49,10 +49,13 @@ function App() {
       setHideSection(true);
     }
   };
+  const finterGarment = garmentsData?.filter(
+    ({ garment }) => garment === searchClothes
+  );
 
   const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
     const { id } = event.currentTarget;
-    const garmentFilter = garmentsData?.filter(
+    const garmentFilter = finterGarment?.filter(
       (garment) => garment.id === Number(id)
     );
 
@@ -106,27 +109,6 @@ function App() {
   }, [garmentsData]);
 
   //DATAAAAAAAAAA
-
-  if (chosenClothes) {
-    const chosenClothesID = chosenClothes[0]?.id;
-    const chosenClothesGARMENT = chosenClothes[0]?.garment;
-    const chosenClothesNAME = chosenClothes[0]?.name;
-    const chosenClothesIMAGE = chosenClothes[0]?.image;
-    const chosenClothesSTYLE = chosenClothes[0]?.style;
-    const chosenClothesWEATHER = chosenClothes[0]?.weather;
-    const chosenClothesCOLORS = chosenClothes[0]?.colors;
-    const chosenClothesCOLORSNAME = chosenClothes[0]?.colors[0]?.colorName;
-
-    const { data: fetchData } = UseFetch("clothes", null);
-    const { data: fetchColors } = UseFetch("colors", null);
-
-
-    const garmentFilter = fetchData?.filter(
-      (item) => item.garment !== chosenClothesGARMENT
-    );
-
-    const findColorMatch = fetchColors?.filter((item) => chosenClothesCOLORSNAME.)
-  }
 
   const isHideSection = hideSection ? "block" : "hidden";
 
