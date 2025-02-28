@@ -1,6 +1,7 @@
 //HOOKS
-import { MouseEventHandler, useEffect, useState } from "react";
+import { MouseEventHandler, useEffect, useState, useMemo } from "react";
 import { useFetch } from "./hooks/UseFetch";
+
 //DATA
 import { DefaultImages } from "./data/ImageDefaultButtons";
 import { ClothesProps } from "./data/types";
@@ -11,6 +12,7 @@ import { MainSection } from "./components/sections/MainSection";
 import { WeatherSection } from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
+import { useOutfitCreator } from "./hooks/UseOutifCreator";
 
 function App() {
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
@@ -21,6 +23,7 @@ function App() {
   const [chosenClothes, setChosenClothes] = useState<ClothesProps[]>([]);
   const [hiddenList, setHiddenList] = useState(0);
 
+  //RESET ALL STATES
   const resetState = () => {
     setImagesMainButtons(DefaultImages);
     setHideSection(false);
@@ -29,8 +32,7 @@ function App() {
     setHiddenList(0);
   };
 
-  const { data: garmentsData } = useFetch("clothes");
-
+  //RESET USESATE ON SCREEN SIZE CHANGES
   const handleResize = () => {
     if (window.innerWidth > 1024) {
       setHideSection(false);
@@ -38,8 +40,6 @@ function App() {
     }
   };
 
-  console.log(searchClothes)
-  
   const handleSearchCLothes: MouseEventHandler<HTMLButtonElement> = (event) => {
     resetState();
     const { id } = event.currentTarget;
@@ -49,24 +49,31 @@ function App() {
       setHideSection(true);
     }
   };
-  const finterGarment = garmentsData?.filter(
-    ({ garment }) => garment === searchClothes
-  );
+  //CLOTHES DATA
+  const { data: garmentsData } = useFetch("clothes");
+
+  //FILTER THE SELECTED GARMENT
+  const garmentFilter = useMemo(() => {
+    return garmentsData?.filter(({ garment }) => garment === searchClothes);
+  }, [garmentsData, searchClothes]);
 
   const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
     const { id } = event.currentTarget;
-    const garmentFilter = finterGarment?.filter(
+
+    //FILTER UNIQUE GARMENT
+    const objectFilter = garmentFilter?.filter(
       (garment) => garment.id === Number(id)
     );
 
-    if (garmentFilter?.length) {
-      setChosenClothes(garmentFilter);
+    if (objectFilter?.length) {
+      setChosenClothes(objectFilter);
       setHiddenList(2);
     }
   };
 
   const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
     const { id } = event.currentTarget;
+
     const colorFilter = chosenClothes?.[0]?.colors?.find(
       (color) => color.colorName === id
     );
@@ -77,6 +84,7 @@ function App() {
 
     if (!selectedGarment || !colorFilter) return;
 
+    //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
     setChosenClothes((prevState) =>
       prevState.length > 0 && prevState[0]
         ? [{ ...prevState[0], colors: [colorFilter] }]
@@ -86,6 +94,7 @@ function App() {
     setHiddenList(0);
     setHideSection(false);
 
+    //ADD COLOR IMAGE TO INVENTORY
     setImagesMainButtons((prevState) =>
       prevState.map((item) => ({
         ...item,
@@ -94,7 +103,11 @@ function App() {
     );
   };
 
-  const handleSearchOutfit = () => {};
+  const handleSearchOutfit = () => {
+    console.log("");
+  };
+
+  console.log(useOutfitCreator(garmentsData,chosenClothes))
 
   useEffect(() => {
     handleResize();
@@ -103,12 +116,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (garmentsData?.length) {
+    if (
+      garmentFilter &&
+      garmentFilter.length > 0 &&
+      searchClothes !== undefined
+    ) {
       setHiddenList(1);
     }
-  }, [garmentsData]);
-
-  //DATAAAAAAAAAA
+  }, [garmentFilter, searchClothes]);
 
   const isHideSection = hideSection ? "block" : "hidden";
 
@@ -126,7 +141,7 @@ function App() {
         >
           <GarmentList
             isHidden={hiddenList === 1}
-            arrayClothes={garmentsData}
+            arrayClothes={garmentFilter}
             onGarmentSubmit={handleGarmentSubmit}
           />
           <ColorList

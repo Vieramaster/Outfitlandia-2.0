@@ -6,15 +6,19 @@ export interface ColorClothesProps {
   imageColor: string;
 }
 
+export type GarmentType = "top" | "coat" | "pants" | "shoes" | "belt";
+export type WeatherType = "today" | "mild" | "cold";
+
 export interface ClothesProps {
   id: number;
-  garment: string;
+  garment: GarmentType;
   name: string;
   image: string;
   style: string[];
-  weather: string[];
+  weather: WeatherType[]; 
   colors: ColorClothesProps[];
 }
+
 //WEATHER DATA
 export interface WeatherProps {
   water: string;

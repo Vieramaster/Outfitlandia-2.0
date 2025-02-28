@@ -1,12 +1,9 @@
 import { useEffect, useState, useMemo } from "react";
-import { ClothesProps, CombineColorsProps, WeatherProps } from "../data/types";
+import { ClothesProps, CombineColorsProps } from "../data/types";
 
-type FetchDataProps<T extends "clothes" | "colors" | "weather"> =
-  T extends "clothes"
-    ? ClothesProps
-    : T extends "colors"
-    ? CombineColorsProps
-    : WeatherProps;
+type FetchDataProps<T extends "clothes" | "colors"> = T extends "clothes"
+  ? ClothesProps
+  : CombineColorsProps;
 
 interface FetchState<T> {
   data: T[] | undefined;
@@ -14,7 +11,7 @@ interface FetchState<T> {
   error: Error | null;
 }
 
-export const useFetch = <T extends "clothes" | "colors" | "weather">(
+export const useFetch = <T extends "clothes" | "colors">(
   product: T
 ): FetchState<FetchDataProps<T>> => {
   const [data, setData] = useState<FetchDataProps<T>[] | undefined>(undefined);
@@ -27,14 +24,9 @@ export const useFetch = <T extends "clothes" | "colors" | "weather">(
     const { signal } = controller;
     setLoading(true);
 
-    const url =
-      product === "clothes"
-        ? "/garmentData.json"
-        : product === "colors"
-        ? "/combineColors.json"
-        : "/weather.json"; // New API
-
-    fetch(url, { signal })
+    fetch(product === "clothes" ? "/garmentData.json" : "/combineColors.json", {
+      signal,
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al obtener los datos");
