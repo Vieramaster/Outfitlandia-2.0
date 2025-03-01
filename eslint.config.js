@@ -10,10 +10,16 @@ export default tseslint.config(
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.json',
+        sourceType: 'module',
+      },
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     plugins: {
+      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },

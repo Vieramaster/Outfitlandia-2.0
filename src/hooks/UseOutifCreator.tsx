@@ -25,15 +25,14 @@ export const useOutfitCreator = (
     style: CHOSENSTYLE,
   } = selectedGarment[0]!;
 
+  const garmentKey = CHOSENGARMENT as "top" | "coat" | "pants";
+
   const { colorName: CHOSENCOLORNAME, imageColor: CHOSENIMAGECOLOR } =
     CHOSENARRAYCOLORS[0]!;
 
   //FILTER COLOR COMBINATIONS
   const filteredColors = fetchColorsData?.filter(({ combineClothes }) => {
-    return (
-      combineClothes[CHOSENGARMENT as "top" | "coat" | "pants"] ===
-      CHOSENCOLORNAME
-    );
+    return combineClothes[garmentKey] === CHOSENCOLORNAME;
   });
 
   //FILTER CLOTHES
@@ -50,19 +49,32 @@ export const useOutfitCreator = (
   );
 
   const remainingClothes = ["top", "coat", "pants"].filter(
-    (item) => item !== CHOSENGARMENT
+    (item) => item !== garmentKey
   );
 
   const combination = (
     arrayColors: CombineColorsProps[],
     Clothes: ClothesProps[]
   ) => {
+
+    
     const randomColor =
       arrayColors[Math.floor(Math.random() * arrayColors.length)];
 
-    return randomColor;
-  };
+    if (!randomColor) {
+      return null;
+    }
 
+    const { [garmentKey]: string, ...newCombineClothes } =
+      randomColor.combineClothes;
+
+    const newDataCombination = {
+      ...randomColor,
+      combineClothes: newCombineClothes,
+    };
+
+    return newDataCombination;
+  };
   const lala = combination(filteredColors!, filteredClothes!);
   return [lala, matchingItems];
 };
