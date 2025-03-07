@@ -1,6 +1,7 @@
 //HOOKS
 import { MouseEventHandler, useEffect, useState, useMemo } from "react";
-import { useFetch } from "./hooks/UseFetch";
+import { useFetch } from "./hooks/useFetch";
+import { useOutfitCreator } from "./hooks/useOutfitCreator";
 
 //DATA
 import { DefaultImages } from "./data/ImageDefaultButtons";
@@ -12,7 +13,6 @@ import { MainSection } from "./components/sections/MainSection";
 import { WeatherSection } from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import { useOutfitCreator } from "./hooks/UseOutifCreator";
 
 function App() {
   const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
@@ -22,6 +22,7 @@ function App() {
   >(undefined);
   const [chosenClothes, setChosenClothes] = useState<ClothesProps[]>([]);
   const [hiddenList, setHiddenList] = useState(0);
+  const [searchOutfit, setSearchOutfit] = useState(false);
 
   //RESET ALL STATES
   const resetState = () => {
@@ -104,10 +105,8 @@ function App() {
   };
 
   const handleSearchOutfit = () => {
-    console.log("");
+    setSearchOutfit(true);
   };
-
-  console.log(useOutfitCreator(garmentsData,chosenClothes))
 
   useEffect(() => {
     handleResize();
@@ -124,6 +123,19 @@ function App() {
       setHiddenList(1);
     }
   }, [garmentFilter, searchClothes]);
+
+  useEffect(() => {
+    if (searchOutfit && garmentsData && chosenClothes.length > 0) {
+      const outfit = useOutfitCreator(garmentsData, chosenClothes);
+      if (outfit.length > 0) {
+        setImagesMainButtons(outfit);
+      } else {
+        console.error("No outfit found");
+      }
+    } else {
+      console.error("Missing data for outfit creation");
+    }
+  }, [searchOutfit, garmentsData, chosenClothes]);
 
   const isHideSection = hideSection ? "block" : "hidden";
 
