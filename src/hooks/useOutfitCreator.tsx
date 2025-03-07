@@ -8,7 +8,6 @@ export const useOutfitCreator = (
   const { data: fetchColorsData } = useFetch("colors");
 
   if (!fetchData || !selectedGarment || selectedGarment.length === 0) {
-    console.error("Invalid data passed to useOutfitCreator");
     return [];
   }
 
@@ -29,7 +28,7 @@ export const useOutfitCreator = (
 
   const garmentKey = CHOSENGARMENT as "top" | "coat" | "pants";
 
-  const { colorName: CHOSENCOLORNAME, imageColor: CHOSENIMAGECOLOR } =
+  const { colorName: CHOSENCOLORNAME } =
     CHOSENARRAYCOLORS[0]!;
 
   // FILTER CLOTHES

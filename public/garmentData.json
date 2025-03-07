@@ -1846,8 +1846,8 @@
     "name": "campera bomber",
     "image": "images/image-json/coat/coatBomber.webp",
     "style": [
-      "basic",
-      "casual"
+      "basic"
+      
     ],
     "weather": [
       "mild",
