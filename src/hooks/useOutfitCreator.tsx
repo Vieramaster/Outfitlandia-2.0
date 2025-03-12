@@ -28,8 +28,7 @@ export const useOutfitCreator = (
 
   const garmentKey = CHOSENGARMENT as "top" | "coat" | "pants";
 
-  const { colorName: CHOSENCOLORNAME } =
-    CHOSENARRAYCOLORS[0]!;
+  const { colorName: CHOSENCOLORNAME } = CHOSENARRAYCOLORS[0]!;
 
   // FILTER CLOTHES
   const filteredClothes = fetchData.filter(
@@ -46,7 +45,6 @@ export const useOutfitCreator = (
   const filteredColors = fetchColorsData?.filter(({ combineClothes }) => {
     return combineClothes[garmentKey] === CHOSENCOLORNAME;
   });
-
   const combination = (
     arrayColors: CombineColorsProps[],
     Clothes: ClothesProps[],

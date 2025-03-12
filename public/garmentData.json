@@ -94,7 +94,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topHoodieChocolate.webp"
       },
       {
@@ -260,7 +260,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topSweatShirtChocolate.webp"
       },
       {
@@ -427,7 +427,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topTShirtChocolate.webp"
       },
       {
@@ -586,7 +586,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topPoloChocolate.webp"
       },
       {
@@ -740,7 +740,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topSweaterChocolate.webp"
       },
       {
@@ -869,7 +869,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topTurtleSweaterChocolate.webp"
       },
       {
@@ -1005,7 +1005,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topShortShirtChocolate.webp"
       },
       {
@@ -1079,8 +1079,7 @@
       "elegant"
     ],
     "weather": [
-      "mild",
-      "cold"
+      "mild"
     ],
     "colors": [
       {
@@ -1152,7 +1151,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topLongShirtChocolate.webp"
       },
       {
@@ -1305,7 +1304,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/top/topLongTShirtChocolate.webp"
       },
       {
@@ -1373,7 +1372,7 @@
   {
     "id": 10,
     "garment": "coat",
-    "name": "chaqueta de jean o garbardina",
+    "name": "gabardine jacket",
     "image": "images/image-json/coat/coatDenim.webp",
     "style": [
       "casual",
@@ -1399,7 +1398,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatDenimChocolate.webp"
       },
       {
@@ -1421,7 +1420,7 @@
         "imageColor": "images/image-json/coat/coatDenimLightGrey.webp"
       },
       {
-        "colorName": "WornBlack",
+        "colorName": "wornBlack",
         "hex": "#2d2d2d",
         "title": "dark grey",
         "imageColor": "images/image-json/coat/coatDenimDarkGrey.webp"
@@ -1455,7 +1454,7 @@
   {
     "id": 11,
     "garment": "coat",
-    "name": "campera de cuero",
+    "name": "leather jacket",
     "image": "images/image-json/coat/coatLeather.webp",
     "style": [
       "casual",
@@ -1480,7 +1479,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatLeather.webp"
       },
       {
@@ -1536,7 +1535,7 @@
   {
     "id": 12,
     "garment": "coat",
-    "name": "campera inflable",
+    "name": "inflatable jacket",
     "image": "images/image-json/coat/coatInflatableJacket.webp",
     "style": [
       "basic"
@@ -1615,7 +1614,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatInflatableJacketChocolate.webp"
       },
       {
@@ -1701,7 +1700,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatParkaChocolate.webp"
       },
       {
@@ -1739,12 +1738,13 @@
   {
     "id": 14,
     "garment": "coat",
-    "name": "camisaco",
+    "name": "shacket",
     "image": "images/image-json/coat/coatShacket.webp",
     "style": [
       "casual"
     ],
     "weather": [
+      "mild",
       "cold"
     ],
     "colors": [
@@ -1793,7 +1793,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatShacketChocolate.webp"
       },
       {
@@ -1843,11 +1843,10 @@
   {
     "id": 15,
     "garment": "coat",
-    "name": "campera bomber",
+    "name": "bomber jacket",
     "image": "images/image-json/coat/coatBomber.webp",
     "style": [
       "basic"
-      
     ],
     "weather": [
       "mild",
@@ -1887,7 +1886,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatBomberChocolate.webp"
       },
       {
@@ -1943,7 +1942,7 @@
   {
     "id": 16,
     "garment": "coat",
-    "name": "chaqueta de jean con abrigo",
+    "name": "winter gabardine jacket",
     "image": "images/image-json/coat/coatDenimWinter.webp",
     "style": [
       "casual"
@@ -1983,9 +1982,9 @@
         "imageColor": "images/image-json/coat/coatDenimWinterBeige.webp"
       },
       {
-        "colorName": "WornBlack",
+        "colorName": "wornBlack",
         "hex": "#2d2d2d",
-        "title": "negro gastado",
+        "title": "worn black",
         "imageColor": "images/image-json/coat/coatDenimWinterWornBlack.webp"
       },
       {
@@ -2066,7 +2065,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatWindbreakerChocolate.webp"
       },
       {
@@ -2171,7 +2170,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatBlazerChocolate.webp"
       },
       {
@@ -2239,7 +2238,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatShortOvercoatChocolate.webp"
       },
       {
@@ -2277,7 +2276,7 @@
   {
     "id": 20,
     "garment": "coat",
-    "name": "sobretodo",
+    "name": "gaban",
     "image": "images/image-json/coat/coatGaban.webp",
     "style": [
       "elegant"
@@ -2295,7 +2294,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatGabanChocolate.webp"
       },
       {
@@ -2357,7 +2356,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/coat/coatDuffleChocolate.webp"
       },
       {
@@ -2401,7 +2400,7 @@
   {
     "id": 22,
     "garment": "belt",
-    "name": "tradicional",
+    "name": "traditional",
     "image": "images/image-json/belt/beltClasic.webp",
     "style": [
       "casual",
@@ -2428,7 +2427,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/belt/beltClasicChocolate.webp"
       },
       {
@@ -2478,7 +2477,7 @@
   {
     "id": 23,
     "garment": "belt",
-    "name": "de tela",
+    "name": "cloth",
     "image": "images/image-json/belt/beltCloth.webp",
     "style": [
       "basic"
@@ -2528,7 +2527,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/belt/beltClothChocolate.webp"
       },
       {
@@ -2578,7 +2577,7 @@
   {
     "id": 24,
     "garment": "belt",
-    "name": "trenzado",
+    "name": "braided",
     "image": "images/image-json/belt/beltBraided.webp",
     "style": [
       "basic"
@@ -2616,7 +2615,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/belt/beltBraidedChocolate.webp"
       },
       {
@@ -2739,7 +2738,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsJogginChocolate.webp"
       },
       {
@@ -2855,7 +2854,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsShortJogginChocolate.webp"
       },
       {
@@ -2877,9 +2876,9 @@
         "imageColor": "images/image-json/pants/pantsShortJogginDarkGrey.webp"
       },
       {
-        "colorName": "WornBlack",
+        "colorName": "wornBlack",
         "hex": "#2d2d2d",
-        "title": "negro gastado",
+        "title": "worn black",
         "imageColor": "images/image-json/pants/pantsShortJogginWronBlack.webp"
       },
       {
@@ -2923,7 +2922,7 @@
   {
     "id": 27,
     "garment": "pants",
-    "name": "pantalon jean",
+    "name": "jeans",
     "image": "images/image-json/pants/pantsJean.webp",
     "style": [
       "casual",
@@ -2953,9 +2952,9 @@
         "imageColor": "images/image-json/pants/pantsJeanLightGrey.webp"
       },
       {
-        "colorName": "WornBlack",
+        "colorName": "wornBlack",
         "hex": "#2d2d2d",
-        "title": "negro gastado",
+        "title": "worn black",
         "imageColor": "images/image-json/pants/pantsJeanWornBlack.webp"
       }
     ]
@@ -2992,9 +2991,9 @@
         "imageColor": "images/image-json/pants/pantsshortJeanLightGrey.webp"
       },
       {
-        "colorName": "WornBlack",
+        "colorName": "wornBlack",
         "hex": "#2d2d2d",
-        "title": "negro gastado",
+        "title": "worn black",
         "imageColor": "images/image-json/pants/pantsshortJeanWornBlack.webp"
       }
     ]
@@ -3002,7 +3001,7 @@
   {
     "id": 29,
     "garment": "pants",
-    "name": "gabardina",
+    "name": "gabardine pants",
     "image": "images/image-json/pants/pantsGabardine.webp",
     "style": [
       "casual",
@@ -3041,7 +3040,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsGabardineChocolate.webp"
       },
       {
@@ -3091,7 +3090,7 @@
   {
     "id": 30,
     "garment": "pants",
-    "name": "bermuda gabardina",
+    "name": "gabardine bermuda",
     "image": "images/image-json/pants/pantsShortsGab.webp",
     "style": [
       "casual",
@@ -3128,7 +3127,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsShortsGabChocolate.webp"
       },
       {
@@ -3215,7 +3214,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsChinoChocolate.webp"
       },
       {
@@ -3296,7 +3295,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsShortChinoChocolate.webp"
       },
       {
@@ -3377,7 +3376,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/pants/pantsChargeChocolate.webp"
       },
       {
@@ -3427,7 +3426,7 @@
   {
     "id": 34,
     "garment": "shoes",
-    "name": "deportivo",
+    "name": "sports shoe",
     "image": "images/image-json/shoes/shoesSport.webp",
     "style": [
       "basic"
@@ -3513,7 +3512,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesSportChocolate.webp"
       },
       {
@@ -3590,7 +3589,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesSneakersChocolate.webp"
       },
       {
@@ -3646,7 +3645,7 @@
   {
     "id": 36,
     "garment": "shoes",
-    "name": "nautico",
+    "name": "nautic shoes",
     "image": "images/image-json/shoes/shoesNautic.webp",
     "style": [
       "elegant"
@@ -3670,7 +3669,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesNauticChocolate.webp"
       },
       {
@@ -3720,7 +3719,7 @@
   {
     "id": 37,
     "garment": "shoes",
-    "name": "botines de vestir",
+    "name": "dress bots",
     "image": "images/image-json/shoes/shoesShortBoots.webp",
     "style": [
       "casual",
@@ -3745,7 +3744,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesShortBootsChocolate.webp"
       },
       {
@@ -3795,7 +3794,7 @@
   {
     "id": 38,
     "garment": "shoes",
-    "name": "borcego",
+    "name": "boots",
     "image": "images/image-json/shoes/shoesBorcego.webp",
     "style": [
       "casual"
@@ -3831,7 +3830,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesBorcegoChocolate.webp"
       },
       {
@@ -3857,7 +3856,7 @@
   {
     "id": 39,
     "garment": "shoes",
-    "name": "zapato oxford",
+    "name": "oxford shoe",
     "image": "images/image-json/shoes/shoesOxford.webp",
     "style": [
       "elegant"
@@ -3882,7 +3881,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesOxfordChocolate.webp"
       },
       {
@@ -3932,7 +3931,7 @@
   {
     "id": 40,
     "garment": "shoes",
-    "name": "zapato brogue",
+    "name": "brogue shoes",
     "image": "images/image-json/shoes/shoesBrogue.webp",
     "style": [
       "elegant"
@@ -3957,7 +3956,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesBrogueChocolate.webp"
       },
       {
@@ -4007,7 +4006,7 @@
   {
     "id": 41,
     "garment": "shoes",
-    "name": "de lona",
+    "name": "canvas sneakers",
     "image": "images/image-json/shoes/shoesCanvas.webp",
     "style": [
       "basic"
@@ -4056,7 +4055,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesCanvasChocolate.webp"
       },
       {
@@ -4137,7 +4136,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesChelseaChocolate.webp"
       },
       {
@@ -4187,7 +4186,7 @@
   {
     "id": 43,
     "garment": "shoes",
-    "name": "zapato brogue",
+    "name": "brogue shoes",
     "image": "images/image-json/shoes/shoesBrogue.webp",
     "style": [
       "elegant"
@@ -4212,7 +4211,7 @@
       {
         "colorName": "chocolate",
         "hex": "#493327",
-        "title": "Chocolate",
+        "title": "chocolate",
         "imageColor": "images/image-json/shoes/shoesBrogueChocolate.webp"
       },
       {

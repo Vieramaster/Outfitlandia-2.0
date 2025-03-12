@@ -3,18 +3,18 @@ import { ColorButton } from "../buttons/ColorButton";
 
 interface Section {
   arrayColors: ClothesProps[] | undefined;
-  isHidden: boolean;
+  isShown: boolean;
   onColorsSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 export const ColorList = ({
   arrayColors,
-  isHidden,
+  isShown,
   onColorsSubmit,
 }: Section) => {
-  const hidden = isHidden ? "block" : "hidden";
+  const shown = isShown ? "block" : "hidden";
   return (
     <ul
-      className={`${hidden} bg-red-800 w-[95%] h-[calc(100vh-8rem)] flex flex-wrap  justify-center content-center items-center gap-4  lg:h-[37rem] lg:w-[95%]`}
+      className={`${shown} bg-red-800 w-[95%] h-[calc(100vh-8rem)] flex flex-wrap  justify-center content-center items-center gap-4  lg:h-[37rem] lg:w-[95%]`}
     >
       {arrayColors?.map(({ colors }) =>
         colors?.map(({ hex, colorName, title }) => (

@@ -2,17 +2,17 @@ import { ClothesButton } from "../buttons/ClothesButton";
 import { ClothesProps } from "../../data/types";
 
 interface Section {
-  isHidden: boolean;
+  isShown: boolean;
   arrayClothes: ClothesProps[] | undefined;
   onGarmentSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const GarmentList = ({
   arrayClothes,
-  isHidden,
+  isShown,
   onGarmentSubmit,
 }: Section) => {
-  const hidden = isHidden ? "block" : "hidden";
+  const hidden = isShown ? "block" : "hidden";
 
   return (
     <ul

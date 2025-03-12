@@ -21,7 +21,7 @@ function App() {
     "top" | "coat" | "pants" | undefined
   >(undefined);
   const [chosenClothes, setChosenClothes] = useState<ClothesProps[]>([]);
-  const [hiddenList, setHiddenList] = useState(0);
+  const [shownList, setshownList] = useState(0);
 
   //RESET ALL STATES
   const resetState = () => {
@@ -29,7 +29,7 @@ function App() {
     setHideSection(false);
     setSearchClothes(undefined);
     setChosenClothes([]);
-    setHiddenList(0);
+    setshownList(0);
   };
 
   //RESET USESATE ON SCREEN SIZE CHANGES
@@ -48,6 +48,7 @@ function App() {
     if (window.innerWidth < 1024) {
       setHideSection(true);
     }
+    setshownList(1);
   };
   //CLOTHES DATA
   const { data: garmentsData } = useFetch("clothes");
@@ -67,7 +68,7 @@ function App() {
 
     if (objectFilter?.length) {
       setChosenClothes(objectFilter);
-      setHiddenList(2);
+      setshownList(2);
     }
   };
 
@@ -91,7 +92,7 @@ function App() {
         : []
     );
 
-    setHiddenList(0);
+    setshownList(0);
     setHideSection(false);
 
     //ADD COLOR IMAGE TO INVENTORY
@@ -104,7 +105,9 @@ function App() {
   };
 
   const outfitImages = useOutfitCreator(garmentsData, chosenClothes);
+  console.log(outfitImages);
 
+  
   const handleSearchOutfit = () => {
     if (outfitImages && outfitImages.length > 0) {
       setImagesMainButtons(outfitImages);
@@ -117,18 +120,8 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (
-      garmentFilter &&
-      garmentFilter.length > 0 &&
-      searchClothes !== undefined
-    ) {
-      setHiddenList(1);
-    }
-  }, [garmentFilter, searchClothes]);
-
   const isHideSection = hideSection ? "block" : "hidden";
-
+  console.log(shownList);
   return (
     <>
       <Header />
@@ -142,12 +135,12 @@ function App() {
           className={`${isHideSection} absolute w-full h-[calc(100vh-4rem)] bg-rose-200 grid place-content-center place-items-center lg:block lg:relative lg:w-1/2 lg:order-3 2xl:w-2/3`}
         >
           <GarmentList
-            isHidden={hiddenList === 1}
+            isShown={shownList === 1}
             arrayClothes={garmentFilter}
             onGarmentSubmit={handleGarmentSubmit}
           />
           <ColorList
-            isHidden={hiddenList === 2}
+            isShown={shownList === 2}
             arrayColors={chosenClothes}
             onColorsSubmit={handleColorsSubmit}
           />

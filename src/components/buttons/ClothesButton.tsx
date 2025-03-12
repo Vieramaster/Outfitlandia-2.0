@@ -1,5 +1,3 @@
-import { CardSize } from "../../data/ComponentSizes";
-
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   image: string;
 }
@@ -7,7 +5,7 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 export const ClothesButton = ({ image, ...props }: ButtonProps) => {
   return (
     <button
-      className={`${CardSize} bg-green-800 flex justify-center items-center cursor-pointer select-none drag-none`}
+      className=" clothesButton bg-green-800 flex justify-center items-center cursor-pointer select-none drag-none"
       {...props}
     >
       <img src={image} alt="Clothing item" className="w-5/6 " />

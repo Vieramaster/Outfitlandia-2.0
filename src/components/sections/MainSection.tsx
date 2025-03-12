@@ -2,7 +2,7 @@ import { ClothesButton } from "../buttons/ClothesButton";
 import { ChangeClothesButton } from "../buttons/ChangeClothesButton";
 import { MainButtonsProps } from "../../data/types";
 import { ClothesContainer } from "../containers/ClothesContainer";
-import { CardSize } from "../../data/ComponentSizes";
+
 
 interface MainSectionProps {
   images: MainButtonsProps[];
@@ -34,7 +34,7 @@ export const MainSection = ({
             />
           ) : (
             <div
-              className={`${CardSize} bg-orange-400 flex flex-col gap-4`}
+              className="clothesButton bg-orange-400 flex flex-col gap-4"
               key={"shoes & belt"}
             >
               <div className="w-full h-1/2 bg-red-500 flex gap-4">

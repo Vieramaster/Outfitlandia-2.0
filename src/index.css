@@ -6,3 +6,14 @@
   box-sizing: border-box;
 }
 
+.clothesButton {
+  width: 9rem;   
+  height: 13.5rem; 
+}
+
+@media (min-width: 768px) {
+  .clothesButton {
+    width: 13rem;   
+    height: 18rem;  
+  }
+}
