@@ -1,5 +1,14 @@
-import { ClothesProps, CombineColorsProps, WeatherType } from "../data/types";
+import {
+  ClothesProps,
+  CombineColorsProps,
+  WeatherType,
+  StyleType,
+} from "../data/types";
 import { useFetch } from "./useFetch";
+
+type GarmentKeyType = "top" | "coat" | "pants";
+
+const MAX_ATTEMPTS = 400;
 
 export const useOutfitCreator = (
   fetchData: ClothesProps[] | undefined,
@@ -7,44 +16,43 @@ export const useOutfitCreator = (
 ) => {
   const { data: fetchColorsData } = useFetch("colors");
 
-  if (!fetchData || !selectedGarment || selectedGarment.length === 0) {
+  if (!fetchData || !selectedGarment || !selectedGarment[0]) {
+    console.error("some type of main data is missing");
     return [];
   }
 
   if (!fetchColorsData || fetchColorsData.length === 0) {
-    console.error("No color data found");
+    console.error("There is no data on the color date.");
     return [];
   }
 
-  const MAX_ATTEMPTS = 400;
-
   // DESTRUCTURING OF ENTERED DATA
   const {
-    garment: CHOSENGARMENT,
-    colors: CHOSENARRAYCOLORS,
-    weather: CHOSENWEATHER,
-    style: CHOSENSTYLE,
-  } = selectedGarment[0]!;
+    garment: MAIN_GARMENT,
+    colors: MAIN_COLORS,
+    weather: MAIN_WEATHER,
+    style: MAIN_STYLE,
+  } = selectedGarment[0];
 
-  const garmentKey = CHOSENGARMENT as "top" | "coat" | "pants";
+  const garmentKey = MAIN_GARMENT as GarmentKeyType;
 
-  const { colorName: CHOSENCOLORNAME } = CHOSENARRAYCOLORS[0]!;
+  const MAIN_COLORNAME = MAIN_COLORS[0]?.colorName;
 
-  // FILTER CLOTHES
-  const filteredClothes = fetchData.filter(
-    ({ garment }) => garment !== CHOSENGARMENT
+  // the clothes that are not chosen are filtered
+  const filteredClothes = filterClothes(fetchData, MAIN_GARMENT);
+
+  // Matches are found for style and weather and the rest is filtered out.
+  const clothesClassFiltering = filterStyleAndWheater(
+    filteredClothes,
+    MAIN_STYLE,
+    MAIN_WEATHER
   );
 
-  const matchingItems = filteredClothes.filter(
-    ({ style, weather }) =>
-      style.some((styleItem) => CHOSENSTYLE.includes(styleItem)) &&
-      weather.some((weatherItem) => CHOSENWEATHER.includes(weatherItem))
-  );
-
-  // FILTER COLOR COMBINATIONS
+  // the colors are filtered based on the color of the chosen clothing
   const filteredColors = fetchColorsData?.filter(({ combineClothes }) => {
-    return combineClothes[garmentKey] === CHOSENCOLORNAME;
+    return combineClothes[garmentKey] === MAIN_COLORNAME;
   });
+
   const combination = (
     arrayColors: CombineColorsProps[],
     Clothes: ClothesProps[],
@@ -66,14 +74,16 @@ export const useOutfitCreator = (
     const randomColor =
       arrayColors[Math.floor(Math.random() * arrayColors.length)];
 
+    
+
     if (!randomColor) {
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
 
     const { combineClothes, combineShoes } = randomColor;
     const { [garmentKey]: removed, ...newCombineClothes } = combineClothes;
 
-    const shoesFilter = matchingItems.filter(
+    const shoesFilter = clothesClassFiltering.filter(
       ({ garment }) => garment === "shoes"
     );
 
@@ -90,12 +100,12 @@ export const useOutfitCreator = (
     });
 
     if (newShoes.length === 0)
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     const results = Object.entries(
       newCombineClothes as Record<string, string>
     ).reduce((acc, [garmentColor, designatedColor]) => {
-      const filteredItems = matchingItems
+      const filteredItems = clothesClassFiltering
         .filter(
           ({ garment, colors }) =>
             garment === garmentColor &&
@@ -117,7 +127,7 @@ export const useOutfitCreator = (
     }, {} as Record<string, ClothesProps[]>);
 
     if (Object.values(results).some((item) => item.length === 0))
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     const updatedCombineClothes = [
       {
@@ -138,19 +148,22 @@ export const useOutfitCreator = (
       return acc;
     }, {} as Record<string, ClothesProps>);
 
-    const addMainGarment = {
+    const addMAIN_GARMENT = {
       ...ChoseOneObject,
       [selectedGarment[0]!.garment]: selectedGarment[0]!,
     };
 
-    if (addMainGarment === undefined || Object.keys(addMainGarment).length < 3)
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+    if (
+      addMAIN_GARMENT === undefined ||
+      Object.keys(addMAIN_GARMENT).length < 3
+    )
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     const checkWeatherAndStyle = () => {
-      const garments = Object.values(addMainGarment);
+      const garments = Object.values(addMAIN_GARMENT);
       const isMatch = garments.every((garment) => {
         return garments.some((otherGarment) => {
-          const styleMatch = garment.style.some((style: string) =>
+          const styleMatch = garment.style.some((style: StyleType) =>
             otherGarment.style.includes(style)
           );
           const weatherMatch = garment.weather.some((weather) =>
@@ -164,10 +177,10 @@ export const useOutfitCreator = (
       return isMatch;
     };
     if (!checkWeatherAndStyle()) {
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
 
-    const finalShoes = addMainGarment.shoes;
+    const finalShoes = addMAIN_GARMENT.shoes;
 
     if (!finalShoes) return combination(arrayColors, Clothes, attempt + 1);
 
@@ -178,11 +191,11 @@ export const useOutfitCreator = (
     } = finalShoes;
 
     if (!colorsShoe[0])
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     const colorNameShoe = colorsShoe[0].colorName;
 
-    const chosenBelt = matchingItems.filter(
+    const chosenBelt = clothesClassFiltering.filter(
       ({ garment }) => garment === "belt"
     );
     const beltFilter = chosenBelt.filter(
@@ -191,7 +204,7 @@ export const useOutfitCreator = (
         weather.some((item) => weatherShoe.includes(item))
     );
 
-    const pantsName = addMainGarment.pants?.name;
+    const pantsName = addMAIN_GARMENT.pants?.name;
 
     // COMBINE BELT WITH SHOES
     const beltWithMatchingColor = beltFilter
@@ -207,7 +220,7 @@ export const useOutfitCreator = (
       .filter(Boolean);
 
     if (beltWithMatchingColor.length === 0)
-      return combination(filteredColors!, matchingItems!, attempt + 1);
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     // If there is more than one belt, it is chosen randomly.
     const uniqueBelt =
@@ -218,7 +231,7 @@ export const useOutfitCreator = (
         : beltWithMatchingColor[0];
 
     const finishClothes = {
-      ...addMainGarment,
+      ...addMAIN_GARMENT,
       belt: uniqueBelt!,
     };
 
@@ -248,7 +261,26 @@ export const useOutfitCreator = (
     ];
   };
 
-  const returnImages = combination(filteredColors!, matchingItems!);
+  const returnImages = combination(filteredColors!, clothesClassFiltering!);
 
   return returnImages ?? [];
 };
+
+//FUNCTIONS
+
+const filterClothes = (fetch: ClothesProps[], selectedGarment: string) =>
+  fetch.filter(({ garment }) => garment !== selectedGarment);
+
+const filterStyleAndWheater = (
+  arrayClothes: ClothesProps[],
+  styleSearched: StyleType[],
+  weatherSearched: WeatherType[]
+) =>
+  arrayClothes.filter(
+    ({ style, weather }) =>
+      style.some((styleItem) => styleSearched.includes(styleItem)) &&
+      weather.some((weatherItem) => weatherSearched.includes(weatherItem))
+  );
+
+const getRandomElement = (object: []) =>
+  object[Math.floor(Math.random() * object.length)];

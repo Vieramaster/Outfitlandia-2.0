@@ -8,14 +8,14 @@ export interface ColorClothesProps {
 
 export type GarmentType = "top" | "coat" | "pants" | "shoes" | "belt";
 export type WeatherType = "today" | "mild" | "cold";
-
+export type StyleType = "basic" | "casual" | "elegant";
 export interface ClothesProps {
   id: number;
   garment: GarmentType;
   name: string;
   image: string;
-  style: string[];
-  weather: WeatherType[]; 
+  style: StyleType[];
+  weather: WeatherType[];
   colors: ColorClothesProps[];
 }
 
