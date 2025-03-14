@@ -3,6 +3,7 @@ import {
   CombineColorsProps,
   WeatherType,
   StyleType,
+  GarmentType,
 } from "../data/types";
 import { useFetch } from "./useFetch";
 
@@ -39,7 +40,7 @@ export const useOutfitCreator = (
   const MAIN_COLORNAME = MAIN_COLORS[0]?.colorName;
 
   // the clothes that are not chosen are filtered
-  const filteredClothes = filterClothes(fetchData, MAIN_GARMENT);
+  const filteredClothes = filterClothes(fetchData, MAIN_GARMENT, true);
 
   // Matches are found for style and weather and the rest is filtered out.
   const clothesClassFiltering = filterStyleAndWheater(
@@ -49,9 +50,11 @@ export const useOutfitCreator = (
   );
 
   // the colors are filtered based on the color of the chosen clothing
-  const filteredColors = fetchColorsData?.filter(({ combineClothes }) => {
-    return combineClothes[garmentKey] === MAIN_COLORNAME;
-  });
+  const filteredColors = filterColors(
+    garmentKey,
+    MAIN_COLORNAME!,
+    fetchColorsData
+  );
 
   const combination = (
     arrayColors: CombineColorsProps[],
@@ -71,60 +74,28 @@ export const useOutfitCreator = (
       return null;
     }
 
-    const randomColor =
-      arrayColors[Math.floor(Math.random() * arrayColors.length)];
+    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {}
 
-    
+    const randomColor = getRandomElement(arrayColors);
 
     if (!randomColor) {
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
 
+    // the random color is deconstructed and the garment we already have is removed
     const { combineClothes, combineShoes } = randomColor;
     const { [garmentKey]: removed, ...newCombineClothes } = combineClothes;
 
-    const shoesFilter = clothesClassFiltering.filter(
-      ({ garment }) => garment === "shoes"
-    );
+    const shoesFiltered = filterClothes(clothesClassFiltering, "shoes", false);
 
-    // ONE OBJECT IS CREATED FOR EACH SHOE COLOR
-    const newShoes = shoesFilter.flatMap((shoe) => {
-      return shoe.colors
-        .filter((color) => combineShoes.includes(color.colorName))
-        .map((color) => {
-          return {
-            ...shoe,
-            colors: [color],
-          };
-        });
-    });
+    // It is filtered and a shoe is created for each color
+    const shoesArray = flatMapObjectShoe(shoesFiltered, combineShoes);
 
-    if (newShoes.length === 0)
+    if (shoesArray.length === 0)
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
-    const results = Object.entries(
-      newCombineClothes as Record<string, string>
-    ).reduce((acc, [garmentColor, designatedColor]) => {
-      const filteredItems = clothesClassFiltering
-        .filter(
-          ({ garment, colors }) =>
-            garment === garmentColor &&
-            colors.some(
-              ({ colorName }) =>
-                colorName.toLowerCase() === designatedColor.toLowerCase()
-            )
-        )
-        .map((item) => ({
-          ...item,
-          colors: item.colors.filter(
-            (color) =>
-              color.colorName.toLowerCase() === designatedColor.toLowerCase()
-          ),
-        }));
-
-      acc[garmentColor] = filteredItems;
-      return acc;
-    }, {} as Record<string, ClothesProps[]>);
+    //creates an array based on the combinations
+    const results = searchMatchColors(newCombineClothes, clothesClassFiltering);
 
     if (Object.values(results).some((item) => item.length === 0))
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
@@ -132,7 +103,7 @@ export const useOutfitCreator = (
     const updatedCombineClothes = [
       {
         ...results,
-        shoes: newShoes,
+        shoes: shoesArray,
       },
     ];
 
@@ -147,6 +118,7 @@ export const useOutfitCreator = (
       }
       return acc;
     }, {} as Record<string, ClothesProps>);
+    const fafa = lala(updatedCombineClothes);
 
     const addMAIN_GARMENT = {
       ...ChoseOneObject,
@@ -261,16 +233,24 @@ export const useOutfitCreator = (
     ];
   };
 
-  const returnImages = combination(filteredColors!, clothesClassFiltering!);
+  const returnImages = combination(filteredColors, clothesClassFiltering);
 
   return returnImages ?? [];
 };
 
 //FUNCTIONS
 
-const filterClothes = (fetch: ClothesProps[], selectedGarment: string) =>
-  fetch.filter(({ garment }) => garment !== selectedGarment);
+//filter garment
+const filterClothes = (
+  fetch: ClothesProps[],
+  selectedGarment: string,
+  excludes: boolean
+) =>
+  fetch.filter(({ garment }) =>
+    excludes ? garment !== selectedGarment : garment === selectedGarment
+  );
 
+//filter style and weather
 const filterStyleAndWheater = (
   arrayClothes: ClothesProps[],
   styleSearched: StyleType[],
@@ -282,5 +262,73 @@ const filterStyleAndWheater = (
       weather.some((weatherItem) => weatherSearched.includes(weatherItem))
   );
 
-const getRandomElement = (object: []) =>
-  object[Math.floor(Math.random() * object.length)];
+//random element
+const getRandomElement = <T,>(array: T[]): T | undefined => {
+  if (array.length === 0) return;
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+const filterColors = (
+  key: GarmentKeyType,
+  name: string,
+  fetch: CombineColorsProps[]
+) =>
+  fetch?.filter(({ combineClothes }) => {
+    return combineClothes[key] === name;
+  });
+
+const flatMapObjectShoe = (array: ClothesProps[], combineColor: string[]) =>
+  array.flatMap((product) => {
+    return product.colors
+      .filter((color) => combineColor.includes(color.colorName))
+      .map((color) => {
+        return {
+          ...product,
+          colors: [color],
+        };
+      });
+  });
+
+const searchMatchColors = (
+  objectColors: Record<string, string>,
+  arrayClothes: ClothesProps[]
+) =>
+  Object.entries(objectColors).reduce(
+    (acc, [garmentColor, designatedColor]) => {
+      const filteredItems = arrayClothes
+        .filter(
+          ({ garment, colors }) =>
+            garment === garmentColor &&
+            colors.some(
+              ({ colorName }) =>
+                colorName.toLowerCase() === designatedColor.toLowerCase()
+            )
+        )
+        .map((item) => ({
+          ...item,
+          colors: item.colors.filter(
+            (color) =>
+              color.colorName.toLowerCase() === designatedColor.toLowerCase()
+          ),
+        }));
+
+      acc[garmentColor] = filteredItems;
+      return acc;
+    },
+    {} as Record<string, ClothesProps[]>
+  );
+
+const lala = (arrayClothes: ClothesProps[]) => {
+  const result: Record<string, ClothesProps> = {};
+  for (const combineItem of arrayClothes) {
+    for (const [garment, items] of Object.entries(combineItem)) {
+      if (Array.isArray(items) && items.length > 0) {
+        const randomItem = getRandomElement(items);
+        if (randomItem) {
+          result[garment] = randomItem;
+        }
+      }
+    }
+  }
+  return result;
+};
