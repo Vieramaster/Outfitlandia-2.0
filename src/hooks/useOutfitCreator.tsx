@@ -8,6 +8,8 @@ import {
 import { useFetch } from "./useFetch";
 
 type GarmentKeyType = "top" | "coat" | "pants";
+type ListStructureType = Record<string, ClothesProps>;
+type ClothesListObject = Record<string, ClothesProps[]>;
 
 const MAX_ATTEMPTS = 400;
 
@@ -100,59 +102,31 @@ export const useOutfitCreator = (
     if (Object.values(results).some((item) => item.length === 0))
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
-    const updatedCombineClothes = [
+    const updatedCombineClothes: ClothesListObject[] = [
       {
         ...results,
         shoes: shoesArray,
       },
     ];
 
-    const ChoseOneObject = updatedCombineClothes.reduce((acc, combineItem) => {
-      for (const [garment, items] of Object.entries(combineItem)) {
-        if (Array.isArray(items) && items.length > 0) {
-          const randomIndex = Math.floor(Math.random() * items.length);
-          if (items[randomIndex]) {
-            acc[garment] = items[randomIndex];
-          }
-        }
-      }
-      return acc;
-    }, {} as Record<string, ClothesProps>);
-    const fafa = lala(updatedCombineClothes);
+    // For each object one is chosen randomly
+    const estructureObject = chosenObjectRandomly(updatedCombineClothes);
 
-    const addMAIN_GARMENT = {
-      ...ChoseOneObject,
+    const addMainGarment = {
+      ...estructureObject,
       [selectedGarment[0]!.garment]: selectedGarment[0]!,
     };
 
-    if (
-      addMAIN_GARMENT === undefined ||
-      Object.keys(addMAIN_GARMENT).length < 3
-    )
+    if (addMainGarment === undefined || Object.keys(addMainGarment).length < 3)
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
-    const checkWeatherAndStyle = () => {
-      const garments = Object.values(addMAIN_GARMENT);
-      const isMatch = garments.every((garment) => {
-        return garments.some((otherGarment) => {
-          const styleMatch = garment.style.some((style: StyleType) =>
-            otherGarment.style.includes(style)
-          );
-          const weatherMatch = garment.weather.some((weather) =>
-            otherGarment.weather.includes(weather as WeatherType)
-          );
+    const filterWeatherAndStyle = checkWeatherAndStyle(addMainGarment);
 
-          return styleMatch || weatherMatch;
-        });
-      });
-
-      return isMatch;
-    };
-    if (!checkWeatherAndStyle()) {
+    if (filterWeatherAndStyle) {
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
 
-    const finalShoes = addMAIN_GARMENT.shoes;
+    const finalShoes = addMainGarment.shoes;
 
     if (!finalShoes) return combination(arrayColors, Clothes, attempt + 1);
 
@@ -161,6 +135,7 @@ export const useOutfitCreator = (
       weather: weatherShoe,
       colors: colorsShoe,
     } = finalShoes;
+    
 
     if (!colorsShoe[0])
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
@@ -176,7 +151,7 @@ export const useOutfitCreator = (
         weather.some((item) => weatherShoe.includes(item))
     );
 
-    const pantsName = addMAIN_GARMENT.pants?.name;
+    const pantsName = addMainGarment.pants?.name;
 
     // COMBINE BELT WITH SHOES
     const beltWithMatchingColor = beltFilter
@@ -203,7 +178,7 @@ export const useOutfitCreator = (
         : beltWithMatchingColor[0];
 
     const finishClothes = {
-      ...addMAIN_GARMENT,
+      ...addMainGarment,
       belt: uniqueBelt!,
     };
 
@@ -220,9 +195,10 @@ export const useOutfitCreator = (
       },
       {} as Record<string, string>
     );
-
+    return garmentsImages;
     // Return the images with the correct structure
-    return [
+    /**
+    *  return [
       {
         top: garmentsImages.top || "",
         coat: garmentsImages.coat || "",
@@ -231,6 +207,7 @@ export const useOutfitCreator = (
         shoes: garmentsImages.shoes || "",
       },
     ];
+    */
   };
 
   const returnImages = combination(filteredColors, clothesClassFiltering);
@@ -279,7 +256,7 @@ const filterColors = (
 
 const flatMapObjectShoe = (array: ClothesProps[], combineColor: string[]) =>
   array.flatMap((product) => {
-    return product.colors
+    const result = product.colors
       .filter((color) => combineColor.includes(color.colorName))
       .map((color) => {
         return {
@@ -287,6 +264,7 @@ const flatMapObjectShoe = (array: ClothesProps[], combineColor: string[]) =>
           colors: [color],
         };
       });
+    return result as ClothesProps[];
   });
 
 const searchMatchColors = (
@@ -315,11 +293,12 @@ const searchMatchColors = (
       acc[garmentColor] = filteredItems;
       return acc;
     },
-    {} as Record<string, ClothesProps[]>
+    {} as ClothesListObject
   );
 
-const lala = (arrayClothes: ClothesProps[]) => {
-  const result: Record<string, ClothesProps> = {};
+//For each object one is chosen randomly
+const chosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
+  const result: ListStructureType = {};
   for (const combineItem of arrayClothes) {
     for (const [garment, items] of Object.entries(combineItem)) {
       if (Array.isArray(items) && items.length > 0) {
@@ -331,4 +310,23 @@ const lala = (arrayClothes: ClothesProps[]) => {
     }
   }
   return result;
+};
+
+const checkWeatherAndStyle = (array: { [x: string]: ClothesProps }) => {
+  const garments = Object.values(array);
+
+  const isMatch = garments.every((garment) => {
+    return garments.some((otherGarment) => {
+      const styleMatch = garment.style.some((style: StyleType) =>
+        otherGarment.style.includes(style)
+      );
+      const weatherMatch = garment.weather.some((weather) =>
+        otherGarment.weather.includes(weather as WeatherType)
+      );
+
+      return styleMatch || weatherMatch;
+    });
+  });
+
+  return isMatch;
 };
