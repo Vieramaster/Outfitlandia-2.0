@@ -105,6 +105,7 @@ function App() {
   };
 
   const outfitImages = useOutfitCreator(garmentsData, chosenClothes);
+  
   console.log(outfitImages);
 
   
@@ -121,7 +122,7 @@ function App() {
   }, []);
 
   const isHideSection = hideSection ? "block" : "hidden";
-  console.log(shownList);
+
   return (
     <>
       <Header />

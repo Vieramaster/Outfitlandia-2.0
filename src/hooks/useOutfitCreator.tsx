@@ -84,7 +84,6 @@ export const useOutfitCreator = (
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
 
-    // the random color is deconstructed and the garment we already have is removed
     const { combineClothes, combineShoes } = randomColor;
     const { [garmentKey]: removed, ...newCombineClothes } = combineClothes;
 
@@ -93,7 +92,7 @@ export const useOutfitCreator = (
     // It is filtered and a shoe is created for each color
     const shoesArray = flatMapObjectShoe(shoesFiltered, combineShoes);
 
-    if (shoesArray.length === 0)
+    if (shoesArray && shoesArray.length === 0)
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     //creates an array based on the combinations
@@ -120,12 +119,13 @@ export const useOutfitCreator = (
     if (addMainGarment === undefined || Object.keys(addMainGarment).length < 3)
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
+    //filtering clothes by style and climate
     const filterWeatherAndStyle = checkWeatherAndStyle(addMainGarment);
 
-    if (filterWeatherAndStyle) {
+    if (!filterWeatherAndStyle) {
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
     }
-
+    //filter the footwear to a new array
     const finalShoes = addMainGarment.shoes;
 
     if (!finalShoes) return combination(arrayColors, Clothes, attempt + 1);
@@ -135,79 +135,45 @@ export const useOutfitCreator = (
       weather: weatherShoe,
       colors: colorsShoe,
     } = finalShoes;
-    
 
     if (!colorsShoe[0])
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
     const colorNameShoe = colorsShoe[0].colorName;
 
-    const chosenBelt = clothesClassFiltering.filter(
-      ({ garment }) => garment === "belt"
+    //filter the belts to a new array
+    const chosenBelt = filterClothes(clothesClassFiltering, "belt", false);
+
+    //filtering belts by style and climate
+    const beltFilter = filterStyleAndWheater(
+      chosenBelt,
+      styleShoe,
+      weatherShoe
     );
-    const beltFilter = chosenBelt.filter(
-      ({ style, weather }) =>
-        style.some((item) => styleShoe.includes(item)) &&
-        weather.some((item) => weatherShoe.includes(item))
-    );
 
-    const pantsName = addMainGarment.pants?.name;
-
-    // COMBINE BELT WITH SHOES
-    const beltWithMatchingColor = beltFilter
-      .map((belt) => {
-        if (pantsName === "joggin" || pantsName === "bermuda joggin")
-          return null;
-        const matchingColor =
-          belt.colors.find(({ colorName }) => colorName === colorNameShoe) ??
-          belt.colors.find(({ colorName }) => colorName === "black");
-
-        return matchingColor ? { ...belt, colors: [matchingColor] } : null;
-      })
-      .filter(Boolean);
-
-    if (beltWithMatchingColor.length === 0)
+    if (!addMainGarment.pants || !addMainGarment.pants.name)
       return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
 
-    // If there is more than one belt, it is chosen randomly.
-    const uniqueBelt =
-      beltWithMatchingColor.length > 1
-        ? beltWithMatchingColor[
-            Math.floor(Math.random() * beltWithMatchingColor.length)
-          ]
-        : beltWithMatchingColor[0];
+    const pantsNameOutfit = addMainGarment.pants.name;
+
+    //Look for whether a belt is needed in the outfit, if so, look for the color corresponding to the footwear
+    const filteredBelts = beltWithMatchingColor(
+      beltFilter,
+      pantsNameOutfit,
+      colorNameShoe
+    );
+
+    if (filteredBelts.length === 0)
+      return combination(filteredColors!, clothesClassFiltering!, attempt + 1);
+
+    const uniqueBelt = getRandomElement(filteredBelts);
 
     const finishClothes = {
       ...addMainGarment,
       belt: uniqueBelt!,
     };
 
-    // PICK IMAGES
-    const garmentsImages = Object.entries(finishClothes).reduce(
-      (acc, [garmentKey, garmentObj]) => {
-        if (garmentObj.colors && garmentObj.colors.length > 0) {
-          const imageColor = garmentObj.colors?.[0]?.imageColor;
-          if (imageColor) {
-            acc[garmentKey] = imageColor;
-          }
-        }
-        return acc;
-      },
-      {} as Record<string, string>
-    );
-    return garmentsImages;
-    // Return the images with the correct structure
-    /**
-    *  return [
-      {
-        top: garmentsImages.top || "",
-        coat: garmentsImages.coat || "",
-        pants: garmentsImages.pants || "",
-        belt: garmentsImages.belt || "",
-        shoes: garmentsImages.shoes || "",
-      },
-    ];
-    */
+    return filteredBelts;
   };
 
   const returnImages = combination(filteredColors, clothesClassFiltering);
@@ -329,4 +295,23 @@ const checkWeatherAndStyle = (array: { [x: string]: ClothesProps }) => {
   });
 
   return isMatch;
+};
+
+const beltWithMatchingColor = (
+  array: ClothesProps[],
+  pantsName: string,
+  colorShoe: string
+) => {
+  const filter = array
+    .map((belt) => {
+      if (pantsName === "joggin" || pantsName === "bermuda joggin") return null;
+      const matchingColor =
+        belt.colors.find(({ colorName }) => colorName === colorShoe) ??
+        belt.colors.find(({ colorName }) => colorName === "black");
+
+      return matchingColor ? { ...belt, colors: [matchingColor] } : null;
+    })
+    .filter(Boolean);
+
+  return filter as ClothesProps[];
 };
