@@ -13,19 +13,26 @@ type ClothesListObject = Record<string, ClothesProps[]>;
 
 const MAX_ATTEMPTS = 400;
 
+const ERROR_MESSAGES = {
+  MISSING_DATA: "some type of main data is missing",
+  NO_COLOR_DATA: "There is no data on the color date",
+  MAX_ATTEMPTS_REACHED: "Reached maximum attempts",
+};
+
+
 export const useOutfitCreator = (
-  fetchData: ClothesProps[] | undefined,
+  clothesData: ClothesProps[] | undefined,
   selectedGarment: ClothesProps[] | undefined
 ) => {
   const { data: fetchColorsData } = useFetch("colors");
 
-  if (!fetchData || !selectedGarment || !selectedGarment[0]) {
-    console.error("some type of main data is missing");
+  if (!clothesData || !selectedGarment || !selectedGarment[0]) {
+    console.error(ERROR_MESSAGES.MISSING_DATA);
     return [];
   }
 
   if (!fetchColorsData || fetchColorsData.length === 0) {
-    console.error("There is no data on the color date.");
+    console.error(ERROR_MESSAGES.NO_COLOR_DATA);
     return [];
   }
 
@@ -42,7 +49,7 @@ export const useOutfitCreator = (
   const MAIN_COLORNAME = MAIN_COLORS[0]?.colorName;
 
   // the clothes that are not chosen are filtered
-  const filteredClothes = filterClothes(fetchData, MAIN_GARMENT, true);
+  const filteredClothes = filterClothes(clothesData, MAIN_GARMENT, true);
 
   // Matches are found for style and weather and the rest is filtered out.
   const clothesClassFiltering = filterStyleAndWheater(
@@ -62,17 +69,9 @@ export const useOutfitCreator = (
     arrayColors: CombineColorsProps[],
     Clothes: ClothesProps[],
     attempt: number = 0
-  ):
-    | {
-        top: string;
-        coat: string;
-        pants: string;
-        belt: string;
-        shoes: string;
-      }[]
-    | null => {
+  ): ListStructureType | null => {
     if (attempt >= MAX_ATTEMPTS) {
-      console.error("Reached maximum attempts");
+      console.error(ERROR_MESSAGES.MAX_ATTEMPTS_REACHED);
       return null;
     }
 
@@ -168,15 +167,15 @@ export const useOutfitCreator = (
 
     const uniqueBelt = getRandomElement(filteredBelts);
 
-    const finishClothes = {
+    const finishClothes: ListStructureType = {
       ...addMainGarment,
       belt: uniqueBelt!,
     };
 
-    return filteredBelts;
+    return finishClothes;
   };
 
-  const returnImages = combination(filteredColors, clothesClassFiltering);
+  const returnImages = [combination(filteredColors, clothesClassFiltering)];
 
   return returnImages ?? [];
 };

@@ -110,7 +110,7 @@ function App() {
 
   
   const handleSearchOutfit = () => {
-    if (outfitImages && outfitImages.length > 0) {
+    if (Array.isArray(outfitImages) && outfitImages.length > 0) {
       setImagesMainButtons(outfitImages);
     }
   };
