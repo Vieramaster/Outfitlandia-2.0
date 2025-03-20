@@ -51,7 +51,7 @@ function App() {
     setshownList(1);
   };
   //CLOTHES DATA
-  const { data: garmentsData } = useFetch("clothes");
+  const { data: garmentsData } = useFetch<ClothesProps[]>("/garmentData.json");
 
   //FILTER THE SELECTED GARMENT
   const garmentFilter = useMemo(() => {
@@ -105,10 +105,9 @@ function App() {
   };
 
   const outfitImages = useOutfitCreator(garmentsData, chosenClothes);
-  
+
   console.log(outfitImages);
 
-  
   const handleSearchOutfit = () => {
     if (Array.isArray(outfitImages) && outfitImages.length > 0) {
       setImagesMainButtons(outfitImages);

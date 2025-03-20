@@ -6,6 +6,8 @@ export interface ColorClothesProps {
   imageColor: string;
 }
 
+export type ListStructureType = Record<string, ClothesProps>;
+export type ClothesListObject = Record<string, ClothesProps[]>;
 export type GarmentType = "top" | "coat" | "pants" | "shoes" | "belt";
 export type WeatherType = "today" | "mild" | "cold";
 export type StyleType = "basic" | "casual" | "elegant";
