@@ -1,65 +1,42 @@
-import { useState, useEffect } from "react";
-import { WeatherStatsContainer } from "../containers/WheaterStatsContainer";
+import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
+import { useFetch } from "../../hooks/useFetch";
+import { useGeolocation } from "../../hooks/useGeolocation";
+
+interface WeatherData {
+  current?: {
+    temp?: number;
+    weather?: { description: string }[];
+    wind_speed?: number;
+  };
+}
 
 export const WeatherSection = () => {
-  const [location, setLocation] = useState<{ lat: number; lon: number } | null>(
-    null
-  );
-  const [error, setError] = useState<string | null>(null);
+  const { coordinates, error: geoError, getCurrentPosition } = useGeolocation();
 
-  const handleWeather = () => {
-    if (!navigator.geolocation) {
-      setError("Geolocalización no es compatible con este navegador.");
-      return;
-    }
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string | undefined;
 
-    navigator.geolocation.getCurrentPosition(
-      ({ coords }) => {
-        setLocation({
-          lat: coords.latitude,
-          lon: coords.longitude,
-        });
-        setError(null);
-      },
-      ({ code, PERMISSION_DENIED, POSITION_UNAVAILABLE, TIMEOUT }) => {
-        switch (code) {
-          case PERMISSION_DENIED:
-            setError(
-              "Permiso denegado. Habilita la geolocalización en el navegador."
-            );
-            break;
-          case POSITION_UNAVAILABLE:
-            setError("Ubicación no disponible.");
-            break;
-          case TIMEOUT:
-            setError("Tiempo de espera agotado. Inténtalo de nuevo.");
-            break;
-          default:
-            setError("Error desconocido al obtener la ubicación.");
-        }
-      }
-    );
+  if (!API_KEY) {
+    console.error("API_KEY is missing");
+    return;
+  }
+  const { latitude, longitude } = coordinates || {
+    latitude: -37.979858,
+    longitude: -57.589794,
   };
-useEffect(() => {console.log(location)}, [location]);
+
+  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric&mode=cors`;
+
+  const { data, loading } = useFetch<WeatherData>(weatherUrl);
+
+  console.log(data);
 
   return (
-    <section className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col ">
+    <section className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col">
       <WeatherStatsContainer>
-        <button className="w-full h-full" onClick={handleWeather}>
-          cambiar
+        <button className="w-full h-full" onClick={getCurrentPosition}>
+          Cambiar ubicación
         </button>
       </WeatherStatsContainer>
-      <WeatherStatsContainer>
-        <p>20°C</p>
-      </WeatherStatsContainer>
-      <WeatherStatsContainer>nublado</WeatherStatsContainer>
-      <WeatherStatsContainer>viento</WeatherStatsContainer>
     </section>
   );
 };
-
-/**
- *   const APIKEY = import.meta.env.VITE_WEATHER_API_KEY;
-
-  const weatherLocation = `https://api.openweathermap.org/data/3.0/onecall?lat=${location.lat}&lon=${location.lon}&units=metric&appid=${APIKEY}`;
- */
