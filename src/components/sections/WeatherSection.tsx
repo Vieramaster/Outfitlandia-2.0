@@ -1,42 +1,74 @@
-import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
+import { WeatherDataProps } from "../../data/types";
+//HOOKS
+import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useGeolocation } from "../../hooks/useGeolocation";
+import { useTransformWeatherData } from "../../hooks/useTransformWeatherData";
+//COMPONENTS
+import { WeatherSectionContainer } from "../containers/WeatherSectionContainer";
+import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
+import { GeolocationButton } from "../buttons/GeolocationButton";
+import { WeatherErrorAndLoading } from "../../loadingsAndErrors/WeatherErrorAndLoading";
+import { Spinner } from "../../loadingsAndErrors/Spinner";
 
-interface WeatherData {
-  current?: {
-    temp?: number;
-    weather?: { description: string }[];
-    wind_speed?: number;
-  };
-}
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string | undefined;
 
-export const WeatherSection = () => {
+const buildWeatherUrl = (latitude: number, longitude: number): string => {
+  return `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric&mode=cors`;
+};
+
+const WeatherSection = () => {
   const { coordinates, error: geoError, getCurrentPosition } = useGeolocation();
+  const { latitude, longitude } = coordinates;
+  const weatherUrl = useMemo(
+    () => (coordinates ? buildWeatherUrl(latitude, longitude) : null),
+    [coordinates]
+  );
+  const { data, loading, error } = useFetch<WeatherDataProps>(weatherUrl);
+  const weatherData = useMemo(
+    () => (data ? useTransformWeatherData(data) : null),
+    [data]
+  );
 
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string | undefined;
-
-  if (!API_KEY) {
-    console.error("API_KEY is missing");
-    return;
-  }
-  const { latitude, longitude } = coordinates || {
-    latitude: -37.979858,
-    longitude: -57.589794,
-  };
-
-  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric&mode=cors`;
-
-  const { data, loading } = useFetch<WeatherData>(weatherUrl);
-
-  console.log(data);
+  if (!API_KEY)
+    return (
+      <WeatherErrorAndLoading
+        label="Configuración incompleta"
+        children={<p>x</p>}
+      />
+    );
+  if (geoError)
+    return <WeatherErrorAndLoading label={geoError} children={<p>x</p>} />;
+  if (error)
+    return (
+      <WeatherErrorAndLoading
+        label="Error cargando clima"
+        children={<p>x</p>}
+      />
+    );
+  if (loading || !weatherData) return <Spinner />;
 
   return (
-    <section className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col">
-      <WeatherStatsContainer>
-        <button className="w-full h-full" onClick={getCurrentPosition}>
-          Cambiar ubicación
-        </button>
-      </WeatherStatsContainer>
-    </section>
+    <WeatherSectionContainer>
+      <GeolocationButton
+        onClick={getCurrentPosition}
+        loading={loading}
+        aria-label="b"
+      />
+      <WeatherStatsContainer
+        label="Temperatura"
+        children={`${weatherData.temperature}°C`}
+      />
+      <WeatherStatsContainer
+        children={weatherData.icon}
+        label={weatherData.description}
+      />
+      <WeatherStatsContainer
+        label="Viento"
+        children={`${weatherData.windSpeed} km/h`}
+      />
+    </WeatherSectionContainer>
   );
 };
+
+export default WeatherSection;

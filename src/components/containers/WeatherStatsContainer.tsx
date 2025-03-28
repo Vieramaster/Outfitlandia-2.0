@@ -1,7 +1,17 @@
 import { ReactNode } from "react";
 
-export const WeatherStatsContainer = ({ children }: { children: ReactNode }) => (
-  <div className="size-14 lg:size-18 2xl:size-22 bg-amber-400 flex items-center justify-center">
+interface WeatherStatsContainerProps {
+  children: ReactNode;
+  label: string;
+}
+export const WeatherStatsContainer = ({
+  label,
+  children,
+}: WeatherStatsContainerProps) => (
+  <div
+    className="size-14 lg:size-18 2xl:size-22 bg-amber-400 flex flex-col gap-2 items-center justify-center"
+    aria-label={label}
+  >
     {children}
   </div>
 );

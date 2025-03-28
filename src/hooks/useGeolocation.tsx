@@ -5,15 +5,19 @@ interface Coordinates {
   latitude: number;
   longitude: number;
 }
-
 interface UseGeolocationResult {
-  coordinates: Coordinates | null;
+  coordinates: Coordinates;
   error: string | null;
   getCurrentPosition: () => void;
 }
+const DEFAULT_COORDINATES = {
+  latitude: -35.96667,
+  longitude: -62.7,
+};
 
 export const useGeolocation = (): UseGeolocationResult => {
-  const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
+  const [coordinates, setCoordinates] =
+    useState<Coordinates>(DEFAULT_COORDINATES);
   const [error, setError] = useState<string | null>(null);
 
   const getCurrentPosition = useCallback((): void => {
@@ -22,9 +26,11 @@ export const useGeolocation = (): UseGeolocationResult => {
       return;
     }
     navigator.geolocation.getCurrentPosition(
-      (position: GeolocationPosition) => {
-        const { latitude, longitude } = position.coords;
-        setCoordinates({ latitude, longitude });
+      ({ coords }: GeolocationPosition) => {
+        setCoordinates({
+          latitude: coords.latitude,
+          longitude: coords.longitude,
+        });
         setError(null);
       },
       (error: GeolocationPositionError) => setError(error.message)
