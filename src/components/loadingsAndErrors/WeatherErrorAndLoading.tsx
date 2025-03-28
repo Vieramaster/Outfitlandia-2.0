@@ -1,4 +1,4 @@
-import { WeatherStatsContainer } from "../components/containers/WeatherStatsContainer";
+import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
 
 interface WeatherErrorAndLoadingProps {
   children: React.ReactNode;

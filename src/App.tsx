@@ -10,7 +10,7 @@ import { ClothesProps } from "./data/types";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
-import { WeatherSection } from "./components/sections/WeatherSection";
+import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
 
@@ -106,7 +106,7 @@ function App() {
 
   const outfitImages = useOutfitCreator(garmentsData, chosenClothes);
 
-  console.log(outfitImages);
+
 
   const handleSearchOutfit = () => {
     if (Array.isArray(outfitImages) && outfitImages.length > 0) {

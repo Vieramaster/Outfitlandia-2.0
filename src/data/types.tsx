@@ -96,6 +96,9 @@ export interface WeatherWindDataProps {
   gust: number;
 }
 
-interface WeatherDataResponse {
-  
+export interface TransformedWeatherDataProps {
+  temperature: number;
+  icon: string;
+  windSpeed: number;
+  description: string;
 }

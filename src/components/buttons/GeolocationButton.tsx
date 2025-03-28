@@ -1,4 +1,4 @@
-import { Spinner } from "../../loadingsAndErrors/Spinner";
+import { Spinner } from "../loadingsAndErrors/Spinner";
 
 interface GeolocationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
