@@ -96,9 +96,10 @@ export interface WeatherWindDataProps {
   gust: number;
 }
 
+import { WeatherIconKey } from "./WeatherIconList";
 export interface TransformedWeatherDataProps {
   temperature: number;
-  icon: string;
+  icon: WeatherIconKey;
   windSpeed: number;
   description: string;
 }

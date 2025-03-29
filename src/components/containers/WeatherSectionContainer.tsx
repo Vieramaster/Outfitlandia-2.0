@@ -5,7 +5,7 @@ export const WeatherSectionContainer = ({
 }: {
   children: ReactNode;
 }) => (
-  <div className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col">
+  <section className="bg-violet-600 w-full flex gap-5 justify-center items-center h-22 lg:w-1/12 lg:h-full lg:flex-col">
     {children}
-  </div>
+  </section>
 );

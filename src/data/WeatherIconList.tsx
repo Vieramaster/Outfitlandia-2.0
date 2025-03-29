@@ -1,5 +1,6 @@
+
 export const WeatherIconList = {
-  "01d": "images/icons01d/o1d.svg",
+  "01d": "images/icons/01d.svg",
   "01n": "images/icons/01n.svg",
   "02d": "images/icons/02d.svg",
   "02n": "images/icons/02n.svg",
@@ -18,3 +19,5 @@ export const WeatherIconList = {
   "50n": "images/icons/50n.svg",
   wind: "images/icons/wind.svg",
 } as const;
+
+export type WeatherIconKey = keyof typeof WeatherIconList;

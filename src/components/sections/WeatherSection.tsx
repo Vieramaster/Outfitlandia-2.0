@@ -20,70 +20,87 @@ const buildWeatherUrl = (latitude: number, longitude: number): string => {
 };
 
 const WeatherSection = () => {
+  if (!API_KEY) return console.error("API_KEY is missing");
+
   const { coordinates, error: geoError, getCurrentPosition } = useGeolocation();
-  geoError ? console.error("geoError", geoError) : null;
+  
+  if (geoError) return console.error("geoError", geoError);
 
   const { latitude, longitude } = coordinates;
 
+  // The URL is created based on the coordinates provided by the useGeolocation hook.
   const weatherUrl = useMemo(() => {
     if (!latitude || !longitude) return null;
     return buildWeatherUrl(latitude, longitude);
   }, [latitude, longitude]);
 
-  if (!weatherUrl) return console.error("No se pudo obtener la URL del clima");
+  if (!weatherUrl) return console.error("Could not get weather URL");
 
+  //the location is searched for using the https://api.openweathermap.org/ API.
   const {
     data,
     loading: fetchLoading,
     error: fetchError,
   } = useFetch<WeatherDataProps>(weatherUrl);
 
+  if (fetchError) return console.error("Fetch error", fetchError);
+
+  // error handling is used to return what we are going to use through the TransformWeatherData function that was imported
   const transformedData = useMemo(() => {
     if (!data) return null;
     return TransformWeatherData(data);
   }, [data]);
 
-  const renderContent = () => {
-    if (!API_KEY || geoError || fetchError)
+  // Renders
+  const renderError = () => {
+    if (!API_KEY || geoError || fetchError) {
       return (
-        <WeatherErrorAndLoading children={<p>x</p>} label={"api faliure"} />
+        <WeatherErrorAndLoading children={<p>x</p>} label={"api failure"} />
       );
+    }
+    return null;
+  };
 
-    if (fetchLoading)
+  const renderLoading = () => {
+    if (fetchLoading) {
       return (
         <WeatherErrorAndLoading children={<Spinner />} label={"loading"} />
       );
-    return transformedData ? (
-      <>
-        <WeatherStatsContainer
-          label={"weather icon"}
-          children={
-            <image
+    }
+    return null;
+  };
+
+  const renderContent = () => {
+    if (transformedData && !fetchLoading) {
+      return (
+        <>
+          <WeatherStatsContainer label={"weather icon"}>
+            <img
               aria-label={transformedData.description}
-              href={transformedData.icon}
-              className="w-full h-full"
+              src={
+                WeatherIconList[transformedData.icon] || WeatherIconList["01d"]
+              }
+              alt={transformedData.description}
+              className="w-5/6 h-5/6"
             />
-          }
-        />
-        <WeatherStatsContainer
-          label={"temperature"}
-          children={<p>{transformedData.temperature}°C</p>}
-        />
-        <WeatherStatsContainer
-          label={"winter speed"}
-          children={
-            <>
-              <image
-                aria-label={"winter icon"}
-                href={WeatherIconList.wind}
-                className="w-full h-1/2"
-              />
-              <p>{transformedData.windSpeed} km/h</p>
-            </>
-          }
-        />
-      </>
-    ) : null;
+          </WeatherStatsContainer>
+
+          <WeatherStatsContainer label={"temperature"}>
+            <p>{transformedData.temperature}°C</p>
+          </WeatherStatsContainer>
+
+          <WeatherStatsContainer label={"wind speed"}>
+            <img
+              aria-label={"winter icon"}
+              src={WeatherIconList.wind || "x"}
+              className="w-full h-1/2"
+            />
+            <p>{transformedData.windSpeed} km/h</p>
+          </WeatherStatsContainer>
+        </>
+      );
+    }
+    return null;
   };
 
   return (
@@ -91,8 +108,11 @@ const WeatherSection = () => {
       <GeolocationButton
         onClick={getCurrentPosition}
         loading={false}
-        aria-label="Actualizar ubicación"
+        aria-label="Geolocation for the weather"
+        title="Geolocation for the weather"
       />
+      {renderError()}
+      {renderLoading()}
       {renderContent()}
     </WeatherSectionContainer>
   );

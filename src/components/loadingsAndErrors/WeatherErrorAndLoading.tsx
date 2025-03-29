@@ -3,6 +3,7 @@ import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
 interface WeatherErrorAndLoadingProps {
   children: React.ReactNode;
   count?: number;
+
   label: string;
 }
 
