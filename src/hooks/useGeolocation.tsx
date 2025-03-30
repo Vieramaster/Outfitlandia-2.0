@@ -8,6 +8,7 @@ interface Coordinates {
 interface UseGeolocationResult {
   coordinates: Coordinates;
   error: string | null;
+  loading: boolean;
   getCurrentPosition: () => void;
 }
 const DEFAULT_COORDINATES = {
@@ -19,12 +20,14 @@ export const useGeolocation = (): UseGeolocationResult => {
   const [coordinates, setCoordinates] =
     useState<Coordinates>(DEFAULT_COORDINATES);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const getCurrentPosition = useCallback((): void => {
     if (!navigator.geolocation) {
       setError("Geolocation is not supported by your browser");
       return;
     }
+    setLoading(true);
     navigator.geolocation.getCurrentPosition(
       ({ coords }: GeolocationPosition) => {
         setCoordinates({
@@ -35,7 +38,8 @@ export const useGeolocation = (): UseGeolocationResult => {
       },
       (error: GeolocationPositionError) => setError(error.message)
     );
+    setLoading(false);
   }, []);
 
-  return { coordinates, error, getCurrentPosition };
+  return { coordinates, error, loading, getCurrentPosition };
 };

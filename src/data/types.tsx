@@ -87,7 +87,7 @@ export interface WeatherGeneralWeatherDataProps {
   id: number;
   main: string;
   description: string;
-  icon: string;
+  icon: WeatherIconKey;
 }
 
 export interface WeatherWindDataProps {
