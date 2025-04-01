@@ -1,7 +1,6 @@
 //UTILITIES
 import { TransformWeatherData } from "../../helpers/TransformWeatherData";
 import { WeatherDataProps } from "../../data/types";
-import { WeatherIconList } from "../../data/WeatherIconList";
 //HOOKS
 import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";
@@ -11,7 +10,7 @@ import { WeatherSectionContainer } from "../containers/WeatherSectionContainer";
 import { GeolocationButton } from "../buttons/GeolocationButton";
 import { Spinner } from "../loadingsAndErrors/Spinner";
 import { WeatherErrorAndLoading } from "../loadingsAndErrors/WeatherErrorAndLoading";
-import { WeatherStatsContainer } from "../containers/WeatherStatsContainer";
+import { WeatherSectionContent } from "./parts/WeatherSectionContent";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY as string | undefined;
 
@@ -30,6 +29,7 @@ const WeatherSection = () => {
     loading: geoLoading,
     getCurrentPosition,
   } = useGeolocation();
+
   const { latitude, longitude } = coordinates;
 
   const weatherUrl = useMemo(
@@ -69,41 +69,15 @@ const WeatherSection = () => {
   }, [geoLoading, fetchLoading]);
 
   const weatherContent = useMemo(() => {
-    if (!transformedData) return null;
-    return (
-      <>
-        <WeatherStatsContainer label={"weather icon"}>
-          <img
-            aria-label={transformedData.description}
-            src={
-              WeatherIconList[transformedData.icon] || WeatherIconList["01d"]
-            }
-            alt={transformedData.description}
-            className="w-5/6 h-5/6"
-          />
-        </WeatherStatsContainer>
+    if (!transformedData || geoLoading || fetchLoading) return null;
 
-        <WeatherStatsContainer label={"temperature"}>
-          <p>{transformedData.temperature}°C</p>
-        </WeatherStatsContainer>
-
-        <WeatherStatsContainer label={"wind speed"}>
-          <img
-            aria-label={"winter icon"}
-            src={WeatherIconList.wind || "x"}
-            className="w-full h-1/2"
-          />
-          <p>{transformedData.windSpeed} km/h</p>
-        </WeatherStatsContainer>
-      </>
-    );
-  }, [transformedData]);
+    return <WeatherSectionContent weatherArray={transformedData} />;
+  }, [transformedData, geoLoading, fetchLoading]);
 
   return (
     <WeatherSectionContainer>
       <GeolocationButton
         onClick={getCurrentPosition}
-        loading={fetchLoading}
         aria-label="Geolocation for the weather"
         title="Geolocation for the weather"
       />

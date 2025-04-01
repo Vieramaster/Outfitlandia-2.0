@@ -40,7 +40,7 @@ export const MainSection = ({
               <div className="w-full h-1/2 bg-red-500 flex gap-4">
                 <ClothesContainer
                   style="belt"
-                  image={belt || ""}
+                  image={belt || "belt"}
                   altImage="belt"
                 />
                 <ChangeClothesButton onClick={onSearchOutfit}>
@@ -49,7 +49,7 @@ export const MainSection = ({
               </div>
               <ClothesContainer
                 style="shoes"
-                image={shoes || ""}
+                image={shoes || "shoes"}
                 altImage="shoes"
               />
             </div>
