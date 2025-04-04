@@ -1,147 +1,119 @@
 //HOOKS
-import { MouseEventHandler, useEffect, useState, useMemo } from "react";
+import { MouseEventHandler, use, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
-import { useOutfitCreator } from "./hooks/useOutfitCreator";
-
+import { OutfitCreator } from "./helpers/OutfitCreator";
+import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
+import { SearchFilter, colorFilter } from "./helpers/SearchFilter";
 //DATA
-import { DefaultImages } from "./data/ImageDefaultButtons";
-import { ClothesProps } from "./data/types";
-
+import { ClothesProps, GarmentKeyType } from "./data/types";
+import { appReducer, initialState } from "./hooks/AppReducer";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
+import GarmentFilterValidator from "./validators/GarmentFilterValidator";
 
 function App() {
-  const [imagesMainButtons, setImagesMainButtons] = useState(DefaultImages);
-  const [hideSection, setHideSection] = useState(false);
-  const [searchClothes, setSearchClothes] = useState<
-    "top" | "coat" | "pants" | undefined
-  >(undefined);
-  const [chosenClothes, setChosenClothes] = useState<ClothesProps[]>([]);
-  const [shownList, setshownList] = useState(0);
-
-  //RESET ALL STATES
-  const resetState = () => {
-    setImagesMainButtons(DefaultImages);
-    setHideSection(false);
-    setSearchClothes(undefined);
-    setChosenClothes([]);
-    setshownList(0);
-  };
-
-  //RESET USESATE ON SCREEN SIZE CHANGES
-  const handleResize = () => {
-    if (window.innerWidth > 1024) {
-      setHideSection(false);
-      setImagesMainButtons(DefaultImages);
-    }
-  };
-
-  const handleSearchCLothes: MouseEventHandler<HTMLButtonElement> = (event) => {
-    resetState();
-    const { id } = event.currentTarget;
-    setSearchClothes(id as "top" | "coat" | "pants");
-
-    if (window.innerWidth < 1024) {
-      setHideSection(true);
-    }
-    setshownList(1);
-  };
   //CLOTHES DATA
+  const [state, dispatch] = useReducer(appReducer, initialState);
   const { data: garmentsData } = useFetch<ClothesProps[]>("/garmentData.json");
+  const { isMobile } = useResponsiveLayout();
 
-  //FILTER THE SELECTED GARMENT
-  const garmentFilter = useMemo(() => {
-    return garmentsData?.filter(({ garment }) => garment === searchClothes);
-  }, [garmentsData, searchClothes]);
+  const handleSearchClothes: MouseEventHandler<HTMLButtonElement> = useCallback(
+    ({ currentTarget }) => {
+      const selectedClothes = currentTarget.id as GarmentKeyType;
 
-  const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
-    const { id } = event.currentTarget;
+      //FILTER GARMENT
+      const garmentFilter = SearchFilter(
+        garmentsData,
+        "garment",
+        selectedClothes
+      );
 
-    //FILTER UNIQUE GARMENT
-    const objectFilter = garmentFilter?.filter(
-      (garment) => garment.id === Number(id)
-    );
+      if (!GarmentFilterValidator(garmentFilter)) return undefined;
 
-    if (objectFilter?.length) {
-      setChosenClothes(objectFilter);
-      setshownList(2);
-    }
-  };
+      dispatch({
+        type: "SELECT_GARMENT",
+        garment: selectedClothes,
+        chosenClothes: garmentFilter,
+      });
+    },
+    [garmentsData, dispatch]
+  );
 
-  const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = (event) => {
-    const { id } = event.currentTarget;
+  const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
+    ({ currentTarget }) => {
+      const selectedGarment = Number(currentTarget.id);
 
-    const colorFilter = chosenClothes?.[0]?.colors?.find(
-      (color) => color.colorName === id
-    );
-    const selectedGarment = chosenClothes?.[0]?.garment as
-      | "top"
-      | "coat"
-      | "pants";
+      //FILTER UNIQUE GARMENT
+      const objectFilter = SearchFilter(
+        state.chosenClothes,
+        "id",
+        selectedGarment
+      );
+      if (!GarmentFilterValidator(objectFilter)) return undefined;
 
-    if (!selectedGarment || !colorFilter) return;
+      dispatch({
+        type: "SELECT_CLOTHING_ITEM",
+        chosenClothes: objectFilter,
+      });
+    },
+    [dispatch, state.chosenClothes]
+  );
 
-    //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
-    setChosenClothes((prevState) =>
-      prevState.length > 0 && prevState[0]
-        ? [{ ...prevState[0], colors: [colorFilter] }]
-        : []
-    );
+  const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
+    ({ currentTarget }) => {
+      const colorNameID = currentTarget.id;
 
-    setshownList(0);
-    setHideSection(false);
+      const filteredColors = colorFilter(state.chosenClothes, colorNameID);
 
-    //ADD COLOR IMAGE TO INVENTORY
-    setImagesMainButtons((prevState) =>
-      prevState.map((item) => ({
+      //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
+      const uniqueColor: ClothesProps[] = state.chosenClothes!.map((item) => ({
         ...item,
-        [selectedGarment]: colorFilter.imageColor,
-      }))
-    );
-  };
+        colors: filteredColors ?? [],
+      }));
 
-  const outfitImages = useOutfitCreator(garmentsData, chosenClothes);
+      const colorImage = uniqueColor[0]?.colors[0]?.imageColor || undefined;
 
+      dispatch({
+        type: "SELECT_COLOR",
+        chosenClothes: uniqueColor,
+        images: {
+          ...state.images,
+          [state.selectedGarment as GarmentKeyType]: colorImage,
+        },
+      });
+    },
+    [dispatch, state.chosenClothes, state.selectedGarment, state.images]
+  );
 
-
-  const handleSearchOutfit = () => {
-    if (Array.isArray(outfitImages) && outfitImages.length > 0) {
-      setImagesMainButtons(outfitImages);
-    }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isHideSection = hideSection ? "block" : "hidden";
-
+  const handleSearchOutfit = useCallback(()=>{
+    const outfit = OutfitCreator(state.chosenClothes, state.images);
+  }, [])
   return (
     <>
       <Header />
       <main className="relative w-full h-[calc(100vh-4rem)] min-h-[35rem] md:min-h-[45rem] flex flex-col lg:flex-row">
         <MainSection
-          images={imagesMainButtons}
-          onSearchCLothes={handleSearchCLothes}
+          images={state.images}
+          onSearchCLothes={handleSearchClothes}
           onSearchOutfit={handleSearchOutfit}
         />
         <section
-          className={`${isHideSection} absolute w-full h-[calc(100vh-4rem)] bg-rose-200 grid place-content-center place-items-center lg:block lg:relative lg:w-1/2 lg:order-3 2xl:w-2/3`}
+          className={`${
+            state.isMobileMenuHidden ? "block" : "hidden"
+          } absolute w-full h-[calc(100vh-4rem)] bg-rose-200 grid place-content-center place-items-center lg:block lg:relative lg:w-1/2 lg:order-3 2xl:w-2/3`}
         >
           <GarmentList
-            isShown={shownList === 1}
-            arrayClothes={garmentFilter}
+            isShown={state.activeView === "garments"}
+            arrayClothes={state.chosenClothes}
             onGarmentSubmit={handleGarmentSubmit}
           />
           <ColorList
-            isShown={shownList === 2}
-            arrayColors={chosenClothes}
+            isShown={state.activeView === "colors"}
+            arrayColors={state.chosenClothes}
             onColorsSubmit={handleColorsSubmit}
           />
         </section>

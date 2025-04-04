@@ -1,5 +1,4 @@
-import { ClothesProps, GarmentType } from "../data/types";
-
+import { ClothesProps } from "../data/types";
 const validateKeys = (array: unknown[]) =>
   array.every(
     (item) =>
@@ -9,7 +8,7 @@ const validateKeys = (array: unknown[]) =>
       typeof item.garment === "string"
   );
 
-const isValidateArray = (
+const GarmentFilterValidator = (
   validateArray: unknown
 ): validateArray is ClothesProps[] => {
   if (
@@ -22,9 +21,4 @@ const isValidateArray = (
 
   return true;
 };
-
-export const garmentFilter = (array: unknown, clothes: GarmentType) => {
-  if (!isValidateArray(array)) return undefined;
-
-  return array.filter(({ garment }) => garment === clothes);
-};
+export default GarmentFilterValidator;

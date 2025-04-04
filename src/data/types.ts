@@ -36,15 +36,7 @@ export interface CombineColorsProps {
   combineShoes: string[];
 }
 
-//ARRAY MAIN BUTTONS
-export interface MainButtonsProps {
-  top: string;
-  coat: string;
-  pants: string;
-  belt: string;
-  shoes: string;
-}
-
+//WEATHER API DATA
 export interface WeatherDataProps {
   base: string;
   clouds: { all: number };
@@ -97,6 +89,7 @@ export interface WeatherWindDataProps {
 }
 
 import { WeatherIconKey } from "./WeatherIconList";
+//WEATHER ICONS
 export interface TransformedWeatherDataProps {
   temperature: number;
   icon: WeatherIconKey;

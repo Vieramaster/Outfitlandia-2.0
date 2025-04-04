@@ -1,11 +1,10 @@
 import { ClothesButton } from "../buttons/ClothesButton";
 import { ChangeClothesButton } from "../buttons/ChangeClothesButton";
-import { MainButtonsProps } from "../../data/types";
+import { DefaultImages } from "../../data/ImageDefaultButtons";
 import { ClothesContainer } from "../containers/ClothesContainer";
 
-
 interface MainSectionProps {
-  images: MainButtonsProps[];
+  images: typeof DefaultImages;
   onSearchCLothes: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onSearchOutfit: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -15,7 +14,7 @@ export const MainSection = ({
   onSearchCLothes,
   onSearchOutfit,
 }: MainSectionProps) => {
-  const { top, coat, pants, belt, shoes } = images[0] || {};
+  const { top, coat, pants, belt, shoes } = images;
 
   const imagesIndex = [top, coat, pants];
   const CATEGORIES = ["top", "coat", "pants"];

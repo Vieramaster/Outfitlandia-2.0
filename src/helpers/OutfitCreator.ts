@@ -5,9 +5,9 @@ import {
   StyleType,
   ListStructureType,
   ClothesListObject,
-  MainButtonsProps,
 } from "../data/types";
-import { useFetch } from "./useFetch";
+import { DefaultImages } from "../data/ImageDefaultButtons";
+import { useFetch } from "../hooks/useFetch";
 
 type GarmentKeyType = "top" | "coat" | "pants";
 
@@ -20,7 +20,7 @@ const ERROR_MESSAGES = {
   MISSING_COLORNAME: "colorName is not in the colors array",
 };
 
-export const useOutfitCreator = (
+export const OutfitCreator = (
   clothesData: ClothesProps[] | undefined,
   selectedGarment: ClothesProps[] | undefined
 ) => {
@@ -84,7 +84,7 @@ const combination = (
   clothes: ClothesProps[],
   key: GarmentKeyType,
   mainGarment: ClothesProps
-): MainButtonsProps[] | undefined => {
+): typeof DefaultImages | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     const randomColor = getRandomElement(arrayColors);
     if (!randomColor) continue;
@@ -304,7 +304,7 @@ const beltWithMatchingColor = (
   return filter as ClothesProps[];
 };
 
-const arrayImages = (array: ListStructureType[]): MainButtonsProps[] =>
+const arrayImages = (array: ListStructureType[]): ListStructureType =>
   array.map((item) => ({
     top: item?.top?.colors?.[0]?.imageColor || "ruta_default_top.webp",
     coat: item?.coat?.colors?.[0]?.imageColor || "ruta_default_coat.webp",

@@ -1,4 +1,3 @@
-
 export const WeatherIconList = {
   "01d": "images/icons/01d.svg",
   "01n": "images/icons/01n.svg",
