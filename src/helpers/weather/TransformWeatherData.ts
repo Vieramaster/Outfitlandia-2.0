@@ -1,5 +1,5 @@
-import { TransformedWeatherDataProps } from "../data/types";
-import WeatherDataValidator from "../validators/WeatherDataValidator";
+import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
+import WeatherDataValidator from "../../data/validators/WeatherDataValidator";
 
 const DEFAULT_ICON = "01d";
 const DEFAULT_DESCRIPTION = "Clear sky";

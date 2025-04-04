@@ -1,6 +1,6 @@
 import { ClothesButton } from "../buttons/ClothesButton";
 import { ChangeClothesButton } from "../buttons/ChangeClothesButton";
-import { DefaultImages } from "../../data/ImageDefaultButtons";
+import { DefaultImages } from "../../data/listObjects/ImageDefaultButtons";
 import { ClothesContainer } from "../containers/ClothesContainer";
 
 interface MainSectionProps {

@@ -1,5 +1,5 @@
-import { ClothesProps, ColorClothesProps } from "../data/types";
-import GarmentFilterValidator from "../validators/GarmentFilterValidator";
+import { ClothesProps, ColorClothesProps } from "../../data/types/Clothestypes";
+import GarmentFilterValidator from "../../data/validators/GarmentFilterValidator";
 
 export const SearchFilter = <K extends keyof ClothesProps>(
   array: ClothesProps[] | undefined,

@@ -1,11 +1,15 @@
 //HOOKS
-import { MouseEventHandler, use, useCallback, useReducer } from "react";
+import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
-import { OutfitCreator } from "./helpers/OutfitCreator";
+import { OutfitCreator } from "./helpers/clothes/OutfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
-import { SearchFilter, colorFilter } from "./helpers/SearchFilter";
+import { SearchFilter, colorFilter } from "./helpers/clothes/SearchFilter";
 //DATA
-import { ClothesProps, GarmentKeyType } from "./data/types";
+import {
+  ClothesProps,
+  GarmentKeyType,
+  CombineColorsProps,
+} from "./data/types/Clothestypes";
 import { appReducer, initialState } from "./hooks/AppReducer";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
@@ -13,12 +17,16 @@ import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import GarmentFilterValidator from "./validators/GarmentFilterValidator";
+import GarmentFilterValidator from "./data/validators/GarmentFilterValidator";
 
 function App() {
   //CLOTHES DATA
   const [state, dispatch] = useReducer(appReducer, initialState);
   const { data: garmentsData } = useFetch<ClothesProps[]>("/garmentData.json");
+  const { data: fetchColorsData } = useFetch<CombineColorsProps[]>(
+    "/combineColors.json"
+  );
+
   const { isMobile } = useResponsiveLayout();
 
   const handleSearchClothes: MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -89,9 +97,14 @@ function App() {
     [dispatch, state.chosenClothes, state.selectedGarment, state.images]
   );
 
-  const handleSearchOutfit = useCallback(()=>{
-    const outfit = OutfitCreator(state.chosenClothes, state.images);
-  }, [])
+  const handleSearchOutfit = useCallback(() => {
+    const outfit = OutfitCreator(
+      garmentsData,
+      state.chosenClothes,
+      fetchColorsData
+    );
+    console.log(outfit);
+  }, [garmentsData, state.chosenClothes]);
   return (
     <>
       <Header />

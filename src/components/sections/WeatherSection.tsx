@@ -1,6 +1,6 @@
 //UTILITIES
-import { TransformWeatherData } from "../../helpers/TransformWeatherData";
-import { WeatherDataProps } from "../../data/types";
+import { TransformWeatherData } from "../../helpers/weather/TransformWeatherData";
+import { WeatherDataProps } from "../../data/types/WeatherTypes";
 //HOOKS
 import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";

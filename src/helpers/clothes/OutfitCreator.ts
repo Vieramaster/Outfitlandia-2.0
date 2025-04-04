@@ -1,3 +1,4 @@
+//TYPES
 import {
   ClothesProps,
   CombineColorsProps,
@@ -5,9 +6,11 @@ import {
   StyleType,
   ListStructureType,
   ClothesListObject,
-} from "../data/types";
-import { DefaultImages } from "../data/ImageDefaultButtons";
-import { useFetch } from "../hooks/useFetch";
+  MainButtonsProps,
+} from "../../data/types/Clothestypes";
+
+//FUNCTIONS
+
 
 type GarmentKeyType = "top" | "coat" | "pants";
 
@@ -22,18 +25,15 @@ const ERROR_MESSAGES = {
 
 export const OutfitCreator = (
   clothesData: ClothesProps[] | undefined,
-  selectedGarment: ClothesProps[] | undefined
+  selectedGarment: ClothesProps[] | undefined,
+  ColorCombination: CombineColorsProps[] | undefined
 ) => {
-  const { data: fetchColorsData } = useFetch<CombineColorsProps[]>(
-    "/combineColors.json"
-  );
-
   if (!clothesData || !selectedGarment || !selectedGarment[0]) {
     console.error(ERROR_MESSAGES.MISSING_DATA);
     return [];
   }
 
-  if (!fetchColorsData || fetchColorsData.length === 0) {
+  if (!ColorCombination || ColorCombination.length === 0) {
     console.error(ERROR_MESSAGES.NO_COLOR_DATA);
     return [];
   }
@@ -65,7 +65,7 @@ export const OutfitCreator = (
   const filteredColors = filterColors(
     garmentKey,
     MAIN_COLORS[0].colorName,
-    fetchColorsData
+    ColorCombination
   );
 
   const returnImages = combination(
@@ -84,7 +84,7 @@ const combination = (
   clothes: ClothesProps[],
   key: GarmentKeyType,
   mainGarment: ClothesProps
-): typeof DefaultImages | undefined => {
+): MainButtonsProps[] | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     const randomColor = getRandomElement(arrayColors);
     if (!randomColor) continue;
@@ -191,7 +191,7 @@ const filterStyleAndWheater = (
   );
 
 //random element
-const getRandomElement = <T,>(array: T[]): T | undefined => {
+const getRandomElement = <T>(array: T[]): T | undefined => {
   if (array.length === 0) return;
   return array[Math.floor(Math.random() * array.length)];
 };
@@ -304,7 +304,7 @@ const beltWithMatchingColor = (
   return filter as ClothesProps[];
 };
 
-const arrayImages = (array: ListStructureType[]): ListStructureType =>
+const arrayImages = (array: ListStructureType[]): MainButtonsProps[] =>
   array.map((item) => ({
     top: item?.top?.colors?.[0]?.imageColor || "ruta_default_top.webp",
     coat: item?.coat?.colors?.[0]?.imageColor || "ruta_default_coat.webp",

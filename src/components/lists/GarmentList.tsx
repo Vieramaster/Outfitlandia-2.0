@@ -1,5 +1,5 @@
 import { ClothesButton } from "../buttons/ClothesButton";
-import { ClothesProps } from "../../data/types";
+import { ClothesProps } from "../../data/types/Clothestypes";
 
 interface Section {
   isShown: boolean;

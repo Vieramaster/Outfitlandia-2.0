@@ -1,6 +1,6 @@
 import { WeatherStatsContainer } from "../../containers/WeatherStatsContainer";
-import { WeatherIconList } from "../../../data/WeatherIconList";
-import { TransformedWeatherDataProps } from "../../../data/types";
+import { WeatherIconList } from "../../../data/listObjects/WeatherIconList";
+import { TransformedWeatherDataProps } from "../../../data/types/Clothestypes";
 
 interface WeatherSectionContentPros {
   weatherArray: TransformedWeatherDataProps;
