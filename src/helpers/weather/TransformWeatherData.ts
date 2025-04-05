@@ -1,6 +1,13 @@
 import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
 import WeatherDataValidator from "../../data/validators/WeatherDataValidator";
 
+/**
+ * The weather fetch is used to validate the data and then return an object with the data that is required.
+ *
+ * @param data - Fetched weather data from the API.
+ * @returns An object containing the transformed weather data, including temperature, icon, wind speed, and description.
+ */
+
 const DEFAULT_ICON = "01d";
 const DEFAULT_DESCRIPTION = "Clear sky";
 

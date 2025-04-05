@@ -10,7 +10,7 @@ import {
 } from "../../data/types/Clothestypes";
 
 //FUNCTIONS
-
+import SearchFilter from "./SearchFilter";
 
 type GarmentKeyType = "top" | "coat" | "pants";
 
@@ -47,7 +47,12 @@ export const OutfitCreator = (
   } = selectedGarment[0];
 
   // the clothes that are not chosen are filtered
-  const filteredClothes = filterClothes(clothesData, MAIN_GARMENT, true);
+  const filteredClothes = SearchFilter(
+    clothesData,
+    "garment",
+    MAIN_GARMENT,
+    true
+  );
 
   // Matches are found for style and weather and the rest is filtered out.
   const clothesClassFiltering = filterStyleAndWheater(
@@ -92,7 +97,8 @@ const combination = (
     const { combineClothes, combineShoes } = randomColor;
     const { [key]: removed, ...newCombineClothes } = combineClothes;
 
-    const shoesFiltered = filterClothes(clothes, "shoes", false);
+    const shoesFiltered = SearchFilter(clothes, "garment", "shoes", false);
+
     // Se filtran las zapatillas y se genera una variante para cada color
     const shoesArray = flatMapObjectShoe(shoesFiltered, combineShoes);
     if (!shoesArray || shoesArray.length === 0) continue;
@@ -132,7 +138,8 @@ const combination = (
     const colorNameShoe = colorsShoe[0].colorName;
 
     // Se filtran los cinturones según estilo y clima
-    const chosenBelt = filterClothes(clothes, "belt", false);
+    const chosenBelt = SearchFilter(clothes, "garment", "belt", false);
+
     const beltFilter = filterStyleAndWheater(
       chosenBelt,
       styleShoe,
@@ -167,16 +174,6 @@ const combination = (
 };
 
 //FUNCTIONS
-
-//filter garment
-const filterClothes = (
-  fetch: ClothesProps[],
-  selectedGarment: string,
-  excludes: boolean
-): ClothesProps[] =>
-  fetch.filter(({ garment }) =>
-    excludes ? garment !== selectedGarment : garment === selectedGarment
-  );
 
 //filter style and weather
 const filterStyleAndWheater = (

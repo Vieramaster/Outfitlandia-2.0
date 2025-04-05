@@ -3,7 +3,9 @@ import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
 import { OutfitCreator } from "./helpers/clothes/OutfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
-import { SearchFilter, colorFilter } from "./helpers/clothes/SearchFilter";
+//FUNCTONS
+import SearchFilter from "./helpers/clothes/SearchFilter";
+import ColorFilter from "./helpers/clothes/ColorFilter";
 //DATA
 import {
   ClothesProps,
@@ -75,7 +77,7 @@ function App() {
     ({ currentTarget }) => {
       const colorNameID = currentTarget.id;
 
-      const filteredColors = colorFilter(state.chosenClothes, colorNameID);
+      const filteredColors = ColorFilter(state.chosenClothes, colorNameID);
 
       //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
       const uniqueColor: ClothesProps[] = state.chosenClothes!.map((item) => ({

@@ -1,25 +1,30 @@
-import { ClothesProps, ColorClothesProps } from "../../data/types/Clothestypes";
+import { ClothesProps } from "../../data/types/Clothestypes";
 import GarmentFilterValidator from "../../data/validators/GarmentFilterValidator";
 
-export const SearchFilter = <K extends keyof ClothesProps>(
+/**
+ * Filters an array of ClothesProps by a given key and value.
+ *
+ * @param array - The array  to filter.
+ * @param key - The property of ClothesProps to compare.
+ * @param value - The value to match against the selected key.
+ * @param excludes - If true, includes items that match the value; if false, excludes them. Default is false.
+ * @returns A filtered array of ClothesProps or undefined if input is invalid.
+ */
+
+const SearchFilter = <K extends keyof ClothesProps>(
   array: ClothesProps[] | undefined,
   key: K,
-  value: ClothesProps[K]
-): ClothesProps[] | undefined => {
-  if (!GarmentFilterValidator(array)) return undefined;
+  value: ClothesProps[K],
+  excludes: boolean = false
+): ClothesProps[] | [] => {
+  if (!GarmentFilterValidator(array)) {
+    console.error("SearchFilter: array is undefined or invalid.");
+    return [];
+  }
 
-  return array.filter((item) => item[key] === value);
-};
-
-export const colorFilter = (
-  array: ClothesProps[] | undefined,
-  value: ColorClothesProps["colorName"]
-): ColorClothesProps[] | undefined => {
-  if (!array || !GarmentFilterValidator(array)) return undefined;
-
-  const filteredColors = array.flatMap(({ colors }) =>
-    colors.filter(({ colorName }) => colorName === value)
+  return array.filter((item) =>
+    excludes ? item[key] !== value : item[key] === value
   );
-
-  return filteredColors;
 };
+
+export default SearchFilter;
