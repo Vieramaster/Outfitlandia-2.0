@@ -11,7 +11,8 @@ import {
 
 //FUNCTIONS
 import SearchFilter from "./SearchFilter";
-
+import GetRandomElement from "../../components/utils/GetRandomElement";
+import FilterStyleAndWheater from "./FilterStyleAndWeather";
 type GarmentKeyType = "top" | "coat" | "pants";
 
 const MAX_ATTEMPTS = 400;
@@ -55,7 +56,7 @@ export const OutfitCreator = (
   );
 
   // Matches are found for style and weather and the rest is filtered out.
-  const clothesClassFiltering = filterStyleAndWheater(
+  const clothesClassFiltering = FilterStyleAndWheater(
     filteredClothes,
     MAIN_STYLE,
     MAIN_WEATHER
@@ -91,7 +92,7 @@ const combination = (
   mainGarment: ClothesProps
 ): MainButtonsProps[] | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-    const randomColor = getRandomElement(arrayColors);
+    const randomColor = GetRandomElement(arrayColors);
     if (!randomColor) continue;
 
     const { combineClothes, combineShoes } = randomColor;
@@ -140,7 +141,7 @@ const combination = (
     // Se filtran los cinturones según estilo y clima
     const chosenBelt = SearchFilter(clothes, "garment", "belt", false);
 
-    const beltFilter = filterStyleAndWheater(
+    const beltFilter = FilterStyleAndWheater(
       chosenBelt,
       styleShoe,
       weatherShoe
@@ -157,7 +158,7 @@ const combination = (
     );
     if (filteredBelts.length === 0) continue;
 
-    const uniqueBelt = getRandomElement(filteredBelts);
+    const uniqueBelt = GetRandomElement(filteredBelts);
 
     const finishClothes: ListStructureType[] = [
       {
@@ -173,25 +174,7 @@ const combination = (
   return undefined;
 };
 
-//FUNCTIONS
 
-//filter style and weather
-const filterStyleAndWheater = (
-  arrayClothes: ClothesProps[],
-  styleSearched: StyleType[],
-  weatherSearched: WeatherType[]
-): ClothesProps[] =>
-  arrayClothes.filter(
-    ({ style, weather }) =>
-      style.some((styleItem) => styleSearched.includes(styleItem)) &&
-      weather.some((weatherItem) => weatherSearched.includes(weatherItem))
-  );
-
-//random element
-const getRandomElement = <T>(array: T[]): T | undefined => {
-  if (array.length === 0) return;
-  return array[Math.floor(Math.random() * array.length)];
-};
 
 const filterColors = (
   key: GarmentKeyType,
@@ -253,7 +236,7 @@ const chosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
   for (const combineItem of arrayClothes) {
     for (const [garment, items] of Object.entries(combineItem)) {
       if (Array.isArray(items) && items.length > 0) {
-        const randomItem = getRandomElement(items);
+        const randomItem = GetRandomElement(items);
         if (randomItem) {
           result[garment] = randomItem;
         }
