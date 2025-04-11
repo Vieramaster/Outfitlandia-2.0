@@ -7,11 +7,8 @@ import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
 import SearchFilter from "./helpers/clothes/SearchFilter";
 import ColorFilter from "./helpers/clothes/ColorFilter";
 //DATA
-import {
-  ClothesProps,
-  GarmentKeyType,
-  CombineColorsProps,
-} from "./data/types/Clothestypes";
+import { ClothesProps, GarmentKeyType } from "./data/types/ClothesTypes";
+import { CombineColorsProps } from "./data/types/ColorCombineTypes";
 import { appReducer, initialState } from "./hooks/AppReducer";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
@@ -19,7 +16,7 @@ import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import GarmentFilterValidator from "./data/validators/GarmentFilterValidator";
+import GarmentFilterValidator from "./helpers/validators/GarmentFilterValidator";
 
 function App() {
   //CLOTHES DATA

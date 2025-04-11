@@ -1,4 +1,4 @@
-import { ClothesProps } from "../types/Clothestypes";
+import { ClothesProps } from "../../data/types/ClothesTypes";
 const validateKeys = (array: unknown[]) =>
   array.every(
     (item) =>

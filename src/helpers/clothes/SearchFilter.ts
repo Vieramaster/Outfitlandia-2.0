@@ -1,5 +1,5 @@
-import { ClothesProps } from "../../data/types/Clothestypes";
-import GarmentFilterValidator from "../../data/validators/GarmentFilterValidator";
+import { ClothesProps } from "../../data/types/ClothesTypes";
+import GarmentFilterValidator from "../validators/GarmentFilterValidator";
 
 /**
  * Filters an array of ClothesProps by a given key and value.

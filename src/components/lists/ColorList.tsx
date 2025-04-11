@@ -1,4 +1,4 @@
-import { ClothesProps } from "../../data/types/Clothestypes";
+import { ClothesProps } from "../../data/types/ClothesTypes";
 import { ColorButton } from "../buttons/ColorButton";
 
 interface Section {

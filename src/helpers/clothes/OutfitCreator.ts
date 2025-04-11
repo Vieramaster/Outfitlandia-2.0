@@ -1,18 +1,25 @@
 //TYPES
 import {
   ClothesProps,
-  CombineColorsProps,
-  WeatherType,
-  StyleType,
   ListStructureType,
   ClothesListObject,
   MainButtonsProps,
-} from "../../data/types/Clothestypes";
+} from "../../data/types/ClothesTypes";
+
+import { CombineColorsProps } from "../../data/types/ColorCombineTypes";
 
 //FUNCTIONS
 import SearchFilter from "./SearchFilter";
 import GetRandomElement from "../../components/utils/GetRandomElement";
 import FilterStyleAndWheater from "./FilterStyleAndWeather";
+import FilterColors from "./FilterColors";
+import FlatMapObjectShoe from "./FlatMapObjectShoe";
+import SearchMatchColors from "./SearchMatchColors";
+import ChosenObjectRandomly from "./ChosenObjectRandomly";
+import CheckCommonAttributes from "./CheckCommonAttributes";
+import BeltWithMatchingColor from "./BeltWithMatchingColor";
+import CreateArrayImages from "./CreateArrayImages";
+
 type GarmentKeyType = "top" | "coat" | "pants";
 
 const MAX_ATTEMPTS = 400;
@@ -67,11 +74,12 @@ export const OutfitCreator = (
     return [];
   }
   const garmentKey = MAIN_GARMENT as GarmentKeyType;
+
   // the colors are filtered based on the color of the chosen clothing
-  const filteredColors = filterColors(
+  const filteredColors = FilterColors(
+    ColorCombination,
     garmentKey,
-    MAIN_COLORS[0].colorName,
-    ColorCombination
+    MAIN_COLORS[0].colorName
   );
 
   const returnImages = combination(
@@ -95,17 +103,17 @@ const combination = (
     const randomColor = GetRandomElement(arrayColors);
     if (!randomColor) continue;
 
-    const { combineClothes, combineShoes } = randomColor;
+    const { clothes: combineClothes, shoes: combineShoes } = randomColor;
     const { [key]: removed, ...newCombineClothes } = combineClothes;
 
     const shoesFiltered = SearchFilter(clothes, "garment", "shoes", false);
 
     // Se filtran las zapatillas y se genera una variante para cada color
-    const shoesArray = flatMapObjectShoe(shoesFiltered, combineShoes);
+    const shoesArray = FlatMapObjectShoe(shoesFiltered, combineShoes);
     if (!shoesArray || shoesArray.length === 0) continue;
 
     // Se generan las coincidencias de colores para cada prenda según la combinación
-    const results = searchMatchColors(newCombineClothes, clothes);
+    const results = SearchMatchColors(newCombineClothes, clothes);
     if (Object.values(results).some((item) => item.length === 0)) continue;
 
     const updatedCombineClothes: ClothesListObject[] = [
@@ -116,7 +124,7 @@ const combination = (
     ];
 
     // Se elige aleatoriamente un elemento de cada grupo
-    const estructureObject = chosenObjectRandomly(updatedCombineClothes);
+    const estructureObject = ChosenObjectRandomly(updatedCombineClothes);
     const addMainGarment = {
       ...estructureObject,
       [mainGarment.garment]: mainGarment,
@@ -125,7 +133,7 @@ const combination = (
     if (!addMainGarment || Object.keys(addMainGarment).length < 3) continue;
 
     // Se verifica que todas las prendas compartan al menos un atributo común de estilo y clima
-    if (!checkCommonAttributes(addMainGarment)) continue;
+    if (!CheckCommonAttributes(addMainGarment)) continue;
 
     const finalShoes = addMainGarment.shoes;
     if (!finalShoes) continue;
@@ -151,7 +159,7 @@ const combination = (
     const pantsNameOutfit = addMainGarment.pants.name;
 
     // Se busca un cinturón que tenga el color adecuado o el color "black" por defecto
-    const filteredBelts = beltWithMatchingColor(
+    const filteredBelts = BeltWithMatchingColor(
       beltFilter,
       pantsNameOutfit,
       colorNameShoe
@@ -167,128 +175,9 @@ const combination = (
       },
     ];
 
-    const finalArray = arrayImages(finishClothes);
+    const finalArray = CreateArrayImages(finishClothes);
     return finalArray;
   }
   console.error(ERROR_MESSAGES.MAX_ATTEMPTS_REACHED);
   return undefined;
 };
-
-
-
-const filterColors = (
-  key: GarmentKeyType,
-  name: string,
-  fetch: CombineColorsProps[]
-): CombineColorsProps[] =>
-  fetch?.filter(({ combineClothes }) => {
-    return combineClothes[key] === name;
-  });
-
-const flatMapObjectShoe = (
-  array: ClothesProps[],
-  combineColor: string[]
-): ClothesProps[] =>
-  array.flatMap((product) => {
-    const result = product.colors
-      .filter((color) => combineColor.includes(color.colorName))
-      .map((color) => {
-        return {
-          ...product,
-          colors: [color],
-        };
-      });
-    return result as ClothesProps[];
-  });
-
-const searchMatchColors = (
-  objectColors: Record<string, string>,
-  arrayClothes: ClothesProps[]
-) =>
-  Object.entries(objectColors).reduce(
-    (acc, [garmentColor, designatedColor]) => {
-      const filteredItems = arrayClothes
-        .filter(
-          ({ garment, colors }) =>
-            garment === garmentColor &&
-            colors.some(
-              ({ colorName }) =>
-                colorName.toLowerCase() === designatedColor.toLowerCase()
-            )
-        )
-        .map((item) => ({
-          ...item,
-          colors: item.colors.filter(
-            (color) =>
-              color.colorName.toLowerCase() === designatedColor.toLowerCase()
-          ),
-        }));
-
-      acc[garmentColor] = filteredItems;
-      return acc;
-    },
-    {} as ClothesListObject
-  );
-
-//For each object one is chosen randomly
-const chosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
-  const result: ListStructureType = {};
-  for (const combineItem of arrayClothes) {
-    for (const [garment, items] of Object.entries(combineItem)) {
-      if (Array.isArray(items) && items.length > 0) {
-        const randomItem = GetRandomElement(items);
-        if (randomItem) {
-          result[garment] = randomItem;
-        }
-      }
-    }
-  }
-  return result;
-};
-
-export const checkCommonAttributes = (item: ListStructureType): boolean => {
-  const getIntersection = (arrays: string[][]): string[] =>
-    arrays.reduce((acc, curr) => acc.filter((value) => curr.includes(value)));
-
-  const styles: StyleType[][] = Object.values(item).map(
-    (garment) => garment.style
-  );
-  const weathers: WeatherType[][] = Object.values(item).map(
-    (garment) => garment.weather
-  );
-
-  const commonStyles = getIntersection(styles);
-  const commonWeathers = getIntersection(weathers);
-
-  return commonStyles.length > 0 && commonWeathers.length > 0;
-};
-
-const beltWithMatchingColor = (
-  array: ClothesProps[],
-  pantsName: string,
-  colorShoe: string
-) => {
-  const filter = array
-    .map((belt) => {
-      if (pantsName === "joggin" || pantsName === "bermuda joggin")
-        return { ...belt, colors: [""] };
-
-      const matchingColor =
-        belt.colors.find(({ colorName }) => colorName === colorShoe) ??
-        belt.colors.find(({ colorName }) => colorName === "black");
-
-      return matchingColor ? { ...belt, colors: [matchingColor] } : undefined;
-    })
-    .filter(Boolean);
-
-  return filter as ClothesProps[];
-};
-
-const arrayImages = (array: ListStructureType[]): MainButtonsProps[] =>
-  array.map((item) => ({
-    top: item?.top?.colors?.[0]?.imageColor || "ruta_default_top.webp",
-    coat: item?.coat?.colors?.[0]?.imageColor || "ruta_default_coat.webp",
-    belt: item?.belt?.colors?.[0]?.imageColor || "ruta_default_belt.webp",
-    shoes: item?.shoes?.colors?.[0]?.imageColor || "ruta_default_shoes.webp",
-    pants: item?.pants?.colors?.[0]?.imageColor || "ruta_default_pants.webp",
-  }));

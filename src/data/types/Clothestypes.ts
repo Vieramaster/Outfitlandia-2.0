@@ -11,6 +11,7 @@ export type ClothesListObject = Record<string, ClothesProps[]>;
 export type GarmentType = "top" | "coat" | "pants" | "shoes" | "belt";
 export type WeatherType = "today" | "mild" | "cold";
 export type StyleType = "basic" | "casual" | "elegant";
+
 export interface ClothesProps {
   id: number;
   garment: GarmentType;
@@ -21,20 +22,7 @@ export interface ClothesProps {
   colors: ColorClothesProps[];
 }
 
-//WEATHER DATA
-export interface WeatherProps {
-  water: string;
-}
-//COMBINE COLORS DATA
-export interface CombineColorsClothesProps {
-  top: string;
-  pants: string;
-  coat: string;
-}
-export interface CombineColorsProps {
-  combineClothes: CombineColorsClothesProps;
-  combineShoes: string[];
-}
+
 export interface MainButtonsProps {
   top: string;
   coat: string;

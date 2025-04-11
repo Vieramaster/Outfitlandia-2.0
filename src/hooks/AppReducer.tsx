@@ -1,4 +1,4 @@
-import { ClothesProps, GarmentKeyType } from "../data/types/Clothestypes";
+import { ClothesProps, GarmentKeyType } from "../data/types/ClothesTypes";
 import { DefaultImages } from "../data/listObjects/ImageDefaultButtons";
 
 type AppStateProps = {

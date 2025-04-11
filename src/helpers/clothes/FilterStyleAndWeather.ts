@@ -2,7 +2,7 @@ import {
   ClothesProps,
   StyleType,
   WeatherType,
-} from "../../data/types/Clothestypes";
+} from "../../data/types/ClothesTypes";
 
 /**
  *

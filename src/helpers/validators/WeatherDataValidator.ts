@@ -1,4 +1,4 @@
-import { WeatherDataProps } from "../types/WeatherTypes";
+import { WeatherDataProps } from "../../data/types/WeatherTypes";
 
 const WeatherDataValidator = (obj: unknown): obj is WeatherDataProps => {
   if (typeof obj !== "object" || obj === null) return false;

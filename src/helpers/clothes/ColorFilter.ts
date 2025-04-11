@@ -1,5 +1,5 @@
-import { ClothesProps, ColorClothesProps } from "../../data/types/Clothestypes";
-import GarmentFilterValidator from "../../data/validators/GarmentFilterValidator";
+import { ClothesProps, ColorClothesProps } from "../../data/types/ClothesTypes";
+import GarmentFilterValidator from "../validators/GarmentFilterValidator";
 
 /**
  * Filters the colors from a list of clothes based on a specific color name.
