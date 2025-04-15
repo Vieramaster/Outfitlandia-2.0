@@ -1,5 +1,5 @@
 import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
-import WeatherDataValidator from "../../data/validators/WeatherDataValidator";
+import WeatherDataValidator from "../validators/WeatherDataValidator";
 
 /**
  * The weather fetch is used to validate the data and then return an object with the data that is required.

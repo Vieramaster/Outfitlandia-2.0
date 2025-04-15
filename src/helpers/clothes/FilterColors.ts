@@ -16,8 +16,8 @@ const FilterColors = (
 ): CombineColorsProps[] => {
   if (!array) return [];
 
-  return array.filter(({ combineClothes }) => {
-    return combineClothes[key] === name;
+  return array.filter(({ clothes }) => {
+    return clothes[key] === name;
   });
 };
 export default FilterColors;

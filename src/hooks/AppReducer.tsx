@@ -1,28 +1,5 @@
-import { ClothesProps, GarmentKeyType } from "../data/types/ClothesTypes";
+import { AppStateProps, ActionProps } from "../data/types/ReducerTypes";
 import { DefaultImages } from "../data/listObjects/ImageDefaultButtons";
-
-type AppStateProps = {
-  images: typeof DefaultImages;
-  selectedGarment?: GarmentKeyType;
-  chosenClothes: ClothesProps[] | undefined;
-  activeView: "main" | "garments" | "colors";
-  isMobileMenuHidden: boolean;
-};
-
-type ActionProps =
-  | { type: "RESET" }
-  | {
-      type: "SELECT_GARMENT";
-      garment: "top" | "coat" | "pants";
-      chosenClothes: ClothesProps[];
-    }
-  | { type: "SELECT_CLOTHING_ITEM"; chosenClothes: ClothesProps[] }
-  | {
-      type: "SELECT_COLOR";
-      chosenClothes: ClothesProps[];
-      images: typeof DefaultImages;
-    }
-  | { type: "GENERATE_OUTFIT"; images: typeof DefaultImages };
 
 export const initialState: AppStateProps = {
   images: DefaultImages,
