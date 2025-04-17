@@ -1,45 +1,49 @@
 import { ClothesProps } from "../../../data/types/ClothesTypes";
-import GenericArrayValidator from "../GenericArrayValidator";
+import {
+  isValidArray,
+  isValidObjects,
+} from "../GenericArrayAndObjectValidator";
+import {
+  isValidArrayColor,
+  isValidColorClothesObject,
+} from "./GarmentColorsValidator";
 
-/**
- * Verifica si un objeto tiene una propiedad (key) que es un array de strings.
- *
- * @param item - El objeto a validar.
- * @param key - La clave que se espera sea un array de strings.
- * @returns `true` si la clave existe y su valor es un array de strings, de lo contrario `false`.
- */
-const isValidStringArrayKey = (
-  item: unknown,
-  key: keyof Pick<ClothesProps, "style" | "weather">
-): boolean => {
-  if (typeof item !== "object" || item === null) return false;
 
-  const value = (item as ClothesProps)[key];
+
+const isValidClothesObject = (item: unknown): item is ClothesProps => {
+  if (!isValidObjects(item)) return false;
+
+  const obj = item as Record<string, unknown>;
+  const objKeys: (keyof ClothesProps)[] = [
+    "garment",
+    "id",
+    "name",
+    "image",
+    "style",
+    "weather",
+    "colors",
+  ];
+  const allObjKeys = objKeys.every((key) => key in obj);
+  if (!allObjKeys) return false;
+  const arrayObj = obj as Record<string, unknown>;
 
   return (
-    GenericArrayValidator(value) &&
-    value.every((val) => typeof val === "string")
+    typeof arrayObj.garment === "string" &&
+    typeof arrayObj.id === "string" &&
+    typeof arrayObj.name === "string" &&
+    typeof arrayObj.image === "string" &&
+    
+    
+    isValidArrayColor(arrayObj.colors) &&
+    isValidColorClothesObject(arrayObj.colors) &&
+    
   );
 };
 
-const ValidateObjectKeys = (array: unknown[]): boolean => {
-  if (!GenericArrayValidator(array)) return false;
-  return array.every(
-    (item) =>
-      typeof item === "object" &&
-      item !== null &&
-      "garment" in item &&
-      typeof item.garment === "string" &&
-      "id" in item &&
-      typeof item.id === "number" &&
-      "name" in item &&
-      typeof item.name === "string" &&
-      "image" in item &&
-      typeof item.image === "string" &&
-      "style" in item &&
-      isValidStringArrayKey(item, "style") &&
-      isValidStringArrayKey(item, "weather")
-  );
+const ValidateObjectKeys = (array: unknown[]): array is ClothesProps[] => {
+  if (!isValidArray(array)) return false;
+
+  return array.every(isValidClothesObject);
 };
 
 export default ValidateObjectKeys;
