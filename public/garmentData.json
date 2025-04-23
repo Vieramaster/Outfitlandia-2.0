@@ -3479,12 +3479,6 @@
         "imageColor": "images/image-json/shoes/shoesSportEmerald.webp"
       },
       {
-        "colorName": "darkGreen",
-        "hex": "#363d10",
-        "title": "verde oscuro",
-        "imageColor": "images/image-json/shoes/shoesSportdarkgreen.webp"
-      },
-      {
         "colorName": "army",
         "hex": "#5f6053",
         "title": "green army",

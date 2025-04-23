@@ -1,8 +1,7 @@
 import { ClothesProps } from "../../data/types/ClothesTypes";
-import IsValidArray from "../genericValidators/IsValidArray";
+import IsValidArray from "../genericValidators/isNonEmptyArray";
 import IsValidClothesObject from "./IsValidClothesObject";
 
-// Verificamos un array de objetos ClothesProps
 const IsValidClothesArray = (
   clothesArray: unknown
 ): clothesArray is ClothesProps[] => {
@@ -11,4 +10,4 @@ const IsValidClothesArray = (
   return clothesArray.every(IsValidClothesObject);
 };
 
-export default IsValidArray
+export default IsValidClothesArray;

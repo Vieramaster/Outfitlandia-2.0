@@ -1,8 +1,11 @@
 //TYPES
 import { ColorClothesProps } from "../../data/types/ClothesTypes";
+import IsValidColorClothesValue from "./isValidColorClothesValue";
+
 //VALIDATORS
 import IsValidKeys from "../genericValidators/IsValidKeys";
-import IsValidObject from "../genericValidators/IsValidObject";
+import IsValidObject from "../genericValidators/IsObjectRecord";
+import IsValidRecord from "../genericValidators/IsValidRecord";
 
 const colorClothesObjectKeys = ["colorname", "hex", "title", "imagecolor"];
 
@@ -11,11 +14,13 @@ const IsValidColorClothesObject = (
 ): colorObject is ColorClothesProps => {
   if (!IsValidObject(colorObject)) return false;
 
-  const obj = colorObject as Record<string, unknown>;
+  if (!IsValidRecord(colorObject)) return false;
 
-  if (!IsValidKeys(colorClothesObjectKeys, obj)) return false;
+  if (!IsValidKeys(colorClothesObjectKeys, colorObject)) return false;
 
-  return colorClothesObjectKeys.every((key) => typeof obj[key] === "string");
+  return colorClothesObjectKeys.every((key) =>
+    IsValidColorClothesValue(key, colorObject[key])
+  );
 };
 
 export default IsValidColorClothesObject;

@@ -20,3 +20,4 @@ export const WeatherIconList = {
 } as const;
 
 export type WeatherIconKey = keyof typeof WeatherIconList;
+

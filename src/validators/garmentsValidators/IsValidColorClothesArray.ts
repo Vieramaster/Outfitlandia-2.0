@@ -2,8 +2,7 @@
 import { ColorClothesProps } from "../../data/types/ClothesTypes";
 //VALIDATORS
 import IsValidColorClothesObject from "./IsValidColorClothesObject";
-import IsValidArray from "../genericValidators/IsValidArray";
-
+import IsValidArray from "../genericValidators/isNonEmptyArray";
 
 const IsValidColorClothesArray = (
   colorClothesArray: unknown

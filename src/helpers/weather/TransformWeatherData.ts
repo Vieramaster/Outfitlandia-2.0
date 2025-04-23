@@ -1,6 +1,9 @@
 import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
-import WeatherDataValidator from "../validators/WeatherDataValidator";
-
+import IsValidObject from "../../validators/genericValidators/IsObjectRecord";
+import IsValidWeatherObjects from "../../validators/weatherValidators/IsValidWeatherAPIResponse";
+import IsValidGeneralWeatherArray from "../../validators/weatherValidators/IsValidGeneralWeatherArray";
+import IsValidPropertyWeatherObject from "../../validators/weatherValidators/IsValidPropertyWeatherObject";
+import IsValidKeys from "../../validators/genericValidators/IsValidKeys";
 /**
  * The weather fetch is used to validate the data and then return an object with the data that is required.
  *
@@ -21,12 +24,31 @@ const DEFAULT_OBJECT: TransformedWeatherDataProps = {
 export const TransformWeatherData = (
   data: unknown
 ): TransformedWeatherDataProps => {
-  if (!WeatherDataValidator(data) || !data.weather[0]) return DEFAULT_OBJECT;
+  if (!IsValidObject(data)) return DEFAULT_OBJECT;
+  if (!IsValidWeatherObjects(data)) return DEFAULT_OBJECT;
 
-  return {
-    temperature: Math.round(data.main.temp),
-    icon: data.weather[0].icon,
-    windSpeed: Math.round(data.wind.speed * 3.6),
-    description: data.weather[0].description || DEFAULT_DESCRIPTION,
+  const { main, wind, weather } = data;
+
+  if (
+    !IsValidObject(main) ||
+    IsValidKeys(["temp"] as const, data) ||
+    !IsValidObject(wind) ||
+    IsValidKeys(["windspeed"] as const, data)
+  )
+    return DEFAULT_OBJECT;
+
+  if (!IsValidGeneralWeatherArray(weather) || !weather[0])
+    return DEFAULT_OBJECT;
+
+  const { icon, description } = weather[0];
+
+  /**
+   * return {
+    temperature: Math.round(temp) || DEFAULT_OBJECT.temperature,
+    icon: icon || DEFAULT_OBJECT.icon, yo 
+    windSpeed: Math.round(speed * 3.6) || DEFAULT_OBJECT.windSpeed,
+    description: description || DEFAULT_OBJECT.description,
   };
+   */
+  return DEFAULT_OBJECT;
 };

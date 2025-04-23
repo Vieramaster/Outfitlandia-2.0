@@ -1,4 +1,4 @@
-import IsValidArray from "../genericValidators/IsValidArray";
+import IsValidArray from "../genericValidators/isNonEmptyArray";
 
 type PrimitiveType = "string" | "number" | "boolean" | "object" | "function";
 
