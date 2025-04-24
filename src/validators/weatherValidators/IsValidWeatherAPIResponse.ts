@@ -1,30 +1,33 @@
-import IsObjectRecord from "../genericValidators/IsObjectRecord";
-import IsValidKeys from "../genericValidators/IsValidKeys";
-import IsValidWeatherObject from "./IsValidWeatherObject";
-import IsValidWeatherArray from "./IsValidWeatherArray";
-
-interface MainWeatherProps {
-  temp: number;
-}
-
-interface WindWeatherProps {
-  windspeed: number;
-}
-
-interface WeatherAPIResponse {
-  main: MainWeatherProps;
-  wind: WindWeatherProps;
+type WeatherAPIResponse = {
+  main: object;
+  wind: object;
   weather: unknown[];
-}
-
-const requiredWeatherKeys = ["main", "weather", "wind"] as const;
-
-const IsValidWeatherAPIResponse = (
-  objectData: unknown
-): objectData is WeatherAPIResponse => {
-  if (!IsObjectRecord(objectData)) return false;
-  
-
 };
 
-export default IsValidWeatherAPIResponse;
+// validamos me de un objeto con key
+const isObject = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+// bueno, este no salio XD
+const isValidKeys = <const Keys extends ReadonlyArray<string>>(
+  keys: Keys,
+  object: Readonly<Record<PropertyKey, unknown>>
+): object is Record<Keys[number], unknown> =>
+  keys.every((key) => key in object);
+
+const requiredWeatherKeys = ["main", "wind", "weather"] as const;
+const requiredWindKeys = ["windspeed"] as const;
+const requiredMainKeys = ["temp"] as const;
+
+const isValidAPIResponse = <T>(data: unknown, arrayKeys: string[]): data is T =>
+  isObject(data) && isValidKeys(arrayKeys, data);
+
+const mainApi = () => {};
+
+const lala = (api: unknown) => {
+  if (!<WeatherAPIResponse>isValidAPIResponse(api, requiredWeatherKeys)) return false;
+
+  const { main, wind } = api;
+
+  return true;
+};

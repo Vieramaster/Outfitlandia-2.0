@@ -1,9 +1,7 @@
-// Versión mejorada con type predicate y tipos genéricos
-const IsValidKeys = <K extends string>(
-  arrayKeys: readonly K[], // Usar "readonly" para preservar literales
+const isValidKeys = <key extends string>(
+  arrayKeys: readonly key[],
   obj: Record<string, unknown>
-): obj is Record<K, unknown> => {
-  // <- Type predicate clave
+): obj is Record<key, unknown> => {
   return arrayKeys.every((key) => key in obj);
 };
 
