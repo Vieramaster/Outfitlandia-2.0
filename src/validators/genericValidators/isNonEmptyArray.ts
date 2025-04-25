@@ -1,5 +1,2 @@
- const isNonEmptyArray = (array: unknown): array is unknown[] => {
-    return Array.isArray(array) && array.length > 0;
-  }
-  
-  export default isNonEmptyArray
+export const isNonEmptyArray = (array: unknown): array is unknown[] =>
+  Array.isArray(array) && array.length > 0;

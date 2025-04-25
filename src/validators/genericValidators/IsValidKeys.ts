@@ -1,8 +1,5 @@
-const isValidKeys = <key extends string>(
-  arrayKeys: readonly key[],
-  obj: Record<string, unknown>
-): obj is Record<key, unknown> => {
-  return arrayKeys.every((key) => key in obj);
-};
-
-export default IsValidKeys;
+export const isValidKeys = <const Keys extends ReadonlyArray<string>>(
+  keys: Keys,
+  object: Readonly<Record<string, unknown>>
+): object is Record<Keys[number], unknown> =>
+  keys.every((key) => key in object);

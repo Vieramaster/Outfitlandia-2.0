@@ -4,7 +4,7 @@ import IsValidColorClothesValue from "./isValidColorClothesValue";
 
 //VALIDATORS
 import IsValidKeys from "../genericValidators/IsValidKeys";
-import IsValidObject from "../genericValidators/IsObjectRecord";
+import IsValidObject from "../genericValidators/IsObject";
 import IsValidRecord from "../genericValidators/IsValidRecord";
 
 const colorClothesObjectKeys = ["colorname", "hex", "title", "imagecolor"];

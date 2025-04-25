@@ -1,6 +1,6 @@
 import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
-import IsValidObject from "../../validators/genericValidators/IsObjectRecord";
-import IsValidWeatherObjects from "../../validators/weatherValidators/IsValidWeatherAPIResponse";
+import IsValidObject from "../../validators/genericValidators/IsObject";
+import IsValidWeatherObjects from "../../validators/weatherValidators/isValidWeatherApiResponse";
 import IsValidGeneralWeatherArray from "../../validators/weatherValidators/IsValidGeneralWeatherArray";
 import IsValidPropertyWeatherObject from "../../validators/weatherValidators/IsValidPropertyWeatherObject";
 import IsValidKeys from "../../validators/genericValidators/IsValidKeys";

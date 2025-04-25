@@ -2,7 +2,7 @@
 import { ClothesProps } from "../../data/types/ClothesTypes";
 //VALIDATORS
 import IsValidClothesObjectArray from "./IsValidClothesObjectArray";
-import IsValidObject from "../genericValidators/IsObjectRecord";
+import IsValidObject from "../genericValidators/IsObject";
 import IsValidKeys from "../genericValidators/IsValidKeys";
 
 const requiredClothesKeys = [
