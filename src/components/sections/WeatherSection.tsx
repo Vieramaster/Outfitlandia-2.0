@@ -1,6 +1,6 @@
 //UTILITIES
 import { TransformWeatherData } from "../../helpers/weather/TransformWeatherData";
-import { WeatherDataProps } from "../../data/types/WeatherTypes";
+import { WeatherApiResponse } from "../../data/types/WeatherTypes";
 //HOOKS
 import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";
@@ -38,14 +38,14 @@ const WeatherSection = () => {
   );
 
   const {
-    data,
-    loading: fetchLoading,
-    error: fetchError,
-  } = useFetch<WeatherDataProps>(weatherUrl);
+    data: weatherData,
+    loading: weatherLoading,
+    error: weatherErrror,
+  } = useFetch<WeatherApiResponse>(weatherUrl);
 
   const transformedData = useMemo(
-    () => data && TransformWeatherData(data),
-    [data]
+    () => weatherData && TransformWeatherData(weatherData),
+    [weatherData]
   );
 
   const errorContent = useMemo(() => {

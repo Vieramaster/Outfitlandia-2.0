@@ -1,10 +1,12 @@
-import { MainWeatherDataProps } from "../../data/types/WeatherTypes";
+//TYPES
+import { WeatherMainDataType } from "../../data/types/WeatherTypes";
+//VALIDATORS
 import { isObjectWithRequiredKeys } from "../genericValidators/isObjectWithRequiredKeys";
 
 const requiredMainKeys = ["temp"] as const;
 
 export const isValidMainApiResponse = (
   mainData: unknown
-): mainData is MainWeatherDataProps =>
+): mainData is WeatherMainDataType =>
   isObjectWithRequiredKeys(mainData, requiredMainKeys) &&
   typeof mainData.temp === "number";

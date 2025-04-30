@@ -1,4 +1,35 @@
-const IconWeatherArray = [
+export type CurrentWeatherAPI = {
+  temperature: number;
+  icon: IconWeatherArrayType;
+  windSpeed: number;
+  description: DescriptionWeatherArrayType;
+};
+
+export type IconWeatherArrayType = (typeof iconWeatherArray)[number];
+
+export type DescriptionWeatherArrayType =
+  (typeof descriptionWeatherArray)[number];
+
+export type WindWeatherDataType = {
+  windspeed: number;
+};
+
+export type WeatherMainDataType = {
+  temp: number;
+};
+
+export type WeatherArrayType = {
+  icon: IconWeatherArrayType;
+  description: DescriptionWeatherArrayType;
+};
+
+export type WeatherApiResponse = {
+  wind: WindWeatherDataType;
+  main: WeatherMainDataType;
+  weather: [WeatherArrayType, ...WeatherArrayType[]];
+};
+
+export const iconWeatherArray = [
   "01d",
   "02d",
   "03d",
@@ -17,7 +48,7 @@ const IconWeatherArray = [
   "50n",
 ] as const;
 
-const DescriptionWeatherArray = [
+export const descriptionWeatherArray = [
   "clear sky",
   "few clouds",
   "scattered clouds",
@@ -28,27 +59,3 @@ const DescriptionWeatherArray = [
   "snow",
   "mist",
 ] as const;
-
-export type IconWeatherArrayProps = (typeof IconWeatherArray)[number];
-
-export type DescriptionWeatherArrayProps =
-  (typeof DescriptionWeatherArray)[number];
-
-export type WindWeatherDataProps = {
-  windspeed: number;
-};
-
-export type MainWeatherDataProps = {
-  temp: number;
-};
-
-export type WeatherArrayProps = {
-  icon: IconWeatherArrayProps;
-  description: DescriptionWeatherArrayProps;
-};
-
-export type WeatherApiResponseProps = {
-  wind: WindWeatherDataProps;
-  main: MainWeatherDataProps;
-  weather: WeatherApiResponseProps;
-};

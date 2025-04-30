@@ -1,34 +1,36 @@
 import { useEffect, useState, useMemo } from "react";
 
 export const useFetch = <T,>(URL: string | null) => {
-  const [data, setData] = useState<T | undefined>(undefined);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [data, setData] = useState<T>();
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     if (!URL) return;
     const controller = new AbortController();
-    const { signal } = controller;
-    setLoading(true);
+    const signal = controller.signal;
 
-    fetch(URL, { signal })
-      .then((response) => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(URL, { signal });
         if (!response.ok) {
-          throw new Error("data not found");
+          throw new Error(
+            `Fetch error: ${response.status} ${response.statusText}`
+          );
         }
-        return response.json();
-      })
-      .then((jsonData: T) => {
+        const jsonData: T = await response.json();
         setData(jsonData);
-      })
-      .catch((error: Error) => {
-        if (error.name !== "AbortError") {
-          setError(error);
+      } catch (err) {
+        if ((err as any).name !== "AbortError") {
+          setError(err as Error);
         }
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
 
     return () => {
       controller.abort();
@@ -37,6 +39,6 @@ export const useFetch = <T,>(URL: string | null) => {
 
   return useMemo(
     () => ({ data, loading, error } as const),
-    [data, error, loading]
+    [data, loading, error]
   );
 };

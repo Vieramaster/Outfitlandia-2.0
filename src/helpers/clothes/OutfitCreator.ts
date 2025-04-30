@@ -1,18 +1,16 @@
-//TYPES
-import { ClothesProps, GarmentKeyType } from "../../data/types/ClothesTypes";
-import { CombineColorsProps } from "../../data/types/ColorCombineTypes";
+//TYPES && MESSAGES
+import { ERROR_MESSAGES_OUTFIT } from "../../data/types/ErrorMessages";
+import { ClothesType, GarmentKeyType } from "../../data/types/ClothesTypes";
+import { CombineColorsClothesType } from "../../data/types/ColorCombineTypes";
+//VALIDATORS
+import { isValidClothesApiResponse } from "../../validators/garmentsValidators/isValidClothesApiResponse";
+import { isValidCombineColorsApiResponse } from "../../validators/combineColorsValidators/isValidCombineColorsApiResponse";
 //FUNCTIONS
 import SearchFilter from "./SearchFilter";
 import FilterStyleAndWheater from "./FilterStyleAndWeather";
 import FilterColors from "./FilterColors";
 import Outfit from "./Outfit";
 
-const ERROR_MESSAGES = {
-  MISSING_DATA: "some type of main data is missing",
-  NO_COLOR_DATA: "There is no data on the color date",
-  MAX_ATTEMPTS_REACHED: "Reached maximum attempts",
-  MISSING_COLORNAME: "colorName is not in the colors array",
-};
 
 /**
  * @param clothesData  - Clothing fetch array, it will be used to search for combinations
@@ -22,18 +20,20 @@ const ERROR_MESSAGES = {
  */
 
 export const OutfitCreator = (
-  clothesData: ClothesProps[] | undefined,
-  selectedGarment: ClothesProps[] | undefined,
-  ColorCombination: CombineColorsProps[] | undefined
+  clothesData: ClothesType[],
+  selectedGarment: [ClothesType, ...ClothesType[]],
+  colorCombination: CombineColorsClothesType[]
 ) => {
-  if (!clothesData || !selectedGarment || !selectedGarment[0]) {
-    console.error(ERROR_MESSAGES.MISSING_DATA);
-    return [];
+  if (
+    !isValidClothesApiResponse(clothesData) ||
+    !isValidClothesApiResponse(selectedGarment)
+  ) {
+    console.error(ERROR_MESSAGES_OUTFIT.MISSING_DATA);
+    return false;
   }
-
-  if (!ColorCombination || ColorCombination.length === 0) {
-    console.error(ERROR_MESSAGES.NO_COLOR_DATA);
-    return [];
+  if (!isValidCombineColorsApiResponse(colorCombination)) {
+    console.error(ERROR_MESSAGES_OUTFIT.NO_COLOR_DATA);
+    return false;
   }
 
   // DESTRUCTURING OF ENTERED DATA

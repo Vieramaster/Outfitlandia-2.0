@@ -1,10 +1,10 @@
-import { ClothesProps, GarmentKeyType } from "./ClothesTypes";
+import { ClothesType, GarmentKeyType } from "./ClothesTypes";
 import { DefaultImages } from "../listObjects/ImageDefaultButtons";
 
 export type AppStateProps = {
   images: typeof DefaultImages;
   selectedGarment?: GarmentKeyType;
-  chosenClothes: ClothesProps[] | undefined;
+  chosenClothes: ClothesType[] | undefined;
   activeView: "main" | "garments" | "colors";
   isMobileMenuHidden: boolean;
 };
@@ -14,12 +14,12 @@ export type ActionProps =
   | {
       type: "SELECT_GARMENT";
       garment: "top" | "coat" | "pants";
-      chosenClothes: ClothesProps[];
+      chosenClothes: ClothesType[];
     }
-  | { type: "SELECT_CLOTHING_ITEM"; chosenClothes: ClothesProps[] }
+  | { type: "SELECT_CLOTHING_ITEM"; chosenClothes: ClothesType[] }
   | {
       type: "SELECT_COLOR";
-      chosenClothes: ClothesProps[];
+      chosenClothes: ClothesType[];
       images: typeof DefaultImages;
     }
   | { type: "GENERATE_OUTFIT"; images: typeof DefaultImages };

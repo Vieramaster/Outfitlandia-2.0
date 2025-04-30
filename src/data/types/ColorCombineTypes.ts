@@ -1,11 +1,12 @@
-export interface CombineColorsProps {
-  clothes: CombineColorsClothesProps;
-  shoes: string[];
-}
+import { ColorNameType, ColorNameArrayType } from "./ClothesTypes";
 
-export interface CombineColorsClothesProps {
-  top: string;
-  pants: string;
-  coat: string;
-}
+export type CombineColorsApiResponse = {
+  clothes: CombineColorsClothesType;
+  shoes: ColorNameArrayType;
+};
 
+export type CombineColorsClothesType = {
+  top: ColorNameType;
+  pants: ColorNameType;
+  coat: ColorNameType;
+};

@@ -1,54 +1,36 @@
-import { TransformedWeatherDataProps } from "../../data/types/WeatherTypes";
-import IsValidObject from "../../validators/genericValidators/IsObject";
-import IsValidWeatherObjects from "../../validators/weatherValidators/isValidWeatherApiResponse";
-import IsValidGeneralWeatherArray from "../../validators/weatherValidators/IsValidGeneralWeatherArray";
-import IsValidPropertyWeatherObject from "../../validators/weatherValidators/IsValidPropertyWeatherObject";
-import IsValidKeys from "../../validators/genericValidators/IsValidKeys";
+//TYPES & MESSAGES
+import { CurrentWeatherAPI } from "../../data/types/WeatherTypes";
+//VALIDATORS
+import { isValidWeatherApiResponse } from "../../validators/weatherValidators/isValidWeatherApiResponse";
+
 /**
  * The weather fetch is used to validate the data and then return an object with the data that is required.
- *
  * @param data - Fetched weather data from the API.
  * @returns An object containing the transformed weather data, including temperature, icon, wind speed, and description.
  */
 
-const DEFAULT_ICON = "01d";
-const DEFAULT_DESCRIPTION = "Clear sky";
-
-const DEFAULT_OBJECT: TransformedWeatherDataProps = {
+const DEFAULT_OBJECT: CurrentWeatherAPI = {
   temperature: 0,
-  icon: DEFAULT_ICON,
+  icon: "01d",
   windSpeed: 0,
-  description: DEFAULT_DESCRIPTION,
+  description: "clear sky",
 } as const;
 
-export const TransformWeatherData = (
-  data: unknown
-): TransformedWeatherDataProps => {
-  if (!IsValidObject(data)) return DEFAULT_OBJECT;
-  if (!IsValidWeatherObjects(data)) return DEFAULT_OBJECT;
+export const TransformWeatherData = (weatherData: unknown) => {
+  if (!isValidWeatherApiResponse(weatherData)) return DEFAULT_OBJECT;
 
-  const { main, wind, weather } = data;
-
-  if (
-    !IsValidObject(main) ||
-    IsValidKeys(["temp"] as const, data) ||
-    !IsValidObject(wind) ||
-    IsValidKeys(["windspeed"] as const, data)
-  )
-    return DEFAULT_OBJECT;
-
-  if (!IsValidGeneralWeatherArray(weather) || !weather[0])
-    return DEFAULT_OBJECT;
+  const {
+    main: { temp },
+    wind: { windspeed },
+    weather,
+  } = weatherData;
 
   const { icon, description } = weather[0];
 
-  /**
-   * return {
-    temperature: Math.round(temp) || DEFAULT_OBJECT.temperature,
-    icon: icon || DEFAULT_OBJECT.icon, yo 
-    windSpeed: Math.round(speed * 3.6) || DEFAULT_OBJECT.windSpeed,
-    description: description || DEFAULT_OBJECT.description,
+  return {
+    temperature: Math.round(temp),
+    icon: icon,
+    windSpeed: Math.round(windspeed * 3.6),
+    description: description,
   };
-   */
-  return DEFAULT_OBJECT;
 };
