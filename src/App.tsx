@@ -104,6 +104,8 @@ function App() {
     );
     console.log(outfit);
   }, [garmentsData, state.chosenClothes]);
+
+  
   return (
     <>
       <Header />

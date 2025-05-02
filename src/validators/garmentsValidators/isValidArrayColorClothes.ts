@@ -4,8 +4,8 @@ import {
   hexColorKeys,
   titleColorKeys,
   ColorClothesType,
-  ERROR_CLOTHES_MESSAGE,
 } from "../../data/types/ClothesTypes";
+import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
 //VALIDATORS
 import { isObjectWithRequiredKeys } from "../genericValidators/isObjectWithRequiredKeys";
 import { isOneOf } from "../genericValidators/isOneOf";
@@ -19,7 +19,7 @@ const requiredColorClothesKeys = [
 
 export const isValidArrayColorClothes = (
   dataColor: unknown[]
-): dataColor is ColorClothesType[] =>
+): dataColor is [ColorClothesType, ...ColorClothesType[]] =>
   dataColor.every((colorObject) => {
     if (!isObjectWithRequiredKeys(colorObject, requiredColorClothesKeys)) {
       console.error(ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_OBJECT, colorObject);

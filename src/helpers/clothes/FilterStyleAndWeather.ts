@@ -1,5 +1,5 @@
 import {
-  ClothesProps,
+  ClothesType,
   StyleType,
   WeatherType,
 } from "../../data/types/ClothesTypes";
@@ -11,16 +11,13 @@ import {
  * @param weatherSearched - The weather conditions to search for.
  * @returns - A filtered array of clothes that match the specified styles and weather conditions.
  */
-const FilterStyleAndWheater = (
-  arrayClothes: ClothesProps[],
+export const FilterStyleAndWheater = (
+  arrayClothes: ClothesType[],
   styleSearched: StyleType[],
   weatherSearched: WeatherType[]
-): ClothesProps[] => {
-  return arrayClothes.filter(
+): ClothesType[] =>
+  arrayClothes.filter(
     ({ style, weather }) =>
       style.some((styleItem) => styleSearched.includes(styleItem)) &&
       weather.some((weatherItem) => weatherSearched.includes(weatherItem))
   );
-};
-
-export default FilterStyleAndWheater;

@@ -1,5 +1,4 @@
-import { ClothesProps } from "../../data/types/ClothesTypes";
-import GarmentFilterValidator from "../validators/GarmentFilterValidator";
+import { ClothesType } from "../../data/types/ClothesTypes";
 
 /**
  * Filters an array of ClothesProps by a given key and value.
@@ -11,20 +10,12 @@ import GarmentFilterValidator from "../validators/GarmentFilterValidator";
  * @returns A filtered array of ClothesProps or undefined if input is invalid.
  */
 
-const SearchFilter = <K extends keyof ClothesProps>(
-  array: ClothesProps[] | undefined,
+export const SearchFilter = <K extends keyof ClothesType>(
+  array: ClothesType[],
   key: K,
-  value: ClothesProps[K],
+  value: ClothesType[K],
   excludes: boolean = false
-): ClothesProps[] | [] => {
-  if (!GarmentFilterValidator(array)) {
-    console.error("SearchFilter: array is undefined or invalid.");
-    return [];
-  }
-
-  return array.filter((item) =>
+): ClothesType[] =>
+  array.filter((item) =>
     excludes ? item[key] !== value : item[key] === value
   );
-};
-
-export default SearchFilter;

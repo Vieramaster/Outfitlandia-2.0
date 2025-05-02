@@ -1,16 +1,15 @@
 //TYPES && MESSAGES
 import { ERROR_MESSAGES_OUTFIT } from "../../data/types/ErrorMessages";
 import { ClothesType, GarmentKeyType } from "../../data/types/ClothesTypes";
-import { CombineColorsClothesType } from "../../data/types/ColorCombineTypes";
+import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
 //VALIDATORS
 import { isValidClothesApiResponse } from "../../validators/garmentsValidators/isValidClothesApiResponse";
 import { isValidCombineColorsApiResponse } from "../../validators/combineColorsValidators/isValidCombineColorsApiResponse";
+import { isValidArrayColorClothes } from "../../validators/garmentsValidators/isValidArrayColorClothes";
 //FUNCTIONS
-import SearchFilter from "./SearchFilter";
-import FilterStyleAndWheater from "./FilterStyleAndWeather";
-import FilterColors from "./FilterColors";
+import { SearchFilter } from "./SearchFilter";
+import { FilterStyleAndWheater } from "./FilterStyleAndWeather";
 import Outfit from "./Outfit";
-
 
 /**
  * @param clothesData  - Clothing fetch array, it will be used to search for combinations
@@ -22,18 +21,18 @@ import Outfit from "./Outfit";
 export const OutfitCreator = (
   clothesData: ClothesType[],
   selectedGarment: [ClothesType, ...ClothesType[]],
-  colorCombination: CombineColorsClothesType[]
+  colorCombination: CombineColorsApiResponse[]
 ) => {
   if (
     !isValidClothesApiResponse(clothesData) ||
     !isValidClothesApiResponse(selectedGarment)
   ) {
     console.error(ERROR_MESSAGES_OUTFIT.MISSING_DATA);
-    return false;
+    return [];
   }
   if (!isValidCombineColorsApiResponse(colorCombination)) {
     console.error(ERROR_MESSAGES_OUTFIT.NO_COLOR_DATA);
-    return false;
+    return [];
   }
 
   // DESTRUCTURING OF ENTERED DATA
@@ -59,18 +58,17 @@ export const OutfitCreator = (
     MAIN_WEATHER
   );
 
-  if (!MAIN_COLORS[0]?.colorName) {
-    console.error(ERROR_MESSAGES.MISSING_COLORNAME);
+  if (!isValidArrayColorClothes(MAIN_COLORS)) {
+    console.error(ERROR_MESSAGES_OUTFIT.MISSING_COLORNAME);
     return [];
   }
   const garmentKey = MAIN_GARMENT as GarmentKeyType;
 
   // the colors are filtered based on the color of the chosen clothing
-  const filteredColors = FilterColors(
-    ColorCombination,
-    garmentKey,
-    MAIN_COLORS[0].colorName
+  const filteredColors = colorCombination.filter(
+    ({ clothes }) => clothes[garmentKey] === MAIN_COLORS[0].colorName
   );
+  
   //Create outfit
   const returnImages = Outfit(
     filteredColors,

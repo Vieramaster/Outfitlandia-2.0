@@ -1,8 +1,12 @@
+//TYPES
 import {
   ClothesListObject,
   ListStructureType,
 } from "../../data/types/ClothesTypes";
-import GetRandomElement from "../../components/utils/GetRandomElement";
+//VALIDATORS
+import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
+//FUNCTIONS
+import { GetRandomElement } from "../../components/utils/GetRandomElement";
 
 /**
  * 
@@ -13,11 +17,11 @@ import GetRandomElement from "../../components/utils/GetRandomElement";
  * @returns - Returns an object ramdonly for each garment.
 
  */
-const ChosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
+export const ChosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
   const result: ListStructureType = {};
   for (const combineItem of arrayClothes) {
     for (const [garment, items] of Object.entries(combineItem)) {
-      if (Array.isArray(items) && items.length > 0) {
+      if (isNonEmptyArray(items)) {
         const randomItem = GetRandomElement(items);
         if (randomItem) {
           result[garment] = randomItem;
@@ -27,5 +31,3 @@ const ChosenObjectRandomly = (arrayClothes: ClothesListObject[]) => {
   }
   return result;
 };
-
-export default ChosenObjectRandomly;

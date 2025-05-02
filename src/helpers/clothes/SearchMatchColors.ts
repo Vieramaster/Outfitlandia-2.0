@@ -1,8 +1,10 @@
-import { ClothesProps, ClothesListObject } from "../../data/types/ClothesTypes";
+import { ClothesType, ClothesListObject } from "../../data/types/ClothesTypes";
 
-const SearchMatchColors = (
+
+
+export const SearchMatchColors = (
   objectColors: Record<string, string>,
-  arrayClothes: ClothesProps[]
+  arrayClothes: ClothesType[]
 ) =>
   Object.entries(objectColors).reduce(
     (acc, [garmentColor, designatedColor]) => {
@@ -28,5 +30,3 @@ const SearchMatchColors = (
     },
     {} as ClothesListObject
   );
-
-export default SearchMatchColors;

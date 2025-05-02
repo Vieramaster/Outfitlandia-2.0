@@ -1,23 +1,24 @@
 // TYPES
 import {
-  ClothesProps,
+  ClothesType,
   ListStructureType,
   ClothesListObject,
   MainButtonsProps,
   GarmentKeyType,
 } from "../../data/types/ClothesTypes";
-import { CombineColorsProps } from "../../data/types/ColorCombineTypes";
-
+import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
+//VALIDATORS
+import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
 // FUNCTIONS
-import SearchFilter from "./SearchFilter";
-import GetRandomElement from "../../components/utils/GetRandomElement";
-import FilterStyleAndWheater from "./FilterStyleAndWeather";
-import FlatMapObjectShoe from "./FlatMapObjectShoe";
-import SearchMatchColors from "./SearchMatchColors";
-import ChosenObjectRandomly from "./ChosenObjectRandomly";
-import CheckCommonAttributes from "./CheckCommonAttributes";
-import BeltWithMatchingColor from "./BeltWithMatchingColor";
-import CreateArrayImages from "./CreateArrayImages";
+import { SearchFilter } from "./SearchFilter";
+import { GetRandomElement } from "../../components/utils/GetRandomElement";
+import { FilterStyleAndWheater } from "./FilterStyleAndWeather";
+import { FlatMapObjectShoe } from "./FlatMapObjectShoe";
+import { SearchMatchColors } from "./SearchMatchColors";
+import { ChosenObjectRandomly } from "./ChosenObjectRandomly";
+import { CheckCommonAttributes } from "./CheckCommonAttributes";
+import { BeltWithMatchingColor } from "./BeltWithMatchingColor";
+import { CreateArrayImages } from "./CreateArrayImages";
 
 const MAX_ATTEMPTS = 400;
 const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
@@ -33,10 +34,10 @@ const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
  * @returns An array of MainButtonsProps representing the generated outfit, or undefined if no valid combination is found.
  */
 const Outfit = (
-  arrayColors: CombineColorsProps[],
-  clothes: ClothesProps[],
+  arrayColors: CombineColorsApiResponse[],
+  clothes: ClothesType[],
   key: GarmentKeyType,
-  mainGarment: ClothesProps
+  mainGarment: ClothesType
 ): MainButtonsProps[] | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     // Get a random color combination from the provided array.
@@ -53,10 +54,11 @@ const Outfit = (
 
     // Filter the sneakers and generate a variant for each color.
     const shoesArray = FlatMapObjectShoe(shoesFiltered, combineShoes);
-    if (!shoesArray || shoesArray.length === 0) continue;
+    if (!isNonEmptyArray(shoesArray)) continue;
 
     // Generate color matches for each garment based on the new combination.
     const results = SearchMatchColors(newCombineClothes, clothes);
+
     if (Object.values(results).some((item) => item.length === 0)) continue;
 
     const updatedCombineClothes: ClothesListObject[] = [
