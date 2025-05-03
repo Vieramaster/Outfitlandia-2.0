@@ -1,5 +1,6 @@
-import { ClothesProps, ColorClothesProps } from "../../data/types/ClothesTypes";
-import GarmentFilterValidator from "../validators/GarmentFilterValidator";
+import { ClothesType } from "../../../data/types/ClothesTypes";
+
+import { ColorClothesType } from "../../../data/types/ClothesTypes";
 
 /**
  * Filters the colors from a list of clothes based on a specific color name.
@@ -9,12 +10,10 @@ import GarmentFilterValidator from "../validators/GarmentFilterValidator";
  * @returns An array of ColorClothesProps that match the given color name, or undefined if the input is invalid.
  */
 
-const ColorFilter = (
-  array: ClothesProps[] | undefined,
-  value: ColorClothesProps["colorName"]
-): ColorClothesProps[] | undefined => {
-  if (!array || !GarmentFilterValidator(array)) return undefined;
-
+export const colorFilter = (
+  array: ClothesType[],
+  value: ColorClothesType["colorName"]
+): ColorClothesType[] => {
   const filteredColors = array.flatMap(({ colors }) =>
     colors.filter(({ colorName }) => colorName === value)
   );
@@ -22,4 +21,3 @@ const ColorFilter = (
   return filteredColors;
 };
 
-export default ColorFilter;

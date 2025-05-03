@@ -21,6 +21,18 @@ const requiredClothesKeys = [
   "colors",
 ] as const;
 
+export const isValidClothesApiResponse = (
+  data: unknown
+): data is RawClothes[] => {
+  if (!isNonEmptyArray(data) || !data.every(isValidObjectClothes)) {
+    console.error(ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_ARRAY, data);
+    return false;
+  }
+  return true;
+};
+
+/* ------------------------ Internal helpers ------------------------ */
+
 const isValidObjectClothes = (
   objectData: unknown
 ): objectData is RawClothes => {
@@ -41,16 +53,6 @@ const isValidObjectClothes = (
     !isNonEmptyArray(colors)
   ) {
     console.error(ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_KEYS_VALUE, objectData);
-    return false;
-  }
-  return true;
-};
-
-export const isValidClothesApiResponse = (
-  data: unknown
-): data is RawClothes[] => {
-  if (!isNonEmptyArray(data) || !data.every(isValidObjectClothes)) {
-    console.error(ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_ARRAY, data);
     return false;
   }
   return true;

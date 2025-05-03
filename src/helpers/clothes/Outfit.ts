@@ -10,15 +10,15 @@ import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
 //VALIDATORS
 import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
 // FUNCTIONS
-import { SearchFilter } from "./SearchFilter";
-import { GetRandomElement } from "../../components/utils/GetRandomElement";
-import { FilterStyleAndWheater } from "./FilterStyleAndWeather";
-import { FlatMapObjectShoe } from "./FlatMapObjectShoe";
-import { SearchMatchColors } from "./SearchMatchColors";
-import { ChosenObjectRandomly } from "./ChosenObjectRandomly";
-import { CheckCommonAttributes } from "./CheckCommonAttributes";
-import { BeltWithMatchingColor } from "./BeltWithMatchingColor";
-import { CreateArrayImages } from "./CreateArrayImages";
+import { searchFilter } from "./genericFunctions/searchFilter";
+import { getRandomElement } from "../../utils/getRandomElement";
+import { filterStyleAndWheater } from "./genericFunctions/filterStyleAndWheater";
+import { getShoesWithMatchingColors } from "./genericFunctions/getShoesWithMatchingColors";
+import { searchMatchColors } from "./genericFunctions/searchMatchColors";
+import { pickRandomClothes } from "./genericFunctions/pickRandomClothes";
+import { hasCommonStyleAndWeather } from "./genericFunctions/hasCommonStyleAndWeather";
+import { getBeltsWithMatchingColor } from "./genericFunctions/getBeltsWithMatchingColor";
+import { buildButtonImageArray } from "./genericFunctions/buildButtonImageArray";
 
 const MAX_ATTEMPTS = 400;
 const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
@@ -33,7 +33,7 @@ const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
  * @param mainGarment - The main garment object selected by the user.
  * @returns An array of MainButtonsProps representing the generated outfit, or undefined if no valid combination is found.
  */
-const Outfit = (
+const outfit = (
   arrayColors: CombineColorsApiResponse[],
   clothes: ClothesType[],
   key: GarmentKeyType,
@@ -41,23 +41,27 @@ const Outfit = (
 ): MainButtonsProps[] | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     // Get a random color combination from the provided array.
-    const randomColor = GetRandomElement(arrayColors);
+    const randomColor = getRandomElement(arrayColors);
     if (!randomColor) continue;
 
     // Destructure clothes and shoes from the random color combination.
-    const { clothes: combineClothes, shoes: combineShoes } = randomColor;
+    const { clothes: colorcombineClothes, shoes: colorCombineShoes } =
+      randomColor;
     // Exclude the garment specified by the key to create a new combination.
-    const { [key]: removed, ...newCombineClothes } = combineClothes;
+    const { [key]: removed, ...newColorcombineClothes } = colorcombineClothes;
 
     // Filter out shoes from the clothes array.
-    const shoesFiltered = SearchFilter(clothes, "garment", "shoes", false);
+    const shoesFiltered = searchFilter(clothes, "garment", "shoes", false);
 
     // Filter the sneakers and generate a variant for each color.
-    const shoesArray = FlatMapObjectShoe(shoesFiltered, combineShoes);
+    const shoesArray = getShoesWithMatchingColors(
+      shoesFiltered,
+      colorCombineShoes
+    );
     if (!isNonEmptyArray(shoesArray)) continue;
 
     // Generate color matches for each garment based on the new combination.
-    const results = SearchMatchColors(newCombineClothes, clothes);
+    const results = searchMatchColors(newColorcombineClothes, clothes);
 
     if (Object.values(results).some((item) => item.length === 0)) continue;
 
@@ -69,9 +73,9 @@ const Outfit = (
     ];
 
     // Randomly select one element from each group.
-    const estructureObject = ChosenObjectRandomly(updatedCombineClothes);
+    const estructureObject = pickRandomClothes(updatedCombineClothes);
     // Merge the main garment into the combination.
-    const addMainGarment = {
+    const addMainGarment: ListStructureType = {
       ...estructureObject,
       [mainGarment.garment]: mainGarment,
     };
@@ -80,7 +84,7 @@ const Outfit = (
     if (!addMainGarment || Object.keys(addMainGarment).length < 3) continue;
 
     // Verify that all garments share at least one common style and weather attribute.
-    if (!CheckCommonAttributes(addMainGarment)) continue;
+    if (!hasCommonStyleAndWeather(addMainGarment)) continue;
 
     const finalShoes = addMainGarment.shoes;
     if (!finalShoes) continue;
@@ -94,8 +98,8 @@ const Outfit = (
     const colorNameShoe = colorsShoe[0].colorName;
 
     // Filter belts based on style and weather.
-    const chosenBelt = SearchFilter(clothes, "garment", "belt", false);
-    const beltFilter = FilterStyleAndWheater(
+    const chosenBelt = searchFilter(clothes, "garment", "belt", false);
+    const beltFilter = filterStyleAndWheater(
       chosenBelt,
       styleShoe,
       weatherShoe
@@ -106,7 +110,7 @@ const Outfit = (
     const pantsNameOutfit = addMainGarment.pants.name;
 
     // Find a belt that matches the color criteria or defaults to "black".
-    const filteredBelts = BeltWithMatchingColor(
+    const filteredBelts = getBeltsWithMatchingColor(
       beltFilter,
       pantsNameOutfit,
       colorNameShoe
@@ -114,7 +118,7 @@ const Outfit = (
     if (filteredBelts.length === 0) continue;
 
     // Select a random belt from the filtered list.
-    const uniqueBelt = GetRandomElement(filteredBelts);
+    const uniqueBelt = getRandomElement(filteredBelts);
 
     const finishClothes: ListStructureType[] = [
       {
@@ -124,10 +128,10 @@ const Outfit = (
     ];
 
     // Create an array of images based on the final combination of clothes.
-    const finalArray = CreateArrayImages(finishClothes);
+    const finalArray = buildButtonImageArray(finishClothes);
     return finalArray;
   }
   console.error(MAX_ATTEMPTS_REACHED);
   return undefined;
 };
-export default Outfit;
+export default outfit;

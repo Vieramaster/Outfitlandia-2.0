@@ -7,9 +7,9 @@ import { isValidClothesApiResponse } from "../../validators/garmentsValidators/i
 import { isValidCombineColorsApiResponse } from "../../validators/combineColorsValidators/isValidCombineColorsApiResponse";
 import { isValidArrayColorClothes } from "../../validators/garmentsValidators/isValidArrayColorClothes";
 //FUNCTIONS
-import { SearchFilter } from "./SearchFilter";
-import { FilterStyleAndWheater } from "./FilterStyleAndWeather";
-import Outfit from "./Outfit";
+import { searchFilter } from "./genericFunctions/searchFilter";
+import { filterStyleAndWheater } from "./genericFunctions/filterStyleAndWheater";
+import Outfit from "./outfit";
 
 /**
  * @param clothesData  - Clothing fetch array, it will be used to search for combinations
@@ -18,7 +18,7 @@ import Outfit from "./Outfit";
  * @returns - It grants a clothing combination based on the color and garment chosen by the user, said combination being aligned with respect to the weather and style of the garment
  */
 
-export const OutfitCreator = (
+export const outfitCreator = (
   clothesData: ClothesType[],
   selectedGarment: [ClothesType, ...ClothesType[]],
   colorCombination: CombineColorsApiResponse[]
@@ -44,7 +44,7 @@ export const OutfitCreator = (
   } = selectedGarment[0];
 
   // the clothes that are not chosen are filtered
-  const filteredClothes = SearchFilter(
+  const filteredClothes = searchFilter(
     clothesData,
     "garment",
     MAIN_GARMENT,
@@ -52,7 +52,7 @@ export const OutfitCreator = (
   );
 
   // Matches are found for style and weather and the rest is filtered out.
-  const clothesClassFiltering = FilterStyleAndWheater(
+  const clothesClassFiltering = filterStyleAndWheater(
     filteredClothes,
     MAIN_STYLE,
     MAIN_WEATHER
@@ -68,7 +68,7 @@ export const OutfitCreator = (
   const filteredColors = colorCombination.filter(
     ({ clothes }) => clothes[garmentKey] === MAIN_COLORS[0].colorName
   );
-  
+
   //Create outfit
   const returnImages = Outfit(
     filteredColors,

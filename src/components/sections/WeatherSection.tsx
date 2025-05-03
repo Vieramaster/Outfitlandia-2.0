@@ -1,5 +1,5 @@
 //UTILITIES
-import { TransformWeatherData } from "../../helpers/weather/TransformWeatherData";
+import { TransformWeatherData } from "../../helpers/weather/transformWeatherData";
 import { WeatherApiResponse } from "../../data/types/WeatherTypes";
 //HOOKS
 import { useMemo } from "react";

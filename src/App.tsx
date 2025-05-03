@@ -1,15 +1,15 @@
 //HOOKS
 import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
-import { OutfitCreator } from "./helpers/clothes/OutfitCreator";
+import { OutfitCreator } from "./helpers/clothes/outfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
 //FUNCTONS
 import SearchFilter from "./helpers/clothes/SearchFilter";
-import ColorFilter from "./helpers/clothes/ColorFilter";
+import ColorFilter from "./helpers/clothes/genericFunctions/colorFilter";
 //DATA
 import { ClothesProps, GarmentKeyType } from "./data/types/ClothesTypes";
 import { CombineColorsProps } from "./data/types/ColorCombineTypes";
-import { appReducer, initialState } from "./hooks/AppReducer";
+import { appReducer, initialState } from "./hooks/appReducer";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
@@ -105,7 +105,6 @@ function App() {
     console.log(outfit);
   }, [garmentsData, state.chosenClothes]);
 
-  
   return (
     <>
       <Header />

@@ -16,7 +16,7 @@ const DEFAULT_OBJECT: CurrentWeatherAPI = {
   description: "clear sky",
 } as const;
 
-export const TransformWeatherData = (weatherData: unknown) => {
+export const transformWeatherData = (weatherData: unknown) => {
   if (!isValidWeatherApiResponse(weatherData)) return DEFAULT_OBJECT;
 
   const {

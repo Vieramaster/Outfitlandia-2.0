@@ -1,4 +1,4 @@
-import { ClothesType } from "../../data/types/ClothesTypes";
+import { ClothesType } from "../../../data/types/ClothesTypes";
 
 /**
  * Filters an array of ClothesProps by a given key and value.
@@ -10,7 +10,7 @@ import { ClothesType } from "../../data/types/ClothesTypes";
  * @returns A filtered array of ClothesProps or undefined if input is invalid.
  */
 
-export const SearchFilter = <K extends keyof ClothesType>(
+export const searchFilter = <K extends keyof ClothesType>(
   array: ClothesType[],
   key: K,
   value: ClothesType[K],

@@ -1,4 +1,4 @@
-//ARRAYTYPES & TYPES
+// ARRAYTYPES & TYPES
 import {
   colorNameKeys,
   hexColorKeys,
@@ -6,7 +6,8 @@ import {
   ColorClothesType,
 } from "../../data/types/ClothesTypes";
 import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
-//VALIDATORS
+
+// VALIDATORS
 import { isObjectWithRequiredKeys } from "../genericValidators/isObjectWithRequiredKeys";
 import { isOneOf } from "../genericValidators/isOneOf";
 
@@ -17,6 +18,13 @@ const requiredColorClothesKeys = [
   "imageColor",
 ] as const;
 
+/**
+ * Validates that the input is a non-empty array of valid color objects used in clothing items.
+ * Each object must contain valid `colorName`, `hex`, `title`, and `imageColor` values.
+ *
+ * @param dataColor – The unknown array to validate.
+ * @returns true if the array consists of valid ColorClothesType items.
+ */
 export const isValidArrayColorClothes = (
   dataColor: unknown[]
 ): dataColor is [ColorClothesType, ...ColorClothesType[]] =>
@@ -32,7 +40,7 @@ export const isValidArrayColorClothes = (
       !isOneOf(colorName, colorNameKeys) ||
       !isOneOf(hex, hexColorKeys) ||
       !isOneOf(title, titleColorKeys) ||
-      !(typeof imageColor === "string")
+      typeof imageColor !== "string"
     ) {
       console.error(
         ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_KEYS_VALUE,
@@ -40,5 +48,6 @@ export const isValidArrayColorClothes = (
       );
       return false;
     }
+
     return true;
   });
