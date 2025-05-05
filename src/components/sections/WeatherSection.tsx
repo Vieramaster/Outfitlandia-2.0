@@ -1,5 +1,5 @@
 //UTILITIES
-import { TransformWeatherData } from "../../helpers/weather/transformWeatherData";
+import { transformWeatherData } from "../../helpers/weather/transformWeatherData";
 import { WeatherApiResponse } from "../../data/types/WeatherTypes";
 //HOOKS
 import { useMemo } from "react";
@@ -44,12 +44,12 @@ const WeatherSection = () => {
   } = useFetch<WeatherApiResponse>(weatherUrl);
 
   const transformedData = useMemo(
-    () => weatherData && TransformWeatherData(weatherData),
+    () => weatherData && transformWeatherData(weatherData),
     [weatherData]
   );
 
   const errorContent = useMemo(() => {
-    if (!API_KEY || geoError || fetchError)
+    if (!API_KEY || geoError || weatherErrror)
       return (
         <WeatherErrorAndLoading
           label="API_KEY is missing"
@@ -58,21 +58,21 @@ const WeatherSection = () => {
       );
 
     return null;
-  }, [API_KEY, geoError, fetchError]);
+  }, [API_KEY, geoError, weatherErrror]);
 
   const loadingContent = useMemo(() => {
-    if (geoLoading || fetchLoading)
+    if (geoLoading || weatherLoading)
       return (
         <WeatherErrorAndLoading children={<Spinner />} label="Loading..." />
       );
     return null;
-  }, [geoLoading, fetchLoading]);
+  }, [geoLoading, weatherLoading]);
 
   const weatherContent = useMemo(() => {
-    if (!transformedData || geoLoading || fetchLoading) return null;
+    if (!transformedData || geoLoading || weatherLoading) return null;
 
     return <WeatherSectionContent weatherArray={transformedData} />;
-  }, [transformedData, geoLoading, fetchLoading]);
+  }, [transformedData, geoLoading, weatherLoading]);
 
   return (
     <WeatherSectionContainer>

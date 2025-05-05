@@ -10,6 +10,7 @@ import { isValidArrayColorClothes } from "../../validators/garmentsValidators/is
 import { searchFilter } from "./genericFunctions/searchFilter";
 import { filterStyleAndWheater } from "./genericFunctions/filterStyleAndWheater";
 import Outfit from "./outfit";
+import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
 
 /**
  * @param clothesData  - Clothing fetch array, it will be used to search for combinations
@@ -20,21 +21,15 @@ import Outfit from "./outfit";
 
 export const outfitCreator = (
   clothesData: ClothesType[],
-  selectedGarment: [ClothesType, ...ClothesType[]],
+  selectedGarment: ClothesType[],
   colorCombination: CombineColorsApiResponse[]
 ) => {
-  if (
-    !isValidClothesApiResponse(clothesData) ||
-    !isValidClothesApiResponse(selectedGarment)
-  ) {
+  if (!isValidClothesApiResponse(selectedGarment)) {
     console.error(ERROR_MESSAGES_OUTFIT.MISSING_DATA);
     return [];
   }
-  if (!isValidCombineColorsApiResponse(colorCombination)) {
-    console.error(ERROR_MESSAGES_OUTFIT.NO_COLOR_DATA);
-    return [];
-  }
 
+  if (isNonEmptyArray(selectedGarment)) return undefined;
   // DESTRUCTURING OF ENTERED DATA
   const {
     garment: MAIN_GARMENT,

@@ -1,31 +1,58 @@
 //HOOKS
 import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
-import { OutfitCreator } from "./helpers/clothes/outfitCreator";
+import { outfitCreator } from "./helpers/clothes/outfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
 //FUNCTONS
-import SearchFilter from "./helpers/clothes/SearchFilter";
-import ColorFilter from "./helpers/clothes/genericFunctions/colorFilter";
+import { searchFilter } from "./helpers/clothes/genericFunctions/searchFilter";
+import { colorFilter } from "./helpers/clothes/genericFunctions/colorFilter";
 //DATA
-import { ClothesProps, GarmentKeyType } from "./data/types/ClothesTypes";
-import { CombineColorsProps } from "./data/types/ColorCombineTypes";
+import {
+  ClothesType,
+  ColorNameType,
+  GarmentKeyType,
+} from "./data/types/ClothesTypes";
 import { appReducer, initialState } from "./hooks/appReducer";
+import { ERROR_MESSAGES_OUTFIT } from "./data/types/ErrorMessages";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import GarmentFilterValidator from "./helpers/validators/GarmentFilterValidator";
+import { isNonEmptyArray } from "./validators/genericValidators/isNonEmptyArray";
+import { isValidClothesApiResponse } from "./validators/garmentsValidators/isValidClothesApiResponse";
+import { isValidCombineColorsApiResponse } from "./validators/combineColorsValidators/isValidCombineColorsApiResponse";
 
 function App() {
   //CLOTHES DATA
   const [state, dispatch] = useReducer(appReducer, initialState);
-  const { data: garmentsData } = useFetch<ClothesProps[]>("/garmentData.json");
-  const { data: fetchColorsData } = useFetch<CombineColorsProps[]>(
-    "/combineColors.json"
-  );
+  const {
+    data: garmentsData,
+    error: garmentError,
+    loading: garmentLoading,
+  } = useFetch<ClothesType[]>("/garmentData.json");
 
+  const {
+    data: combineColorsData,
+    error: combineColorsError,
+    loading: combineColorsLoading,
+  } = useFetch<ClothesType[]>("/combineColors.json");
+
+  if (
+    !isNonEmptyArray(garmentsData) ||
+    isValidClothesApiResponse(garmentsData)
+  ) {
+    console.error(ERROR_MESSAGES_OUTFIT.MISSING_DATA);
+    return undefined;
+  }
+  if (
+    !isValidCombineColorsApiResponse(combineColorsData) ||
+    combineColorsError
+  ) {
+    console.error(ERROR_MESSAGES_OUTFIT.NO_COLOR_DATA);
+    return [];
+  }
   const { isMobile } = useResponsiveLayout();
 
   const handleSearchClothes: MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -33,13 +60,11 @@ function App() {
       const selectedClothes = currentTarget.id as GarmentKeyType;
 
       //FILTER GARMENT
-      const garmentFilter = SearchFilter(
+      const garmentFilter = searchFilter(
         garmentsData,
         "garment",
         selectedClothes
       );
-
-      if (!GarmentFilterValidator(garmentFilter)) return undefined;
 
       dispatch({
         type: "SELECT_GARMENT",
@@ -53,15 +78,13 @@ function App() {
   const handleGarmentSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
     ({ currentTarget }) => {
       const selectedGarment = Number(currentTarget.id);
-
+      if (!state.chosenClothes) return undefined;
       //FILTER UNIQUE GARMENT
-      const objectFilter = SearchFilter(
+      const objectFilter = searchFilter(
         state.chosenClothes,
         "id",
         selectedGarment
       );
-      if (!GarmentFilterValidator(objectFilter)) return undefined;
-
       dispatch({
         type: "SELECT_CLOTHING_ITEM",
         chosenClothes: objectFilter,
@@ -72,12 +95,12 @@ function App() {
 
   const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
     ({ currentTarget }) => {
-      const colorNameID = currentTarget.id;
-
-      const filteredColors = ColorFilter(state.chosenClothes, colorNameID);
+      const colorNameID = currentTarget.id as ColorNameType;
+      if (!state.chosenClothes) return undefined;
+      const filteredColors = colorFilter(state.chosenClothes, colorNameID);
 
       //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
-      const uniqueColor: ClothesProps[] = state.chosenClothes!.map((item) => ({
+      const uniqueColor: ClothesType[] = state.chosenClothes!.map((item) => ({
         ...item,
         colors: filteredColors ?? [],
       }));
@@ -97,10 +120,10 @@ function App() {
   );
 
   const handleSearchOutfit = useCallback(() => {
-    const outfit = OutfitCreator(
+    const outfit = outfitCreator(
       garmentsData,
       state.chosenClothes,
-      fetchColorsData
+      combineColorsData
     );
     console.log(outfit);
   }, [garmentsData, state.chosenClothes]);

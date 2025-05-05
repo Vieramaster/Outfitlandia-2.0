@@ -12,6 +12,7 @@ export const ClothesContainer = ({
   style,
   image,
   altImage,
+  
 }: ClothesContainerProps) => (
   <div
     className={`${divStyle[style]} flex items-center justify-center `}

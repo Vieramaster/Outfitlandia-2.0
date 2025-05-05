@@ -31,7 +31,9 @@ export type WeatherApiResponse = {
 
 export const iconWeatherArray = [
   "01d",
+  "01n",
   "02d",
+  "02n",
   "03d",
   "03n",
   "04d",
@@ -46,6 +48,7 @@ export const iconWeatherArray = [
   "13n",
   "50d",
   "50n",
+  "wind"
 ] as const;
 
 export const descriptionWeatherArray = [
