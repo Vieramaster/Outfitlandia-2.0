@@ -11,7 +11,7 @@ export type DescriptionWeatherArrayType =
   (typeof descriptionWeatherArray)[number];
 
 export type WindWeatherDataType = {
-  windspeed: number;
+  speed: number;
 };
 
 export type WeatherMainDataType = {

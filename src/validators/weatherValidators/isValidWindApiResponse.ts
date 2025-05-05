@@ -5,7 +5,7 @@ import { WindWeatherDataType } from "../../data/types/WeatherTypes";
 import { isObjectWithRequiredKeys } from "../genericValidators/isObjectWithRequiredKeys";
 
 // Define the required keys for the wind data object
-const requiredWindKeys = ["windspeed"] as const;
+const requiredWindKeys = ["speed"] as const;
 
 /**
  * Validates the wind data response from the weather API.
@@ -19,4 +19,4 @@ export const isValidWindApiResponse = (
   windData: unknown
 ): windData is WindWeatherDataType =>
   isObjectWithRequiredKeys(windData, requiredWindKeys) &&
-  typeof windData.windspeed === "number";
+  typeof windData.speed === "number";

@@ -2,6 +2,7 @@ import {
   ListStructureType,
   MainButtonsProps,
 } from "../../../data/types/ClothesTypes";
+import { isOneOf } from "../../../validators/genericValidators/isOneOf";
 
 /**
  * Map each garment key to its default image path.

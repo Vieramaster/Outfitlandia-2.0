@@ -5,18 +5,34 @@ interface Coordinates {
   latitude: number;
   longitude: number;
 }
-interface UseGeolocationResult {
+
+interface GeolocationResult {
+  /** The last known coordinates, or defaults if none fetched yet */
   coordinates: Coordinates;
+  /** Any error message from the geolocation API, or null if no error */
   error: string | null;
+  /** True while a position request is in progress */
   loading: boolean;
+  /** Trigger a new geolocation lookup */
   getCurrentPosition: () => void;
 }
-const DEFAULT_COORDINATES = {
+
+/** Fallback coordinates if the user hasn’t granted geolocation yet */
+const DEFAULT_COORDINATES: Coordinates = {
   latitude: -35.96667,
   longitude: -62.7,
 };
 
-export const useGeolocation = (): UseGeolocationResult => {
+/**
+ * Custom React hook for accessing the browser’s geolocation API.
+ *
+ * @returns An object with:
+ *   - `coordinates`: the current or default lat/lng
+ *   - `error`: any error message encountered
+ *   - `loading`: whether a lookup is in progress
+ *   - `getCurrentPosition`: function to re‑fetch the position
+ */
+export const useGeolocation = (): GeolocationResult => {
   const [coordinates, setCoordinates] =
     useState<Coordinates>(DEFAULT_COORDINATES);
   const [error, setError] = useState<string | null>(null);
@@ -27,19 +43,28 @@ export const useGeolocation = (): UseGeolocationResult => {
       setError("Geolocation is not supported by your browser");
       return;
     }
+
     setLoading(true);
     navigator.geolocation.getCurrentPosition(
-      ({ coords }: GeolocationPosition) => {
+      (position: GeolocationPosition) => {
         setCoordinates({
-          latitude: coords.latitude,
-          longitude: coords.longitude,
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
         });
         setError(null);
+        setLoading(false);
       },
-      (error: GeolocationPositionError) => setError(error.message)
+      (positionError: GeolocationPositionError) => {
+        setError(positionError.message);
+        setLoading(false);
+      }
     );
-    setLoading(false);
   }, []);
 
-  return { coordinates, error, loading, getCurrentPosition };
+  return {
+    coordinates,
+    error,
+    loading,
+    getCurrentPosition,
+  };
 };

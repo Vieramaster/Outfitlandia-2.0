@@ -21,7 +21,7 @@ export const transformWeatherData = (weatherData: unknown) => {
 
   const {
     main: { temp },
-    wind: { windspeed },
+    wind: { speed },
     weather,
   } = weatherData;
 
@@ -30,7 +30,7 @@ export const transformWeatherData = (weatherData: unknown) => {
   return {
     temperature: Math.round(temp),
     icon: icon,
-    windSpeed: Math.round(windspeed * 3.6),
+    windSpeed: Math.round(speed * 3.6),
     description: description,
   };
 };
