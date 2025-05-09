@@ -1,5 +1,5 @@
 //TYPES && MESSAGES
-import { ERROR_MESSAGES_OUTFIT } from "../../data/types/ErrorMessages";
+import { ERROR_MESSAGES_OUTFIT } from "../../data/types/ValidatorResultType";
 import { ClothesType, GarmentKeyType } from "../../data/types/ClothesTypes";
 import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
 //VALIDATORS
@@ -29,14 +29,15 @@ export const outfitCreator = (
     return [];
   }
 
-  if (isNonEmptyArray(selectedGarment)) return undefined;
+  if (!isNonEmptyArray(selectedGarment) || !selectedGarment[0]) return [];
+
   // DESTRUCTURING OF ENTERED DATA
   const {
     garment: MAIN_GARMENT,
     colors: MAIN_COLORS,
     weather: MAIN_WEATHER,
     style: MAIN_STYLE,
-  } = selectedGarment[0];
+  } = selectedGarment[0] as ClothesType;
 
   // the clothes that are not chosen are filtered
   const filteredClothes = searchFilter(

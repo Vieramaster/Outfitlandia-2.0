@@ -1,5 +1,5 @@
 // TYPES & MESSAGES
-import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
+import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ValidatorResultType";
 import { CombineColorsClothesType } from "../../data/types/ColorCombineTypes";
 import { colorNameKeys } from "../../data/types/ClothesTypes";
 

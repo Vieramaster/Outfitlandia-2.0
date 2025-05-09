@@ -3,7 +3,7 @@ import {
   ColorNameArrayType,
   colorNameKeys,
 } from "../../data/types/ClothesTypes";
-import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
+import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ValidatorResultType";
 
 // VALIDATORS
 import { isNonEmptyArray } from "../genericValidators/isNonEmptyArray";
@@ -38,14 +38,9 @@ export const isValidCombineShoes = (
   }
 
   if (!isValidShoesKey(shoesData)) {
-    console.error(
-      ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_KEYS_VALUE,
-      objectData
-    );
+    console.error(ERROR_CLOTHES_MESSAGE.INVALID_CLOTHES_KEYS_VALUE, objectData);
     return false;
   }
 
   return true;
 };
-
-

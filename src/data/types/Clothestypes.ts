@@ -3,6 +3,7 @@
 export type ListStructureType = Record<string, ClothesType>;
 export type ClothesListObject = Record<string, ClothesType[]>;
 export type GarmentKeyType = "top" | "coat" | "pants";
+type RequiredKeys = readonly ["id", "garment", "name", "image", "style", "weather", "colors"];
 
 export type GarmentType = (typeof garmentsKeys)[number];
 export type StyleType = (typeof styleKeys)[number];
@@ -131,3 +132,4 @@ export const titleColorKeys = [
   "old pink",
   "salmon",
 ] as const;
+

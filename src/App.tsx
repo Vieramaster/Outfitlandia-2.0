@@ -3,6 +3,7 @@ import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useFetch } from "./hooks/useFetch";
 import { outfitCreator } from "./helpers/clothes/outfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
+import { useClothesData } from "./hooks/useClothes";
 //FUNCTONS
 import { searchFilter } from "./helpers/clothes/genericFunctions/searchFilter";
 import { colorFilter } from "./helpers/clothes/genericFunctions/colorFilter";
@@ -13,7 +14,7 @@ import {
   GarmentKeyType,
 } from "./data/types/ClothesTypes";
 import { appReducer, initialState } from "./hooks/appReducer";
-import { ERROR_MESSAGES_OUTFIT } from "./data/types/ErrorMessages";
+import { ERROR_MESSAGES_OUTFIT } from "./data/types/ValidatorResultType";
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
@@ -26,19 +27,11 @@ import { isValidCombineColorsApiResponse } from "./validators/combineColorsValid
 
 function App() {
   //CLOTHES DATA
-  const [state, dispatch] = useReducer(appReducer, initialState);
-  const {
-    data: garmentsData,
-    error: garmentError,
-    loading: garmentLoading,
-  } = useFetch<ClothesType[]>("/garmentData.json");
+  /*const [state, dispatch] = useReducer(appReducer, initialState);*/
 
-  const {
-    data: combineColorsData,
-    error: combineColorsError,
-    loading: combineColorsLoading,
-  } = useFetch<ClothesType[]>("/combineColors.json");
-
+  const { clothes, loading, error } = useClothesData();
+  
+  /*
   if (
     !isNonEmptyArray(garmentsData) ||
     isValidClothesApiResponse(garmentsData)
@@ -120,6 +113,8 @@ function App() {
   );
 
   const handleSearchOutfit = useCallback(() => {
+    if (!state.chosenClothes)
+      return console.error("bug in state ChosenClothes");
     const outfit = outfitCreator(
       garmentsData,
       state.chosenClothes,
@@ -159,4 +154,7 @@ function App() {
   );
 }
 
+
+*/
+}
 export default App;

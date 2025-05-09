@@ -5,7 +5,7 @@ import {
   titleColorKeys,
   ColorClothesType,
 } from "../../data/types/ClothesTypes";
-import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
+import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ValidatorResultType";
 
 // VALIDATORS
 import { isObjectWithRequiredKeys } from "../genericValidators/isObjectWithRequiredKeys";

@@ -1,5 +1,5 @@
 // TYPES & ARRAYS & MESSAGES
-import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ErrorMessages";
+import { ERROR_CLOTHES_MESSAGE } from "../../data/types/ValidatorResultType";
 import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
 
 // VALIDATORS

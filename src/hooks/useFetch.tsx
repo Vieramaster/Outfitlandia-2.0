@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 
-export const useFetch = <T,>(URL: string | null) => {
-  const [data, setData] = useState<T>();
+export const useFetch = (URL: string | null) => {
+  const [data, setData] = useState<unknown>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
@@ -19,7 +19,7 @@ export const useFetch = <T,>(URL: string | null) => {
             `Fetch error: ${response.status} ${response.statusText}`
           );
         }
-        const jsonData: T = await response.json();
+        const jsonData: unknown = await response.json();
         setData(jsonData);
       } catch (err) {
         if ((err as any).name !== "AbortError") {
