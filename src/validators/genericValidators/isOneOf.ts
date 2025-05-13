@@ -7,6 +7,7 @@
  */
 export const isOneOf = <T extends readonly string[]>(
   value: unknown,
+  object: Record<string, unknown>,
   allowedValues: T
 ): value is T[number] =>
-  typeof value === "string" && allowedValues.includes(value);
+  typeof value === "string" && value in object && allowedValues.includes(value);

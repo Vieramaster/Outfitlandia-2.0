@@ -2,7 +2,7 @@ import { ClothesType } from "./ClothesTypes";
 
 export type ValidationIssue = {
   index: number;
-  field: keyof ClothesType[] | "root";
+  field: keyof ClothesType | "root" | "object";
   message: string;
 };
 export type ValidationResult<T> =
