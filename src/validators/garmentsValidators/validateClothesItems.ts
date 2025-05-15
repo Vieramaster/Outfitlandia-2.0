@@ -13,82 +13,62 @@ import {
   GarmentKeyType,
 } from "../../data/types/ClothesTypes";
 
-const REQUIRED_KEYS = [
+const lala = [
   {
-    field: "id",
-    type: "number",
-    validateField: (field: unknown, object: Record<string, unknown>): boolean =>
-      isObjectWithRequiredKeys(field, object, RequiredKeys) ,
-    validateKey: (
-      object: Record<GarmentKeyType, unknown>,
-      field: GarmentKeyType
-    ) => typeof object[field] === "number",
+    field: "id" as const,
+    validate: (value: unknown) => typeof value === "number",
   },
   {
-    field: "garment",
-    type: "string",
-    validateField: (value: unknown, object: Record<string, unknown>) =>
-      isOneOf(value, object, RequiredKeys),
-    validateKey: (
-      object: Record<GarmentKeyType, unknown>,
-      field: GarmentKeyType
-    ) =>
-      typeof object[field] === "string"  && garmentsKeys.includes(object[field])
-     
-  },
-
-  {
-    field: "name",
-    type: "string",
-    validate: (value: unknown, object: Record<string, unknown>) =>
-      isOneOf(value, object, RequiredKeys) && object[value] === "string",
+    field: "garment" as const,
+    validate: (value: unknown) => isOneOf(value, garmentsKeys),
   },
   {
-    field: "image",
-    type: "string",
-    validate: (value: unknown, object: Record<string, unknown>) =>
-      typeof value === "string" && value in object,
+    field: "name" as const,
+    validate: (value: unknown) => typeof value === "string",
   },
   {
-    field: "style",
-    type: "array",
-    validate: (value: unknown) =>
-      Array.isArray(value) &&
-      value.every((item) => typeof item === "string") &&
-      isOneOf(value, styleKeys),
+    field: "image" as const,
+    validate: (value: unknown) => typeof value === "string",
   },
   {
-    field: "weather",
-    type: "array",
-    validate: (value: unknown) =>
-      Array.isArray(value) &&
-      value.every((item) => typeof item === "string") &&
-      isOneOf(value, weatherKeys),
+    field: "style" as const,
+    validate: (value: unknown) => validateStringArray(value, styleKeys),
   },
   {
-    field: "colors",
-    type: "array",
-    validate: (value: unknown) =>
-      Array.isArray(value) &&
-      value.every((item) => typeof item === "object" && item !== null),
+    field: "weather" as const,
+    validate: (value: unknown) => validateStringArray(value, weatherKeys),
   },
-] as const;
-
+  {
+    field: "colors" as const,
+    validate: (value: unknown) => Array.isArray(value) && value.length > 0,
+  },
+];
 export const validateClothesItems = (
-  item: unknown,
+  objectItem: unknown,
   index: number,
   issues: ValidationIssue[]
 ): boolean => {
-  if (!isPlainObject(item)) {
+  if (!isPlainObject(objectItem)) {
     issues.push(createIssue("object", ERROR_MESSAGE.INVALID_OBJECT, index));
     return false;
   }
 
-  const lala = REQUIRED_KEYS.forEach((element) => {});
+  const isValidKeys = lala.forEach(({ field, validate }, index): boolean => {
+    if (!isObjectWithRequiredKeys(objectItem, field, RequiredKeys)) {
+      issues.push(createIssue(field, ERROR_MESSAGE.INVALID_KEYS_VALUE, index));
+      return false;
+    }
+    if (!validate) {
+      issues.push(createIssue(field, ERROR_MESSAGE.INVALID_KEYS_VALUE, index));
+      return false;
+    }
+    return true;
+  });
+
+  if (!isValidKeys) return false;
+
   return true;
 };
-
-/** */
 
 const isPlainObject = (value: unknown): value is Record<string, unknown> =>
   value !== null &&
@@ -96,19 +76,30 @@ const isPlainObject = (value: unknown): value is Record<string, unknown> =>
   Object.getPrototypeOf(value) === Object.prototype;
 
 export const isOneOf = <T extends readonly string[]>(
-  field: unknown,
-  object: Record<string, unknown>,
+  value: unknown,
   allowedValues: T
-): field is T[number] =>
-  && allowedValues.includes(field);
-
+): value is T[number] =>
+  typeof value === "string" && allowedValues.includes(value);
 
 export const isObjectWithRequiredKeys = <const K extends ReadonlyArray<string>>(
-   field: unknown,
   objectData: Record<string, unknown>,
+  field: unknown,
   requiredKeys: K
 ): objectData is Record<K[number], unknown> =>
-   typeof field === "string" && field in objectData &&
+  typeof field === "string" &&
+  field in objectData &&
   requiredKeys.every((key) =>
     Object.prototype.hasOwnProperty.call(objectData, key)
   );
+export const validateStringArray = <T extends readonly string[]>(
+  value: unknown,
+  allowedValues: T
+): value is T[number][] => {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (item) =>
+        typeof item === "string" && allowedValues.includes(item as T[number])
+    )
+  );
+};
