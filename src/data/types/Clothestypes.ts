@@ -8,7 +8,7 @@ export type ClothesListObject = Record<string, ClothesType[]>;
 export type GarmentType = (typeof garmentsKeys)[number];
 export type StyleType = (typeof styleKeys)[number];
 export type WeatherType = (typeof weatherKeys)[number];
-export type GarmentKeyType = (typeof RequiredKeys)[number];
+export type GarmentKeyType = (typeof RequiredMainKeys)[number];
 
 
 export type RawClothes = Omit<ClothesType, "colors"> & {
@@ -44,7 +44,8 @@ export type MainButtonsProps = {
   belt: string;
   shoes: string;
 };
-export const RequiredKeys =  ["id", "garment", "name", "image", "style", "weather", "colors"] as const;
+export const colorRequiredKeys = ["colorName", "hex", "title", "imageColor"] as const;
+export const RequiredMainKeys =  ["id", "garment", "name", "image", "style", "weather", "colors"] as const;
 export const garmentsKeys = ["top", "coat", "pants", "shoes", "belt"] as const;
 export const styleKeys = ["basic", "casual", "elegant"] as const;
 export const weatherKeys = ["cold", "mild", "hot"] as const;
@@ -134,4 +135,3 @@ export const titleColorKeys = [
   "old pink",
   "salmon",
 ] as const;
-
