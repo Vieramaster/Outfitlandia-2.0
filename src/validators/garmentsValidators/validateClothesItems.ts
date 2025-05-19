@@ -94,21 +94,19 @@ const validateAgainstSchema = <T extends ClothesType | ColorClothesType>(
   itemIndex: number
 ): objectItem is T =>
   schema.every(({ field, validate }): boolean => {
-    if (!isObjectWithRequiredKeys(objectItem, field, arrayKeys)) {
+    if (
+      !isObjectWithRequiredKeys<T, typeof arrayKeys>(
+        objectItem,
+        field,
+        arrayKeys
+      )
+    ) {
       issues.push(createIssue(field, ERROR_MESSAGE.INVALID_KEYS, itemIndex));
       return false;
-      
     }
-    const lala = field
-    const value = objectItem[lala];
 
-    if (!validate(value)) {
-      issues.push(createIssue(field, ERROR_MESSAGE.INVALID_VALUE, itemIndex));
-      return false;
-    }
     return true;
   });
-
 
 const isPlainObject = (value: unknown): value is Record<string, unknown> =>
   value !== null &&
@@ -121,15 +119,18 @@ export const isOneOf = <T extends readonly string[]>(
 ): value is T[number] =>
   typeof value === "string" && allowedValues.includes(value);
 
-export const isObjectWithRequiredKeys = <const K extends ReadonlyArray<string>>(
+export const isObjectWithRequiredKeys = <
+  F extends string,
+  const K extends ReadonlyArray<string>
+>(
   objectData: Record<string, unknown>,
-  field: unknown,
+  field: string,
   requiredKeys: K
-): objectData is Record<K[number], unknown> =>
+): objectData is Record<F, unknown> =>
   typeof field === "string" &&
-  requiredKeys.every((key) =>
-    Object.prototype.hasOwnProperty.call(objectData, key)
-  );
+  Object.prototype.hasOwnProperty.call(objectData, field) &&
+  requiredKeys.includes(field);
+
 export const validateStringArray = <T extends readonly string[]>(
   value: unknown,
   allowedValues: T
