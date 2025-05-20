@@ -1,51 +1,6 @@
-//GARMENT DATA
 
-export type ListStructureType = Record<string, ClothesType>;
-export type ClothesListObject = Record<string, ClothesType[]>;
-
-
-
-export type GarmentType = (typeof garmentsKeys)[number];
-export type StyleType = (typeof styleKeys)[number];
-export type WeatherType = (typeof weatherKeys)[number];
-export type GarmentKeyType = (typeof RequiredMainKeys)[number];
-
-
-export type RawClothes = Omit<ClothesType, "colors"> & {
-  colors: unknown[];
-};
-
-export type ClothesType = {
-  id: number;
-  garment: GarmentType;
-  name: string;
-  image: string;
-  style: StyleType[];
-  weather: WeatherType[];
-  colors: ColorClothesType[];
-};
-
-export type ColorNameType = (typeof colorNameKeys)[number];
-export type ColorNameArrayType = ColorNameType[];
-export type HexType = (typeof hexColorKeys)[number];
-export type TitleColorType = (typeof titleColorKeys)[number];
-
-export type ColorClothesType = {
-  colorName: ColorNameType;
-  hex: HexType;
-  title: TitleColorType;
-  imageColor: string;
-};
-
-export type MainButtonsProps = {
-  top: string;
-  coat: string;
-  pants: string;
-  belt: string;
-  shoes: string;
-};
 export const colorRequiredKeys = ["colorName", "hex", "title", "imageColor"] as const;
-export const RequiredMainKeys =  ["id", "garment", "name", "image", "style", "weather", "colors"] as const;
+export const requiredMainKeys =  ["id", "garment", "name", "image", "style", "weather", "colors"] as const;
 export const garmentsKeys = ["top", "coat", "pants", "shoes", "belt"] as const;
 export const styleKeys = ["basic", "casual", "elegant"] as const;
 export const weatherKeys = ["cold", "mild", "hot"] as const;

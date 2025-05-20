@@ -1,7 +1,8 @@
+//TYPES
 import {
   ValidationIssue,
   ValidationResult,
-} from "../data/types/ValidatorResultType";
+} from "../../../shared/types/apiValidationTypes";
 
 export const createIssue = (
   field: ValidationIssue["field"],
