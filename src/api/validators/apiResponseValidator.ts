@@ -10,7 +10,7 @@ import { isNonEmptyArray } from "../../shared/validators/isNonEmplyArray";
 
 export const apiResponseValidator =<T> (
   data: unknown,
-  objectValidator: () => void
+  objectValidator: (item: unknown, index: number, issues:ValidationIssue[]) => item is T
 ): ValidationResult<T[]> => {
 
   const issues: ValidationIssue[] = [];
