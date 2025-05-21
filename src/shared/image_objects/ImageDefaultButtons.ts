@@ -1,4 +1,5 @@
-export const DefaultImages = {
+export const imageDefaultButtons
+ = {
   belt: "/images/default/defaultBelt-lg.webp",
   coat: "/images/default/defaultCoat-lg.webp",
   pants: "/images/default/defaultPants-lg.webp",

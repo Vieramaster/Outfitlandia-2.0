@@ -1,11 +1,11 @@
 //TYPES
-import { ArraySChemaType } from "../../shared/types/apiValidationTypes";
-import { ValidationIssue } from "../../shared/types/apiValidationTypes";
+import { ArraySChemaType } from "../../../shared/types/validationApi.types";
+import { ValidationIssue } from "../../../shared/types/validationApi.types";
 //FUNCTIONS
 import { isObjectWithRequiredKeys } from "./isObjectWithRequiredKeys";
-import { createIssue } from "./validationUtils/validationUtils";
+import { createIssue } from "../utils_validations/validationUtils";
 //MESSAGE
-import { ERROR_MESSAGE } from "../../shared/messages/estructureMessage";
+import { ERROR_MESSAGE } from "../../../shared/messages/estructureMessage";
 
 export const validateSchemaKeys = <T extends Record<string, unknown>>(
   objectItem: Record<string, unknown>,

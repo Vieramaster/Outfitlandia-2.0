@@ -1,7 +1,7 @@
 import { WeatherStatsContainer } from "../../containers/WeatherStatsContainer";
 import { CurrentWeatherAPI } from "../../../data/types/WeatherTypes";
 //DATA
-import { iconWeathers } from "../../../data/listObjects/iconWeathers";
+import { iconWeathers } from "../../../shared/image_objects/weatherIcons";
 
 interface WeatherSectionContentPros {
   weatherArray: CurrentWeatherAPI;

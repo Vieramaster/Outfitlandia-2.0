@@ -1,5 +1,5 @@
 import { AppStateProps, ActionProps } from "../data/types/ReducerTypes";
-import { DefaultImages } from "../data/listObjects/ImageDefaultButtons";
+import { DefaultImages } from "../shared/image_objects/ImageDefaultButtons";
 
 /**
  * initialState – Default values for the useReducer hook

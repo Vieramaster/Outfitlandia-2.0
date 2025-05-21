@@ -1,5 +1,5 @@
 //TYPES
-import { ArraySChemaType } from "../../../shared/types/apiValidationTypes";
+import { ArraySChemaType } from "../../../shared/types/validationApi.types";
 //ARRAY_VALIDATORS
 import {
   garmentsKeys,
@@ -8,11 +8,11 @@ import {
   colorNameKeys,
   titleColorKeys,
   hexColorKeys,
-} from "../types/arrayTypes";
+} from "../../../shared/types/clothes/arrayTypes";
 //FUNCTIONS
-import { isOneOf } from "../../validators/isOneOf";
+import { isOneOf } from "../../validators/object_validations/isOneOf";
 import { isNonEmptyArray } from "../../../shared/validators/isNonEmplyArray";
-import { validateStringArray } from "../../validators/validateStringArray";
+import { validateStringArray } from "../../validators/object_validations/validateStringArray";
 
 export const CLOTHES_SCHEMA: ArraySChemaType[] = [
   { field: "id", validate: (v) => typeof v === "number" },
