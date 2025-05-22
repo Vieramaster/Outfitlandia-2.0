@@ -1,57 +1,40 @@
+//TYPES
+import { ClothesType, GarmentType } from "./shared/types/clothes/clothes.types";
+
 //HOOKS
 import { MouseEventHandler, useCallback, useReducer } from "react";
-import { useFetch } from "./hooks/useFetch";
-import { outfitCreator } from "./helpers/clothes/outfitCreator";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
-import { useClothesData } from "./hooks/useClothes";
+import { useApiData } from "./hooks/useApiData";
+
 //FUNCTONS
+import { outfitCreator } from "./helpers/clothes/outfitCreator";
 import { searchFilter } from "./helpers/clothes/genericFunctions/searchFilter";
 import { colorFilter } from "./helpers/clothes/genericFunctions/colorFilter";
-//DATA
-import {
-  ClothesType,
-  ColorNameType,
-  GarmentKeyType,
-} from "./data/types/ClothesTypes";
-import { appReducer, initialState } from "./hooks/appReducer";
-import { ERROR_MESSAGES_OUTFIT } from "./data/types/ValidatorResultType";
+import { appReducer, initialState } from "../src/hooks/appReducer";
+
 //COMPONENTS
 import { Header } from "./components/layout/Header";
 import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import { isNonEmptyArray } from "./validators/genericValidators/isNonEmptyArray";
-import { isValidClothesApiResponse } from "./validators/garmentsValidators/isValidClothesApiResponse";
-import { isValidCombineColorsApiResponse } from "./validators/combineColorsValidators/isValidCombineColorsApiResponse";
 
 function App() {
-  //CLOTHES DATA
-  /*const [state, dispatch] = useReducer(appReducer, initialState);*/
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
-  const { clothes, loading, error } = useClothesData();
-  
-  /*
-  if (
-    !isNonEmptyArray(garmentsData) ||
-    isValidClothesApiResponse(garmentsData)
-  ) {
-    console.error(ERROR_MESSAGES_OUTFIT.MISSING_DATA);
-    return undefined;
-  }
-  if (
-    !isValidCombineColorsApiResponse(combineColorsData) ||
-    combineColorsError
-  ) {
-    console.error(ERROR_MESSAGES_OUTFIT.NO_COLOR_DATA);
-    return [];
-  }
+  const {
+    validatedData: garmentsData,
+    loading: garmentLoading,
+    error: garmentError,
+  } = useApiData<ClothesType>("/garmentData.json", "clothes");
+
+  if (!garmentsData) return;
+
   const { isMobile } = useResponsiveLayout();
 
   const handleSearchClothes: MouseEventHandler<HTMLButtonElement> = useCallback(
     ({ currentTarget }) => {
-      const selectedClothes = currentTarget.id as GarmentKeyType;
-
+      const selectedClothes = currentTarget.id;
       //FILTER GARMENT
       const garmentFilter = searchFilter(
         garmentsData,
@@ -154,7 +137,4 @@ function App() {
   );
 }
 
-
-*/
-}
 export default App;

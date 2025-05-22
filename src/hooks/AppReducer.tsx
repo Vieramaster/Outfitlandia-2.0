@@ -1,5 +1,8 @@
-import { AppStateProps, ActionProps } from "../data/types/ReducerTypes";
-import { DefaultImages } from "../shared/image_objects/ImageDefaultButtons";
+import {
+  AppStateProps,
+  ActionProps,
+} from "../shared/types/hooks/appReducer.types";
+import { imageDefaultButtons } from "../shared/image_objects/ImageDefaultButtons";
 
 /**
  * initialState – Default values for the useReducer hook
@@ -14,7 +17,7 @@ import { DefaultImages } from "../shared/image_objects/ImageDefaultButtons";
  * @property isMobileMenuHidden   – Whether the mobile menu is hidden
  */
 export const initialState: AppStateProps = {
-  images: DefaultImages,
+  images: imageDefaultButtons,
   selectedGarment: undefined,
   chosenClothes: [],
   activeView: "main",

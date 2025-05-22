@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "garment": "top",
     "name": "hoodie",
     "image": "images/image-json/top/topHoodie.webp",
@@ -34,13 +34,13 @@
       {
         "colorName": "navy",
         "hex": "#272b41",
-        "title": "navy",
+        "title": "blue navy",
         "imageColor": "images/image-json/top/topHoodieNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
-        "title": "french blue(2°)",
+        "title": "french blue (2°)",
         "imageColor": "images/image-json/top/topHoodieFrench.webp"
       },
       {
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "garment": "top",
     "name": "sweatshirt",
     "image": "images/image-json/top/topSweatShirt.webp",
@@ -332,7 +332,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "garment": "top",
     "name": "short sleeve t-shirt",
     "image": "images/image-json/top/topTShirt.webp",
@@ -342,7 +342,7 @@
       "elegant"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -493,7 +493,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "garment": "top",
     "name": "polo",
     "image": "images/image-json/top/topPolo.webp",
@@ -501,7 +501,7 @@
       "casual"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -652,7 +652,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "garment": "top",
     "name": "sweater",
     "image": "images/image-json/top/topSweater.webp",
@@ -800,7 +800,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "garment": "top",
     "name": "turtle neck sweater",
     "image": "images/image-json/top/topTurtleSweater.webp",
@@ -917,7 +917,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 6,
     "garment": "top",
     "name": "short sleeve shirt",
     "image": "images/image-json/top/topShortShirt.webp",
@@ -926,7 +926,7 @@
       "casual"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -1071,7 +1071,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 7,
     "garment": "top",
     "name": "long sleeve shirt",
     "image": "images/image-json/top/topLongShirt.webp",
@@ -1217,7 +1217,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 8,
     "garment": "top",
     "name": "long sleeve t-shirt",
     "image": "images/image-json/top/topLongTShirt.webp",
@@ -1370,7 +1370,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 9,
     "garment": "coat",
     "name": "gabardine jacket",
     "image": "images/image-json/coat/coatDenim.webp",
@@ -1379,7 +1379,7 @@
       "elegant"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -1446,13 +1446,13 @@
       {
         "colorName": "army",
         "hex": "#5f6053",
-        "title": "army",
+        "title": "green army",
         "imageColor": "images/image-json/coat/coatDenimArmy.webp"
       }
     ]
   },
   {
-    "id": 11,
+    "id": 10,
     "garment": "coat",
     "name": "leather jacket",
     "image": "images/image-json/coat/coatLeather.webp",
@@ -1461,7 +1461,7 @@
       "elegant"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -1528,7 +1528,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 11,
     "garment": "coat",
     "name": "inflatable jacket",
     "image": "images/image-json/coat/coatInflatableJacket.webp",
@@ -1656,7 +1656,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "garment": "coat",
     "name": "parka",
     "image": "images/image-json/coat/coatParka.webp",
@@ -1730,7 +1730,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "garment": "coat",
     "name": "shacket",
     "image": "images/image-json/coat/coatShacket.webp",
@@ -1835,7 +1835,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "garment": "coat",
     "name": "bomber jacket",
     "image": "images/image-json/coat/coatBomber.webp",
@@ -1844,7 +1844,7 @@
     ],
     "weather": [
       "mild",
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -1934,7 +1934,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "garment": "coat",
     "name": "winter gabardine jacket",
     "image": "images/image-json/coat/coatDenimWinter.webp",
@@ -1990,7 +1990,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 15,
     "garment": "coat",
     "name": "windbraker",
     "image": "images/image-json/coat/coatWindbreaker.webp",
@@ -1999,7 +1999,7 @@
     ],
     "weather": [
       "mild",
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -2107,7 +2107,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 17,
     "garment": "coat",
     "name": "blazer",
     "image": "images/image-json/coat/coatBlazer.webp",
@@ -2212,7 +2212,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 18,
     "garment": "coat",
     "name": "saco cruzado",
     "image": "images/image-json/coat/coatShortOvercoat.webp",
@@ -2268,7 +2268,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 19,
     "garment": "coat",
     "name": "gaban",
     "image": "images/image-json/coat/coatGaban.webp",
@@ -2324,7 +2324,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 20,
     "garment": "coat",
     "name": "montgomery",
     "image": "images/image-json/coat/coatDuffle.webp",
@@ -2392,7 +2392,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 21,
     "garment": "belt",
     "name": "traditional",
     "image": "images/image-json/belt/beltClasic.webp",
@@ -2401,9 +2401,9 @@
       "elegant"
     ],
     "weather": [
-      "heat",
+      "hot",
       "cold",
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -2469,7 +2469,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 22,
     "garment": "belt",
     "name": "cloth",
     "image": "images/image-json/belt/beltCloth.webp",
@@ -2477,7 +2477,7 @@
       "basic"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild",
       "cold"
     ],
@@ -2498,7 +2498,7 @@
         "colorName": "emerald",
         "hex": "#07463e",
         "title": "emerald",
-        "imageCo|lor": "images/image-json/belt/beltClothEmerald.webp"
+        "imageColor": "images/image-json/belt/beltClothEmerald.webp"
       },
       {
         "colorName": "army",
@@ -2510,7 +2510,7 @@
         "colorName": "yellow",
         "hex": "#efbe3d",
         "title": "yellow",
-        "imageCo|lor": "images/image-json/belt/beltClothYellow.webp"
+        "imageColor": "images/image-json/belt/beltClothYellow.webp"
       },
       {
         "colorName": "windsorTan",
@@ -2569,7 +2569,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 23,
     "garment": "belt",
     "name": "braided",
     "image": "images/image-json/belt/beltBraided.webp",
@@ -2577,7 +2577,7 @@
       "basic"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild",
       "cold"
     ],
@@ -2663,7 +2663,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 24,
     "garment": "pants",
     "name": "joggin",
     "image": "images/image-json/pants/pantsJoggin.webp",
@@ -2786,7 +2786,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 25,
     "garment": "pants",
     "name": "bermuda joggin",
     "image": "images/image-json/pants/pantsShortJoggin.webp",
@@ -2794,7 +2794,7 @@
       "basic"
     ],
     "weather": [
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -2914,7 +2914,7 @@
     ]
   },
   {
-    "id": 27,
+    "id": 26,
     "garment": "pants",
     "name": "jeans",
     "image": "images/image-json/pants/pantsJean.webp",
@@ -2954,7 +2954,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 27,
     "garment": "pants",
     "name": "bermuda jean",
     "image": "images/image-json/pants/pantsShortJean.webp",
@@ -2963,7 +2963,7 @@
       "basic"
     ],
     "weather": [
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -2993,7 +2993,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 28,
     "garment": "pants",
     "name": "gabardine pants",
     "image": "images/image-json/pants/pantsGabardine.webp",
@@ -3004,7 +3004,7 @@
     "weather": [
       "mild",
       "cold",
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -3082,7 +3082,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 29,
     "garment": "pants",
     "name": "gabardine bermuda",
     "image": "images/image-json/pants/pantsShortsGab.webp",
@@ -3091,7 +3091,7 @@
       "elegant"
     ],
     "weather": [
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -3169,7 +3169,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 30,
     "garment": "pants",
     "name": "chino",
     "image": "images/image-json/pants/pantsChinos.webp",
@@ -3250,7 +3250,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 31,
     "garment": "pants",
     "name": " bermuda chino",
     "image": "images/image-json/pants/pantsShortChino.webp",
@@ -3259,7 +3259,7 @@
       "elegant"
     ],
     "weather": [
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -3331,7 +3331,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 32,
     "garment": "pants",
     "name": "cargo",
     "image": "images/image-json/pants/pantsCharge.webp",
@@ -3418,7 +3418,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 33,
     "garment": "shoes",
     "name": "sports shoe",
     "image": "images/image-json/shoes/shoesSport.webp",
@@ -3426,7 +3426,7 @@
       "basic"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild"
     ],
     "colors": [
@@ -3547,7 +3547,7 @@
     ]
   },
   {
-    "id": 35,
+    "id": 34,
     "garment": "shoes",
     "name": "sneakers",
     "image": "images/image-json/shoes/shoesSneakers.webp",
@@ -3556,7 +3556,7 @@
       "elegant"
     ],
     "weather": [
-      "heat",
+      "hot",
       "mild",
       "cold"
     ],
@@ -3630,7 +3630,7 @@
     ]
   },
   {
-    "id": 36,
+    "id": 35,
     "garment": "shoes",
     "name": "nautic shoes",
     "image": "images/image-json/shoes/shoesNautic.webp",
@@ -3638,7 +3638,7 @@
       "elegant"
     ],
     "weather": [
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -3704,7 +3704,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": 36,
     "garment": "shoes",
     "name": "dress bots",
     "image": "images/image-json/shoes/shoesShortBoots.webp",
@@ -3779,7 +3779,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 37,
     "garment": "shoes",
     "name": "boots",
     "image": "images/image-json/shoes/shoesBorcego.webp",
@@ -3841,7 +3841,7 @@
     ]
   },
   {
-    "id": 39,
+    "id": 38,
     "garment": "shoes",
     "name": "oxford shoe",
     "image": "images/image-json/shoes/shoesOxford.webp",
@@ -3916,7 +3916,7 @@
     ]
   },
   {
-    "id": 40,
+    "id": 39,
     "garment": "shoes",
     "name": "brogue shoes",
     "image": "images/image-json/shoes/shoesBrogue.webp",
@@ -3991,7 +3991,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 40,
     "garment": "shoes",
     "name": "canvas sneakers",
     "image": "images/image-json/shoes/shoesCanvas.webp",
@@ -4000,7 +4000,7 @@
     ],
     "weather": [
       "mild",
-      "heat"
+      "hot"
     ],
     "colors": [
       {
@@ -4096,7 +4096,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 41,
     "garment": "shoes",
     "name": "chelsea",
     "image": "images/image-json/shoes/shoesChelsea.webp",
@@ -4171,7 +4171,7 @@
     ]
   },
   {
-    "id": 43,
+    "id": 42,
     "garment": "shoes",
     "name": "brogue shoes",
     "image": "images/image-json/shoes/shoesBrogue.webp",

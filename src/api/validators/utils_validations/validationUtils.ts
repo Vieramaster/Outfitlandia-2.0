@@ -7,12 +7,13 @@ import {
 export const createIssue = (
   field: ValidationIssue["field"],
   message: string,
-  index?: number
+  index: number[] = [-1]
 ): ValidationIssue => ({
   field,
   message,
-  index: index ?? -1,
+  index,
 });
+
 
 export const dataValidationResult = (
   raw: unknown,

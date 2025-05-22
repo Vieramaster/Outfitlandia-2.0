@@ -1,18 +1,22 @@
-import { ERROR_MESSAGE } from "../../../shared/messages/estructureMessage";
-import { WeatherType } from "../../../shared/types/clothes/clothes.types"
-import { ValidationResult, ValidationIssue } from "../../../shared/types/validationApi.types"
-import { isNonEmptyArray } from "../../../shared/validators/isNonEmplyArray"
-import { createIssue, dataValidationResult } from "../../validators/utils_validations/validationUtils";
+//TYPES
+import {
+  ValidationIssue,
+  ValidationResult,
+} from "../../../shared/types/validationApi.types";
+import { WeatherApiResponseType } from "../../../shared/types/weather/weather.types";
+//FUNCTIONS
+import { dataValidationResult } from "../../validators/utils_validations/validationUtils";
+import { weatherItemValidator } from "./weatherItemValidator";
 
-export const weatherApiValidator = ( data : unknown) : ValidationResult<WeatherType[]>=>{
 
-const issues: ValidationIssue[] = [];
+export const weatherApiValidator = (
+  data: unknown
+): ValidationResult<WeatherApiResponseType[]> => {
+  const issues: ValidationIssue[] = [];
 
-    if(!isNonEmptyArray(data)){
-        issues.push(createIssue("root", ERROR_MESSAGE.INVALID_ARRAY))
-        return dataValidationResult(data, issues)
-    }
+  const isValid = weatherItemValidator(data, 0, issues);
 
-    const validObjects = data.filter((item, index) => )
-}   
-
+  return isValid
+    ? { valid: true, value: [data] }
+    : dataValidationResult(data, issues);
+};

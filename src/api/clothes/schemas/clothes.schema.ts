@@ -24,9 +24,10 @@ export const CLOTHES_SCHEMA: ArraySChemaType[] = [
   { field: "colors", validate: (v) => isNonEmptyArray(v) },
 ];
 
-export const COLOR_SCHEMA: ArraySChemaType[] = [
+export const CLOTHES_COLOR_SCHEMA: ArraySChemaType[] = [
   { field: "colorName", validate: (v) => isOneOf(v, colorNameKeys) },
   { field: "hex", validate: (v) => isOneOf(v, hexColorKeys) },
   { field: "title", validate: (v) => isOneOf(v, titleColorKeys) },
   { field: "imageColor", validate: (v) => typeof v === "string" },
+  
 ];

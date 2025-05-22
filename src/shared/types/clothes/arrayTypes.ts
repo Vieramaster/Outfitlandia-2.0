@@ -1,6 +1,20 @@
+export const colorRequiredKeys = [
+  "colorName",
+  "hex",
+  "title",
+  "imageColor",
+] as const;
 
-export const colorRequiredKeys = ["colorName", "hex", "title", "imageColor"] as const;
-export const requiredMainKeys =  ["id", "garment", "name", "image", "style", "weather", "colors"] as const;
+export const requiredMainKeys = [
+  "id",
+  "garment",
+  "name",
+  "image",
+  "style",
+  "weather",
+  "colors",
+] as const;
+
 export const garmentsKeys = ["top", "coat", "pants", "shoes", "belt"] as const;
 export const styleKeys = ["basic", "casual", "elegant"] as const;
 export const weatherKeys = ["cold", "mild", "hot"] as const;
@@ -32,6 +46,7 @@ export const colorNameKeys = [
   "oldPink",
   "salmon",
   "wornBlack",
+  "jean",
 ] as const;
 
 export const hexColorKeys = [
@@ -39,6 +54,7 @@ export const hexColorKeys = [
   "#c9b8e1",
   "#53718d",
   "#272b41",
+  "#132b59",
   "#2c81d4",
   "#afd8eb",
   "#85d5dc",
@@ -67,8 +83,8 @@ export const titleColorKeys = [
   "purple",
   "lilac",
   "aero",
-  "navy",
-  "french blue(2°)",
+  "blue navy",
+  "french blue (2°)",
   "sky blue",
   "aquamarine",
   "emerald",
@@ -88,5 +104,7 @@ export const titleColorKeys = [
   "red",
   "baby pink",
   "old pink",
+  "jean",
   "salmon",
+  "worn black",
 ] as const;

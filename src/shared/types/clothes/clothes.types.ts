@@ -42,7 +42,3 @@ export type MainButtonsProps = {
 
 export type ListStructureType = Record<string, ClothesType>;
 export type ClothesListObject = Record<string, ClothesType[]>;
-
-export type RawClothes = Omit<ClothesType, "colors"> & {
-  colors: unknown[];
-};
