@@ -2,23 +2,25 @@
 import {
   ClothesType,
   ColorClothesType,
-} from "../../../shared/types/clothes/clothes.types";
-import { ValidationIssue } from "../../../shared/types/validationApi.types";
+} from "../../../../shared/types/clothes/clothes.types";
+
+import { ValidationIssue } from "../../../../shared/types/validationApi.types";
 //MESSAGES
-import { ERROR_MESSAGE } from "../../../shared/messages/estructureMessage";
+import { ERROR_MESSAGE } from "../../../../shared/messages/estructureMessage";
 //ARRAY_VALIDATORS
 import {
   requiredMainKeys,
   colorRequiredKeys,
-} from "../../../shared/types/clothes/arrayTypes";
+} from "../../../../shared/types/clothes/arrayTypes";
+
 import {
   CLOTHES_SCHEMA,
   CLOTHES_COLOR_SCHEMA,
 } from "../schemas/clothes.schema";
 //FUNCTIONS
-import { createIssue } from "../../validators/utils_validations/validationUtils";
-import { isPlainObject } from "../../../shared/validators/isPlainObject";
-import { validateSchemaKeys } from "../../validators/object_validations/validateSchemaKeys";
+import { createIssue } from "../../../validators/utils_validations/validationUtils";
+import { isPlainObject } from "../../../../shared/validators/isPlainObject";
+import { validateSchemaKeys } from "../../../validators/object_validations/validateSchemaKeys";
 
 export const clothesItemValidator = (
   objectItem: unknown,

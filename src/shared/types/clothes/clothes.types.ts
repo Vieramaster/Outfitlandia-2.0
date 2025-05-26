@@ -7,6 +7,7 @@ import {
   titleColorKeys,
 } from "./arrayTypes";
 
+export type GarmentButtonType = "top" | "coat" | "pants";
 export type ClothesType = {
   id: number;
   garment: GarmentType;

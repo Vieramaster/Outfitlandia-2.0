@@ -1,5 +1,5 @@
 //TYPES
-import { ArraySChemaType } from "../../../shared/types/validationApi.types";
+import { ArraySChemaType } from "../../../../shared/types/validationApi.types";
 //ARRAY_VALIDATORS
 import {
   garmentsKeys,
@@ -8,11 +8,12 @@ import {
   colorNameKeys,
   titleColorKeys,
   hexColorKeys,
-} from "../../../shared/types/clothes/arrayTypes";
+} from "../../../../shared/types/clothes/arrayTypes";
+
 //FUNCTIONS
-import { isOneOf } from "../../validators/object_validations/isOneOf";
-import { isNonEmptyArray } from "../../../shared/validators/isNonEmplyArray";
-import { validateStringArray } from "../../validators/object_validations/validateStringArray";
+import { isOneOf } from "../../../validators/object_validations/isOneOf";
+import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
+import { validateStringArray } from "../../../validators/object_validations/validateStringArray";
 
 export const CLOTHES_SCHEMA: ArraySChemaType[] = [
   { field: "id", validate: (v) => typeof v === "number" },
@@ -29,5 +30,4 @@ export const CLOTHES_COLOR_SCHEMA: ArraySChemaType[] = [
   { field: "hex", validate: (v) => isOneOf(v, hexColorKeys) },
   { field: "title", validate: (v) => isOneOf(v, titleColorKeys) },
   { field: "imageColor", validate: (v) => typeof v === "string" },
-  
 ];

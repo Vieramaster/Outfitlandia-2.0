@@ -1,10 +1,12 @@
+//TYPES
+import { WeatherApiResponseType } from "../../shared/types/weather/weather.types";
 //UTILITIES
 import { transformWeatherData } from "../../helpers/weather/transformWeatherData";
-import { WeatherApiResponse } from "../../data/types/WeatherTypes";
 //HOOKS
 import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useGeolocation } from "../../hooks/useGeolocation";
+import { useApiData } from "../../hooks/useApiData";
 //COMPONENTS
 import { WeatherSectionContainer } from "../containers/WeatherSectionContainer";
 import { GeolocationButton } from "../buttons/GeolocationButton";
@@ -32,16 +34,20 @@ const WeatherSection = () => {
 
   const { latitude, longitude } = coordinates;
 
-  const weatherUrl = useMemo(
+  const weatherURL = useMemo(
     () => buildWeatherUrl(latitude, longitude),
     [latitude, longitude]
   );
 
+  if (!weatherURL) return;
+
   const {
-    data: weatherData,
+    validatedData: weatherData,
     loading: weatherLoading,
-    error: weatherErrror,
-  } = useFetch<WeatherApiResponse>(weatherUrl);
+    error: weatherError,
+  } = useApiData<WeatherApiResponseType>(weatherURL, "weather");
+
+  console.log(weatherData)
 
   const transformedData = useMemo(
     () => weatherData && transformWeatherData(weatherData),
@@ -49,7 +55,7 @@ const WeatherSection = () => {
   );
 
   const errorContent = useMemo(() => {
-    if (!API_KEY || geoError || weatherErrror)
+    if (!API_KEY || geoError || weatherError)
       return (
         <WeatherErrorAndLoading
           label="API_KEY is missing"
@@ -58,7 +64,7 @@ const WeatherSection = () => {
       );
 
     return null;
-  }, [API_KEY, geoError, weatherErrror]);
+  }, [API_KEY, geoError, weatherError]);
 
   const loadingContent = useMemo(() => {
     if (geoLoading || weatherLoading)

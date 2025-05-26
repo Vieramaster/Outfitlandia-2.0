@@ -1,5 +1,9 @@
 //TYPES
-import { ClothesType, GarmentType } from "./shared/types/clothes/clothes.types";
+import {
+  ClothesType,
+  GarmentButtonType,
+  GarmentType,
+} from "./shared/types/clothes/clothes.types";
 
 //HOOKS
 import { MouseEventHandler, useCallback, useReducer } from "react";
@@ -18,6 +22,7 @@ import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
+import { WeatherApiResponseType } from "./shared/types/weather/weather.types";
 
 function App() {
   const [state, dispatch] = useReducer(appReducer, initialState);
@@ -28,13 +33,19 @@ function App() {
     error: garmentError,
   } = useApiData<ClothesType>("/garmentData.json", "clothes");
 
+  const {
+    validatedData: combineColorData,
+    loading: combineColorLoading,
+    error: combineColorError,
+  } = useApiData<ClothesType>("/combineColors.json", "clothes");
+
   if (!garmentsData) return;
 
   const { isMobile } = useResponsiveLayout();
 
   const handleSearchClothes: MouseEventHandler<HTMLButtonElement> = useCallback(
     ({ currentTarget }) => {
-      const selectedClothes = currentTarget.id;
+      const selectedClothes = currentTarget.id as GarmentButtonType;
       //FILTER GARMENT
       const garmentFilter = searchFilter(
         garmentsData,
@@ -71,7 +82,7 @@ function App() {
 
   const handleColorsSubmit: MouseEventHandler<HTMLButtonElement> = useCallback(
     ({ currentTarget }) => {
-      const colorNameID = currentTarget.id as ColorNameType;
+      const colorNameID = currentTarget.id;
       if (!state.chosenClothes) return undefined;
       const filteredColors = colorFilter(state.chosenClothes, colorNameID);
 
@@ -88,7 +99,7 @@ function App() {
         chosenClothes: uniqueColor,
         images: {
           ...state.images,
-          [state.selectedGarment as GarmentKeyType]: colorImage,
+          [state.selectedGarment as GarmentType]: colorImage,
         },
       });
     },

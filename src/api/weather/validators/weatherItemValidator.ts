@@ -43,7 +43,7 @@ export const weatherItemValidator = (
     weatherApiResponseKeys,
     WEATHER_API_SCHEMA,
     issues,
-    indexItem
+    [indexItem]
   );
 
   if (!isValidApi) return false;
@@ -53,7 +53,7 @@ export const weatherItemValidator = (
     weatherCurrentKeys,
     WEATHER_CURRENT_SCHEMA,
     issues,
-    indexItem
+    [indexItem]
   );
 
   if (!isValidCurrent) return false;
@@ -75,7 +75,7 @@ export const weatherItemValidator = (
     weatherVisualKeys,
     WEATHER_VISUAL_SCHEMA,
     issues,
-    indexItem
+    [indexItem]
   );
 
   if (!isValidVisualWeather) return false;

@@ -26,3 +26,4 @@ export const WEATHER_VISUAL_SCHEMA = [
     validate: (v: unknown) => isOneOf(v, descriptionWeatherKeys),
   },
 ];
+

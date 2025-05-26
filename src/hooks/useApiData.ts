@@ -4,7 +4,7 @@ import { ValidationResult } from "../shared/types/validationApi.types";
 //HOOK
 import { useFetch } from "./useFetch";
 //FUNCTIONS
-import { clothesApiValidator } from "../api/clothes/validators/clothesApiValidator";
+import { clothesApiValidator } from "../api/main_clothes/clothes/validators/clothesApiValidator";
 import { weatherApiValidator } from "../api/weather/validators/weatherApiValidator";
 
 // 1. Definir tipo para los validadores
@@ -27,7 +27,7 @@ const VALIDATORS: ApiValidator<any>[] = [
 
 export const useApiData = <T>(
   URL: string,
-  chosenAPI: "clothes" | "weather"
+  chosenAPI: "clothes" | "weather" | "combineColors"
 ): DataResultType<T[]> => {
   // 3. Tipo genérico para array
   const { data, loading, error } = useFetch(URL);
