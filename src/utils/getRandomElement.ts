@@ -1,4 +1,4 @@
-import { isNonEmptyArray } from "../validators/genericValidators/isNonEmptyArray";
+import { isNonEmptyArray } from "../shared/validators/isNonEmplyArray";
 /**
  * @param array - The array to select a random element from.
  * @template T - The type of elements in the array.

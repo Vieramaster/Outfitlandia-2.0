@@ -5,3 +5,10 @@ export enum ERROR_MESSAGE {
   INVALID_VALUE = "The value is undefined or misspelled",
   INVALID_ARRAY_COLOR = "The  array color is null, undefined, or invalid",
 }
+
+export enum ERROR_MESSAGE_API {
+  COMBINE_COLORS = "CombineColors API error:",
+  CLOTHES = "Clothes API error:",
+  CLOTHES_COLORS = "Clothes API error faliure in colors object ",
+  WEATHER = "Weather API error:",
+}

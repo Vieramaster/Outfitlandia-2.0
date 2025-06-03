@@ -1,9 +1,12 @@
-//TYPES && MESSAGE
+//TYPES
 import {
   ValidationIssue,
   ValidationResult,
 } from "../../../../shared/types/validationApi.types";
-import { ERROR_MESSAGE } from "../../../../shared/messages/estructureMessage";
+import {
+  ERROR_MESSAGE,
+  ERROR_MESSAGE_API,
+} from "../../../../shared/messages/estructureMessage";
 //VALIDATION UTILS
 import { createIssue } from "../../../validators/utils_validations/validationUtils";
 import { dataValidationResult } from "../../../validators/utils_validations/validationUtils";
@@ -18,7 +21,7 @@ export const clothesApiValidator = (
   const issues: ValidationIssue[] = [];
 
   if (!isNonEmptyArray(data)) {
-    issues.push(createIssue("root", ERROR_MESSAGE.INVALID_ARRAY));
+    issues.push(createIssue(ERROR_MESSAGE_API.CLOTHES, ERROR_MESSAGE.INVALID_ARRAY));
     return dataValidationResult(data, issues);
   }
 

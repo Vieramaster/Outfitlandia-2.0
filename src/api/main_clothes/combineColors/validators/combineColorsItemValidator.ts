@@ -7,7 +7,10 @@ import {
   COMBINE_COLORS_CLOTHES_SCHEMA,
 } from "../schema/combineColors.schema";
 //MESSAGES
-import { ERROR_MESSAGE } from "../../../../shared/messages/estructureMessage";
+import {
+  ERROR_MESSAGE,
+  ERROR_MESSAGE_API,
+} from "../../../../shared/messages/estructureMessage";
 //FUNCTIONS
 import { validateSchemaKeys } from "../../../validators/object_validations/validateSchemaKeys";
 import { isPlainObject } from "../../../../shared/validators/isPlainObject";
@@ -20,7 +23,11 @@ export const combineColorsItemValidator = (
 ): objectItem is CombineColorsType => {
   if (!isPlainObject(objectItem)) {
     issues.push(
-      createIssue("object", ERROR_MESSAGE.INVALID_OBJECT, [mainIndex])
+      createIssue(
+        ERROR_MESSAGE_API.COMBINE_COLORS,
+        ERROR_MESSAGE.INVALID_OBJECT,
+        [mainIndex]
+      )
     );
     return false;
   }
@@ -30,7 +37,8 @@ export const combineColorsItemValidator = (
     ["clothes", "shoes"],
     COMBINE_COLOR_SCHEMA,
     issues,
-    [mainIndex]
+    [mainIndex],
+    ERROR_MESSAGE_API.COMBINE_COLORS
   );
 
   if (!validKeys) return false;
@@ -40,7 +48,8 @@ export const combineColorsItemValidator = (
     ["top", "coat", "pants"],
     COMBINE_COLORS_CLOTHES_SCHEMA,
     issues,
-    [mainIndex]
+    [mainIndex],
+    ERROR_MESSAGE_API.COMBINE_COLORS
   );
 
   if (!validClothes) return false;

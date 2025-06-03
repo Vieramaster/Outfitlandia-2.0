@@ -22,24 +22,39 @@ import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-import { WeatherApiResponseType } from "./shared/types/weather/weather.types";
+
+//API RESPONSES
+const {
+  error: garmentError,
+  loading: garmentLoading,
+  validatedData: garmentsData,
+} = useApiData<ClothesType>("/garmentData.json", "clothes");
+
+const {
+  error: combineColorError,
+  loading: combineColorLoading,
+  validatedData: combineColorData,
+} = useApiData<ClothesType>("/combineColors.json", "clothes");
 
 function App() {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
-  const {
-    validatedData: garmentsData,
-    loading: garmentLoading,
-    error: garmentError,
-  } = useApiData<ClothesType>("/garmentData.json", "clothes");
+  if (garmentError || combineColorError) {
+    return <h1>ERROR DE SISTEMA </h1>;
+  }
 
-  const {
-    validatedData: combineColorData,
-    loading: combineColorLoading,
-    error: combineColorError,
-  } = useApiData<ClothesType>("/combineColors.json", "clothes");
+  if (garmentLoading || combineColorLoading) {
+    return <h1>Cargando...</h1>;
+  }
 
-  if (!garmentsData) return;
+  return(
+      
+  )
+}
+
+export default App;
+/**
+ * if (!garmentsData) return;
 
   const { isMobile } = useResponsiveLayout();
 
@@ -107,12 +122,12 @@ function App() {
   );
 
   const handleSearchOutfit = useCallback(() => {
-    if (!state.chosenClothes)
+    if (!state.chosenClothes || !combineColorData)
       return console.error("bug in state ChosenClothes");
     const outfit = outfitCreator(
       garmentsData,
       state.chosenClothes,
-      combineColorsData
+      combineColorData
     );
     console.log(outfit);
   }, [garmentsData, state.chosenClothes]);
@@ -146,6 +161,4 @@ function App() {
       </main>
     </>
   );
-}
-
-export default App;
+ */
