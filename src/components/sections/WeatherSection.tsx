@@ -6,7 +6,7 @@ import { transformWeatherData } from "../../helpers/weather/transformWeatherData
 import { useMemo } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useGeolocation } from "../../hooks/useGeolocation";
-import { useApiData } from "../../hooks/useApiData";
+import { useApiData } from "../../api/consumeAPI";
 //COMPONENTS
 import { WeatherSectionContainer } from "../containers/WeatherSectionContainer";
 import { GeolocationButton } from "../buttons/GeolocationButton";
@@ -47,7 +47,7 @@ const WeatherSection = () => {
     error: weatherError,
   } = useApiData<WeatherApiResponseType>(weatherURL, "weather");
 
-  console.log(weatherData)
+  console.log(weatherData);
 
   const transformedData = useMemo(
     () => weatherData && transformWeatherData(weatherData),

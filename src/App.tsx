@@ -8,7 +8,10 @@ import {
 //HOOKS
 import { MouseEventHandler, useCallback, useReducer } from "react";
 import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
-import { useApiData } from "./hooks/useApiData";
+import { consumeAPI } from "./api/consumeAPI";
+//VALIDATORS
+import { clothesApiValidator } from "./api/main_clothes/clothes/validators/clothesApiValidator";
+import { combineColorsApiValidator } from "./api/main_clothes/combineColors/validators/combineColorsApiValidator";
 
 //FUNCTONS
 import { outfitCreator } from "./helpers/clothes/outfitCreator";
@@ -22,35 +25,38 @@ import { MainSection } from "./components/sections/MainSection";
 import WeatherSection from "./components/sections/WeatherSection";
 import { GarmentList } from "./components/lists/GarmentList";
 import { ColorList } from "./components/lists/ColorList";
-
-//API RESPONSES
-const {
-  error: garmentError,
-  loading: garmentLoading,
-  validatedData: garmentsData,
-} = useApiData<ClothesType>("/garmentData.json", "clothes");
-
-const {
-  error: combineColorError,
-  loading: combineColorLoading,
-  validatedData: combineColorData,
-} = useApiData<ClothesType>("/combineColors.json", "clothes");
+import { CombineColorsType } from "./shared/types/clothes/combineColors.types";
 
 function App() {
+  //API RESPONSES
+  const {
+    error: garmentError,
+    loading: garmentLoading,
+    validatedData: garmentsData,
+  } = consumeAPI<ClothesType>("/garmentData.json", clothesApiValidator);
+
+  const {
+    error: combineColorError,
+    loading: combineColorLoading,
+    validatedData: combineColorData,
+  } = consumeAPI<CombineColorsType>(
+    "/combineColors.json",
+    combineColorsApiValidator
+  );
+
   const [state, dispatch] = useReducer(appReducer, initialState);
 
-  if (garmentError || combineColorError) {
+  if (garmentError) {
     return <h1>ERROR DE SISTEMA </h1>;
   }
 
-  if (garmentLoading || combineColorLoading) {
+  if (garmentLoading) {
     return <h1>Cargando...</h1>;
   }
 
-  return(
-      
-  )
+  return <></>;
 }
+
 
 export default App;
 /**
