@@ -21,7 +21,9 @@ export const clothesApiValidator = (
   const issues: ValidationIssue[] = [];
 
   if (!isNonEmptyArray(data)) {
-    issues.push(createIssue(ERROR_MESSAGE_API.CLOTHES, ERROR_MESSAGE.INVALID_ARRAY));
+    issues.push(
+      createIssue(ERROR_MESSAGE_API.CLOTHES, ERROR_MESSAGE.INVALID_ROOT)
+    );
     return dataValidationResult(data, issues);
   }
 

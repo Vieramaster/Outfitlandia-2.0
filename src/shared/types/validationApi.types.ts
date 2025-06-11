@@ -1,4 +1,3 @@
-
 export type ValidationResult<T> =
   | { valid: true; value: T }
   | { valid: false; issues: ValidationIssue[]; raw: unknown };
@@ -9,13 +8,13 @@ export type ValidationIssue = {
   message: string;
 };
 
-export type ArraySChemaType = {
-  field: string;
-  validate: (value: unknown) => boolean;
-};
-
 export type DataResultType<T> = {
   loading: boolean;
   error: Error | null;
   validatedData: T | undefined;
+};
+
+export type ArraySchemaType = {
+  field: string;
+  validate: (v: unknown) => v is any;
 };

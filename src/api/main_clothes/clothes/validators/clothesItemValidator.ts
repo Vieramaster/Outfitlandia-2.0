@@ -1,6 +1,7 @@
 //TYPES
 import {
   ClothesType,
+  ClothesShallow,
   ColorClothesType,
 } from "../../../../shared/types/clothes/clothes.types";
 
@@ -10,12 +11,7 @@ import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
 } from "../../../../shared/messages/estructureMessage";
-//ARRAY_VALIDATORS
-import {
-  requiredMainKeys,
-  colorRequiredKeys,
-} from "../../../../shared/types/clothes/arrayTypes";
-
+//SCHEMAS
 import {
   CLOTHES_SCHEMA,
   CLOTHES_COLOR_SCHEMA,
@@ -38,35 +34,30 @@ export const clothesItemValidator = (
     );
     return false;
   }
-
-  const validKeys = validateSchemaKeys<ClothesType>(
+  const validateClothesKeys = validateSchemaKeys<ClothesShallow>(
     objectItem,
-    requiredMainKeys,
     CLOTHES_SCHEMA,
     issues,
     [mainIndex],
     ERROR_MESSAGE_API.CLOTHES
   );
+  if (!validateClothesKeys) return false;
 
-  if (!validKeys) return false;
-
-  const allColorsValid = objectItem.colors.filter((item, colorIndex) => {
+  const allColorsValid = objectItem.colors.every((item, colorIndex) => {
     if (!isPlainObject(item)) {
       issues.push(
-        createIssue(
-          ERROR_MESSAGE_API.CLOTHES_COLORS,
-          ERROR_MESSAGE.INVALID_OBJECT,
-          [mainIndex, colorIndex]
-        )
+        createIssue(ERROR_MESSAGE_API.CLOTHES, ERROR_MESSAGE.INVALID_OBJECT, [
+          mainIndex,
+          colorIndex,
+        ])
       );
     }
-    validateSchemaKeys<ColorClothesType>(
+    return validateSchemaKeys<ColorClothesType>(
       item,
-      colorRequiredKeys,
       CLOTHES_COLOR_SCHEMA,
       issues,
       [mainIndex, colorIndex],
-      ERROR_MESSAGE_API.CLOTHES_COLORS
+      ERROR_MESSAGE_API.CLOTHES + ERROR_MESSAGE_API.COMBINE_COLORS
     );
   });
 

@@ -10,3 +10,7 @@ export type CombineColorsClothes = {
   pants: ColorNameType;
   coat: ColorNameType;
 };
+
+export type CombineColorsShallow = Omit<CombineColorsType, "clothes"> & {
+  clothes: object;
+};

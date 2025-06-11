@@ -44,6 +44,8 @@ function App() {
     combineColorsApiValidator
   );
 
+  console.log(combineColorData)
+ 
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   if (garmentError) {

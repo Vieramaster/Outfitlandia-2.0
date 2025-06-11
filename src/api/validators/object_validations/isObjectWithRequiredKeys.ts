@@ -1,11 +1,6 @@
-export const isObjectWithRequiredKeys = <
-  F extends string,
-  const K extends readonly string[]
->(
+export const isObjectWithRequiredKeys = <K extends string>(
   objectData: Record<string, unknown>,
-  field: F,
-  requiredKeys: K
-): objectData is Record<F[number], unknown> =>
+  field: K
+): objectData is Record<K[number], unknown> =>
   typeof field === "string" &&
-  Object.prototype.hasOwnProperty.call(objectData, field) &&
-  requiredKeys.includes(field);
+  Object.prototype.hasOwnProperty.call(objectData, field);

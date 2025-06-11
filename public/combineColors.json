@@ -5887,7 +5887,7 @@
       "white",
       "navy",
       "beige",
-      "grey",
+      "lightGrey",
       "army",
       "windsorTan"
     ],
@@ -6059,7 +6059,7 @@
     },
     "shoes": [
       "white",
-      "grey",
+      "lightGrey",
       "beige",
       "windsorTan",
       "darkGrey"
@@ -8231,8 +8231,10 @@
       "coat": "white"
     },
     "shoes": [
-      "",
-      ""
+      "white",
+      "windsorTan",
+      "beige",
+      "army"
     ],
     "id": 653
   },
@@ -10968,11 +10970,13 @@
     "clothes": {
       "top": "black",
       "pants": "red",
-      "coat": ""
+      "coat": "beige"
     },
     "shoes": [
-      "",
-      ""
+      "white",
+      "beige",
+      "black",
+      "lightGrey"
     ],
     "id": 887
   },
@@ -13569,8 +13573,10 @@
       "coat": "wornBlack"
     },
     "shoes": [
-      "",
-      ""
+      "white",
+      "black",
+      "beige",
+      "lightGrey"
     ],
     "id": 1100
   },
@@ -13735,12 +13741,14 @@
   {
     "clothes": {
       "top": "lightGrey",
-      "pants": "lightGrey",
-      "coat": ""
+      "pants": "burgundy",
+      "coat": "wornBlack"
     },
     "shoes": [
-      "",
-      ""
+      "white",
+      "beige",
+      "lightGrey",
+      "black"
     ],
     "id": 1114
   },

@@ -8,6 +8,9 @@ import {
 } from "./arrayTypes";
 
 export type GarmentButtonType = "top" | "coat" | "pants";
+
+export type ClothesShallow = Omit<ClothesType, "colors"> & { colors: unknown[] };
+
 export type ClothesType = {
   id: number;
   garment: GarmentType;

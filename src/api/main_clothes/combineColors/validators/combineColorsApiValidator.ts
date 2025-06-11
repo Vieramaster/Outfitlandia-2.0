@@ -8,7 +8,6 @@ import {
 import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
-  ERROR_MESSAGE_COMBINE_COLORS,
 } from "../../../../shared/messages/estructureMessage";
 //FUNCTIONS
 import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
@@ -24,7 +23,7 @@ export const combineColorsApiValidator = (
   const issues: ValidationIssue[] = [];
   if (!isNonEmptyArray(data)) {
     issues.push(
-      createIssue(ERROR_MESSAGE_COMBINE_COLORS.API, ERROR_MESSAGE.INVALID_ARRAY)
+      createIssue(ERROR_MESSAGE_API.COMBINE_COLORS, ERROR_MESSAGE.INVALID_ARRAY)
     );
     return dataValidationResult(data, issues);
   }
