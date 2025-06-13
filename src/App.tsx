@@ -20,12 +20,16 @@ import { colorFilter } from "./helpers/clothes/genericFunctions/colorFilter";
 import { appReducer, initialState } from "../src/hooks/appReducer";
 
 //COMPONENTS
-import { Header } from "./components/layout/Header";
-import { MainSection } from "./components/sections/MainSection";
-import WeatherSection from "./components/sections/WeatherSection";
-import { GarmentList } from "./components/lists/GarmentList";
-import { ColorList } from "./components/lists/ColorList";
+import { Header } from "./components2/layout/Header";
+import { MainSection } from "./components2/sections/MainSection";
+import WeatherSection from "./components2/sections/WeatherSection";
+import { GarmentList } from "./components2/lists/GarmentList";
+import { ColorList } from "./components2/lists/ColorList";
 import { CombineColorsType } from "./shared/types/clothes/combineColors.types";
+import { WeatherApiResponseType } from "./shared/types/weather/weather.types";
+import { weatherApiValidator } from "./api/weather/validators/weatherApiValidator";
+
+import MainLayout from "./components/layout/MainLayout";
 
 function App() {
   //API RESPONSES
@@ -44,22 +48,18 @@ function App() {
     combineColorsApiValidator
   );
 
-  console.log(combineColorData)
- 
-  const [state, dispatch] = useReducer(appReducer, initialState);
+  const Content = () => {
+    if (garmentError) return <h1>ERROR DE SISTEMA</h1>;
+    if (garmentLoading) return <h1>Cargando...</h1>;
+    return <><h1>hola mundo</h1></>;
+  };
 
-  if (garmentError) {
-    return <h1>ERROR DE SISTEMA </h1>;
-  }
-
-  if (garmentLoading) {
-    return <h1>Cargando...</h1>;
-  }
-
-  return <></>;
+  return (
+    <MainLayout>
+      <Content />
+    </MainLayout>
+  );
 }
-
-
 export default App;
 /**
  * if (!garmentsData) return;

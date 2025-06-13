@@ -37,20 +37,12 @@ export const MainSection = ({
               key={"shoes & belt"}
             >
               <div className="w-full h-1/2 bg-red-500 flex gap-4">
-                <ClothesContainer
-                  style="belt"
-                  image={belt}
-                  altImage="belt"
-                />
+                <ClothesContainer style="belt" image={belt} altImage="belt" />
                 <ChangeClothesButton onClick={onSearchOutfit}>
                   hola
                 </ChangeClothesButton>
               </div>
-              <ClothesContainer
-                style="shoes"
-                image={shoes }
-                altImage="shoes"
-              />
+              <ClothesContainer style="shoes" image={shoes} altImage="shoes" />
             </div>
           );
         })}

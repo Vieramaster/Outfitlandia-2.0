@@ -1,19 +1,36 @@
 @import "tailwindcss";
 
+@theme {
+  --color-offwhite: #eeeeee,
+  --color-cian: #00ADB5,
+  --color-darkgrey: #393E46,
+  --color-wornblack: #222831,
+}
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 .clothesButton {
-  width: 9rem;   
-  height: 13.5rem; 
+  width: 9rem;
+  height: 13.5rem;
 }
 
 @media (min-width: 768px) {
   .clothesButton {
-    width: 13rem;   
-    height: 18rem;  
+    width: 13rem;
+    height: 18rem;
   }
+}
+
+.full-vh {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.mainLayoutCSS {
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
 }

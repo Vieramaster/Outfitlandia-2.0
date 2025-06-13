@@ -7,13 +7,6 @@ import {
   WeatherVisualType,
 } from "../../../shared/types/weather/weather.types";
 
-//KEYS VALIDATORS
-import {
-  weatherApiResponseKeys,
-  weatherCurrentKeys,
-  weatherVisualKeys,
-} from "../../../shared/types/weather/weatherTypeObjects";
-
 //FUNCTIONS
 import { isPlainObject } from "../../../shared/validators/isPlainObject";
 import { createIssue } from "../../validators/utils_validations/validationUtils";
@@ -40,7 +33,7 @@ export const weatherItemValidator = (
 
   const isValidApi = validateSchemaKeys<WeatherApiResponseType>(
     objectItem,
-    weatherApiResponseKeys,
+
     WEATHER_API_SCHEMA,
     issues,
     [indexItem]
@@ -50,7 +43,6 @@ export const weatherItemValidator = (
 
   const isValidCurrent = validateSchemaKeys<WeatherCurrentType>(
     objectItem.current,
-    weatherCurrentKeys,
     WEATHER_CURRENT_SCHEMA,
     issues,
     [indexItem]
@@ -62,17 +54,14 @@ export const weatherItemValidator = (
 
   if (!visualApi) {
     issues.push(
-      createIssue(
-        "weather API, array weather",
-        ERROR_MESSAGE.INVALID_ARRAY,
-        [indexItem]
-      )
+      createIssue("weather API, array weather", ERROR_MESSAGE.INVALID_ARRAY, [
+        indexItem,
+      ])
     );
     return false;
   }
   const isValidVisualWeather = validateSchemaKeys<WeatherVisualType>(
     visualApi,
-    weatherVisualKeys,
     WEATHER_VISUAL_SCHEMA,
     issues,
     [indexItem]

@@ -2468,8 +2468,8 @@
   {
     "clothes": {
       "top": "yellow",
-      "pants": "",
-      "coat": ""
+      "pants": "black",
+      "coat": "wornBlack"
     },
     "shoes": [
       "black",
@@ -9869,7 +9869,7 @@
     "clothes": {
       "top": "white",
       "pants": "beige",
-      "coat": "blue"
+      "coat": "navy"
     },
     "shoes": [
       "white",
@@ -9892,7 +9892,7 @@
     "clothes": {
       "top": "white",
       "pants": "red",
-      "coat": "skyblue"
+      "coat": "skyBlue"
     },
     "shoes": [
       "white"
