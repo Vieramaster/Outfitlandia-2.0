@@ -1,35 +1,17 @@
 //TYPES
-import {
-  ClothesType,
-  GarmentButtonType,
-  GarmentType,
-} from "./shared/types/clothes/clothes.types";
-
+import { ClothesType } from "./shared/types/clothes/clothes.types";
+import { CombineColorsType } from "./shared/types/clothes/combineColors.types";
 //HOOKS
-import { MouseEventHandler, useCallback, useReducer } from "react";
-import { useResponsiveLayout } from "./hooks/useResponsibleLayout";
 import { consumeAPI } from "./api/consumeAPI";
 //VALIDATORS
 import { clothesApiValidator } from "./api/main_clothes/clothes/validators/clothesApiValidator";
 import { combineColorsApiValidator } from "./api/main_clothes/combineColors/validators/combineColorsApiValidator";
-
-//FUNCTONS
-import { outfitCreator } from "./helpers/clothes/outfitCreator";
-import { searchFilter } from "./helpers/clothes/genericFunctions/searchFilter";
-import { colorFilter } from "./helpers/clothes/genericFunctions/colorFilter";
-import { appReducer, initialState } from "../src/hooks/appReducer";
-
 //COMPONENTS
-import { Header } from "./components2/layout/Header";
-import { MainSection } from "./components2/sections/MainSection";
-import WeatherSection from "./components2/sections/WeatherSection";
-import { GarmentList } from "./components2/lists/GarmentList";
-import { ColorList } from "./components2/lists/ColorList";
-import { CombineColorsType } from "./shared/types/clothes/combineColors.types";
-import { WeatherApiResponseType } from "./shared/types/weather/weather.types";
-import { weatherApiValidator } from "./api/weather/validators/weatherApiValidator";
+import { MainLayout } from "./components/layout/MainLayout";
+import { Home } from "./pages/Home";
+import { ErrorPage } from "./pages/ErrorPage";
 
-import MainLayout from "./components/layout/MainLayout";
+//NUEVO
 
 function App() {
   //API RESPONSES
@@ -49,9 +31,9 @@ function App() {
   );
 
   const Content = () => {
-    if (garmentError) return <h1>ERROR DE SISTEMA</h1>;
-    if (garmentLoading) return <h1>Cargando...</h1>;
-    return <><h1>hola mundo</h1></>;
+    if (garmentError || combineColorError) return <ErrorPage />;
+    if (garmentLoading || combineColorLoading) return <h1>Cargando...</h1>;
+    return <Home />;
   };
 
   return (

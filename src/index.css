@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-offwhite: #eeeeee,
-  --color-cian: #00ADB5,
-  --color-darkgrey: #393E46,
-  --color-wornblack: #222831,
+  --color-cian: #00adb5;
+  --color-offwhite: #eeeeee;
+  --color-lightgrey: #c9d6df;
+  --color-darkgrey: #52616b;
+  --color-wornblack: #1e2022;
 }
 
-
 * {
-  padding: 0;
-  margin: 0;
+
   box-sizing: border-box;
 }
 .clothesButton {

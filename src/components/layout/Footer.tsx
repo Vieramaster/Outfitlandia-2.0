@@ -1,3 +1,1 @@
-export default function Footer() {
- return <footer></footer>;
-}
+export const Footer = () => <footer className="bg-darkgrey h-16 "></footer>;

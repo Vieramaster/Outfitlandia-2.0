@@ -47,3 +47,5 @@ export const useFetch = (URL: string | null): FetchType => {
 
   return useMemo(() => ({ data, loading, error }), [data, loading, error]);
 };
+
+
