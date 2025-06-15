@@ -1,11 +1,9 @@
-interface ClothesSectionProps {
-  children: React.ReactNode;
-}
-export const ClothesSection = ({ children }: ClothesSectionProps) => (
-  <section className="bg-yellow-500 h-full grid place-content-center">
-    {children}
-  </section>
-);
+import { ClothesSection } from "../components/sections/ClothesSection";
+import { Card } from "../components/ui/cards/Card";
+import { ClothesButton } from "../components/ui/buttons/ClothesButton";
+import { SmallCard } from "../components/ui/cards/SmallCard";
+import { BeltCard } from "../components/ui/cards/BeltCard";
+import { OutfitButton } from "../components/ui/buttons/OutfitButton";
 //
 interface ClothesInventoryProps {
   children: React.ReactNode;
@@ -15,63 +13,31 @@ export const ClothesInventory = ({ children }: ClothesInventoryProps) => (
     {children}
   </ul>
 );
-interface ClothesButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  image: string;
-}
 
-export const ClothesButton = ({ image, ...props }: ClothesButtonProps) => (
-  <button
-    className=" size-full bg-green-800 flex justify-center items-center cursor-pointer select-none drag-none"
-    {...props}
-  >
-    <img src={image} alt="Clothing item" className="size-5/6" />
-  </button>
-);
-
-interface CardProps {
-  children: React.ReactNode;
-  type: "big" | "small";
-}
-export const Card = ({ children, type }: CardProps) => {
-  const variants = {
-    big: "w-[9rem] h-[14rem] flex-col bg-orange-400",
-    small: "w-full h-1/2 bg-sky-400",
-  };
-  return (
-    <div
-      className={`  flex gap-2 place-content-center items-center ${variants[type]}`}
-    >
-      {children}
-    </div>
-  );
-};
-export const SmallButton = () => (
-  <button className="bg-violet-800 w-1/2 h-full rounded-xl "></button>
-);
+import { imageDefaultButtons } from "../shared/image_objects/ImageDefaultButtons";
 
 export const Home = () => {
+  const { pants, top, coat, shoes, belt } = imageDefaultButtons;
+  const mainClothes = [top, coat, pants];
+
   return (
     <>
       <ClothesSection>
         <ClothesInventory>
-          {Array.from({ length: 4 }).map((_, index) => {
-            return index !== 3 ? (
-              <Card type="big" key={index}>
-                <ClothesButton image="" />
-              </Card>
-            ) : (
-              <Card type="big" key={index}>
-                <Card type="small">
-                  <SmallButton />
-                  <SmallButton />
-                </Card>
-                <Card type="small">
-                  <img src="" alt="" className="size-5/6" />
-                </Card>
-              </Card>
-            );
-          })}
+          {mainClothes.map((img, index) => (
+            <Card key={index} arial="ropa">
+              <ClothesButton image={img} />
+            </Card>
+          ))}
+          <Card>
+            <SmallCard>
+              <BeltCard image={belt} />
+              <OutfitButton />
+            </SmallCard>
+            <SmallCard arial="shoes">
+              <img src={shoes} alt="" className="h-5/6" />
+            </SmallCard>
+          </Card>
         </ClothesInventory>
       </ClothesSection>
     </>
@@ -84,3 +50,23 @@ export const Home = () => {
         <div className="grid grid-cols-2 gap-4 place-items-center bg-red-900 w-[19rem] md:w-[27rem]  "></div>
       </section>
  */
+
+/**
+       *  {Array.from({ length: 4 }).map((_, index) => {
+            return index !== 3 ? (
+              <Card type="main" key={index}>
+                <ClothesButton image="" />
+              </Card>
+            ) : (
+              <Card type="main" key={index}>
+                <Card type="small">
+                  <SmallButton />
+                  <SmallButton />
+                </Card>
+                <Card type="small">
+                  <img src="" alt="" className="size-5/6" />
+                </Card>
+              </Card>
+            );
+          })}
+       */
