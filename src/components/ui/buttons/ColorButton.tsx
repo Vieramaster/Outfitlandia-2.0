@@ -4,9 +4,11 @@ interface ColorButtonProps
 }
 
 export const ColorButton = ({ hex, ...props }: ColorButtonProps) => (
-  <button
-    className="w-20 h-10 cursor-pointer"
-    style={{ backgroundColor: hex }}
-    {...props}
-  />
+  <li>
+    <button
+      className="w-20 h-10 cursor-pointer"
+      style={{ backgroundColor: hex }}
+      {...props}
+    />
+  </li>
 );

@@ -1,6 +1,6 @@
 import { ClothesButton } from "../buttons/ClothesButton";
 import { ClothesType } from "../../data/types/ClothesTypes";
-import { ColorButton } from "../buttons/ColorButton";
+import { ColorButton } from "../../components/ui/buttons/ColorButton";
 import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
 interface Section {
   isHidden: boolean;

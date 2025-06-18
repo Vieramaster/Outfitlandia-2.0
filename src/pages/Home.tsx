@@ -1,72 +1,88 @@
-import { ClothesSection } from "../components/sections/ClothesSection";
-import { Card } from "../components/ui/cards/Card";
-import { ClothesButton } from "../components/ui/buttons/ClothesButton";
-import { SmallCard } from "../components/ui/cards/SmallCard";
-import { BeltCard } from "../components/ui/cards/BeltCard";
-import { OutfitButton } from "../components/ui/buttons/OutfitButton";
-//
-interface ClothesInventoryProps {
-  children: React.ReactNode;
+//REACT
+import { useReducer } from "react";
+//HOOKS
+import { appReducer, initialState } from "../hooks/appReducer";
+import { useResponsiveLayout } from "../hooks/useResponsibleLayout";
+//COMPONENTS
+import { ClothesInventory } from "../components/sections/ClothesInventory";
+import { ClothesDisplaySection } from "../components/sections/ClothesDisplaySection";
+//TYPES & OBJECTS
+import {
+  ClothesType,
+  ColorClothesType,
+  GarmentButtonType,
+} from "../shared/types/clothes/clothes.types";
+//FUNCTIONS
+import { searchFilter } from "../helpers/clothes/genericFunctions/searchFilter";
+
+interface HomeProps {
+  clothesData: ClothesType[];
 }
-export const ClothesInventory = ({ children }: ClothesInventoryProps) => (
-  <ul className="bg-red-800  grid grid-cols-2 gap-2 place-items-center">
-    {children}
-  </ul>
-);
+export const Home = ({ clothesData }: HomeProps) => {
+  const [state, dispatch] = useReducer(appReducer, initialState);
+  const { isMobile } = useResponsiveLayout();
 
-import { imageDefaultButtons } from "../shared/image_objects/ImageDefaultButtons";
+  const handleSelectClothes = (selectedClothes: GarmentButtonType) => {
+    const defaultSelectedClothes = searchFilter(
+      clothesData,
+      "garment",
+      selectedClothes
+    );
 
-export const Home = () => {
-  const { pants, top, coat, shoes, belt } = imageDefaultButtons;
-  const mainClothes = [top, coat, pants];
+    dispatch({
+      type: "SELECT_CLOTHING_ITEM",
+      garment: selectedClothes,
+      chosenClothes: defaultSelectedClothes,
+    });
+  };
+
+  const handleSelectGarment = (selectedGarment: number) => {
+    const garmentFilter = searchFilter(clothesData, "id", selectedGarment);
+
+    dispatch({
+      type: "SELECT_GARMENT",
+      chosenClothes: garmentFilter,
+    });
+  };
+
+  const handleSelectColor = (item: ColorClothesType["colorName"]) => {
+    if (
+      !state.chosenClothes ||
+      !state.chosenClothes[0] ||
+      !state.chosenClothes[0].colors
+    ) {
+      return console.log("");
+    }
+
+    const colorFilter = state.chosenClothes[0].colors.filter(
+      ({ colorName }) => colorName === item
+    );
+
+    console.log(colorFilter)
+  };
 
   return (
-    <>
-      <ClothesSection>
-        <ClothesInventory>
-          {mainClothes.map((img, index) => (
-            <Card key={index} arial="ropa">
-              <ClothesButton image={img} />
-            </Card>
-          ))}
-          <Card>
-            <SmallCard>
-              <BeltCard image={belt} />
-              <OutfitButton />
-            </SmallCard>
-            <SmallCard arial="shoes">
-              <img src={shoes} alt="" className="h-5/6" />
-            </SmallCard>
-          </Card>
-        </ClothesInventory>
-      </ClothesSection>
-    </>
+    <section
+      className="
+        bg-yellow-500 
+        relative 
+        h-full 
+        grid 
+        place-content-center 
+        lg:flex
+        lg:justify-between "
+    >
+      <ClothesInventory
+        clothesArray={state.inventory}
+        onSelectClothes={handleSelectClothes}
+      />
+      <ClothesDisplaySection
+        mobile={isMobile && state.selectedGarment !== undefined}
+        chosenView={state.activeView}
+        clothesArray={state.chosenClothes}
+        onSelectGarment={handleSelectGarment}
+        onSelectColor={handleSelectColor}
+      />
+    </section>
   );
 };
-
-/**<section className="bg-orange-900 h-full w-full absolute top-0 -z-0"></section>
- * 
- *       <section className="bg-red-600 grow-1 w-full  lg:h-full lg:w-1/2  2xl:w-1/3 grid place-content-center">
-        <div className="grid grid-cols-2 gap-4 place-items-center bg-red-900 w-[19rem] md:w-[27rem]  "></div>
-      </section>
- */
-
-/**
-       *  {Array.from({ length: 4 }).map((_, index) => {
-            return index !== 3 ? (
-              <Card type="main" key={index}>
-                <ClothesButton image="" />
-              </Card>
-            ) : (
-              <Card type="main" key={index}>
-                <Card type="small">
-                  <SmallButton />
-                  <SmallButton />
-                </Card>
-                <Card type="small">
-                  <img src="" alt="" className="size-5/6" />
-                </Card>
-              </Card>
-            );
-          })}
-       */

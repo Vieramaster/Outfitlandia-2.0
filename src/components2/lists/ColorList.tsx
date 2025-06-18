@@ -1,6 +1,6 @@
 import { ClothesType } from "../../data/types/ClothesTypes";
 import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
-import { ColorButton } from "../buttons/ColorButton";
+import { ColorButton } from "../../components/ui/buttons/ColorButton";
 
 interface ColorListProps {
   arrayColors: ClothesType[] | undefined;

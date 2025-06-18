@@ -20,6 +20,7 @@ export const styleKeys = ["basic", "casual", "elegant"] as const;
 export const weatherKeys = ["cold", "mild", "hot"] as const;
 
 export const colorNameKeys = [
+  "default",
   "purple",
   "lilac",
   "aero",
@@ -80,6 +81,7 @@ export const hexColorKeys = [
 ] as const;
 
 export const titleColorKeys = [
+  "default",
   "purple",
   "lilac",
   "aero",

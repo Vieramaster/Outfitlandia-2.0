@@ -1,8 +1,7 @@
 import { ClothesType, GarmentType } from "../clothes/clothes.types";
-import { imageDefaultButtons } from "../../image_objects/ImageDefaultButtons";
 
 export type AppStateProps = {
-  images: typeof imageDefaultButtons;
+  inventory: ClothesType[];
   selectedGarment?: GarmentType;
   chosenClothes: ClothesType[] | undefined;
   activeView: "main" | "garments" | "colors";
@@ -12,14 +11,14 @@ export type AppStateProps = {
 export type ActionProps =
   | { type: "RESET" }
   | {
-      type: "SELECT_GARMENT";
+      type: "SELECT_CLOTHING_ITEM";
       garment: "top" | "coat" | "pants";
       chosenClothes: ClothesType[];
     }
-  | { type: "SELECT_CLOTHING_ITEM"; chosenClothes: ClothesType[] }
+  | { type: "SELECT_GARMENT"; chosenClothes: ClothesType[] }
   | {
       type: "SELECT_COLOR";
       chosenClothes: ClothesType[];
-      images: typeof imageDefaultButtons;
+      inventory: ClothesType[];
     }
-  | { type: "GENERATE_OUTFIT"; images: typeof imageDefaultButtons };
+  | { type: "GENERATE_OUTFIT"; inventory: ClothesType[] };

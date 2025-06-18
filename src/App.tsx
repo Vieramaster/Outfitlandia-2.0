@@ -31,9 +31,10 @@ function App() {
   );
 
   const Content = () => {
-    if (garmentError || combineColorError) return <ErrorPage />;
     if (garmentLoading || combineColorLoading) return <h1>Cargando...</h1>;
-    return <Home />;
+    if (garmentError || combineColorError || !garmentsData || !combineColorData)
+      return <ErrorPage />;
+    return <Home clothesData={garmentsData} />;
   };
 
   return (

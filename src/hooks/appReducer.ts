@@ -2,7 +2,7 @@ import {
   AppStateProps,
   ActionProps,
 } from "../shared/types/hooks/appReducer.types";
-import { imageDefaultButtons } from "../shared/image_objects/ImageDefaultButtons";
+import { defaultInventoryArray } from "../shared/image_objects/defaultInventoryArray";
 
 /**
  * initialState – Default values for the useReducer hook
@@ -17,7 +17,7 @@ import { imageDefaultButtons } from "../shared/image_objects/ImageDefaultButtons
  * @property isMobileMenuHidden   – Whether the mobile menu is hidden
  */
 export const initialState: AppStateProps = {
-  images: imageDefaultButtons,
+  inventory: defaultInventoryArray,
   selectedGarment: undefined,
   chosenClothes: [],
   activeView: "main",
@@ -48,7 +48,7 @@ export const appReducer = (
       return initialState;
 
     /** User picked a garment category; switch to the garments view */
-    case "SELECT_GARMENT":
+    case "SELECT_CLOTHING_ITEM":
       return {
         ...state,
         selectedGarment: action.garment,
@@ -58,7 +58,7 @@ export const appReducer = (
       };
 
     /** User picked a specific clothing item; switch to color selection */
-    case "SELECT_CLOTHING_ITEM":
+    case "SELECT_GARMENT":
       return {
         ...state,
         activeView: "colors",
@@ -71,7 +71,7 @@ export const appReducer = (
         ...state,
         activeView: "main",
         chosenClothes: action.chosenClothes,
-        images: action.images,
+        inventory: action.inventory,
         isMobileMenuHidden: false,
       };
 
@@ -79,7 +79,7 @@ export const appReducer = (
     case "GENERATE_OUTFIT":
       return {
         ...state,
-        images: action.images,
+        inventory: action.inventory,
       };
 
     /** If action type is unknown, return current state unchanged */
@@ -87,5 +87,3 @@ export const appReducer = (
       return state;
   }
 };
-
-export default appReducer;
