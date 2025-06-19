@@ -1,19 +1,21 @@
-//COMPONENTS
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-//HOOKS
-import { useDynamicVh } from "../../hooks/useDynamicVh";
-
 interface MainLayoutProps {
   children: React.ReactNode;
 }
-export const MainLayout = ({ children }: MainLayoutProps) => {
-  useDynamicVh();
+export const HomeLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="bg-offwhite mainLayoutCSS w-screen min-h-[40rem]">
-      <Header />
-      <main className="flex-1 relative min-h-[30rem] ">{children}</main>
-      <Footer />
-    </div>
+    <main
+      className="
+        flex flex-col            
+        flex-1                   
+        min-h-0                  
+        bg-yellow-500  
+        relative
+        items-center              
+        lg:flex-row lg:justify-between 
+        lg:items-start
+      "
+    >
+      {children}
+    </main>
   );
 };

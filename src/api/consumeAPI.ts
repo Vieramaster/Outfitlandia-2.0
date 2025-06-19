@@ -1,6 +1,6 @@
 //TYPE
-import { DataResultType } from "../shared/types/validationApi.types";
-import { ValidationResult } from "../shared/types/validationApi.types";
+import { DataResultType } from "../types/validationApi.types";
+import { ValidationResult } from "../types/validationApi.types";
 //HOOK
 import { useFetch } from "../hooks/useFetch";
 //FUNCTIONS

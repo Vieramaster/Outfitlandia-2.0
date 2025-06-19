@@ -1,4 +1,7 @@
-import { ClothesType, ColorNameType } from "../../../data/types/ClothesTypes";
+import {
+  ClothesType,
+  ColorNameType,
+} from "../../../types/clothes/clothes.types";
 
 /**
  * For each belt in the inventory, picks the color swatch that best matches the shoe color.
@@ -22,7 +25,8 @@ export const getBeltsWithMatchingColor = (
         return { ...belt, colors: [] };
       }
 
-      const match = findMatchingColor(belt, shoeColor) ?? findMatchingColor(belt, "black");
+      const match =
+        findMatchingColor(belt, shoeColor) ?? findMatchingColor(belt, "black");
       return match ? { ...belt, colors: [match] } : null;
     })
     .filter((b): b is ClothesType => b !== null);
@@ -32,10 +36,7 @@ export const getBeltsWithMatchingColor = (
 /**
  * Finds a color swatch on the belt that matches the requested colorName .
  */
-const findMatchingColor = (
-  belt: ClothesType,
-  desiredColor: ColorNameType
-) =>
+const findMatchingColor = (belt: ClothesType, desiredColor: ColorNameType) =>
   belt.colors.find(
     ({ colorName }) => colorName.toLowerCase() === desiredColor.toLowerCase()
   );

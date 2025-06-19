@@ -1,6 +1,5 @@
-import { ClothesType } from "../../../data/types/ClothesTypes";
-
-import { ColorClothesType } from "../../../data/types/ClothesTypes";
+import { ClothesType } from "../../../types/clothes/clothes.types";
+import { ColorClothesType } from "../../../types/clothes/clothes.types";
 
 /**
  * Filters the colors from a list of clothes based on a specific color name.
@@ -20,4 +19,3 @@ export const colorFilter = (
 
   return filteredColors;
 };
-

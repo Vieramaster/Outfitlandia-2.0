@@ -1,16 +1,16 @@
 //TYPES
-import { CombineColorsType } from "../../../../shared/types/clothes/combineColors.types";
+import { CombineColorsType } from "../../../../types/clothes/combineColors.types";
 import {
   ValidationIssue,
   ValidationResult,
-} from "../../../../shared/types/validationApi.types";
+} from "../../../../types/validationApi.types";
 //MESSAGES
 import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
-} from "../../../../shared/messages/estructureMessage";
+} from "../../../../constants/messageErrors";
 //FUNCTIONS
-import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
+import { isNonEmptyArray } from "../../../../utils/validators/isNonEmplyArray";
 import {
   createIssue,
   dataValidationResult,

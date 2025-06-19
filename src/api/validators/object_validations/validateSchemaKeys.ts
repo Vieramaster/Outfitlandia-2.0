@@ -1,12 +1,12 @@
 //TYPES
-import { ArraySchemaType } from "../../../shared/types/validationApi.types";
-import { ValidationIssue } from "../../../shared/types/validationApi.types";
+import { ArraySchemaType } from "../../../types/validationApi.types";
+import { ValidationIssue } from "../../../types/validationApi.types";
 //MESSAGE
-import { ERROR_MESSAGE } from "../../../shared/messages/estructureMessage";
+import { ERROR_MESSAGE } from "../../../constants/messageErrors";
 //FUNCTIONS
 import { isObjectWithRequiredKeys } from "./isObjectWithRequiredKeys";
 import { createIssue } from "../utils_validations/validationUtils";
-import { isPlainObject } from "../../../shared/validators/isPlainObject";
+import { isPlainObject } from "../../../utils/validators/isPlainObject";
 
 // VALIDADOR PRINCIPAL
 export const validateSchemaKeys = <T>(

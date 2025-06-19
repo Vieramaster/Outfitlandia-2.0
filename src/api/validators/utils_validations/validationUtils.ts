@@ -2,7 +2,7 @@
 import {
   ValidationIssue,
   ValidationResult,
-} from "../../../shared/types/validationApi.types";
+} from "../../../types/validationApi.types";
 
 export const createIssue = (
   field: ValidationIssue["field"],
@@ -13,7 +13,6 @@ export const createIssue = (
   message,
   index,
 });
-
 
 export const dataValidationResult = (
   raw: unknown,

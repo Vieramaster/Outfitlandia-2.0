@@ -1,5 +1,5 @@
 //TYPES
-import { WeatherApiResponseType } from "../../shared/types/weather/weather.types";
+import { WeatherApiResponseType } from "../../types/weather/weather.types";
 //UTILITIES
 import { transformWeatherData } from "../../helpers/weather/transformWeatherData";
 //HOOKS

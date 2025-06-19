@@ -2,17 +2,17 @@
 import {
   ValidationIssue,
   ValidationResult,
-} from "../../../../shared/types/validationApi.types";
+} from "../../../../types/validationApi.types";
 import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
-} from "../../../../shared/messages/estructureMessage";
+} from "../../../../constants/messageErrors";
 //VALIDATION UTILS
 import { createIssue } from "../../../validators/utils_validations/validationUtils";
 import { dataValidationResult } from "../../../validators/utils_validations/validationUtils";
 //FUNCTIONS
-import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
-import { ClothesType } from "../../../../shared/types/clothes/clothes.types";
+import { isNonEmptyArray } from "../../../../utils/validators/isNonEmplyArray";
+import { ClothesType } from "../../../../types/clothes/clothes.types";
 import { clothesItemValidator } from "./clothesItemValidator";
 
 /**

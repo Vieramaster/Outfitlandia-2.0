@@ -1,14 +1,14 @@
 //TYPES && MESSAGES
-import { ERROR_MESSAGE } from "../../../shared/messages/estructureMessage";
-import { ValidationIssue } from "../../../shared/types/validationApi.types";
+import { ERROR_MESSAGE } from "../../../constants/messageErrors";
+import { ValidationIssue } from "../../../types/validationApi.types";
 import {
   WeatherApiResponseType,
   WeatherCurrentType,
   WeatherVisualType,
-} from "../../../shared/types/weather/weather.types";
+} from "../../../types/weather/weather.types";
 
 //FUNCTIONS
-import { isPlainObject } from "../../../shared/validators/isPlainObject";
+import { isPlainObject } from "../../../utils/validators/isPlainObject";
 import { createIssue } from "../../validators/utils_validations/validationUtils";
 import { validateSchemaKeys } from "../../validators/object_validations/validateSchemaKeys";
 

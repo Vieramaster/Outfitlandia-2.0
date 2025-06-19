@@ -1,10 +1,10 @@
 //FUNCTIONS
-import { isPlainObject } from "../../../shared/validators/isPlainObject";
+import { isPlainObject } from "../../../utils/validators/isPlainObject";
 import { isOneOf } from "../../validators/object_validations/isOneOf";
-import { isNonEmptyArray } from "../../../shared/validators/isNonEmplyArray";
+import { isNonEmptyArray } from "../../../utils/validators/isNonEmplyArray";
 //ARRAY_VALIDATORS
-import { iconWeatherKeys } from "../../../shared/types/weather/weatherTypeObjects";
-import { descriptionWeatherKeys } from "../../../shared/types/weather/weatherTypeObjects";
+import { iconWeatherKeys } from "../../../constants/weatherConstants";
+import { descriptionWeatherKeys } from "../../../constants/weatherConstants";
 
 /**
  * Schema definition for validating the top-level structure of a weather API response.

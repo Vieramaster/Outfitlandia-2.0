@@ -5,11 +5,13 @@ import {
   colorNameKeys,
   hexColorKeys,
   titleColorKeys,
-} from "./arrayTypes";
+} from "../../constants/clothesConstants";
 
 export type GarmentButtonType = "top" | "coat" | "pants";
 
-export type ClothesShallow = Omit<ClothesType, "colors"> & { colors: unknown[] };
+export type ClothesShallow = Omit<ClothesType, "colors"> & {
+  colors: unknown[];
+};
 
 export type ClothesType = {
   id: number;

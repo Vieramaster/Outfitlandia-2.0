@@ -1,7 +1,7 @@
 import {
   ClothesType,
   GarmentButtonType,
-} from "../../shared/types/clothes/clothes.types";
+} from "../../types/clothes/clothes.types";
 
 // COMPONENTS
 import { Card } from "../ui/cards/Card";
@@ -22,11 +22,11 @@ export const ClothesInventory = ({
   clothesArray,
   onSelectClothes,
 }: ClothesInventoryProps) => {
+
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
-
   if (!belt || !shoes) return null;
-
+  
   return (
     <section
       className="
@@ -49,11 +49,12 @@ export const ClothesInventory = ({
           place-items-center
         "
       >
-        {clothesArray.map(({ image, id, garment, name }) =>
+        {clothesArray.map(({ colors, id, garment, name }) =>
           garment === "top" || garment === "coat" || garment === "pants" ? (
             <ClothesButton
               key={id}
-              {...{ name, image }}
+              image={colors[0]?.imageColor!}
+              name={name}
               onClick={() => onSelectClothes(garment)}
             />
           ) : null
@@ -61,12 +62,16 @@ export const ClothesInventory = ({
 
         <Card>
           <SmallCard>
-            <BeltCard image={belt.image} arial={belt.name} />
+            <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
             <OutfitButton />
           </SmallCard>
 
           <SmallCard arial={shoes.name}>
-            <img src={shoes.image} alt={shoes.name} className="h-5/6" />
+            <img
+              src={shoes.colors[0]?.imageColor}
+              alt={shoes.name}
+              className="h-5/6"
+            />
           </SmallCard>
         </Card>
       </ul>

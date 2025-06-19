@@ -2,8 +2,8 @@
 import {
   CombineColorsShallow,
   CombineColorsType,
-} from "../../../../shared/types/clothes/combineColors.types";
-import { ValidationIssue } from "../../../../shared/types/validationApi.types";
+} from "../../../../types/clothes/combineColors.types";
+import { ValidationIssue } from "../../../../types/validationApi.types";
 //SCHEMAS
 import {
   COMBINE_COLOR_SCHEMA,
@@ -13,12 +13,12 @@ import {
 import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
-} from "../../../../shared/messages/estructureMessage";
+} from "../../../../constants/messageErrors";
 
 //FUNCTIONS
 import { validateSchemaKeys } from "../../../validators/object_validations/validateSchemaKeys";
 
-import { isPlainObject } from "../../../../shared/validators/isPlainObject";
+import { isPlainObject } from "../../../../utils/validators/isPlainObject";
 import { createIssue } from "../../../validators/utils_validations/validationUtils";
 
 /**

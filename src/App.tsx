@@ -1,19 +1,23 @@
 //TYPES
-import { ClothesType } from "./shared/types/clothes/clothes.types";
-import { CombineColorsType } from "./shared/types/clothes/combineColors.types";
+import { ClothesType } from "./types/clothes/clothes.types";
+import { CombineColorsType } from "./types/clothes/combineColors.types";
 //HOOKS
 import { consumeAPI } from "./api/consumeAPI";
+import { useDynamicVh } from "./hooks/useDynamicVh";
 //VALIDATORS
 import { clothesApiValidator } from "./api/main_clothes/clothes/validators/clothesApiValidator";
 import { combineColorsApiValidator } from "./api/main_clothes/combineColors/validators/combineColorsApiValidator";
 //COMPONENTS
-import { MainLayout } from "./components/layout/MainLayout";
+import { Header } from "./components/layout/Header";
 import { Home } from "./pages/Home";
 import { ErrorPage } from "./pages/ErrorPage";
+import { Footer } from "./components/layout/Footer";
 
 //NUEVO
 
 function App() {
+  //HOOKS
+  useDynamicVh();
   //API RESPONSES
   const {
     error: garmentError,
@@ -38,9 +42,11 @@ function App() {
   };
 
   return (
-    <MainLayout>
+    <>
+      <Header />
       <Content />
-    </MainLayout>
+      <Footer />
+    </>
   );
 }
 export default App;

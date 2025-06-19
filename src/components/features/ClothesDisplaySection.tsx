@@ -1,10 +1,11 @@
 import {
   ClothesType,
   ColorClothesType,
-} from "../../shared/types/clothes/clothes.types";
+} from "../../types/clothes/clothes.types";
 import { ClothesButton } from "../ui/buttons/ClothesButton";
 import { ColorButton } from "../ui/buttons/ColorButton";
-import { DisplayList } from "../ui/list/DisplayList";
+import { ClothesList } from "../ui/list/ClothesList";
+import { ColorList } from "../ui/list/ColorList";
 
 interface ClothesDisplaySectionProps {
   mobile: boolean;
@@ -21,32 +22,29 @@ export const ClothesDisplaySection = ({
   onSelectGarment,
   onSelectColor,
 }: ClothesDisplaySectionProps) => {
-  // No renderizamos nada si no hay datos
   if (!clothesArray) return null;
-
-  // En mobile, solo mostrar si chosenView es "garments"
-  if (mobile && chosenView !== "garments" && chosenView !== "colors") {
-    return null;
-  }
 
   return (
     <section
       id="clothes-display-section"
-      aria-labelledby="clothes-display-title"
-      className={`${
-        mobile && (chosenView === "garments" || chosenView === "colors")
-          ? "absolute w-full h-full"
-          : "w-0 h-0 hidden"
-      }    
-            w-full h-full 
-          bg-rose-900
-            grid place-content-center
-            place-items-center 
-            lg:block lg:relative 
-            lg:w-3/5 `}
+      aria-labelledby="show options"
+      className={`
+  ${
+    mobile && (chosenView === "garments" || chosenView === "colors")
+      ? "absolute size-full "
+      : "w-0 h-0 hidden"
+  }     
+        grid place-items-center
+        bg-rose-900
+        overflow-auto
+        lg:h-full
+        lg:top-auto 
+        lg:block lg:relative 
+        lg:w-3/5
+`}
     >
       {chosenView === "garments" ? (
-        <DisplayList display="garments">
+        <ClothesList>
           {clothesArray.map(({ image, id, name }) => {
             return (
               <ClothesButton
@@ -56,22 +54,22 @@ export const ClothesDisplaySection = ({
               />
             );
           })}
-        </DisplayList>
+        </ClothesList>
       ) : null}
       {chosenView === "colors" ? (
-        <DisplayList display="colors">
+        <ColorList>
           {clothesArray[0]?.colors.flatMap(({ hex, colorName, title }) => {
             return (
               <ColorButton
+                key={colorName}
                 hex={hex}
                 aria-labelledby={title}
-                id={colorName}
                 onClick={() => onSelectColor(colorName)}
                 title={colorName}
               />
             );
           })}
-        </DisplayList>
+        </ColorList>
       ) : null}
     </section>
   );

@@ -2,8 +2,7 @@ import {
   ClothesType,
   StyleType,
   WeatherType,
-} from "../../../data/types/ClothesTypes";
-
+} from "../../../types/clothes/clothes.types";
 /**
  *
  * @param arrayClothes - The array of clothes to filter.
@@ -21,4 +20,3 @@ export const filterStyleAndWheater = (
       style.some((styleItem) => styleSearched.includes(styleItem)) &&
       weather.some((weatherItem) => weatherSearched.includes(weatherItem))
   );
-

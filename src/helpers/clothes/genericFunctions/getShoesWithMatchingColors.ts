@@ -1,8 +1,7 @@
 import {
   ClothesType,
   ColorClothesType,
-  ColorNameArrayType,
-} from "../../../data/types/ClothesTypes";
+} from "../../../types/clothes/clothes.types";
 
 /**
  * Filters an array of clothing products and returns a new list

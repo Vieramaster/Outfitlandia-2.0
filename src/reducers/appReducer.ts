@@ -1,8 +1,5 @@
-import {
-  AppStateProps,
-  ActionProps,
-} from "../shared/types/hooks/appReducer.types";
-import { defaultInventoryArray } from "../shared/image_objects/defaultInventoryArray";
+import { AppStateProps, ActionProps } from "./appReducer.types";
+import { defaultInventoryArray } from "../constants/inventoryArrayConstants";
 
 /**
  * initialState – Default values for the useReducer hook

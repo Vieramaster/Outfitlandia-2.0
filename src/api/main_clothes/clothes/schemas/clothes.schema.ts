@@ -1,5 +1,5 @@
 // TYPES
-import { ArraySchemaType } from "../../../../shared/types/validationApi.types";
+import { ArraySchemaType } from "../../../../types/validationApi.types";
 
 // ARRAY_VALIDATORS
 import {
@@ -9,11 +9,11 @@ import {
   colorNameKeys,
   titleColorKeys,
   hexColorKeys,
-} from "../../../../shared/types/clothes/arrayTypes";
+} from "../../../../constants/clothesConstants";
 
 // FUNCTIONS
 import { isOneOf } from "../../../validators/object_validations/isOneOf";
-import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
+import { isNonEmptyArray } from "../../../../utils/validators/isNonEmplyArray";
 import { validateStringArray } from "../../../validators/object_validations/validateStringArray";
 
 /**

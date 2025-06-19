@@ -1,19 +1,21 @@
 //REACT
 import { useReducer } from "react";
 //HOOKS
-import { appReducer, initialState } from "../hooks/appReducer";
+import { appReducer, initialState } from "../reducers/appReducer";
 import { useResponsiveLayout } from "../hooks/useResponsibleLayout";
 //COMPONENTS
-import { ClothesInventory } from "../components/sections/ClothesInventory";
-import { ClothesDisplaySection } from "../components/sections/ClothesDisplaySection";
+import { ClothesInventory } from "../components/features/ClothesInventory";
+import { ClothesDisplaySection } from "../components/features/ClothesDisplaySection";
+import { HomeLayout } from "../components/layout/MainLayout";
 //TYPES & OBJECTS
 import {
   ClothesType,
   ColorClothesType,
   GarmentButtonType,
-} from "../shared/types/clothes/clothes.types";
+} from "../types/clothes/clothes.types";
 //FUNCTIONS
 import { searchFilter } from "../helpers/clothes/genericFunctions/searchFilter";
+import { colorFilter } from "../helpers/clothes/genericFunctions/colorFilter";
 
 interface HomeProps {
   clothesData: ClothesType[];
@@ -46,32 +48,30 @@ export const Home = ({ clothesData }: HomeProps) => {
   };
 
   const handleSelectColor = (item: ColorClothesType["colorName"]) => {
-    if (
-      !state.chosenClothes ||
-      !state.chosenClothes[0] ||
-      !state.chosenClothes[0].colors
-    ) {
-      return console.log("");
-    }
+    const filteredColors = colorFilter(state.chosenClothes, item);
 
-    const colorFilter = state.chosenClothes[0].colors.filter(
-      ({ colorName }) => colorName === item
+    //ELIMINATE THE OTHERS COLORS AND LEAVE THE CHOSEN COLOR
+    const finalGarment = state.chosenClothes.map((item) => ({
+      ...item,
+      colors: filteredColors,
+    }));
+
+    const newIventory = state.inventory.map((item) =>
+      item.garment === finalGarment[0]?.garment
+        ? { ...finalGarment[0] }
+        : { ...item }
     );
+    console.log(newIventory);
 
-    console.log(colorFilter)
+    dispatch({
+      type: "SELECT_COLOR",
+      chosenClothes: finalGarment,
+      inventory: newIventory,
+    });
   };
 
   return (
-    <section
-      className="
-        bg-yellow-500 
-        relative 
-        h-full 
-        grid 
-        place-content-center 
-        lg:flex
-        lg:justify-between "
-    >
+    <HomeLayout>
       <ClothesInventory
         clothesArray={state.inventory}
         onSelectClothes={handleSelectClothes}
@@ -83,6 +83,6 @@ export const Home = ({ clothesData }: HomeProps) => {
         onSelectGarment={handleSelectGarment}
         onSelectColor={handleSelectColor}
       />
-    </section>
+    </HomeLayout>
   );
 };

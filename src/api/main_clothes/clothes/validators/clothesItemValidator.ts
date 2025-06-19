@@ -3,14 +3,14 @@ import {
   ClothesType,
   ClothesShallow,
   ColorClothesType,
-} from "../../../../shared/types/clothes/clothes.types";
+} from "../../../../types/clothes/clothes.types";
 
-import { ValidationIssue } from "../../../../shared/types/validationApi.types";
+import { ValidationIssue } from "../../../../types/validationApi.types";
 // MESSAGES
 import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_API,
-} from "../../../../shared/messages/estructureMessage";
+} from "../../../../constants/messageErrors";
 // SCHEMAS
 import {
   CLOTHES_SCHEMA,
@@ -18,7 +18,7 @@ import {
 } from "../schemas/clothes.schema";
 // FUNCTIONS
 import { createIssue } from "../../../validators/utils_validations/validationUtils";
-import { isPlainObject } from "../../../../shared/validators/isPlainObject";
+import { isPlainObject } from "../../../../utils/validators/isPlainObject";
 import { validateSchemaKeys } from "../../../validators/object_validations/validateSchemaKeys";
 
 /**

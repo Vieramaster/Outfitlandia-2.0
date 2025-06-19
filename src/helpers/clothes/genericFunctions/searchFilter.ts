@@ -1,4 +1,4 @@
-import { ClothesType } from "../../../shared/types/clothes/clothes.types";
+import { ClothesType } from "../../../types/clothes/clothes.types";
 
 /**
  * Filters an array of ClothesProps by a given key and value.

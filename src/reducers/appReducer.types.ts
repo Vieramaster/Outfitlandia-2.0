@@ -1,9 +1,9 @@
-import { ClothesType, GarmentType } from "../clothes/clothes.types";
+import { ClothesType, GarmentType } from "../types/clothes/clothes.types";
 
 export type AppStateProps = {
   inventory: ClothesType[];
   selectedGarment?: GarmentType;
-  chosenClothes: ClothesType[] | undefined;
+  chosenClothes: ClothesType[];
   activeView: "main" | "garments" | "colors";
   isMobileMenuHidden: boolean;
 };

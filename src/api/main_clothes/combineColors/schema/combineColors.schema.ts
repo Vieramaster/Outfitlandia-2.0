@@ -1,10 +1,10 @@
 //TYPES
-import { ArraySchemaType } from "../../../../shared/types/validationApi.types";
+import { ArraySchemaType } from "../../../../types/validationApi.types";
 //ARRAY_KEYS
-import { colorNameKeys } from "../../../../shared/types/clothes/arrayTypes";
+import { colorNameKeys } from "../../../../constants/clothesConstants";
 //VALIDATORS
-import { isNonEmptyArray } from "../../../../shared/validators/isNonEmplyArray";
-import { isPlainObject } from "../../../../shared/validators/isPlainObject";
+import { isNonEmptyArray } from "../../../../utils/validators/isNonEmplyArray";
+import { isPlainObject } from "../../../../utils/validators/isPlainObject";
 import { isOneOf } from "../../../validators/object_validations/isOneOf";
 import { validateStringArray } from "../../../validators/object_validations/validateStringArray";
 
