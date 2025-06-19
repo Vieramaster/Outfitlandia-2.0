@@ -31,16 +31,10 @@ export const ClothesDisplaySection = ({
       className={`
   ${
     mobile && (chosenView === "garments" || chosenView === "colors")
-      ? "absolute size-full "
-      : "w-0 h-0 hidden"
-  }     
-        grid place-items-center
-        bg-rose-900
-        overflow-auto
-        lg:h-full
-        lg:top-auto 
-        lg:block lg:relative 
-        lg:w-3/5
+      ? "absolute"
+      : "hidden"
+  }   overflow-hidden
+       
 `}
     >
       {chosenView === "garments" ? (

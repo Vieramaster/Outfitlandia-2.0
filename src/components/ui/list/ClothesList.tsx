@@ -7,9 +7,6 @@ export const ClothesList = ({ children }: ClothesListProps) => (
     className="          
 bg-red-500 
     p-10
-    overflow-x-auto    
-    min-h-full 
-    w-full 
     flex flex-wrap justify-center
     gap-6"
   >

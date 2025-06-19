@@ -76,6 +76,7 @@ export const Home = ({ clothesData }: HomeProps) => {
         clothesArray={state.inventory}
         onSelectClothes={handleSelectClothes}
       />
+
       <ClothesDisplaySection
         mobile={isMobile && state.selectedGarment !== undefined}
         chosenView={state.activeView}

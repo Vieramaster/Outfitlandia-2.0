@@ -6,7 +6,7 @@ export const ColorList = ({ children }: ColorListProps) => (
     role="list"
     className="
     bg-sky-900 
-    overflow-x-auto
+    
     p-10
     min-h-full 
     w-full 
