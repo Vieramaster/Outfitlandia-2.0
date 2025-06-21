@@ -23,13 +23,13 @@ function App() {
     error: garmentError,
     loading: garmentLoading,
     validatedData: garmentsData,
-  } = consumeAPI<ClothesType>("/garmentData.json", clothesApiValidator);
+  } = consumeAPI<ClothesType[]>("/garmentData.json", clothesApiValidator);
 
   const {
     error: combineColorError,
     loading: combineColorLoading,
     validatedData: combineColorData,
-  } = consumeAPI<CombineColorsType>(
+  } = consumeAPI<CombineColorsType[]>(
     "/combineColors.json",
     combineColorsApiValidator
   );

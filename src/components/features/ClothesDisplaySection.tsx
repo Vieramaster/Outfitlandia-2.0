@@ -31,9 +31,17 @@ export const ClothesDisplaySection = ({
       className={`
   ${
     mobile && (chosenView === "garments" || chosenView === "colors")
-      ? "absolute"
+      ? "absolute "
       : "hidden"
-  }   overflow-hidden
+  }   overflow-auto
+      bg-background
+      size-full
+      lg:bg-transparent
+      lg:h-full
+      lg:w-3/5
+      lg:flex
+     lg:no-background
+      
        
 `}
     >

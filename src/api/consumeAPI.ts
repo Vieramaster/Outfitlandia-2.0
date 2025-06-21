@@ -7,8 +7,8 @@ import { useFetch } from "../hooks/useFetch";
 
 export const consumeAPI = <T>(
   URL: string,
-  validator: (arg0: unknown) => ValidationResult<T[]>
-): DataResultType<T[]> => {
+  validator: (arg0: unknown) => ValidationResult<T>
+): DataResultType<T> => {
   const { data, loading, error } = useFetch(URL);
 
   if (error) {
@@ -36,6 +36,6 @@ export const consumeAPI = <T>(
   return {
     loading: false,
     error: null,
-    validatedData: validationResult.value as T[],
+    validatedData: validationResult.value as T,
   };
 };

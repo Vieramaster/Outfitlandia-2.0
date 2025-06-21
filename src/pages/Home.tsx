@@ -6,7 +6,7 @@ import { useResponsiveLayout } from "../hooks/useResponsibleLayout";
 //COMPONENTS
 import { ClothesInventory } from "../components/features/ClothesInventory";
 import { ClothesDisplaySection } from "../components/features/ClothesDisplaySection";
-import { HomeLayout } from "../components/layout/MainLayout";
+import { MainLayout } from "../components/layout/MainLayout";
 //TYPES & OBJECTS
 import {
   ClothesType,
@@ -71,7 +71,7 @@ export const Home = ({ clothesData }: HomeProps) => {
   };
 
   return (
-    <HomeLayout>
+    <MainLayout>
       <ClothesInventory
         clothesArray={state.inventory}
         onSelectClothes={handleSelectClothes}
@@ -84,6 +84,6 @@ export const Home = ({ clothesData }: HomeProps) => {
         onSelectGarment={handleSelectGarment}
         onSelectColor={handleSelectColor}
       />
-    </HomeLayout>
+    </MainLayout>
   );
 };

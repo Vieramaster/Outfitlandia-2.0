@@ -13,11 +13,18 @@ export const ClothesButton = ({
   <Card>
     <button
       className=" size-full 
-      bg-green-800 
+      bg-cards
       flex justify-center 
       items-center 
       cursor-pointer 
-      select-none drag-none"
+      select-none drag-none neumorphic
+      rounded-lg
+      border
+      border-background
+      hover:border-detail
+      hover:scale-101
+      duration-300
+      "
       {...props}
       aria-label={`select ${name}`}
       title={`select ${name}`}
@@ -27,7 +34,7 @@ export const ClothesButton = ({
         alt={name}
         loading="lazy"
         draggable={false}
-        className="object-cover w-5/6 "
+        className="object-cover w-5/6  "
       />
     </button>
   </Card>

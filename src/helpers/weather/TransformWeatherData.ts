@@ -1,13 +1,23 @@
 //TYPES & MESSAGES
-import { CurrentWeatherAPI } from "../../data/types/WeatherTypes";
-//VALIDATORS
-import { isValidWeatherApiResponse } from "../../validators/weatherValidators/isValidWeatherApiResponse";
+
+import {
+  WeatherApiResponseType,
+  WeatherDescriptionType,
+  WeatherIconType,
+} from "../../types/weather/weather.types";
 
 /**
  * The weather fetch is used to validate the data and then return an object with the data that is required.
  * @param data - Fetched weather data from the API.
  * @returns An object containing the transformed weather data, including temperature, icon, wind speed, and description.
  */
+
+type CurrentWeatherAPI = {
+  temperature: number;
+  icon: WeatherIconType;
+  windSpeed: number;
+  description: WeatherDescriptionType;
+};
 
 const DEFAULT_OBJECT: CurrentWeatherAPI = {
   temperature: 0,
@@ -16,14 +26,12 @@ const DEFAULT_OBJECT: CurrentWeatherAPI = {
   description: "clear sky",
 } as const;
 
-export const transformWeatherData = (weatherData: unknown) => {
-  if (!isValidWeatherApiResponse(weatherData)) return DEFAULT_OBJECT;
+export const transformWeatherData = (
+  weatherData: WeatherApiResponseType[]
+): CurrentWeatherAPI => {
+  if (!weatherData) return DEFAULT_OBJECT;
 
-  const {
-    main: { temp },
-    wind: { speed },
-    weather,
-  } = weatherData;
+  const {} = weatherData
 
   const { icon, description } = weather[0];
 

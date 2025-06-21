@@ -5,21 +5,18 @@ export const ClothesList = ({ children }: ClothesListProps) => (
   <ul
     role="list"
     className="          
-bg-red-500 
-    p-10
-    flex flex-wrap justify-center
-    gap-6"
+ p-10
+    min-h-full 
+    w-full 
+    grid 
+    grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] 
+    place-content-center
+    items-center
+    gap-5
+    lg:place-content-start
+    "
   >
     {children}
   </ul>
 );
 
-/**
- * 
- * bg-red-500 
-    p-10
-    overflow-x-auto    min-h-full 
-    w-full 
-    flex flex-wrap gap-8
-    gap-6
- */

@@ -1,10 +1,17 @@
 interface SmallCardProps {
   children: React.ReactNode;
   arial?: string;
+  container: boolean;
 }
-export const SmallCard = ({ arial, children }: SmallCardProps) => (
+export const SmallCard = ({
+  arial,
+  container = false,
+  children,
+}: SmallCardProps) => (
   <div
-    className="bg-sky-400  w-full h-1/2 flex gap-2 place-content-center items-center"
+    className={`${
+      container ? "border border-line" : ""
+    }w-full h-1/2 flex gap-2 place-content-center items-center`}
     aria-label={arial}
   >
     {children}

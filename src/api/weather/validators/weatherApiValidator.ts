@@ -24,7 +24,7 @@ import { weatherItemValidator } from "./weatherItemValidator";
  */
 export const weatherApiValidator = (
   data: unknown
-): ValidationResult<WeatherApiResponseType[]> => {
+): ValidationResult<WeatherApiResponseType> => {
   const issues: ValidationIssue[] = [];
 
   // Filter valid item based on `weatherItemValidator`
@@ -32,6 +32,6 @@ export const weatherApiValidator = (
 
   // If there are issues, return result with errors; otherwise, return validated array
   return isValid
-    ? { valid: true, value: [data] }
+    ? { valid: true, value: data }
     : dataValidationResult(data, issues);
 };

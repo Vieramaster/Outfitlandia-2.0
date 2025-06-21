@@ -13,7 +13,7 @@ export const defaultInventoryArray: ClothesType[] = [
         colorName: "default",
         hex: "#ffffff",
         title: "default",
-        imageColor: "/images/default/defaultCoat-lg.webp",
+        imageColor: "/images/default/defaultTop-lg.webp",
       },
     ],
   },

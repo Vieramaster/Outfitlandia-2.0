@@ -14,9 +14,9 @@ export type WeatherCurrentType = {
 };
 
 export type WeatherVisualType = {
-  description: WeatherDescription;
-  icon: WeatherIcon;
+  description: WeatherDescriptionType;
+  icon: WeatherIconType;
 };
 
-export type WeatherDescription = (typeof descriptionWeatherKeys)[number];
-export type WeatherIcon = (typeof iconWeatherKeys)[number];
+export type WeatherDescriptionType = (typeof descriptionWeatherKeys)[number];
+export type WeatherIconType = (typeof iconWeatherKeys)[number];

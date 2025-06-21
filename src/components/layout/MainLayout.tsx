@@ -1,16 +1,17 @@
 interface MainLayoutProps {
   children: React.ReactNode;
 }
-export const HomeLayout = ({ children }: MainLayoutProps) => {
+export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <main
       className="
         flex flex-col            
         flex-1                   
-        min-h-0                  
-        bg-yellow-500  
+       overflow-auto               
+        background-color
         relative
-        items-center              
+        items-center   
+        lg:min-h-[38rem]           
         lg:flex-row lg:justify-between 
         lg:items-start
       "
