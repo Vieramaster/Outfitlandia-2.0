@@ -1,11 +1,23 @@
+//TYPES
+import { ClothesType } from "../../../types/clothes/clothes.types";
+
+//COMPONENTS
+import { ClothesButton } from "../buttons/ClothesButton";
 interface ClothesListProps {
-  children: React.ReactNode;
+  data: ClothesType[];
+  isShown: boolean;
+  onSelectGarment: (item: number) => void;
 }
-export const ClothesList = ({ children }: ClothesListProps) => (
-  <ul
-    role="list"
-    className="          
- p-10
+export const ClothesList = ({
+  data,
+  isShown,
+  onSelectGarment,
+}: ClothesListProps) =>
+  isShown && (
+    <ul
+      role="list"
+      className="          
+    p-10
     min-h-full 
     w-full 
     grid 
@@ -15,8 +27,15 @@ export const ClothesList = ({ children }: ClothesListProps) => (
     gap-5
     lg:place-content-start
     "
-  >
-    {children}
-  </ul>
-);
-
+    >
+      {data.map(({ image, id, name }) => {
+        return (
+          <ClothesButton
+            key={id}
+            {...{ name, image }}
+            onClick={() => onSelectGarment(id)}
+          />
+        );
+      })}
+    </ul>
+  );

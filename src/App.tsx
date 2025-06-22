@@ -8,10 +8,9 @@ import { useDynamicVh } from "./hooks/useDynamicVh";
 import { clothesApiValidator } from "./api/main_clothes/clothes/validators/clothesApiValidator";
 import { combineColorsApiValidator } from "./api/main_clothes/combineColors/validators/combineColorsApiValidator";
 //COMPONENTS
-import { Header } from "./components/layout/Header";
 import { Home } from "./pages/Home";
 import { ErrorPage } from "./pages/ErrorPage";
-import { Footer } from "./components/layout/Footer";
+import { MainLayout } from "./components/layout/MainLayout";
 
 //NUEVO
 
@@ -42,11 +41,9 @@ function App() {
   };
 
   return (
-    <>
-      <Header />
+    <MainLayout>
       <Content />
-      <Footer />
-    </>
+    </MainLayout>
   );
 }
 export default App;

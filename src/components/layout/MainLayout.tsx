@@ -1,13 +1,18 @@
+import { Footer } from "./Footer";
+import { Header } from "./Header";
+
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <main
-      className="
+    <>
+      <Header />
+      <main
+        className="
         flex flex-col            
         flex-1                   
-       overflow-auto               
+        overflow-auto               
         background-color
         relative
         items-center   
@@ -15,8 +20,10 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         lg:flex-row lg:justify-between 
         lg:items-start
       "
-    >
-      {children}
-    </main>
+      >
+        {children}
+      </main>
+      <Footer />
+    </>
   );
 };
