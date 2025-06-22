@@ -16,11 +16,13 @@ import { searchFilter } from "../../helpers/clothes/genericFunctions/searchFilte
 interface ClothesInventoryProps {
   clothesArray: ClothesType[];
   onSelectClothes: (item: GarmentButtonType) => void;
+  onCreateOutfit: () => void;
 }
 
 export const ClothesInventory = ({
   clothesArray,
   onSelectClothes,
+  onCreateOutfit,
 }: ClothesInventoryProps) => {
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
@@ -63,7 +65,10 @@ export const ClothesInventory = ({
         <Card>
           <SmallCard container={false}>
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
-            <OutfitButton />
+            <OutfitButton
+              aria-label="button to create the outfit"
+              onClick={onCreateOutfit}
+            />
           </SmallCard>
 
           <SmallCard container={false}>

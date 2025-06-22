@@ -4,8 +4,9 @@ import {
   ListStructureType,
   ClothesListObject,
   MainButtonsProps,
-  GarmentKeyType,
-} from "../../data/types/ClothesTypes";
+  GarmentType,
+} from "../../types/clothes/clothes.types";
+
 import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
 //VALIDATORS
 import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
@@ -36,7 +37,7 @@ const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
 const outfit = (
   arrayColors: CombineColorsApiResponse[],
   clothes: ClothesType[],
-  key: GarmentKeyType,
+  key: GarmentType,
   mainGarment: ClothesType
 ): MainButtonsProps[] | undefined => {
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {

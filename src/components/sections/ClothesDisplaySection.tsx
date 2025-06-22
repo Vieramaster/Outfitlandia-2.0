@@ -24,7 +24,6 @@ export const ClothesDisplaySection = ({
 
   return (
     <section
-      aria-labelledby="show options"
       className={`
       ${mobile && chosenView !== "main" ? "absolute " : "hidden"}   
       overflow-auto

@@ -4,7 +4,7 @@ export const OutfitButton = ({
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
   <button
     className="
-
+        
         bg-detail 
         w-1/2 h-full 
         rounded-lg "

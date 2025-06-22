@@ -77,10 +77,15 @@ export const homeHandlers = ({
     });
   };
 
+  const handleCreateOutfit = () => {
+    
+  };
+    
   // return all handlers
   return {
     handleSelectClothes,
     handleSelectGarment,
     handleSelectColor,
+    handleCreateOutfit,
   };
 };

@@ -16,6 +16,7 @@ interface HomeProps {
 }
 export const Home = ({ clothesData }: HomeProps) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
+
   const { isMobile } = useResponsiveLayout();
 
   const handlers = useMemo(() => {
@@ -27,6 +28,7 @@ export const Home = ({ clothesData }: HomeProps) => {
       <ClothesInventory
         clothesArray={state.inventory}
         onSelectClothes={handlers.handleSelectClothes}
+        onCreateOutfit={handlers.handleCreateOutfit}
       />
 
       <ClothesDisplaySection
