@@ -10,17 +10,19 @@ import { ClothesInventory } from "../components/sections/ClothesInventory";
 import { ClothesDisplaySection } from "../components/sections/ClothesDisplaySection";
 //HELPERS
 import { homeHandlers } from "../helpers/handlers/homeHandlers";
+import { CombineColorsType } from "../types/clothes/combineColors.types";
 
 interface HomeProps {
   clothesData: ClothesType[];
+  combineColorsData: CombineColorsType[];
 }
-export const Home = ({ clothesData }: HomeProps) => {
+export const Home = ({ clothesData, combineColorsData }: HomeProps) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   const { isMobile } = useResponsiveLayout();
 
   const handlers = useMemo(() => {
-    return homeHandlers({ state, dispatch, clothesData });
+    return homeHandlers({ state, dispatch, clothesData, combineColorsData });
   }, [state, dispatch, clothesData]);
 
   return (

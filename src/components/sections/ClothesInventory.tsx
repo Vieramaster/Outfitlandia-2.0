@@ -67,8 +67,7 @@ export const ClothesInventory = ({
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
             <OutfitButton
               aria-label="button to create the outfit"
-              onClick={onCreateOutfit}
-            />
+              onClick={onCreateOutfit} children={undefined}            />
           </SmallCard>
 
           <SmallCard container={false}>

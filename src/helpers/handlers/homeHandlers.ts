@@ -8,17 +8,22 @@ import {
 // FUNCTIONS
 import { searchFilter } from "../clothes/genericFunctions/searchFilter";
 import { colorFilter } from "../clothes/genericFunctions/colorFilter";
+import { filterCompatibleGarments } from "../clothes/filterCompatibleGarments";
+import { createOutfit } from "../clothes/createOutfit";
+import { CombineColorsType } from "../../types/clothes/combineColors.types";
 
 interface HomeHandlersProps {
   state: AppStateProps;
   dispatch: React.ActionDispatch<[action: ActionProps]>;
   clothesData: ClothesType[];
+  combineColorsData: CombineColorsType[];
 }
 
 export const homeHandlers = ({
   state,
   dispatch,
   clothesData,
+  combineColorsData,
 }: HomeHandlersProps) => {
   // first, reset every state to avoid errors, then filter the clothes based on the selected garment to display styles in the chosen view (garment)
   const handleSelectClothes = (selectedClothes: GarmentButtonType) => {
@@ -78,9 +83,20 @@ export const homeHandlers = ({
   };
 
   const handleCreateOutfit = () => {
-    
+    if (!state.chosenClothes[0] || !state.selectedGarment) return;
+
+    const filteredCompatibleGarments = filterCompatibleGarments(
+      clothesData,
+      state.chosenClothes[0]
+    );
+
+    const newOutfit = createOutfit(
+      filteredCompatibleGarments,
+      combineColorsData,
+      state.selectedGarment
+    );
   };
-    
+
   // return all handlers
   return {
     handleSelectClothes,

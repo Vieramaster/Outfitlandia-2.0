@@ -9,9 +9,9 @@
 }
 @font-face {
   font-family: "madson";
-  src: url("/public/fonts/Madson-Bold.otf") format("opentype"),
-    url("/public/fonts/Madson-Semibold.otf") format("opentype"),
-    url("/public/fonts/Madson.otf") format("opentype");
+  src: url("/fonts/Madson-Bold.otf") format("opentype"),
+    url("/fonts/Madson-Semibold.otf") format("opentype"),
+    url("/fonts/Madson.otf") format("opentype");
   font-display: swap;
 }
 
