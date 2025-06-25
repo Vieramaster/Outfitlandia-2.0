@@ -3,13 +3,12 @@ import {
   ClothesType,
   ListStructureType,
   ClothesListObject,
-  MainButtonsProps,
-  GarmentType,
+  GarmentButtonType,
 } from "../../types/clothes/clothes.types";
 
-import { CombineColorsApiResponse } from "../../data/types/ColorCombineTypes";
+import { CombineColorsType } from "../../types/clothes/combineColors.types";
 //VALIDATORS
-import { isNonEmptyArray } from "../../validators/genericValidators/isNonEmptyArray";
+import { isNonEmptyArray } from "../../utils/validators/isNonEmplyArray";
 // FUNCTIONS
 import { searchFilter } from "./genericFunctions/searchFilter";
 import { getRandomElement } from "../../utils/getRandomElement";
@@ -28,28 +27,29 @@ const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
  * Generates a clothing outfit based on the user's selected colors and garments.
  * Ensures that all items share at least one common style and weather attribute.
  *
- * @param arrayColors - An array of color combination objects.
+ * @param combienColorsData - An array of color combination objects.
  * @param clothes - An array of garment objects to search within.
- * @param key - The key indicating the type of garment selected by the user.
- * @param mainGarment - The main garment object selected by the user.
+ * @param selectedGarment - The main garment object selected by the user.
  * @returns An array of MainButtonsProps representing the generated outfit, or undefined if no valid combination is found.
  */
-const outfit = (
-  arrayColors: CombineColorsApiResponse[],
+export const outfit = (
+  combienColorsData: CombineColorsType[],
   clothes: ClothesType[],
-  key: GarmentType,
-  mainGarment: ClothesType
-): MainButtonsProps[] | undefined => {
+  selectedGarment: ClothesType
+): ClothesType[] => {
+  const SELECTED_GARMENT_GARMENT = selectedGarment.garment as GarmentButtonType;
+
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     // Get a random color combination from the provided array.
-    const randomColor = getRandomElement(arrayColors);
+    const randomColor = getRandomElement(combienColorsData);
     if (!randomColor) continue;
 
     // Destructure clothes and shoes from the random color combination.
     const { clothes: colorcombineClothes, shoes: colorCombineShoes } =
       randomColor;
     // Exclude the garment specified by the key to create a new combination.
-    const { [key]: removed, ...newColorcombineClothes } = colorcombineClothes;
+    const { [SELECTED_GARMENT_GARMENT]: removed, ...newColorcombineClothes } =
+      colorcombineClothes;
 
     // Filter out shoes from the clothes array.
     const shoesFiltered = searchFilter(clothes, "garment", "shoes", false);
@@ -78,7 +78,7 @@ const outfit = (
     // Merge the main garment into the combination.
     const addMainGarment: ListStructureType = {
       ...estructureObject,
-      [mainGarment.garment]: mainGarment,
+      [SELECTED_GARMENT_GARMENT]: selectedGarment,
     };
 
     // Ensure the resulting outfit contains at least three garment groups.
@@ -128,11 +128,8 @@ const outfit = (
       },
     ];
 
-    // Create an array of images based on the final combination of clothes.
-    const finalArray = buildButtonImageArray(finishClothes);
-    return finalArray;
+    return finishClothes;
   }
   console.error(MAX_ATTEMPTS_REACHED);
   return undefined;
 };
-export default outfit;

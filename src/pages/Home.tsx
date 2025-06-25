@@ -34,7 +34,7 @@ export const Home = ({ clothesData, combineColorsData }: HomeProps) => {
       />
 
       <ClothesDisplaySection
-        mobile={isMobile && state.selectedGarment !== undefined}
+        mobile={isMobile && state.chosenClothes !== undefined}
         chosenView={state.activeView}
         clothesArray={state.chosenClothes}
         onSelectGarment={handlers.handleSelectGarment}

@@ -1,8 +1,8 @@
 import {
   ClothesType,
   ClothesListObject,
-} from "../../../data/types/ClothesTypes";
-import { ColorNameType } from "../../../data/types/ClothesTypes";
+  ColorNameType,
+} from "../../../types/clothes/clothes.types";
 
 /**
  * Builds a mapping from garment keys to the list of clothes items

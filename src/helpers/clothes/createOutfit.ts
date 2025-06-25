@@ -1,6 +1,10 @@
 //TYPES
 import { CombineColorsType } from "../../types/clothes/combineColors.types";
-import { ClothesType } from "../../types/clothes/clothes.types";
+import {
+  ClothesType,
+  GarmentButtonType,
+  GarmentType,
+} from "../../types/clothes/clothes.types";
 import { getRandomElement } from "../../utils/getRandomElement";
 
 /**
@@ -21,22 +25,42 @@ export const createOutfit = (
   selectedGarment: ClothesType
 ) => {
   //desesctructuro la prenda seleccionada para manejar mejor los datos
-  const { garment: SELECTED_GARMENT_ID, colors: SELECTED_GARMENT_COLOR } =
-    selectedGarment;
+  const { garment, colors: SELECTED_GARMENT_COLOR } = selectedGarment;
+
+  const SELECTED_GARMENT = garment as GarmentButtonType;
 
   if (!SELECTED_GARMENT_COLOR[0]) return;
 
   const { colorName: SELECTED_GARMENT_COLORNAME } = SELECTED_GARMENT_COLOR[0];
 
+  const filteredCombineColors = combineColorsData.filter(
+    ({ clothes }) => clothes[SELECTED_GARMENT] === SELECTED_GARMENT_COLORNAME
+  );
+
   //creo un bucle donde aleatoriamente elije un una combinacion al azar y trada luego de buscar las prendas que coincidan con los colores dados
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-    //
-    const filteredCombineColors = combineColorsData.every(
-      (item) => item.clothes.top === SELECTED_GARMENT_COLORNAME
-    );
+    const randomColor = getRandomElement(filteredCombineColors);
   }
-  const filteredCombineColors = combineColorsData.every(
-    (item) => item.clothes.top === SELECTED_GARMENT_COLORNAME
+
+  const randomColor = getRandomElement(filteredCombineColors);
+
+  if (!randomColor) return;
+
+  const { clothes, shoes } = randomColor;
+
+  const excludeSelectedGarment = ["top", "coat", "pants"].filter(
+    (item) => item !== SELECTED_GARMENT
   );
-  console.log(filteredCombineColors);
+
+  const otherGarments = (index: number) =>
+    excludeSelectedGarment[index]! as GarmentButtonType;
+
+  const lala = clothesData.filter(
+    ({ garment }) => garment === otherGarments(0)
+  );
+  const fafa = lala.filter((item) =>
+    item.colors.some((item) => item.colorName === clothes[otherGarments(0)])
+  );
+  console.log(lala, clothes[otherGarments(0)]);
 };
+

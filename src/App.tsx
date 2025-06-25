@@ -21,13 +21,13 @@ function App() {
   const {
     error: garmentError,
     loading: garmentLoading,
-    validatedData: garmentsData,
+    validatedData: clothesApiResponse,
   } = consumeAPI<ClothesType[]>("/garmentData.json", clothesApiValidator);
 
   const {
     error: combineColorError,
     loading: combineColorLoading,
-    validatedData: combineColorData,
+    validatedData: combineColorApiResponse,
   } = consumeAPI<CombineColorsType[]>(
     "/combineColors.json",
     combineColorsApiValidator
@@ -35,9 +35,19 @@ function App() {
 
   const Content = () => {
     if (garmentLoading || combineColorLoading) return <h1>Cargando...</h1>;
-    if (garmentError || combineColorError || !garmentsData || !combineColorData)
+    if (
+      garmentError ||
+      combineColorError ||
+      !clothesApiResponse ||
+      !combineColorApiResponse
+    )
       return <ErrorPage />;
-    return <Home clothesData={garmentsData} />;
+    return (
+      <Home
+        clothesData={clothesApiResponse}
+        combineColorsData={combineColorApiResponse}
+      />
+    );
   };
 
   return (

@@ -27,9 +27,7 @@ export const Footer = () => {
     currentCoors.latitude,
     currentCoors.longitude
   );
-  console.log(weatherURL);
-  const lala = useFetch(weatherURL);
-  console.log(lala);
+
   /**
  *   const {
     error: weatherError,

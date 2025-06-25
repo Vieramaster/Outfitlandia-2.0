@@ -9,7 +9,7 @@ import {
 import { searchFilter } from "../clothes/genericFunctions/searchFilter";
 import { colorFilter } from "../clothes/genericFunctions/colorFilter";
 import { filterCompatibleGarments } from "../clothes/filterCompatibleGarments";
-import { createOutfit } from "../clothes/createOutfit";
+import { outfit } from "../clothes/outfit";
 import { CombineColorsType } from "../../types/clothes/combineColors.types";
 
 interface HomeHandlersProps {
@@ -39,7 +39,6 @@ export const homeHandlers = ({
 
     dispatch({
       type: "SELECT_CLOTHING_ITEM",
-      garment: selectedClothes,
       chosenClothes: defaultSelectedClothes,
     });
   };
@@ -83,18 +82,19 @@ export const homeHandlers = ({
   };
 
   const handleCreateOutfit = () => {
-    if (!state.chosenClothes[0] || !state.selectedGarment) return;
+    if (!state.chosenClothes[0]) return;
 
     const filteredCompatibleGarments = filterCompatibleGarments(
       clothesData,
       state.chosenClothes[0]
     );
 
-    const newOutfit = createOutfit(
-      filteredCompatibleGarments,
+    const newOutfit = outfit(
       combineColorsData,
-      state.selectedGarment
+      filteredCompatibleGarments,
+      state.chosenClothes[0]
     );
+    console.log(newOutfit);
   };
 
   // return all handlers

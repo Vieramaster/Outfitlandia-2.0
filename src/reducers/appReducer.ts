@@ -15,7 +15,6 @@ import { defaultInventoryArray } from "../constants/inventoryArrayConstants";
  */
 export const initialState: AppStateProps = {
   inventory: defaultInventoryArray,
-  selectedGarment: undefined,
   chosenClothes: [],
   activeView: "main",
   isMobileMenuHidden: false,
@@ -48,7 +47,6 @@ export const appReducer = (
     case "SELECT_CLOTHING_ITEM":
       return {
         ...state,
-        selectedGarment: action.garment,
         chosenClothes: action.chosenClothes,
         activeView: "garments",
         isMobileMenuHidden: window.innerWidth < 1024,

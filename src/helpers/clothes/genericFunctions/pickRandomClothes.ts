@@ -1,8 +1,8 @@
 import {
   ClothesListObject,
   ListStructureType,
-} from "../../../data/types/ClothesTypes";
-import { isNonEmptyArray } from "../../../validators/genericValidators/isNonEmptyArray";
+} from "../../../types/clothes/clothes.types";
+import { isNonEmptyArray } from "../../../utils/validators/isNonEmplyArray";
 import { getRandomElement } from "../../../utils/getRandomElement";
 
 /**

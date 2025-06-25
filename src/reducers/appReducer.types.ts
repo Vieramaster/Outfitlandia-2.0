@@ -2,7 +2,6 @@ import { ClothesType, GarmentType } from "../types/clothes/clothes.types";
 
 export type AppStateProps = {
   inventory: ClothesType[];
-  selectedGarment?: GarmentType;
   chosenClothes: ClothesType[];
   activeView: "main" | "garments" | "colors";
   isMobileMenuHidden: boolean;
@@ -12,7 +11,6 @@ export type ActionProps =
   | { type: "RESET" }
   | {
       type: "SELECT_CLOTHING_ITEM";
-      garment: "top" | "coat" | "pants";
       chosenClothes: ClothesType[];
     }
   | { type: "SELECT_GARMENT"; chosenClothes: ClothesType[] }
