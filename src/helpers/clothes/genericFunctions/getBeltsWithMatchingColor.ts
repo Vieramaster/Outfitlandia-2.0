@@ -22,7 +22,15 @@ export const getBeltsWithMatchingColor = (
     .map((belt) => {
       if (pantsType === "joggin" || pantsType === "bermuda joggin") {
         // No belt needed for joggin styles
-        return { ...belt, colors: [] };
+        return {
+          ...belt,
+          colors: [
+            {
+              ...belt.colors[0],
+              imageColor: "/images/default/emply.webp",
+            },
+          ],
+        };
       }
 
       const match =

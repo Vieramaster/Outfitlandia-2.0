@@ -36,7 +36,7 @@ export const outfit = (
   combienColorsData: CombineColorsType[],
   clothes: ClothesType[],
   selectedGarment: ClothesType
-): ClothesType[] => {
+): ClothesType[] | undefined => {
   const SELECTED_GARMENT_GARMENT = selectedGarment.garment as GarmentButtonType;
 
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
@@ -120,7 +120,7 @@ export const outfit = (
 
     // Select a random belt from the filtered list.
     const uniqueBelt = getRandomElement(filteredBelts);
-
+    console.log(filteredBelts);
     const finishClothes: ListStructureType[] = [
       {
         ...addMainGarment,
@@ -128,7 +128,7 @@ export const outfit = (
       },
     ];
 
-    return finishClothes;
+    return Object.values(finishClothes[0]!);
   }
   console.error(MAX_ATTEMPTS_REACHED);
   return undefined;

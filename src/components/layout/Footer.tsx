@@ -9,12 +9,14 @@ import { weatherApiValidator } from "../../api/weather/validators/weatherApiVali
 import { useGeolocation } from "../../hooks/useGeolocation";
 import { useFetch } from "../../hooks/useFetch";
 import { WeatherCard } from "../ui/cards/WeatherCard";
+import { StandardButton } from "../ui/buttons/StandardButton";
+import { GeoLocationIcon } from "../icons/GeoLocationIcon";
 
 export const Footer = () => {
   const API_KEY = "655a7f77968191071fc7f94491ab3d2d";
 
   const buildWeatherUrl = (latitude: number, longitude: number): string =>
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric&mode=cors`;
+    `https: //api.openweathermap.org/data/2.5/onecall?lat=-38.00042&lon=-57.5562&exclude=minutely,hourly,daily,alerts&appid=${API_KEY}`;
 
   const {
     coordinates: currentCoors,
@@ -40,7 +42,9 @@ export const Footer = () => {
     <footer className="bg-footer h-20 flex gap-5 justify-center items-center lg:h-20">
       <ul className="flex gap-5">
         <li className="bg-background rounded-lg size-12 lg:size-14">
-          <button className="size-full bg-detail rounded-lg">b</button>
+          <StandardButton variant="geoLocation">
+            <GeoLocationIcon className="fill-background w-full h-full " />
+          </StandardButton>
         </li>
         <WeatherCard />
         <WeatherCard />

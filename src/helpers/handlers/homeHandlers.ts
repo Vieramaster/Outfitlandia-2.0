@@ -94,7 +94,12 @@ export const homeHandlers = ({
       filteredCompatibleGarments,
       state.chosenClothes[0]
     );
-    console.log(newOutfit);
+    if (!newOutfit) return;
+    dispatch({
+      type: "GENERATE_OUTFIT",
+      inventory: newOutfit,
+    });
+    console.log(newOutfit)
   };
 
   // return all handlers

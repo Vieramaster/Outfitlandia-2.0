@@ -7,8 +7,9 @@ import {
 import { Card } from "../ui/cards/Card";
 import { SmallCard } from "../ui/cards/SmallCard";
 import { BeltCard } from "../ui/cards/BeltCard";
-import { OutfitButton } from "../ui/buttons/OutfitButton";
+import { StandardButton } from "../ui/buttons/StandardButton";
 import { ClothesButton } from "../ui/buttons/ClothesButton";
+import { CombineGarmentIcon } from "../icons/CombineGarmentIcon";
 
 // FUNCTIONS
 import { searchFilter } from "../../helpers/clothes/genericFunctions/searchFilter";
@@ -27,6 +28,15 @@ export const ClothesInventory = ({
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
   if (!belt || !shoes) return null;
+
+  const garmentOrder = ["top", "coat", "pants"];
+
+  const sortedClothes = clothesArray
+    .filter(({ garment }) => garmentOrder.includes(garment))
+    .sort(
+      (a, b) =>
+        garmentOrder.indexOf(a.garment) - garmentOrder.indexOf(b.garment)
+    );
 
   return (
     <section
@@ -51,26 +61,25 @@ export const ClothesInventory = ({
           
         "
       >
-        {clothesArray.map(({ colors, id, garment, name }) =>
-          garment === "top" || garment === "coat" || garment === "pants" ? (
-            <ClothesButton
-              key={id}
-              image={colors[0]?.imageColor!}
-              name={name}
-              onClick={() => onSelectClothes(garment)}
-            />
-          ) : null
-        )}
+        {sortedClothes.map(({ colors, id, garment, name }) => (
+          <ClothesButton
+            key={id}
+            image={colors[0]?.imageColor!}
+            name={name}
+            onClick={() => onSelectClothes(garment as GarmentButtonType)}
+          />
+        ))}
 
         <Card>
           <SmallCard container={false}>
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
-            <OutfitButton
+            <StandardButton
+              variant="outfitButton"
               aria-label="button to create the outfit"
               onClick={onCreateOutfit}
             >
-              x
-            </OutfitButton>
+              <CombineGarmentIcon className="fill-background" />
+            </StandardButton>
           </SmallCard>
 
           <SmallCard container={false}>
