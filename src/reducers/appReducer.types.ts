@@ -1,10 +1,10 @@
-import { ClothesType, GarmentType } from "../types/clothes/clothes.types";
+import { ClothesType } from "../types/clothes/clothes.types";
 
 export type AppStateProps = {
   inventory: ClothesType[];
   chosenClothes: ClothesType[];
   activeView: "main" | "garments" | "colors";
-  isMobileMenuHidden: boolean;
+  isEnableOutfitButton: boolean;
 };
 
 export type ActionProps =
@@ -19,4 +19,7 @@ export type ActionProps =
       chosenClothes: ClothesType[];
       inventory: ClothesType[];
     }
-  | { type: "GENERATE_OUTFIT"; inventory: ClothesType[] };
+  | {
+      type: "GENERATE_OUTFIT";
+      inventory: ClothesType[];
+    };

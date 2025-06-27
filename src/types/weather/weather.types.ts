@@ -1,22 +1,10 @@
-import {
-  descriptionWeatherKeys,
-  iconWeatherKeys,
-} from "../../constants/weatherConstants";
-
 export type WeatherApiResponseType = {
-  current: WeatherCurrentType;
+  current_weather: WeatherCurrentType;
 };
 
 export type WeatherCurrentType = {
-  temp: number;
-  wind_speed: number;
-  weather: WeatherVisualType[];
+  is_day: 0 | 1;
+  temperature: number;
+  windspeed: number;
+  weathercode: number;
 };
-
-export type WeatherVisualType = {
-  description: WeatherDescriptionType;
-  icon: WeatherIconType;
-};
-
-export type WeatherDescriptionType = (typeof descriptionWeatherKeys)[number];
-export type WeatherIconType = (typeof iconWeatherKeys)[number];

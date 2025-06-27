@@ -23,7 +23,7 @@ export const validateSchemaKeys = <T>(
       issues.push(
         createIssue(
           field,
-          errorMessage + ERROR_MESSAGE.INVALID_KEYS,
+          errorMessage + " " + ERROR_MESSAGE.INVALID_KEYS,
           totalIndex
         )
       );
@@ -34,7 +34,7 @@ export const validateSchemaKeys = <T>(
       issues.push(
         createIssue(
           field,
-          errorMessage + ERROR_MESSAGE.INVALID_VALUE,
+          errorMessage + " " + ERROR_MESSAGE.INVALID_VALUE,
           totalIndex
         )
       );

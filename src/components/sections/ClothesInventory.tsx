@@ -18,13 +18,16 @@ interface ClothesInventoryProps {
   clothesArray: ClothesType[];
   onSelectClothes: (item: GarmentButtonType) => void;
   onCreateOutfit: () => void;
+  isActiveOutfitButton: boolean;
 }
 
 export const ClothesInventory = ({
   clothesArray,
+  isActiveOutfitButton,
   onSelectClothes,
   onCreateOutfit,
 }: ClothesInventoryProps) => {
+  console.group(isActiveOutfitButton);
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
   if (!belt || !shoes) return null;
@@ -73,12 +76,18 @@ export const ClothesInventory = ({
         <Card>
           <SmallCard container={false}>
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
+
             <StandardButton
               variant="outfitButton"
               aria-label="button to create the outfit"
               onClick={onCreateOutfit}
+              isEnabled={isActiveOutfitButton}
             >
-              <CombineGarmentIcon className="fill-background" />
+              <CombineGarmentIcon
+                className={
+                  isActiveOutfitButton ? "fill-background" : "fill-header"
+                }
+              />
             </StandardButton>
           </SmallCard>
 

@@ -3,7 +3,7 @@
     "id": 0,
     "garment": "top",
     "name": "hoodie",
-    "image": "images/image-json/top/topHoodie.webp",
+    "image": "images/image-json/top/hoodie/top_hoodie_white.webp",
     "style": [
       "basic",
       "casual"
@@ -17,151 +17,151 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topHoodiePurple.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topHoodieLilac.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topHoodieAero.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_aero.webp"
       },
       {
         "colorName": "navy",
         "hex": "#272b41",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topHoodieNavy.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topHoodieFrench.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topHoodieSkyBlue.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
         "hex": "#85d5dc",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topHoodieAquamarine.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_aquamarine.webp"
       },
       {
         "colorName": "emerald",
         "hex": "#07463e",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topHoodieEmerald.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_emerald.webp"
       },
       {
         "colorName": "army",
         "hex": "#5f6053",
         "title": "green army",
-        "imageColor": "images/image-json/top/topHoodieArmy.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_army.webp"
       },
       {
         "colorName": "yellow",
         "hex": "#efbe3d",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topHoodieYellow.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_yellow.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#be7b17",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topHoodieMustard.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/topHoodieOrange.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topHoodieWindsorTan.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topHoodieChocolate.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/top/topHoodieCamel.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topHoodieBeige.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topHoodie.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topHoodieLightGrey.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topHoodieDarkGrey.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topHoodieBlack.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topHoodieBurgundy.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topHoodieRed.webp"
+        "imageColor": "images/image-json/hoodie/top_hoodie_red.webp"
       },
       {
         "colorName": "babyPink",
         "hex": "#dfc2be",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topHoodieBabyPink.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_babyPink.webp"
       },
       {
         "colorName": "oldPink",
         "hex": "#966c6f",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topHoodieOldPink.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topHoodieSalmon.webp"
+        "imageColor": "images/image-json/top/hoodie/top_hoodie_salmon.webp"
       }
     ]
   },

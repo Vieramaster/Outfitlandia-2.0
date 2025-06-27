@@ -16,7 +16,7 @@ export const consumeAPI = <T>(
     return { loading: false, error, validatedData: undefined };
   }
 
-  if (loading || !data) {
+  if (loading || data === null || typeof data !== "object") {
     return { loading: true, error: null, validatedData: undefined };
   }
 

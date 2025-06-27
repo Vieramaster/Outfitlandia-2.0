@@ -31,6 +31,7 @@ export const Home = ({ clothesData, combineColorsData }: HomeProps) => {
         clothesArray={state.inventory}
         onSelectClothes={handlers.handleSelectClothes}
         onCreateOutfit={handlers.handleCreateOutfit}
+        isActiveOutfitButton={state.isEnableOutfitButton}
       />
 
       <ClothesDisplaySection

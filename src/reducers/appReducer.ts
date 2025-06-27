@@ -12,12 +12,14 @@ import { defaultInventoryArray } from "../constants/inventoryArrayConstants";
  * @property chosenClothes        – Array of clothing items the user has picked
  * @property activeView           – Which view is active: "main" | "garments" | "colors"
  * @property isMobileMenuHidden   – Whether the mobile menu is hidden
+ * @property isEnableOutfitButton - When you have finished choosing the garment, the button to combine is enabled
  */
 export const initialState: AppStateProps = {
   inventory: defaultInventoryArray,
   chosenClothes: [],
   activeView: "main",
-  isMobileMenuHidden: false,
+
+  isEnableOutfitButton: false,
 };
 
 /**
@@ -49,7 +51,6 @@ export const appReducer = (
         ...state,
         chosenClothes: action.chosenClothes,
         activeView: "garments",
-        isMobileMenuHidden: window.innerWidth < 1024,
       };
 
     /** User picked a specific clothing item; switch to color selection */
@@ -67,7 +68,7 @@ export const appReducer = (
         activeView: "main",
         chosenClothes: action.chosenClothes,
         inventory: action.inventory,
-        isMobileMenuHidden: false,
+        isEnableOutfitButton: true,
       };
 
     /** Generate a new outfit image set without changing view or selections */

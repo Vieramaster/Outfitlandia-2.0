@@ -11,6 +11,7 @@ import { combineColorsApiValidator } from "./api/main_clothes/combineColors/vali
 import { Home } from "./pages/Home";
 import { ErrorPage } from "./pages/ErrorPage";
 import { MainLayout } from "./components/layout/MainLayout";
+import { useFetch } from "./hooks/useFetch";
 
 //NUEVO
 
@@ -32,6 +33,10 @@ function App() {
     "/combineColors.json",
     combineColorsApiValidator
   );
+
+
+
+
 
   const Content = () => {
     if (garmentLoading || combineColorLoading) return <h1>Cargando...</h1>;

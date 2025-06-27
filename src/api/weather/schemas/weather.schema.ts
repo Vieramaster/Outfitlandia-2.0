@@ -1,61 +1,50 @@
-//FUNCTIONS
 import { isPlainObject } from "../../../utils/validators/isPlainObject";
-import { isOneOf } from "../../validators/object_validations/isOneOf";
-import { isNonEmptyArray } from "../../../utils/validators/isNonEmplyArray";
-//ARRAY_VALIDATORS
-import { iconWeatherKeys } from "../../../constants/weatherConstants";
-import { descriptionWeatherKeys } from "../../../constants/weatherConstants";
-
 /**
- * Schema definition for validating the top-level structure of a weather API response.
+ *  * Schema definition for validating the `current_weather` section of the weather API.
  *
  * Each entry specifies:
- *   - field: the key name expected on the object
- *   - validate: a function that checks at runtime if the value at that key
- *               meets the required shape or constraints.
+ *   - field: the key expected on the object
+ *   - validate: a function to verify the runtime type and constraints for that field
  *
- * Intended use:
- *   Pass this array into a generic validation function (e.g., validateSchemaKeys)
- *   which will:
- *     1. Check that each field exists on the object
- *     2. Run the corresponding validate(...) function and push a ValidationIssue if it returns false
+ * Intended usage:
+ *   This schema is meant to be passed to a generic object validator (e.g. `validateSchemaKeys`),
+ *   which ensures:
+ *     1. The object contains all expected keys
+ *     2. Each value passes its associated validation rule
  *
- * Notes:
- *   - The `current` property is expected to be a plain object.
- *   - Further validation of its inner structure is performed using `WEATHER_CURRENT_SCHEMA`.
+ *
+ * Fields and their expected constraints:
+ *   - current_weather:    must be a plain object (to be validated with WEATHER_CURRENT_WEATHER_SCHEMA)
+
  */
+
 export const WEATHER_API_SCHEMA = [
-  { field: "current", validate: (v: unknown) => isPlainObject(v) },
+  { field: "current_weather", validate: (v: unknown) => isPlainObject(v) },
 ];
 
 /**
- * Schema definition for validating the `current` section of the weather API.
+ * Schema definition for validating the nested `clothes` object
+ * inside a color combination.
  *
  * Fields and their expected constraints:
- *   - temp:         must be a number (temperature).
- *   - wind_speed:   must be a number (wind speed).
- *   - weather:      must be a non-empty array (individual elements validated separately using *`WEATHER_VISUAL_SCHEMA`).
+ *   - is_day:         must be a number (day: 1, night: 0).
+ *   - temperature:    must be a number.
+ *   - windspeed:      must be a number.
+ *   - weathercode:    must be a number (weather state).
+ *
+ *    weathercode meanings:
+ *   - Clear sky                  0
+ *   - Partly cloudy              1, 2, 3
+ *   - Fog                        45, 48
+ *   - Drizzle                    51–67
+ *   - Light snow                 71–77
+ *   - Moderate rain              80–82
+ *   - Thunderstorm               95–99
  */
+
 export const WEATHER_CURRENT_SCHEMA = [
-  { field: "temp", validate: (v: unknown) => typeof v === "number" },
-  { field: "wind_speed", validate: (v: unknown) => typeof v === "number" },
-  {
-    field: "weather",
-    validate: (v: unknown) => isNonEmptyArray(v),
-  },
-];
-
-/**
- * Schema definition for validating items in the `weather` array inside the `current` object.
- *
- * Fields and their expected constraints:
- *   - icon:         must be a string present in `iconWeatherKeys`
- *   - description:  must be a string present in `descriptionWeatherKeys`
- */
-export const WEATHER_VISUAL_SCHEMA = [
-  { field: "icon", validate: (v: unknown) => isOneOf(v, iconWeatherKeys) },
-  {
-    field: "description",
-    validate: (v: unknown) => isOneOf(v, descriptionWeatherKeys),
-  },
+  { field: "is_day", validate: (v: unknown) => typeof v === "number" },
+  { field: "temperature", validate: (v: unknown) => typeof v === "number" },
+  { field: "windspeed", validate: (v: unknown) => typeof v === "number" },
+  { field: "weathercode", validate: (v: unknown) => typeof v === "number" },
 ];

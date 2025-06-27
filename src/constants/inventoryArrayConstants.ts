@@ -5,7 +5,7 @@ export const defaultInventoryArray: ClothesType[] = [
     id: 1000,
     garment: "top",
     name: "default top",
-    image: "/images/default/defaultTop-lg.webp",
+    image: "images/image-json/top/hoodie/top_hoodie_white.webp",
     style: ["basic", "casual", "elegant"],
     weather: ["hot", "mild", "cold"],
     colors: [
@@ -13,7 +13,7 @@ export const defaultInventoryArray: ClothesType[] = [
         colorName: "default",
         hex: "#ffffff",
         title: "default",
-        imageColor: "/images/default/defaultTop-lg.webp",
+        imageColor: "images/image-json/top/hoodie/top_hoodie_white.webp",
       },
     ],
   },
