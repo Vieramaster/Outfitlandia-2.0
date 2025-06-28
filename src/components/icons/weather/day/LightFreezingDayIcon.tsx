@@ -1,4 +1,4 @@
-export const LightFreezingDrizzleDayIcon = (
+export const LightFreezingDayIcon = (
   props: React.SVGProps<SVGSVGElement>
 ) => (
   <svg

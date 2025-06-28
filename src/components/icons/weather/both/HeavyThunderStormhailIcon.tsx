@@ -1,11 +1,11 @@
-export const OvercastRainIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const HeavyThunderStormhailIcon = (
+  props: React.SVGProps<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
-    style={{ scale: 1.3, marginBottom: "0.3rem" }}
-
   >
     <defs>
       <symbol id="c" viewBox="0 0 214.3 140.1">
@@ -20,7 +20,7 @@ export const OvercastRainIcon = (props: React.SVGProps<SVGSVGElement>) => (
       <symbol id="d" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#e2e8f0"
+          stroke="#475569"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}
@@ -61,74 +61,15 @@ export const OvercastRainIcon = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </use>
       </symbol>
-      <symbol id="e" overflow="visible" viewBox="0 0 128 56">
-        <path
-          fill="#e2414c"
-          d="M8 56a8 8 0 01-8-8V8a8 8 0 0116 0v40a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
+      <symbol id="e" viewBox="0 0 96 176">
+        <path fill="#f6a823" d="M32 0 0 96h32l-16 80L96 64H48L80 0H32z">
+          <animate
             id="x1"
-            additive="sum"
-            attributeName="transform"
-            begin="0s; x1.end+.33s"
-            dur=".67s"
-            type="translate"
-            values="0 -60; 0 60"
-          />
-          <animate
-            id="y1"
             attributeName="opacity"
-            begin="0s; y1.end+.33s"
-            dur=".67s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M64 56a8 8 0 01-8-8V8a8 8 0 0116 0v40a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x2"
-            additive="sum"
-            attributeName="transform"
-            begin=".33s; x2.end+.33s"
-            dur=".67s"
-            type="translate"
-            values="0 -60; 0 60"
-          />
-          <animate
-            id="y2"
-            attributeName="opacity"
-            begin=".33s; y2.end+.33s"
-            dur=".67s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M120 56a8 8 0 01-8-8V8a8 8 0 0116 0v40a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x3"
-            additive="sum"
-            attributeName="transform"
-            begin="-.33s; x3.end+.33s"
-            dur=".67s"
-            type="translate"
-            values="0 -60; 0 60"
-          />
-          <animate
-            id="y3"
-            attributeName="opacity"
-            begin="-.33s; y3.end+.33s"
-            dur=".67s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
+            begin="0s; x1.end+.67s"
+            dur="1.33s"
+            keyTimes="0; .38; .5; .63; .75; .86; .94; 1"
+            values="1; 1; 0; 1; 0; 1; 0; 1"
           />
         </path>
       </symbol>
@@ -156,9 +97,9 @@ export const OvercastRainIcon = (props: React.SVGProps<SVGSVGElement>) => (
     />
     <use
       xlinkHref="#e"
-      width={128}
-      height={56}
-      transform="translate(192 344)"
+      width={96}
+      height={176}
+      transform="translate(208 293)"
     />
   </svg>
 );
