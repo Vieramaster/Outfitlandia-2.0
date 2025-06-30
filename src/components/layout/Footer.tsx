@@ -9,7 +9,8 @@ import { WeatherCard } from "../ui/cards/WeatherCard";
 import { StandardButton } from "../ui/buttons/StandardButton";
 import { GeoLocationIcon } from "../icons/GeoLocationIcon";
 import { transformedClimateData } from "../../helpers/weather/transformedClimateData";
-import { dayWeatherIcons } from "../../constants/weatherIconsConstants";
+import { WindIcon } from "../icons/weather/WindIcon";
+import { WindCard } from "../ui/cards/WindCard";
 
 export const Footer = () => {
   const buildWeatherUrl = (latitude: number, longitude: number): string =>
@@ -35,13 +36,11 @@ export const Footer = () => {
 
   if (!weatherData) return;
 
-  const transformWeatherData = transformedClimateData(weatherData);
-  //falta freezing rain y de imagenes seatshirt de
-  if (!dayWeatherIcons) return;
-
-  const code = 73; // por ejemplo
-  const Icon = dayWeatherIcons[code]!.component;
-  const title = dayWeatherIcons[code]!.title;
+  const {
+    temperature,
+    windspeed,
+    weatherIcon: { title, SvgIcon },
+  } = transformedClimateData(weatherData);
 
   return (
     <footer className="bg-footer h-20 flex gap-5 justify-center items-center lg:h-26">
@@ -56,9 +55,22 @@ export const Footer = () => {
             }
           />
         </li>
-        <WeatherCard children={<Icon />} />
-        <WeatherCard children={`${transformWeatherData.temperature} °C`} />
-        <WeatherCard children={`${transformWeatherData.windspeed} km/h`} />
+        <WeatherCard key="icon">
+          <SvgIcon aria-label={title} className="h-[140%]" />
+        </WeatherCard>
+
+        <WeatherCard key="temperature">
+          <p className="text-4xl text-white">{temperature} °C</p>
+        </WeatherCard>
+
+        <WeatherCard column={true} key="wind">
+          <WindCard size="icon">
+            <WindIcon className="h-[150%]" />
+          </WindCard>
+          <WindCard size="speed">
+            <p className="text-2xl text-white">{windspeed} k/m</p>
+          </WindCard>
+        </WeatherCard>
       </ul>
     </footer>
   );

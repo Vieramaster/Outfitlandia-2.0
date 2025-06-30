@@ -4,6 +4,7 @@ export const ClearSkyDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
+    style={{ scale: 0.8 }}
   >
     <defs>
       <symbol id="a" viewBox="0 0 375 375">

@@ -4,6 +4,7 @@ export const ModerateFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
+    style={{marginBottom:"0.3rem"}}
   >
     <defs>
       <symbol id="a" viewBox="0 0 359 231">
@@ -120,7 +121,7 @@ export const ModerateFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
       <symbol id="b" overflow="visible" viewBox="0 0 155.2 48">
         <use xlinkHref="#c" width={155.2} height={48} />
         <path
-          fill="#0a5ad4"
+          fill="#e2414c"
           d="M21.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
           opacity={0}
         >
@@ -144,7 +145,7 @@ export const ModerateFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </path>
         <path
-          fill="#0a5ad4"
+          fill="#e2414c"
           d="M77.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
           opacity={0}
         >
@@ -168,7 +169,7 @@ export const ModerateFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </path>
         <path
-          fill="#0a5ad4"
+          fill="#e2414c"
           d="M133.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
           opacity={0}
         >

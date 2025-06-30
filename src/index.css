@@ -6,7 +6,7 @@
   --color-footer: #1e1e1e;
   --color-off-white: #e9ecef;
   --color-detail: #e2414c;
-  --color-detail-active: #b1323b
+  --color-detail-active: #b1323b;
 }
 @font-face {
   font-family: "madson";
@@ -19,6 +19,7 @@
 * {
   box-sizing: border-box;
   font-family: "madson", sans-serif;
+  font-weight: 100;
 }
 
 .full-vh {

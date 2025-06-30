@@ -1,12 +1,10 @@
-export const LightFreezingDayIcon = (
-  props: React.SVGProps<SVGSVGElement>
-) => (
+export const LightFreezingDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
-    style={{ scale: "1.3", marginBottom: "0.3rem" }}
+    style={{ marginBottom: "0.3rem" }}
   >
     <defs>
       <symbol id="c" viewBox="0 0 193 193">

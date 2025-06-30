@@ -1,5 +1,4 @@
-export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
-
+export const LightSnowIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -8,60 +7,17 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
     style={{marginBottom:"0.3rem"}}
   >
     <defs>
-      <symbol id="c" viewBox="0 0 214.3 140.1">
+      <symbol id="a" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#94a3b8"
-          strokeLinejoin="round"
-          strokeWidth={15}
-          d="M7.5 100.2a32.4 32.4 0 0032.4 32.4h129.8v-.1l2.3.1a34.8 34.8 0 006.5-68.9 32.4 32.4 0 00-48.5-33 48.6 48.6 0 00-88.6 37.1h-1.5a32.4 32.4 0 00-32.4 32.4Z"
-        />
-      </symbol>
-      <symbol id="d" viewBox="0 0 359 231">
-        <path
-          fill="none"
-          stroke="#475569"
+          stroke="#e2e8f0"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}
           d="M295.5 223.5a56 56 0 000-112l-2.5.1a83.9 83.9 0 00-153-64.2 56 56 0 00-84.6 48.1 56.6 56.6 0 00.8 9 60 60 0 0011.2 119"
         />
       </symbol>
-      <symbol id="b" overflow="visible" viewBox="0 0 447.7 371.5">
-        <g clipPath="url(#a)">
-          <use
-            xlinkHref="#c"
-            width={214.3}
-            height={140.1}
-            transform="translate(195.51 165.01)"
-          >
-            <animateTransform
-              additive="sum"
-              attributeName="transform"
-              dur="6s"
-              repeatCount="indefinite"
-              type="translate"
-              values="-9 0; 9 0; -9 0"
-            />
-          </use>
-        </g>
-        <use
-          xlinkHref="#d"
-          width={359}
-          height={231}
-          transform="translate(0 140.5)"
-        >
-          <animateTransform
-            additive="sum"
-            attributeName="transform"
-            dur="6s"
-            repeatCount="indefinite"
-            type="translate"
-            values="-18 0; 18 0; -18 0"
-          />
-        </use>
-      </symbol>
-      <symbol id="f" overflow="visible" viewBox="0 0 155.2 48">
+      <symbol id="b" overflow="visible" viewBox="0 0 155.2 48">
         <g>
           <path
             fill="#86c3db"
@@ -162,105 +118,15 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </g>
       </symbol>
-      <symbol id="e" overflow="visible" viewBox="0 0 155.2 48">
-        <use xlinkHref="#f" width={155.2} height={48} />
-        <path
-          fill="#e2414c"
-          d="M21.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x1"
-            additive="sum"
-            attributeName="transform"
-            begin="0s; x1.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y1"
-            attributeName="opacity"
-            begin="0s; y1.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M77.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x2"
-            additive="sum"
-            attributeName="transform"
-            begin="1.34s; x2.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y2"
-            attributeName="opacity"
-            begin="1.34s; y2.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M133.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x3"
-            additive="sum"
-            attributeName="transform"
-            begin=".67s; x3.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y3"
-            attributeName="opacity"
-            begin=".67s; y3.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-      </symbol>
-      <clipPath id="a">
-        <path
-          fill="none"
-          d="M351.5 308a56 56 0 00-56-56l-2.5.1A83.7 83.7 0 00211.5 148V0h236.2v308Z"
-        >
-          <animateTransform
-            additive="sum"
-            attributeName="transform"
-            dur="6s"
-            repeatCount="indefinite"
-            type="translate"
-            values="-18 0; 18 0; -18 0"
-          />
-        </path>
-      </clipPath>
     </defs>
     <use
-      xlinkHref="#b"
-      width={447.7}
-      height={371.5}
-      transform="translate(64.34)"
+      xlinkHref="#a"
+      width={359}
+      height={231}
+      transform="translate(76.5 140.5)"
     />
     <use
-      xlinkHref="#e"
+      xlinkHref="#b"
       width={155.2}
       height={48}
       transform="translate(178.4 338)"

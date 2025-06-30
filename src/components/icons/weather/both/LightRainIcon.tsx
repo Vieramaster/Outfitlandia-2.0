@@ -4,7 +4,7 @@ export const LightRainIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
-    style={{ scale: 1.3, marginBottom: "0.3rem" }}
+    style={{ marginBottom: "0.3rem" }}
   >
     <defs>
       <symbol id="a" viewBox="0 0 359 231">

@@ -1,29 +1,19 @@
-export const PartyCloudyDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const PartlyCloudyNightIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
-    style={{ scale: 1.3 }}
   >
     <defs>
-      <symbol id="d" viewBox="0 0 193 193">
-        <circle
-          cx={96.5}
-          cy={96.5}
-          r={40}
-          fill="none"
-          stroke="#e2414c"
-          strokeMiterlimit={10}
-          strokeWidth={9}
-        />
+      <symbol id="d" viewBox="0 0 178 178">
         <path
           fill="none"
           stroke="#e2414c"
           strokeLinecap="round"
-          strokeMiterlimit={10}
-          strokeWidth={9}
-          d="M96.5 29.9V4.5m0 184v-25.4m47.1-113.7 18-18M31.4 161.6l18-18m0-94.2-18-18m130.2 130.2-18-18M4.5 96.5h25.4m158.6 0h-25.4"
+          strokeLinejoin="round"
+          strokeWidth={10}
+          d="M163.6 110.4a84.8 84.8 0 01-85.4-84.3A83.3 83.3 0 0181 5 84.7 84.7 0 005 88.7 84.8 84.8 0 0090.4 173a85.2 85.2 0 0082.6-63.1 88 88 0 01-9.4.5Z"
         >
           <animateTransform
             additive="sum"
@@ -31,7 +21,7 @@ export const PartyCloudyDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
             dur="6s"
             repeatCount="indefinite"
             type="rotate"
-            values="0 96.5 96.5; 45 96.5 96.5"
+            values="-15 86 86; 9 86 86; -15 86 86"
           />
         </path>
       </symbol>
@@ -92,9 +82,9 @@ export const PartyCloudyDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
         <g clipPath="url(#b)">
           <use
             xlinkHref="#d"
-            width={193}
-            height={193}
-            transform="translate(57.5 110.5)"
+            width={178}
+            height={178}
+            transform="translate(65 118)"
           />
         </g>
         <use

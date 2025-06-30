@@ -4,12 +4,13 @@ export const HeavySnowIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
+    style={{marginBottom:"0.3rem"}}
   >
     <defs>
       <symbol id="c" viewBox="0 0 214.3 140.1">
         <path
           fill="none"
-          stroke="#94a3b8"
+          stroke="#475569"
           strokeLinejoin="round"
           strokeWidth={15}
           d="M7.5 100.2a32.4 32.4 0 0032.4 32.4h129.8v-.1l2.3.1a34.8 34.8 0 006.5-68.9 32.4 32.4 0 00-48.5-33 48.6 48.6 0 00-88.6 37.1h-1.5a32.4 32.4 0 00-32.4 32.4Z"

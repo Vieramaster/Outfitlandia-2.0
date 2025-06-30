@@ -1,5 +1,4 @@
-export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
-
+export const HeavySnowShowersIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -20,7 +19,7 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
       <symbol id="d" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#475569"
+          stroke="#e2e8f0"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}

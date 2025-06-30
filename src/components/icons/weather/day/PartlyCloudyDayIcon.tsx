@@ -1,15 +1,41 @@
-export const ModerateThunderStormIcon = (
-  props: React.SVGProps<SVGSVGElement>
-) => (
+export const PartlyCloudyDayIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
-  style={{scale:0.85, marginBottom:"0.4rem"}}
+
   >
     <defs>
-      <symbol id="c" viewBox="0 0 214.3 140.1">
+      <symbol id="d" viewBox="0 0 193 193">
+        <circle
+          cx={96.5}
+          cy={96.5}
+          r={40}
+          fill="none"
+          stroke="#e2414c"
+          strokeMiterlimit={10}
+          strokeWidth={9}
+        />
+        <path
+          fill="none"
+          stroke="#e2414c"
+          strokeLinecap="round"
+          strokeMiterlimit={10}
+          strokeWidth={9}
+          d="M96.5 29.9V4.5m0 184v-25.4m47.1-113.7 18-18M31.4 161.6l18-18m0-94.2-18-18m130.2 130.2-18-18M4.5 96.5h25.4m158.6 0h-25.4"
+        >
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            dur="6s"
+            repeatCount="indefinite"
+            type="rotate"
+            values="0 96.5 96.5; 45 96.5 96.5"
+          />
+        </path>
+      </symbol>
+      <symbol id="f" viewBox="0 0 214.3 140.1">
         <path
           fill="none"
           stroke="#94a3b8"
@@ -18,20 +44,20 @@ export const ModerateThunderStormIcon = (
           d="M7.5 100.2a32.4 32.4 0 0032.4 32.4h129.8v-.1l2.3.1a34.8 34.8 0 006.5-68.9 32.4 32.4 0 00-48.5-33 48.6 48.6 0 00-88.6 37.1h-1.5a32.4 32.4 0 00-32.4 32.4Z"
         />
       </symbol>
-      <symbol id="d" viewBox="0 0 359 231">
+      <symbol id="g" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#475569"
+          stroke="#e2e8f0"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}
           d="M295.5 223.5a56 56 0 000-112l-2.5.1a83.9 83.9 0 00-153-64.2 56 56 0 00-84.6 48.1 56.6 56.6 0 00.8 9 60 60 0 0011.2 119"
         />
       </symbol>
-      <symbol id="b" overflow="visible" viewBox="0 0 447.7 371.5">
+      <symbol id="e" overflow="visible" viewBox="0 0 447.7 371.5">
         <g clipPath="url(#a)">
           <use
-            xlinkHref="#c"
+            xlinkHref="#f"
             width={214.3}
             height={140.1}
             transform="translate(195.51 165.01)"
@@ -47,7 +73,7 @@ export const ModerateThunderStormIcon = (
           </use>
         </g>
         <use
-          xlinkHref="#d"
+          xlinkHref="#g"
           width={359}
           height={231}
           transform="translate(0 140.5)"
@@ -62,17 +88,21 @@ export const ModerateThunderStormIcon = (
           />
         </use>
       </symbol>
-      <symbol id="e" viewBox="0 0 96 176">
-        <path fill="#e2414c" d="M32 0 0 96h32l-16 80L96 64H48L80 0H32z">
-          <animate
-            id="x1"
-            attributeName="opacity"
-            begin="0s; x1.end+.67s"
-            dur="1.33s"
-            keyTimes="0; .38; .5; .63; .75; .86; .94; 1"
-            values="1; 1; 0; 1; 0; 1; 0; 1"
+      <symbol id="c" viewBox="0 0 512 371.5">
+        <g clipPath="url(#b)">
+          <use
+            xlinkHref="#d"
+            width={193}
+            height={193}
+            transform="translate(57.5 110.5)"
           />
-        </path>
+        </g>
+        <use
+          xlinkHref="#e"
+          width={447.7}
+          height={371.5}
+          transform="translate(64.34)"
+        />
       </symbol>
       <clipPath id="a">
         <path
@@ -89,18 +119,22 @@ export const ModerateThunderStormIcon = (
           />
         </path>
       </clipPath>
+      <clipPath id="b">
+        <path
+          fill="none"
+          d="M276 148a83.8 83.8 0 00-71.4 40 56 56 0 00-84.6 48 56.6 56.6 0 00.8 9A60 60 0 0072 304H0V0h276Z"
+        >
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            dur="6s"
+            repeatCount="indefinite"
+            type="translate"
+            values="-18 0; 18 0; -18 0"
+          />
+        </path>
+      </clipPath>
     </defs>
-    <use
-      xlinkHref="#b"
-      width={447.7}
-      height={371.5}
-      transform="translate(64.34)"
-    />
-    <use
-      xlinkHref="#e"
-      width={96}
-      height={176}
-      transform="translate(208 293)"
-    />
+    <use xlinkHref="#c" width={512} height={371.5} />
   </svg>
 );

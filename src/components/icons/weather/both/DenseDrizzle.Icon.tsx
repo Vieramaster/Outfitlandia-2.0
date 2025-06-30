@@ -1,9 +1,10 @@
-export const RimeFrog = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
+export const DenseDrizzleIcon = (props: React.SVGProps<SVGSVGElement>) => (
+ <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
     {...props}
+    style={{marginBottom:"0.3rem"}}
   >
     <defs>
       <symbol id="c" viewBox="0 0 214.3 140.1">
@@ -18,7 +19,7 @@ export const RimeFrog = (props: React.SVGProps<SVGSVGElement>) => (
       <symbol id="d" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#475569"
+          stroke="#e2e8f0"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}
@@ -59,78 +60,6 @@ export const RimeFrog = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </use>
       </symbol>
-      <symbol id="e" overflow="visible" viewBox="0 0 258 66">
-        <g>
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M9 57h30"
-          />
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeDasharray="60 60"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M99 57h90"
-          />
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M219 57h30"
-          />
-          <animateTransform
-            additive="sum"
-            attributeName="transform"
-            dur="6s"
-            repeatCount="indefinite"
-            type="translate"
-            values="-24 0; 24 0; -24 0"
-          />
-        </g>
-        <g>
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M9 9h30"
-          />
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeDasharray="60 60"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M99 9h90"
-          />
-          <path
-            fill="none"
-            stroke="#e2e8f0"
-            strokeLinecap="round"
-            strokeMiterlimit={10}
-            strokeWidth={18}
-            d="M219 9h30"
-          />
-          <animateTransform
-            additive="sum"
-            attributeName="transform"
-            dur="6s"
-            repeatCount="indefinite"
-            type="translate"
-            values="24 0; -24 0; 24 0"
-          />
-        </g>
-      </symbol>
       <clipPath id="a">
         <path
           fill="none"
@@ -153,11 +82,76 @@ export const RimeFrog = (props: React.SVGProps<SVGSVGElement>) => (
       height={371.5}
       transform="translate(64.34)"
     />
-    <use
-      xlinkHref="#e"
-      width={258}
-      height={66}
-      transform="translate(127 405)"
-    />
-  </svg>
-);
+    <path
+      fill="#e2414c"
+      d="M200 376a8 8 0 01-8-8v-12a8 8 0 0116 0v12a8 8 0 01-8 8Z"
+      opacity={0}
+    >
+      <animateTransform
+        id="x1"
+        additive="sum"
+        attributeName="transform"
+        begin="0s; x1.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        type="translate"
+        values="0 -32; 0 -32; 0 120;"
+      />
+      <animate
+        id="y1"
+        attributeName="opacity"
+        begin="0s; y1.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        values="0; 1; 0"
+      />
+    </path>
+    <path
+      fill="#e2414c"
+      d="M256 376a8 8 0 01-8-8v-12a8 8 0 0116 0v12a8 8 0 01-8 8Z"
+      opacity={0}
+    >
+      <animateTransform
+        id="x2"
+        additive="sum"
+        attributeName="transform"
+        begin="1.34s; x2.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        type="translate"
+        values="0 -32; 0 -32; 0 120;"
+      />
+      <animate
+        id="y2"
+        attributeName="opacity"
+        begin="1.34s; y2.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        values="0; 1; 0"
+      />
+    </path>
+    <path
+      fill="#e2414c"
+      d="M312 376a8 8 0 01-8-8v-12a8 8 0 0116 0v12a8 8 0 01-8 8Z"
+      opacity={0}
+    >
+      <animateTransform
+        id="x3"
+        additive="sum"
+        attributeName="transform"
+        begin=".67s; x3.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        type="translate"
+        values="0 -32; 0 -32; 0 120;"
+      />
+      <animate
+        id="y3"
+        attributeName="opacity"
+        begin=".67s; y3.end+1s"
+        dur="1s"
+        keyTimes="0; .25; 1"
+        values="0; 1; 0"
+      />
+    </path>
+  </svg>)

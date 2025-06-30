@@ -1,4 +1,4 @@
-export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const ModerateSnowIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
       <symbol id="d" viewBox="0 0 359 231">
         <path
           fill="none"
-          stroke="#475569"
+          stroke="#e2e8f0"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={15}
@@ -61,7 +61,7 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
           />
         </use>
       </symbol>
-      <symbol id="f" overflow="visible" viewBox="0 0 155.2 48">
+      <symbol id="e" overflow="visible" viewBox="0 0 155.2 48">
         <g>
           <path
             fill="#86c3db"
@@ -161,81 +161,6 @@ export const DenseFreezingIcon = (props: React.SVGProps<SVGSVGElement>) => (
             values="0 -36; 0 92;"
           />
         </g>
-      </symbol>
-      <symbol id="e" overflow="visible" viewBox="0 0 155.2 48">
-        <use xlinkHref="#f" width={155.2} height={48} />
-        <path
-          fill="#e2414c"
-          d="M21.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x1"
-            additive="sum"
-            attributeName="transform"
-            begin="0s; x1.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y1"
-            attributeName="opacity"
-            begin="0s; y1.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M77.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x2"
-            additive="sum"
-            attributeName="transform"
-            begin="1.34s; x2.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y2"
-            attributeName="opacity"
-            begin="1.34s; y2.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
-        <path
-          fill="#e2414c"
-          d="M133.6 38a8 8 0 01-8-8V18a8 8 0 0116 0v12a8 8 0 01-8 8Z"
-          opacity={0}
-        >
-          <animateTransform
-            id="x3"
-            additive="sum"
-            attributeName="transform"
-            begin=".67s; x3.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            type="translate"
-            values="0 -32; 0 -32; 0 120;"
-          />
-          <animate
-            id="y3"
-            attributeName="opacity"
-            begin=".67s; y3.end+1s"
-            dur="1s"
-            keyTimes="0; .25; 1"
-            values="0; 1; 0"
-          />
-        </path>
       </symbol>
       <clipPath id="a">
         <path
