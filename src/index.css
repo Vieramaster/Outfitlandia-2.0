@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #111111;
-  --color-header: #1e1e1e;
-  --color-footer: #1e1e1e;
-  --color-off-white: #e9ecef;
+  --color-background: #1a1a1a ;
+  --color-layout: #2a2a2a ;
+  --color-off-white: #f5f5f5;
   --color-detail: #e2414c;
   --color-detail-active: #b1323b;
 }
@@ -26,7 +25,7 @@
   height: calc(var(--vh, 1vh) * 100);
 }
 .neumorphic {
-  background: #1e1e1e;
+  background: #2f2f2f;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -38,22 +37,7 @@
   min-width: 22rem;
 }
 
-@layer utilities {
-  .background-color {
-    background-image: linear-gradient(
-      to bottom left,
-      #242424 0%,
-      #1f1f1f 20%,
-      #1a1a1a 40%,
-      #141414 60%,
-      #111111 80%
-    );
-  }
 
-  .no-background {
-    background-image: none;
-  }
-}
 
 @media (width > 768px) {
   #root {

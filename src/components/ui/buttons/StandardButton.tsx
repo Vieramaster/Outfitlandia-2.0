@@ -7,7 +7,7 @@ interface StandardButtonProps
 
 const classStyle = {
   outfitButton: "w-1/2 h-full",
-  geoLocation: "size-full",
+  geoLocation: "size-full md:size-14 lg:size-16  ",
 };
 
 const isActive =
@@ -22,7 +22,7 @@ export const StandardButton = ({
   ...props
 }: StandardButtonProps) => (
   <button
-    disabled={isEnabled}
+    disabled={!isEnabled}
     className={`
     ${classStyle[variant]}
     ${isEnabled ? isActive : isNotActive}
@@ -32,6 +32,9 @@ export const StandardButton = ({
     px-4
     transition-all  
     duration-200
+    flex
+    justify-center
+    items-center
 `}
     {...props}
   >

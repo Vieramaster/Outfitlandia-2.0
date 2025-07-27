@@ -3,7 +3,7 @@
     "id": 0,
     "garment": "top",
     "name": "hoodie",
-    "image": "images/image-json/top/hoodie/top_hoodie_white.webp",
+    "image": "images/top/hoodie/hoodie_default.webp",
     "style": [
       "basic",
       "casual"
@@ -17,151 +17,151 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_purple.webp"
+        "imageColor": "images/top/hoodie/hoodie_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_lilac.webp"
+        "imageColor": "images/top/hoodie/hoodie_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_aero.webp"
+        "imageColor": "images/top/hoodie/hoodie_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_navy.webp"
+        "imageColor": "images/top/hoodie/hoodie_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_frenchBlue.webp"
+        "imageColor": "images/top/hoodie/hoodie_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_skyBlue.webp"
+        "imageColor": "images/top/hoodie/hoodie_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_aquamarine.webp"
+        "imageColor": "images/top/hoodie/hoodie_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_emerald.webp"
+        "imageColor": "images/top/hoodie/hoodie_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_army.webp"
+        "imageColor": "images/top/hoodie/hoodie_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_yellow.webp"
+        "imageColor": "images/top/hoodie/hoodie_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_mustard.webp"
+        "imageColor": "images/top/hoodie/hoodie_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_orange.webp"
+        "imageColor": "images/top/hoodie/hoodie_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_windsorTan.webp"
+        "imageColor": "images/top/hoodie/hoodie_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_chocolate.webp"
+        "imageColor": "images/top/hoodie/hoodie_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_camel.webp"
+        "imageColor": "images/top/hoodie/hoodie_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_beige.webp"
+        "imageColor": "images/top/hoodie/hoodie_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_white.webp"
+        "imageColor": "images/top/hoodie/hoodie_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_lightGrey.webp"
+        "imageColor": "images/top/hoodie/hoodie_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_darkGrey.webp"
+        "imageColor": "images/top/hoodie/hoodie_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_black.webp"
+        "imageColor": "images/top/hoodie/hoodie_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_burgundy.webp"
+        "imageColor": "images/top/hoodie/hoodie_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_red.webp"
+        "imageColor": "images/top/hoodie/hoodie_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_babyPink.webp"
+        "imageColor": "images/top/hoodie/hoodie_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_oldPink.webp"
+        "imageColor": "images/top/hoodie/hoodie_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/hoodie/top_hoodie_salmon.webp"
+        "imageColor": "images/top/hoodie/hoodie_salmon.webp"
       }
     ]
   },
@@ -169,7 +169,7 @@
     "id": 1,
     "garment": "top",
     "name": "sweatshirt",
-    "image": "images/image-json/top/topSweatShirt.webp",
+    "image": "images/top/sweatshirt/sweatshirt_default.webp",
     "style": [
       "basic",
       "casual"
@@ -183,151 +183,151 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topSweatShirtPurple.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topSweatShirtLilac.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topSweatShirtAero.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topSweatShirtNavy.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topSweatShirtFrench.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topSweatShirtSkyBlue.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topSweatShirtAquamarine.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topSweatShirtEmerald.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topSweatShirtArmy.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topSweatShirtYellow.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topSweatShirtMustard.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/topSweatShirtOrange.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topSweatShirtWindsorTan.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topSweatShirtChocolate.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/top/topSweatShirtCamel.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topSweatShirtBeige.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topSweatShirt.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topSweatShirtLightGrey.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topSweatShirtDarkGrey.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topSweatShirtBlack.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topSweatShirtBurgundy.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topSweatShirtRed.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topSweatShirtBabyPink.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topSweatShirtOldPink.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topSweatShirtSalmon.webp"
+        "imageColor": "images/top/sweatshirt/sweatshirt_salmon.webp"
       }
     ]
   },
@@ -335,7 +335,7 @@
     "id": 2,
     "garment": "top",
     "name": "short sleeve t-shirt",
-    "image": "images/image-json/top/topTShirt.webp",
+    "image": "images/top/short_t-shirt/short_t-shirt_white.webp",
     "style": [
       "basic",
       "casual",
@@ -350,145 +350,151 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topTShirtPurple.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topTShirtLilac.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topTShirtAero.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topTShirtNavy.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topTShirtFrench.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topTShirtSkyBlue.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topTShirtAquamarine.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topTShirtEmerald.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topTShirtArmy.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topTShirtYellow.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topTShirtMustard.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/topTShirtOrange.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topTShirtWindsorTan.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_windsorTan.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_camel.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topTShirtChocolate.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topTShirtBeige.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topTShirt.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topTShirtLightGrey.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topTShirtDarkGrey.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topTShirtBlack.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topTShirtBurgundy.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topTShirtRed.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topTShirtBabyPink.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topTShirtOldPink.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topTShirtSalmon.webp"
+        "imageColor": "images/top/short_t-shirt/short_t-shirt_salmon.webp"
       }
     ]
   },
@@ -496,7 +502,7 @@
     "id": 3,
     "garment": "top",
     "name": "polo",
-    "image": "images/image-json/top/topPolo.webp",
+    "image": "images/top/polo/polo_default.webp",
     "style": [
       "casual"
     ],
@@ -509,145 +515,145 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topPoloPurple.webp"
+        "imageColor": "images/top/polo/polo_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topPoloLilac.webp"
+        "imageColor": "images/top/polo/polo_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topPoloAero.webp"
+        "imageColor": "images/top/polo/polo_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topPoloNavy.webp"
+        "imageColor": "images/top/polo/polo_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topPoloFrench.webp"
+        "imageColor": "images/top/polo/polo_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topPoloSkyBlue.webp"
+        "imageColor": "images/top/polo/polo_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topPoloAquamarine.webp"
+        "imageColor": "images/top/polo/polo_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topPoloEmerald.webp"
+        "imageColor": "images/top/polo/polo_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topPoloArmy.webp"
+        "imageColor": "images/top/polo/polo_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topPoloYellow.webp"
+        "imageColor": "images/top/polo/polo_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topPoloMustard.webp"
+        "imageColor": "images/top/polo/polo_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/topPoloOrange.webp"
+        "imageColor": "images/top/polo/polo_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topPoloWindsorTan.webp"
+        "imageColor": "images/top/polo/polo_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topPoloChocolate.webp"
+        "imageColor": "images/top/polo/polo_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topPoloBeige.webp"
+        "imageColor": "images/top/polo/polo_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topPolo.webp"
+        "imageColor": "images/top/polo/polo_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topPoloLightGrey.webp"
+        "imageColor": "images/top/polo/polo_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topPoloDarkGrey.webp"
+        "imageColor": "images/top/polo/polo_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topPoloBlack.webp"
+        "imageColor": "images/top/polo/polo_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topPoloBurgundy.webp"
+        "imageColor": "images/top/polo/polo_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topPoloRed.webp"
+        "imageColor": "images/top/polo/polo_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topPoloBabyPink.webp"
+        "imageColor": "images/top/polo/polo_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topPoloOldPink.webp"
+        "imageColor": "images/top/polo/polo_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topPoloSalmon.webp"
+        "imageColor": "images/top/polo/polo_salmon.webp"
       }
     ]
   },
@@ -655,7 +661,7 @@
     "id": 4,
     "garment": "top",
     "name": "sweater",
-    "image": "images/image-json/top/topSweater.webp",
+    "image": "images/top/sweater/sweater_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -669,133 +675,133 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topSweaterPurple.webp"
+        "imageColor": "images/top/sweater/sweater_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topSweaterLilac.webp"
+        "imageColor": "images/top/sweater/sweater_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topSweaterAero.webp"
+        "imageColor": "images/top/sweater/sweater_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topSweaterNavy.webp"
+        "imageColor": "images/top/sweater/sweater_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topSweaterFrench.webp"
+        "imageColor": "images/top/sweater/sweater_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topSweaterSkyBlue.webp"
+        "imageColor": "images/top/sweater/sweater_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topSweaterAquamarine.webp"
+        "imageColor": "images/top/sweater/sweater_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topSweaterEmerald.webp"
+        "imageColor": "images/top/sweater/sweater_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topSweaterArmy.webp"
+        "imageColor": "images/top/sweater/sweater_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topSweaterYellow.webp"
+        "imageColor": "images/top/sweater/sweater_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topSweaterMustard.webp"
+        "imageColor": "images/top/sweater/sweater_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topSweaterWindsorTan.webp"
+        "imageColor": "images/top/sweater/sweater_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topSweaterChocolate.webp"
+        "imageColor": "images/top/sweater/sweater_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topSweaterBeige.webp"
+        "imageColor": "images/top/sweater/sweater_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topSweater.webp"
+        "imageColor": "images/top/sweater/sweater_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topSweaterLightGrey.webp"
+        "imageColor": "images/top/sweater/sweater_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topSweaterDarkGrey.webp"
+        "imageColor": "images/top/sweater/sweater_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topSweaterBlack.webp"
+        "imageColor": "images/top/sweater/sweater_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topSweaterBurgundy.webp"
+        "imageColor": "images/top/sweater/sweater_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topSweaterRed.webp"
+        "imageColor": "images/top/sweater/sweater_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topSweaterBabyPink.webp"
+        "imageColor": "images/top/sweater/sweater_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topSweaterOldPink.webp"
+        "imageColor": "images/top/sweater/sweater_oldPink.webp"
       }
     ]
   },
@@ -803,7 +809,7 @@
     "id": 5,
     "garment": "top",
     "name": "turtle neck sweater",
-    "image": "images/image-json/top/topTurtleSweater.webp",
+    "image": "images/top/turtleneck/turtleneck_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -816,103 +822,109 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topTurtleSweaterPurple.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_purple.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topTurtleSweaterAero.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topTurtleSweaterNavy.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topTurtleSweaterFrench.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_frenchBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topTurtleSweaterAquamarine.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_aquamarine.webp"
+      },
+      {
+        "colorName": "skyBlue",
+        "hex": "#afd8eb",
+        "title": "sky blue",
+        "imageColor": "images/top/turtleneck/turtleneck_skyBlue.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topTurtleSweaterEmerald.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topTurtleSweaterArmy.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_army.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topTurtleSweaterMustard.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topTurtleSweaterWindsorTan.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topTurtleSweaterChocolate.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_chocolate.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topTurtleSweater.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topTurtleSweaterLightGrey.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topTurtleSweaterDarkGrey.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topTurtleSweaterBlack.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topTurtleSweaterBurgundy.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topTurtleSweaterRed.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_red.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topTurtleSweaterOldPink.webp"
+        "imageColor": "images/top/turtleneck/turtleneck_oldPink.webp"
       }
     ]
   },
@@ -920,7 +932,7 @@
     "id": 6,
     "garment": "top",
     "name": "short sleeve shirt",
-    "image": "images/image-json/top/topShortShirt.webp",
+    "image": "images/top/short_shirt/short_shirt_white.webp",
     "style": [
       "elegant",
       "casual"
@@ -934,139 +946,139 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topShortShirtPurple.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topShortShirtLilac.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topShortShirtAero.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topShortShirtNavy.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topShortShirtFrench.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topShortShirtSkyBlue.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topShortShirtAquamarine.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topShortShirtEmerald.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topShortShirtArmy.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topShortShirtYellow.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topShortShirtMustard.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topShortShirtWindsorTan.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topShortShirtChocolate.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topShortShirtBeige.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topTShirt.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topShortShirtLightGrey.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topShortShirtDarkGrey.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topShortShirtBlack.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topShortShirtBurgundy.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topShortShirtRed.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topShortShirtBabyPink.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topShortShirtOldPink.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topShortShirtSalmon.webp"
+        "imageColor": "images/top/short_shirt/short_shirt_salmon.webp"
       }
     ]
   },
@@ -1074,7 +1086,7 @@
     "id": 7,
     "garment": "top",
     "name": "long sleeve shirt",
-    "image": "images/image-json/top/topLongShirt.webp",
+    "image": "images/top/long_shirt/long_shirt_default.webp",
     "style": [
       "elegant"
     ],
@@ -1086,133 +1098,133 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topLongShirtPurple.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topLongShirtLilac.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/top/topLongShirtAero.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topLongShirtNavy.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topLongShirtFrench.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topLongShirtSkyBlue.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topLongShirtAquamarine.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topLongShirtEmerald.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topLongShirtArmy.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_army.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topLongShirtMustard.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topLongShirtWindsorTan.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topLongShirtChocolate.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topLongShirtBeige.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topLongShirt.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topLongShirtLightGrey.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topLongShirtDarkGrey.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topLongShirtBlack.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topLongShirtBurgundy.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topLongShirtRed.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topLongShirtBabyPink.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topLongShirtOldPink.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topLongShirtSalmon.webp"
+        "imageColor": "images/top/long_shirt/long_shirt_salmon.webp"
       }
     ]
   },
@@ -1220,7 +1232,7 @@
     "id": 8,
     "garment": "top",
     "name": "long sleeve t-shirt",
-    "image": "images/image-json/top/topLongTShirt.webp",
+    "image": "images/top/long_t-shirt/long_t-shirt_default.webp",
     "style": [
       "basic",
       "casual"
@@ -1233,147 +1245,147 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/top/topLongTShirtPurple.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/top/topLongTShirtLilac.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_lilac.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/top/topLongTShirtNavy.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/top/topLongTShirtFrench.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/top/topLongTShirtSkyBlue.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/top/topLongTShirtAquamarine.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_aquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/top/topLongTShirtEmerald.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/top/topLongTShirtArmy.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_army.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/top/topLongTShirtYellow.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_yellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/top/topLongTShirtMustard.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_mustard.webp"
       },
       {
         "colorName": "orange",
         "hex": "#ea8510",
         "title": "orange",
-        "imageColor": "images/image-json/top/topLongTShirtOrange.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_orange.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/top/topLongTShirtWindsorTan.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/top/topLongTShirtChocolate.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/top/topLongTShirtBeige.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/top/topLongTShirt.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/top/topLongTShirtLightGrey.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/top/topLongTShirtDarkGrey.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/top/topLongTShirtBlack.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/top/topLongTShirtBurgundy.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/top/topLongTShirtRed.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_red.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/top/topLongTShirtBabyPink.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_babyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/top/topLongTShirtOldPink.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_oldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/top/topLongTShirtSalmon.webp"
+        "imageColor": "images/top/long_t-shirt/long_t-shirt_salmon.webp"
       }
     ]
   },
   {
     "id": 9,
     "garment": "coat",
-    "name": "gabardine jacket",
-    "image": "images/image-json/coat/coatDenim.webp",
+    "name": "denim & gabardine jacket",
+    "image": "images/coat/denim_jacket/denim_jacket_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -1387,67 +1399,85 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/coat/coatDenimSkyBlue.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_skyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/image-json/coat/coatDenimJean.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_jean.webp"
+      },
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/coat/denim_jacket/denim_jacket_navy.webp"
+      },
+      {
+        "colorName": "army",
+        "hex": "#545e45",
+        "title": "green army",
+        "imageColor": "images/coat/denim_jacket/denim_jacket_army.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatDenimChocolate.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_chocolate.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/coat/denim_jacket/denim_jacket_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatDenimBeige.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/coat/coatDenim.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatDenimLightGrey.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_lightGrey.webp"
       },
       {
-        "colorName": "wornBlack",
-        "hex": "#2d2d2d",
+        "colorName": "darkGrey",
+        "hex": "#c7c8ca",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatDenimDarkGrey.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatDenimBlack.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/coat/denim_jacket/denim_jacket_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/coat/denim_jacket/denim_jacket_red.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/coat/coatDenimOldPink.webp"
-      },
-      {
-        "colorName": "babyPink",
-        "hex": "#dfc2be",
-        "title": "baby pink",
-        "imageColor": "images/image-json/coat/coatDenimBabyPink.webp"
-      },
-      {
-        "colorName": "army",
-        "hex": "#5f6053",
-        "title": "green army",
-        "imageColor": "images/image-json/coat/coatDenimArmy.webp"
+        "imageColor": "images/coat/denim_jacket/denim_jacket_oldPink.webp"
       }
     ]
   },
@@ -1455,7 +1485,7 @@
     "id": 10,
     "garment": "coat",
     "name": "leather jacket",
-    "image": "images/image-json/coat/coatLeather.webp",
+    "image": "images/coat/coatLeather.webp",
     "style": [
       "casual",
       "elegant"
@@ -1467,63 +1497,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatLeatherNavy.webp"
+        "imageColor": "images/coat/coatLeatherNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/coat/coatLeatherWindsorTan.webp"
+        "imageColor": "images/coat/coatLeatherWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatLeather.webp"
+        "imageColor": "images/coat/coatLeather.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatLeatherCamel.webp"
+        "imageColor": "images/coat/coatLeatherCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatLeatherBeige.webp"
+        "imageColor": "images/coat/coatLeatherBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatLeatherLightGrey.webp"
+        "imageColor": "images/coat/coatLeatherLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatLeatherDarkGrey.webp"
+        "imageColor": "images/coat/coatLeatherDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatLeatherBlack.webp"
+        "imageColor": "images/coat/coatLeatherBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatLeatherBurgundy.webp"
+        "imageColor": "images/coat/coatLeatherBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/coat/coatLeatherRed.webp"
+        "imageColor": "images/coat/coatLeatherRed.webp"
       }
     ]
   },
@@ -1531,9 +1561,10 @@
     "id": 11,
     "garment": "coat",
     "name": "inflatable jacket",
-    "image": "images/image-json/coat/coatInflatableJacket.webp",
+    "image": "images/coat/inflatable_jacket/inflatable_jacket_white.webp",
     "style": [
       "basic"
+
     ],
     "weather": [
       "cold"
@@ -1543,115 +1574,103 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/coat/coatInflatableJacketPurple.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_purple.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/coat/coatInflatableJacketAero.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_aero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatInflatableJacketNavy.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_navy.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/coat/coatInflatableJacketSkyBlue.webp"
-      },
-      {
-        "colorName": "aquamarine",
-        "hex": "#85d5dc",
-        "title": "aquamarine",
-        "imageColor": "images/image-json/coat/coatInflatableJacketAquamarine.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_skyBlue.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/coat/coatInflatableJacketFrench.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_frenchBlue.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/coat/coatInflatableJacketEmerald.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_emerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatInflatableJacketArmy.webp"
-      },
-      {
-        "colorName": "yellow",
-        "hex": "#efbe3d",
-        "title": "yellow",
-        "imageColor": "images/image-json/coat/coatInflatableJacketYellow.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_army.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/coat/coatInflatableJacketMustard.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/coat/coatInflatableJacketWindsorTan.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatInflatableJacketChocolate.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatInflatableJacketBeige.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/coat/coatInflatableJacket.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatInflatableJacketLightGrey.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatInflatableJacketDarkGrey.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatInflatableJacketBlack.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatInflatableJacketBurgundy.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/coat/coatInflatableJacketRed.webp"
+        "imageColor": "images/coat/inflatable_jacket/inflatable_jacket_red.webp"
       }
     ]
   },
@@ -1659,7 +1678,7 @@
     "id": 12,
     "garment": "coat",
     "name": "parka",
-    "image": "images/image-json/coat/coatParka.webp",
+    "image": "images/coat/parka/parka_white.webp",
     "style": [
       "casual"
     ],
@@ -1669,63 +1688,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatParkaNavy.webp"
+        "imageColor": "images/coat/coatParkaNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatParkaArmy.webp"
+        "imageColor": "images/coat/coatParkaArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/coat/coatParkaMustard.webp"
+        "imageColor": "images/coat/coatParkaMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/coat/coatParkaWindsorTan.webp"
+        "imageColor": "images/coat/coatParkaWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatParkaChocolate.webp"
+        "imageColor": "images/coat/coatParkaChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatParkaCamel.webp"
+        "imageColor": "images/coat/coatParkaCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatParkaBeige.webp"
+        "imageColor": "images/coat/coatParkaBeige.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatParkaDarkGrey.webp"
+        "imageColor": "images/coat/coatParkaDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatParkaBlack.webp"
+        "imageColor": "images/coat/coatParkaBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatParkaBurgundy.webp"
+        "imageColor": "images/coat/coatParkaBurgundy.webp"
       }
     ]
   },
@@ -1733,7 +1752,7 @@
     "id": 13,
     "garment": "coat",
     "name": "shacket",
-    "image": "images/image-json/coat/coatShacket.webp",
+    "image": "images/coat/shacket/shacket_white.webp",
     "style": [
       "casual"
     ],
@@ -1746,91 +1765,91 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/coat/coatShacketPurple.webp"
+        "imageColor": "images/coat/coatShacketPurple.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/coat/coatShacketAero.webp"
+        "imageColor": "images/coat/coatShacketAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatShacketNavy.webp"
+        "imageColor": "images/coat/coatShacketNavy.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/coat/coatShacketEmerald.webp"
+        "imageColor": "images/coat/coatShacketEmerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatShacketArmy.webp"
+        "imageColor": "images/coat/coatShacketArmy.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/coat/coatShacketYellow.webp"
+        "imageColor": "images/coat/coatShacketYellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/coat/coatShacketMustard.webp"
+        "imageColor": "images/coat/coatShacketMustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatShacketChocolate.webp"
+        "imageColor": "images/coat/coatShacketChocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatShacketBeige.webp"
+        "imageColor": "images/coat/coatShacketBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/coat/coatShacket.webp"
+        "imageColor": "images/coat/coatShacket.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatShacketLightGrey.webp"
+        "imageColor": "images/coat/coatShacketLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatShacketDarkGrey.webp"
+        "imageColor": "images/coat/coatShacketDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatShacketBlack.webp"
+        "imageColor": "images/coat/coatShacketBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatShacketBurgundy.webp"
+        "imageColor": "images/coat/coatShacketBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/coat/coatShacketRed.webp"
+        "imageColor": "images/coat/coatShacketRed.webp"
       }
     ]
   },
@@ -1838,7 +1857,7 @@
     "id": 14,
     "garment": "coat",
     "name": "bomber jacket",
-    "image": "images/image-json/coat/coatBomber.webp",
+    "image": "images/coat/coatBomber.webp",
     "style": [
       "basic"
     ],
@@ -1851,85 +1870,85 @@
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/coat/coatBomberAero.webp"
+        "imageColor": "images/coat/coatBomberAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatBomberNavy.webp"
+        "imageColor": "images/coat/coatBomberNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/coat/coatBomberFrench.webp"
+        "imageColor": "images/coat/coatBomberFrench.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatBomberArmy.webp"
+        "imageColor": "images/coat/coatBomberArmy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/coat/coatBomberWindsorTan.webp"
+        "imageColor": "images/coat/coatBomberWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatBomberChocolate.webp"
+        "imageColor": "images/coat/coatBomberChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatBomberCamel.webp"
+        "imageColor": "images/coat/coatBomberCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatBomberBeige.webp"
+        "imageColor": "images/coat/coatBomberBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/coat/coatBomber.webp"
+        "imageColor": "images/coat/coatBomber.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatBomberLightGrey.webp"
+        "imageColor": "images/coat/coatBomberLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatBomberDarkGrey.webp"
+        "imageColor": "images/coat/coatBomberDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatBomberBlack.webp"
+        "imageColor": "images/coat/coatBomberBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatBomberBurgundy.webp"
+        "imageColor": "images/coat/coatBomberBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/coat/coatBomberRed.webp"
+        "imageColor": "images/coat/coatBomberRed.webp"
       }
     ]
   },
@@ -1937,7 +1956,7 @@
     "id": 15,
     "garment": "coat",
     "name": "winter gabardine jacket",
-    "image": "images/image-json/coat/coatDenimWinter.webp",
+    "image": "images/coat/coatDenimWinter.webp",
     "style": [
       "casual"
     ],
@@ -1949,43 +1968,43 @@
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/image-json/coat/coatDenimWinterJean.webp"
+        "imageColor": "images/coat/coatDenimWinterJean.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/coat/coatDenimWinterSkyBlue.webp"
+        "imageColor": "images/coat/coatDenimWinterSkyBlue.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatDenimWinterNavy.webp"
+        "imageColor": "images/coat/coatDenimWinterNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatDenimWinterArmy.webp"
+        "imageColor": "images/coat/coatDenimWinterArmy.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatDenimWinterBeige.webp"
+        "imageColor": "images/coat/coatDenimWinterBeige.webp"
       },
       {
         "colorName": "wornBlack",
         "hex": "#2d2d2d",
         "title": "worn black",
-        "imageColor": "images/image-json/coat/coatDenimWinterWornBlack.webp"
+        "imageColor": "images/coat/coatDenimWinterWornBlack.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatDenimWinterBlack.webp"
+        "imageColor": "images/coat/coatDenimWinterBlack.webp"
       }
     ]
   },
@@ -1993,7 +2012,7 @@
     "id": 16,
     "garment": "coat",
     "name": "windbraker",
-    "image": "images/image-json/coat/coatWindbreaker.webp",
+    "image": "images/coat/coatWindbreaker.webp",
     "style": [
       "basic"
     ],
@@ -2006,103 +2025,103 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/coat/coatWindbreakerPurple.webp"
+        "imageColor": "images/coat/coatWindbreakerPurple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/coat/coatWindbreakerLilac.webp"
+        "imageColor": "images/coat/coatWindbreakerLilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/coat/coatWindbreakerAero.webp"
+        "imageColor": "images/coat/coatWindbreakerAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatWindbreakerNavy.webp"
+        "imageColor": "images/coat/coatWindbreakerNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/coat/coatWindbreakerFrench.webp"
+        "imageColor": "images/coat/coatWindbreakerFrench.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/coat/coatWindbreakerSkyBlue.webp"
+        "imageColor": "images/coat/coatWindbreakerSkyBlue.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/coat/coatWindbreakerEmerald.webp"
+        "imageColor": "images/coat/coatWindbreakerEmerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/coat/coatWindbreakerArmy.webp"
+        "imageColor": "images/coat/coatWindbreakerArmy.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/coat/coatWindbreakerYellow.webp"
+        "imageColor": "images/coat/coatWindbreakerYellow.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatWindbreakerChocolate.webp"
+        "imageColor": "images/coat/coatWindbreakerChocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatWindbreakerBeige.webp"
+        "imageColor": "images/coat/coatWindbreakerBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/coat/coatWindbreaker.webp"
+        "imageColor": "images/coat/coatWindbreaker.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatWindbreakerLightGrey.webp"
+        "imageColor": "images/coat/coatWindbreakerLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatWindbreakerDarkGrey.webp"
+        "imageColor": "images/coat/coatWindbreakerDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatWindbreakerBlack.webp"
+        "imageColor": "images/coat/coatWindbreakerBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatWindbreakerBurgundy.webp"
+        "imageColor": "images/coat/coatWindbreakerBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/coat/coatWindbreakerRed.webp"
+        "imageColor": "images/coat/coatWindbreakerRed.webp"
       }
     ]
   },
@@ -2110,7 +2129,7 @@
     "id": 17,
     "garment": "coat",
     "name": "blazer",
-    "image": "images/image-json/coat/coatBlazer.webp",
+    "image": "images/coat/coatBlazer.webp",
     "style": [
       "elegant"
     ],
@@ -2123,91 +2142,91 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/coat/coatBlazerPurple.webp"
+        "imageColor": "images/coat/coatBlazerPurple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/coat/coatBlazerLilac.webp"
+        "imageColor": "images/coat/coatBlazerLilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/coat/coatBlazerAero.webp"
+        "imageColor": "images/coat/coatBlazerAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatBlazerNavy.webp"
+        "imageColor": "images/coat/coatBlazerNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/coat/coatBlazerFrench.webp"
+        "imageColor": "images/coat/coatBlazerFrench.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/coat/coatBlazerSkyBlue.webp"
+        "imageColor": "images/coat/coatBlazerSkyBlue.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/coat/coatBlazerMustard.webp"
+        "imageColor": "images/coat/coatBlazerMustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatBlazerChocolate.webp"
+        "imageColor": "images/coat/coatBlazerChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatBlazerCamel.webp"
+        "imageColor": "images/coat/coatBlazerCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatBlazerBeige.webp"
+        "imageColor": "images/coat/coatBlazerBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatBlazerLightGrey.webp"
+        "imageColor": "images/coat/coatBlazerLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatBlazerDarkGrey.webp"
+        "imageColor": "images/coat/coatBlazerDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatBlazerBlack.webp"
+        "imageColor": "images/coat/coatBlazerBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/coat/coatBlazerBurgundy.webp"
+        "imageColor": "images/coat/coatBlazerBurgundy.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/coat/coatBlazerOldPink.webp"
+        "imageColor": "images/coat/coatBlazerOldPink.webp"
       }
     ]
   },
@@ -2215,7 +2234,7 @@
     "id": 18,
     "garment": "coat",
     "name": "saco cruzado",
-    "image": "images/image-json/coat/coatShortOvercoat.webp",
+    "image": "images/coat/coatShortOvercoat.webp",
     "style": [
       "elegant"
     ],
@@ -2225,45 +2244,45 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatShortOvercoatNavy.webp"
+        "imageColor": "images/coat/coatShortOvercoatNavy.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatShortOvercoatChocolate.webp"
+        "imageColor": "images/coat/coatShortOvercoatChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatShortOvercoatCamel.webp"
+        "imageColor": "images/coat/coatShortOvercoatCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatShortOvercoatBeige.webp"
+        "imageColor": "images/coat/coatShortOvercoatBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatShortOvercoatLightGrey.webp"
+        "imageColor": "images/coat/coatShortOvercoatLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatShortOvercoatDarkGrey.webp"
+        "imageColor": "images/coat/coatShortOvercoatDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatShortOvercoatBlack.webp"
+        "imageColor": "images/coat/coatShortOvercoatBlack.webp"
       }
     ]
   },
@@ -2271,7 +2290,7 @@
     "id": 19,
     "garment": "coat",
     "name": "gaban",
-    "image": "images/image-json/coat/coatGaban.webp",
+    "image": "images/coat/coatGaban.webp",
     "style": [
       "elegant"
     ],
@@ -2281,45 +2300,45 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatGabanNavy.webp"
+        "imageColor": "images/coat/coatGabanNavy.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatGabanChocolate.webp"
+        "imageColor": "images/coat/coatGabanChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatGabanCamel.webp"
+        "imageColor": "images/coat/coatGabanCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatGabanBeige.webp"
+        "imageColor": "images/coat/coatGabanBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatGabanLightGrey.webp"
+        "imageColor": "images/coat/coatGabanLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatGabanDarkGrey.webp"
+        "imageColor": "images/coat/coatGabanDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatGabanBlack.webp"
+        "imageColor": "images/coat/coatGabanBlack.webp"
       }
     ]
   },
@@ -2327,7 +2346,7 @@
     "id": 20,
     "garment": "coat",
     "name": "montgomery",
-    "image": "images/image-json/coat/coatDuffle.webp",
+    "image": "images/coat/coatDuffle.webp",
     "style": [
       "casual"
     ],
@@ -2337,57 +2356,57 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/coat/coatDuffleNavy.webp"
+        "imageColor": "images/coat/coatDuffleNavy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/coat/coatDuffleMustard.webp"
+        "imageColor": "images/coat/coatDuffleMustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/coat/coatDuffleChocolate.webp"
+        "imageColor": "images/coat/coatDuffleChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/coat/coatDuffleCamel.webp"
+        "imageColor": "images/coat/coatDuffleCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/coat/coatDuffleBeige.webp"
+        "imageColor": "images/coat/coatDuffleBeige.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/coat/coatDuffleWindsorTan.webp"
+        "imageColor": "images/coat/coatDuffleWindsorTan.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/coat/coatDuffleLightGrey.webp"
+        "imageColor": "images/coat/coatDuffleLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/coat/coatDuffleDarkGrey.webp"
+        "imageColor": "images/coat/coatDuffleDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/coat/coatDuffleBlack.webp"
+        "imageColor": "images/coat/coatDuffleBlack.webp"
       }
     ]
   },
@@ -2395,7 +2414,7 @@
     "id": 21,
     "garment": "belt",
     "name": "traditional",
-    "image": "images/image-json/belt/beltClasic.webp",
+    "image": "images/belt/beltClasic.webp",
     "style": [
       "casual",
       "elegant"
@@ -2408,63 +2427,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/belt/beltClasicNavy.webp"
+        "imageColor": "images/belt/beltClasicNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/belt/beltClasicWindsorTan.webp"
+        "imageColor": "images/belt/beltClasicWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/belt/beltClasicChocolate.webp"
+        "imageColor": "images/belt/beltClasicChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/belt/beltClasicCamel.webp"
+        "imageColor": "images/belt/beltClasicCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/belt/beltClasicBeige.webp"
+        "imageColor": "images/belt/beltClasicBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/belt/beltClasic.webp"
+        "imageColor": "images/belt/beltClasic.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/belt/beltClasicLightGrey.webp"
+        "imageColor": "images/belt/beltClasicLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/belt/beltClasicDarkGrey.webp"
+        "imageColor": "images/belt/beltClasicDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/belt/beltClasicBlack.webp"
+        "imageColor": "images/belt/beltClasicBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/belt/beltClasicBurgundy.webp"
+        "imageColor": "images/belt/beltClasicBurgundy.webp"
       }
     ]
   },
@@ -2472,7 +2491,7 @@
     "id": 22,
     "garment": "belt",
     "name": "cloth",
-    "image": "images/image-json/belt/beltCloth.webp",
+    "image": "images/belt/beltCloth.webp",
     "style": [
       "basic"
     ],
@@ -2486,85 +2505,85 @@
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/belt/beltClothAero.webp"
+        "imageColor": "images/belt/beltClothAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/belt/beltClothNavy.webp"
+        "imageColor": "images/belt/beltClothNavy.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/belt/beltClothEmerald.webp"
+        "imageColor": "images/belt/beltClothEmerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/belt/beltClothArmy.webp"
+        "imageColor": "images/belt/beltClothArmy.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/belt/beltClothYellow.webp"
+        "imageColor": "images/belt/beltClothYellow.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/belt/beltClothWindsorTan.webp"
+        "imageColor": "images/belt/beltClothWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/belt/beltClothChocolate.webp"
+        "imageColor": "images/belt/beltClothChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/belt/beltClothCamel.webp"
+        "imageColor": "images/belt/beltClothCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/belt/beltClothBeige.webp"
+        "imageColor": "images/belt/beltClothBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/belt/beltClothLightGrey.webp"
+        "imageColor": "images/belt/beltClothLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/belt/beltClothDarkGrey.webp"
+        "imageColor": "images/belt/beltClothDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/belt/beltClothBlack.webp"
+        "imageColor": "images/belt/beltClothBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/belt/beltClothBurgundy.webp"
+        "imageColor": "images/belt/beltClothBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/belt/beltClothRed.webp"
+        "imageColor": "images/belt/beltClothRed.webp"
       }
     ]
   },
@@ -2572,7 +2591,7 @@
     "id": 23,
     "garment": "belt",
     "name": "braided",
-    "image": "images/image-json/belt/beltBraided.webp",
+    "image": "images/belt/beltBraided.webp",
     "style": [
       "basic"
     ],
@@ -2586,79 +2605,79 @@
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/belt/beltBraidedAero.webp"
+        "imageColor": "images/belt/beltBraidedAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/belt/beltBraidedNavy.webp"
+        "imageColor": "images/belt/beltBraidedNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/belt/beltBraidedArmy.webp"
+        "imageColor": "images/belt/beltBraidedArmy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/belt/beltBraidedWindsorTan.webp"
+        "imageColor": "images/belt/beltBraidedWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/belt/beltBraidedChocolate.webp"
+        "imageColor": "images/belt/beltBraidedChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/belt/beltBraidedCamel.webp"
+        "imageColor": "images/belt/beltBraidedCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/belt/beltBraidedBeige.webp"
+        "imageColor": "images/belt/beltBraidedBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/belt/beltBraided.webp"
+        "imageColor": "images/belt/beltBraided.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/belt/beltBraidedLightGrey.webp"
+        "imageColor": "images/belt/beltBraidedLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/belt/beltBraidedDarkGrey.webp"
+        "imageColor": "images/belt/beltBraidedDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/belt/beltBraidedBlack.webp"
+        "imageColor": "images/belt/beltBraidedBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/belt/beltBraidedBurgundy.webp"
+        "imageColor": "images/belt/beltBraidedBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/belt/beltBraidedRed.webp"
+        "imageColor": "images/belt/beltBraidedRed.webp"
       }
     ]
   },
@@ -2666,7 +2685,7 @@
     "id": 24,
     "garment": "pants",
     "name": "joggin",
-    "image": "images/image-json/pants/pantsJoggin.webp",
+    "image": "images/pants/pantsJoggin.webp",
     "style": [
       "basic"
     ],
@@ -2679,109 +2698,109 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/pants/pantsJogginPurple.webp"
+        "imageColor": "images/pants/pantsJogginPurple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/pants/pantsJogginLilac.webp"
+        "imageColor": "images/pants/pantsJogginLilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/pants/pantsJogginAero.webp"
+        "imageColor": "images/pants/pantsJogginAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsJogginNavy.webp"
+        "imageColor": "images/pants/pantsJogginNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/pants/pantsJogginFrench.webp"
+        "imageColor": "images/pants/pantsJogginFrench.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/pants/pantsJogginSkyBlue.webp"
+        "imageColor": "images/pants/pantsJogginSkyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/pants/pantsJogginAquamarine.webp"
+        "imageColor": "images/pants/pantsJogginAquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/pants/pantsJogginEmerald.webp"
+        "imageColor": "images/pants/pantsJogginEmerald.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/pants/pantsJogginYellow.webp"
+        "imageColor": "images/pants/pantsJogginYellow.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsJogginChocolate.webp"
+        "imageColor": "images/pants/pantsJogginChocolate.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/pants/pantsJoggin.webp"
+        "imageColor": "images/pants/pantsJoggin.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsJogginLightGrey.webp"
+        "imageColor": "images/pants/pantsJogginLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsJogginDarkGrey.webp"
+        "imageColor": "images/pants/pantsJogginDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsJogginBlack.webp"
+        "imageColor": "images/pants/pantsJogginBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsJogginBurgundy.webp"
+        "imageColor": "images/pants/pantsJogginBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/pants/pantsJogginRed.webp"
+        "imageColor": "images/pants/pantsJogginRed.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/pants/pantsJogginBabyPink.webp"
+        "imageColor": "images/pants/pantsJogginBabyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/pants/pantsJogginOldPink.webp"
+        "imageColor": "images/pants/pantsJogginOldPink.webp"
       }
     ]
   },
@@ -2789,7 +2808,7 @@
     "id": 25,
     "garment": "pants",
     "name": "bermuda joggin",
-    "image": "images/image-json/pants/pantsShortJoggin.webp",
+    "image": "images/pants/pantsShortJoggin.webp",
     "style": [
       "basic"
     ],
@@ -2801,115 +2820,115 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/pants/pantsShortJogginPurple.webp"
+        "imageColor": "images/pants/pantsShortJogginPurple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/pants/pantsShortJogginLilac.webp"
+        "imageColor": "images/pants/pantsShortJogginLilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/pants/pantsShortJogginAero.webp"
+        "imageColor": "images/pants/pantsShortJogginAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsShortJogginNavy.webp"
+        "imageColor": "images/pants/pantsShortJogginNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/pants/pantsShortJogginFrench.webp"
+        "imageColor": "images/pants/pantsShortJogginFrench.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/pants/pantsShortJogginSkyBlue.webp"
+        "imageColor": "images/pants/pantsShortJogginSkyBlue.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/pants/pantsShortJogginEmerald.webp"
+        "imageColor": "images/pants/pantsShortJogginEmerald.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/pants/pantsShortJogginYellow.webp"
+        "imageColor": "images/pants/pantsShortJogginYellow.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsShortJogginChocolate.webp"
+        "imageColor": "images/pants/pantsShortJogginChocolate.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/pants/pantsShortJoggin.webp"
+        "imageColor": "images/pants/pantsShortJoggin.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsShortJogginLightGrey.webp"
+        "imageColor": "images/pants/pantsShortJogginLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsShortJogginDarkGrey.webp"
+        "imageColor": "images/pants/pantsShortJogginDarkGrey.webp"
       },
       {
         "colorName": "wornBlack",
         "hex": "#2d2d2d",
         "title": "worn black",
-        "imageColor": "images/image-json/pants/pantsShortJogginWronBlack.webp"
+        "imageColor": "images/pants/pantsShortJogginWronBlack.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsShortJogginBlack.webp"
+        "imageColor": "images/pants/pantsShortJogginBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsShortJogginBurgundy.webp"
+        "imageColor": "images/pants/pantsShortJogginBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/pants/pantsShortJogginRed.webp"
+        "imageColor": "images/pants/pantsShortJogginRed.webp"
       },
       {
         "colorName": "babyPink",
-        "hex": "#dfc2be",
+        "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/image-json/pants/pantsShortJogginBabyPink.webp"
+        "imageColor": "images/pants/pantsShortJogginBabyPink.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/pants/pantsShortJogginOldPink.webp"
+        "imageColor": "images/pants/pantsShortJogginOldPink.webp"
       },
       {
         "colorName": "salmon",
         "hex": "#f0938a",
         "title": "salmon",
-        "imageColor": "images/image-json/pants/pantsShortJogginSalmon.webp"
+        "imageColor": "images/pants/pantsShortJogginSalmon.webp"
       }
     ]
   },
@@ -2917,7 +2936,7 @@
     "id": 26,
     "garment": "pants",
     "name": "jeans",
-    "image": "images/image-json/pants/pantsJean.webp",
+    "image": "images/pants/pantsJean.webp",
     "style": [
       "casual",
       "basic"
@@ -2931,25 +2950,25 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/pants/pantsJeanSkyBlue.webp"
+        "imageColor": "images/pants/pantsJeanSkyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/image-json/pants/pantsJeanJean.webp"
+        "imageColor": "images/pants/pantsJeanJean.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsJeanLightGrey.webp"
+        "imageColor": "images/pants/pantsJeanLightGrey.webp"
       },
       {
         "colorName": "wornBlack",
         "hex": "#2d2d2d",
         "title": "worn black",
-        "imageColor": "images/image-json/pants/pantsJeanWornBlack.webp"
+        "imageColor": "images/pants/pantsJeanWornBlack.webp"
       }
     ]
   },
@@ -2957,7 +2976,7 @@
     "id": 27,
     "garment": "pants",
     "name": "bermuda jean",
-    "image": "images/image-json/pants/pantsShortJean.webp",
+    "image": "images/pants/pantsShortJean.webp",
     "style": [
       "casual",
       "basic"
@@ -2970,25 +2989,25 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/pants/pantsshortJeanSkyBlue.webp"
+        "imageColor": "images/pants/pantsshortJeanSkyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/image-json/pants/pantsShortJeanJean.webp"
+        "imageColor": "images/pants/pantsShortJeanJean.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsshortJeanLightGrey.webp"
+        "imageColor": "images/pants/pantsshortJeanLightGrey.webp"
       },
       {
         "colorName": "wornBlack",
         "hex": "#2d2d2d",
         "title": "worn black",
-        "imageColor": "images/image-json/pants/pantsshortJeanWornBlack.webp"
+        "imageColor": "images/pants/pantsshortJeanWornBlack.webp"
       }
     ]
   },
@@ -2996,7 +3015,7 @@
     "id": 28,
     "garment": "pants",
     "name": "gabardine pants",
-    "image": "images/image-json/pants/pantsGabardine.webp",
+    "image": "images/pants/pantsGabardine.webp",
     "style": [
       "casual",
       "elegant"
@@ -3009,75 +3028,75 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsGabardineNavy.webp"
+        "imageColor": "images/pants/pantsGabardineNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/pants/pantsGabardineArmy.webp"
+        "imageColor": "images/pants/pantsGabardineArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/pants/pantsGabardineMustard.webp"
+        "imageColor": "images/pants/pantsGabardineMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/pants/pantsGabardineWindsorTan.webp"
+        "imageColor": "images/pants/pantsGabardineWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsGabardineChocolate.webp"
+        "imageColor": "images/pants/pantsGabardineChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/pants/pantsGabardineCamel.webp"
+        "imageColor": "images/pants/pantsGabardineCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/pants/pantsGabardineBeige.webp"
+        "imageColor": "images/pants/pantsGabardineBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/pants/pantsGabardine.webp"
+        "imageColor": "images/pants/pantsGabardine.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsGabardineLightGrey.webp"
+        "imageColor": "images/pants/pantsGabardineLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsGabardineDarkGrey.webp"
+        "imageColor": "images/pants/pantsGabardineDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsGabardineBlack.webp"
+        "imageColor": "images/pants/pantsGabardineBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsGabardineBurgundy.webp"
+        "imageColor": "images/pants/pantsGabardineBurgundy.webp"
       }
     ]
   },
@@ -3085,7 +3104,7 @@
     "id": 29,
     "garment": "pants",
     "name": "gabardine bermuda",
-    "image": "images/image-json/pants/pantsShortsGab.webp",
+    "image": "images/pants/pantsShortsGab.webp",
     "style": [
       "casual",
       "elegant"
@@ -3096,75 +3115,75 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsShortsGabNavy.webp"
+        "imageColor": "images/pants/pantsShortsGabNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/pants/pantsShortsGabArmy.webp"
+        "imageColor": "images/pants/pantsShortsGabArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/pants/pantsShortsGabMustard.webp"
+        "imageColor": "images/pants/pantsShortsGabMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/pants/pantsShortsGabWindsorTan.webp"
+        "imageColor": "images/pants/pantsShortsGabWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsShortsGabChocolate.webp"
+        "imageColor": "images/pants/pantsShortsGabChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/pants/pantsShortsGabCamel.webp"
+        "imageColor": "images/pants/pantsShortsGabCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/pants/pantsShortsGabBeige.webp"
+        "imageColor": "images/pants/pantsShortsGabBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/pants/pantsShortsGab.webp"
+        "imageColor": "images/pants/pantsShortsGab.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsShortsGabLightGrey.webp"
+        "imageColor": "images/pants/pantsShortsGabLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsShortsGabDarkGrey.webp"
+        "imageColor": "images/pants/pantsShortsGabDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsShortsGabBlack.webp"
+        "imageColor": "images/pants/pantsShortsGabBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsShortsGabBurgundy.webp"
+        "imageColor": "images/pants/pantsShortsGabBurgundy.webp"
       }
     ]
   },
@@ -3172,7 +3191,7 @@
     "id": 30,
     "garment": "pants",
     "name": "chino",
-    "image": "images/image-json/pants/pantsChinos.webp",
+    "image": "images/pants/pantsChinos.webp",
     "style": [
       "elegant"
     ],
@@ -3183,69 +3202,69 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsChinoNavy.webp"
+        "imageColor": "images/pants/pantsChinoNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/pants/pantsChinoArmy.webp"
+        "imageColor": "images/pants/pantsChinoArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/pants/pantsChinosMustard.webp"
+        "imageColor": "images/pants/pantsChinosMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/pants/pantsChinoWindsorTan.webp"
+        "imageColor": "images/pants/pantsChinoWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsChinoChocolate.webp"
+        "imageColor": "images/pants/pantsChinoChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/pants/pantsChinoCamel.webp"
+        "imageColor": "images/pants/pantsChinoCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/pants/pantsChinoBeige.webp"
+        "imageColor": "images/pants/pantsChinoBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsChinoLightGrey.webp"
+        "imageColor": "images/pants/pantsChinoLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsChinoDarkGrey.webp"
+        "imageColor": "images/pants/pantsChinoDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsChinoBlack.webp"
+        "imageColor": "images/pants/pantsChinoBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsChinoBurgundy.webp"
+        "imageColor": "images/pants/pantsChinoBurgundy.webp"
       }
     ]
   },
@@ -3253,7 +3272,7 @@
     "id": 31,
     "garment": "pants",
     "name": " bermuda chino",
-    "image": "images/image-json/pants/pantsShortChino.webp",
+    "image": "images/pants/pantsShortChino.webp",
     "style": [
       "casual",
       "elegant"
@@ -3264,69 +3283,69 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsShortChinoNavy.webp"
+        "imageColor": "images/pants/pantsShortChinoNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/pants/pantsShortChinoArmy.webp"
+        "imageColor": "images/pants/pantsShortChinoArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/pants/pantsShortChinoMustard.webp"
+        "imageColor": "images/pants/pantsShortChinoMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/pants/pantsShortChinoWindsorTan.webp"
+        "imageColor": "images/pants/pantsShortChinoWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsShortChinoChocolate.webp"
+        "imageColor": "images/pants/pantsShortChinoChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/pants/pantsShortChinoCamel.webp"
+        "imageColor": "images/pants/pantsShortChinoCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/pants/pantsShortChinoBeige.webp"
+        "imageColor": "images/pants/pantsShortChinoBeige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsShortChinoLightGrey.webp"
+        "imageColor": "images/pants/pantsShortChinoLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsShortChinoDarkGrey.webp"
+        "imageColor": "images/pants/pantsShortChinoDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsShortChinoBlack.webp"
+        "imageColor": "images/pants/pantsShortChinoBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsShortChinoBurgundy.webp"
+        "imageColor": "images/pants/pantsShortChinoBurgundy.webp"
       }
     ]
   },
@@ -3334,7 +3353,7 @@
     "id": 32,
     "garment": "pants",
     "name": "cargo",
-    "image": "images/image-json/pants/pantsCharge.webp",
+    "image": "images/pants/pantsCharge.webp",
     "style": [
       "basic"
     ],
@@ -3345,75 +3364,75 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/pants/pantsChargeNavy.webp"
+        "imageColor": "images/pants/pantsChargeNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/pants/pantsChargeArmy.webp"
+        "imageColor": "images/pants/pantsChargeArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/pants/pantsChargeMustard.webp"
+        "imageColor": "images/pants/pantsChargeMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/pants/pantsChargeWindsorTan.webp"
+        "imageColor": "images/pants/pantsChargeWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/pants/pantsChargeChocolate.webp"
+        "imageColor": "images/pants/pantsChargeChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/pants/pantsChargeCamel.webp"
+        "imageColor": "images/pants/pantsChargeCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/pants/pantsChargeBeige.webp"
+        "imageColor": "images/pants/pantsChargeBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/pants/pantsCharge.webp"
+        "imageColor": "images/pants/pantsCharge.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/pants/pantsChargeLightGrey.webp"
+        "imageColor": "images/pants/pantsChargeLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/pants/pantsChargeDarkGrey.webp"
+        "imageColor": "images/pants/pantsChargeDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/pants/pantsChargeBlack.webp"
+        "imageColor": "images/pants/pantsChargeBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/pants/pantsChargeBurgundy.webp"
+        "imageColor": "images/pants/pantsChargeBurgundy.webp"
       }
     ]
   },
@@ -3421,7 +3440,7 @@
     "id": 33,
     "garment": "shoes",
     "name": "sports shoe",
-    "image": "images/image-json/shoes/shoesSport.webp",
+    "image": "images/shoes/shoesSport.webp",
     "style": [
       "basic"
     ],
@@ -3434,115 +3453,115 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/image-json/shoes/shoesSportPurple.webp"
+        "imageColor": "images/shoes/shoesSportPurple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/image-json/shoes/shoesSportLilac.webp"
+        "imageColor": "images/shoes/shoesSportLilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/shoes/shoesSportAero.webp"
+        "imageColor": "images/shoes/shoesSportAero.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesSportNavy.webp"
+        "imageColor": "images/shoes/shoesSportNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/shoes/shoesSportFrench.webp"
+        "imageColor": "images/shoes/shoesSportFrench.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/image-json/shoes/shoesSportSkyBlue.webp"
+        "imageColor": "images/shoes/shoesSportSkyBlue.webp"
       },
       {
         "colorName": "aquamarine",
-        "hex": "#85d5dc",
+        "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/image-json/shoes/shoesSportAquamarine.webp"
+        "imageColor": "images/shoes/shoesSportAquamarine.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/shoes/shoesSportEmerald.webp"
+        "imageColor": "images/shoes/shoesSportEmerald.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/shoes/shoesSportArmy.webp"
+        "imageColor": "images/shoes/shoesSportArmy.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/shoes/shoesSportYellow.webp"
+        "imageColor": "images/shoes/shoesSportYellow.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/shoes/shoesSportMustard.webp"
+        "imageColor": "images/shoes/shoesSportMustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesSportChocolate.webp"
+        "imageColor": "images/shoes/shoesSportChocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesSportBeige.webp"
+        "imageColor": "images/shoes/shoesSportBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesSport.webp"
+        "imageColor": "images/shoes/shoesSport.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesSportLightGrey.webp"
+        "imageColor": "images/shoes/shoesSportLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesSportDarkGrey.webp"
+        "imageColor": "images/shoes/shoesSportDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesSportBlack.webp"
+        "imageColor": "images/shoes/shoesSportBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesSportBurgundy.webp"
+        "imageColor": "images/shoes/shoesSportBurgundy.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/shoes/shoesSportOldPink.webp"
+        "imageColor": "images/shoes/shoesSportOldPink.webp"
       }
     ]
   },
@@ -3550,7 +3569,7 @@
     "id": 34,
     "garment": "shoes",
     "name": "sneakers",
-    "image": "images/image-json/shoes/shoesSneakers.webp",
+    "image": "images/shoes/shoesSneakers.webp",
     "style": [
       "casual",
       "elegant"
@@ -3563,69 +3582,69 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesSneakersNavy.webp"
+        "imageColor": "images/shoes/shoesSneakersNavy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/shoes/shoesSneakersMustard.webp"
+        "imageColor": "images/shoes/shoesSneakersMustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesSneakersChocolate.webp"
+        "imageColor": "images/shoes/shoesSneakersChocolate.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesSneakersWindsorTan.webp"
+        "imageColor": "images/shoes/shoesSneakersWindsorTan.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesSneakersCamel.webp"
+        "imageColor": "images/shoes/shoesSneakersCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesSneakersBeige.webp"
+        "imageColor": "images/shoes/shoesSneakersBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesSneakers.webp"
+        "imageColor": "images/shoes/shoesSneakers.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesSneakersLightGrey.webp"
+        "imageColor": "images/shoes/shoesSneakersLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesSneakersDarkGrey.webp"
+        "imageColor": "images/shoes/shoesSneakersDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesSneakersBlack.webp"
+        "imageColor": "images/shoes/shoesSneakersBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesSneakersBurgundy.webp"
+        "imageColor": "images/shoes/shoesSneakersBurgundy.webp"
       }
     ]
   },
@@ -3633,7 +3652,7 @@
     "id": 35,
     "garment": "shoes",
     "name": "nautic shoes",
-    "image": "images/image-json/shoes/shoesNautic.webp",
+    "image": "images/shoes/shoesNautic.webp",
     "style": [
       "elegant"
     ],
@@ -3643,63 +3662,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesNauticNavy.webp"
+        "imageColor": "images/shoes/shoesNauticNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesNauticWindsorTan.webp"
+        "imageColor": "images/shoes/shoesNauticWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesNauticChocolate.webp"
+        "imageColor": "images/shoes/shoesNauticChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesNauticCamel.webp"
+        "imageColor": "images/shoes/shoesNauticCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesNauticBeige.webp"
+        "imageColor": "images/shoes/shoesNauticBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesNautic.webp"
+        "imageColor": "images/shoes/shoesNautic.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesNauticLightGrey.webp"
+        "imageColor": "images/shoes/shoesNauticLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesNauticDarkGrey.webp"
+        "imageColor": "images/shoes/shoesNauticDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesNauticBlack.webp"
+        "imageColor": "images/shoes/shoesNauticBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesNauticBurgundy.webp"
+        "imageColor": "images/shoes/shoesNauticBurgundy.webp"
       }
     ]
   },
@@ -3707,7 +3726,7 @@
     "id": 36,
     "garment": "shoes",
     "name": "dress bots",
-    "image": "images/image-json/shoes/shoesShortBoots.webp",
+    "image": "images/shoes/shoesShortBoots.webp",
     "style": [
       "casual",
       "elegant"
@@ -3718,63 +3737,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesShortBootsNavy.webp"
+        "imageColor": "images/shoes/shoesShortBootsNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesShortBootsWindsorTan.webp"
+        "imageColor": "images/shoes/shoesShortBootsWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesShortBootsChocolate.webp"
+        "imageColor": "images/shoes/shoesShortBootsChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesShortBootsCamel.webp"
+        "imageColor": "images/shoes/shoesShortBootsCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesShortBootsBeige.webp"
+        "imageColor": "images/shoes/shoesShortBootsBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesShortBoots.webp"
+        "imageColor": "images/shoes/shoesShortBoots.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesShortBootsLightGrey.webp"
+        "imageColor": "images/shoes/shoesShortBootsLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesShortBootsDarkGrey.webp"
+        "imageColor": "images/shoes/shoesShortBootsDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesShortBootsBlack.webp"
+        "imageColor": "images/shoes/shoesShortBootsBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesShortBootsBurgundy.webp"
+        "imageColor": "images/shoes/shoesShortBootsBurgundy.webp"
       }
     ]
   },
@@ -3782,7 +3801,7 @@
     "id": 37,
     "garment": "shoes",
     "name": "boots",
-    "image": "images/image-json/shoes/shoesBorcego.webp",
+    "image": "images/shoes/shoesBorcego.webp",
     "style": [
       "casual"
     ],
@@ -3792,51 +3811,51 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesBorcegoNavy.webp"
+        "imageColor": "images/shoes/shoesBorcegoNavy.webp"
       },
       {
         "colorName": "army",
-        "hex": "#5f6053",
+        "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/image-json/shoes/shoesBorcegoArmy.webp"
+        "imageColor": "images/shoes/shoesBorcegoArmy.webp"
       },
       {
         "colorName": "mustard",
-        "hex": "#be7b17",
+        "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/image-json/shoes/shoesBorcegoMustard.webp"
+        "imageColor": "images/shoes/shoesBorcegoMustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesBorcegoWindsorTan.webp"
+        "imageColor": "images/shoes/shoesBorcegoWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesBorcegoChocolate.webp"
+        "imageColor": "images/shoes/shoesBorcegoChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesBorcegoCamel.webp"
+        "imageColor": "images/shoes/shoesBorcegoCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesBorcegoBeige.webp"
+        "imageColor": "images/shoes/shoesBorcegoBeige.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesBorcegoBlack.webp"
+        "imageColor": "images/shoes/shoesBorcegoBlack.webp"
       }
     ]
   },
@@ -3844,7 +3863,7 @@
     "id": 38,
     "garment": "shoes",
     "name": "oxford shoe",
-    "image": "images/image-json/shoes/shoesOxford.webp",
+    "image": "images/shoes/shoesOxford.webp",
     "style": [
       "elegant"
     ],
@@ -3855,63 +3874,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesOxford.webp"
+        "imageColor": "images/shoes/shoesOxford.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesOxfordWindsorTan.webp"
+        "imageColor": "images/shoes/shoesOxfordWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesOxfordChocolate.webp"
+        "imageColor": "images/shoes/shoesOxfordChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesOxfordCamel.webp"
+        "imageColor": "images/shoes/shoesOxfordCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesOxfordBeige.webp"
+        "imageColor": "images/shoes/shoesOxfordBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesOxford.webp"
+        "imageColor": "images/shoes/shoesOxford.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesOxfordLightGrey.webp"
+        "imageColor": "images/shoes/shoesOxfordLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesOxfordDarkGrey.webp"
+        "imageColor": "images/shoes/shoesOxfordDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesOxfordBlack.webp"
+        "imageColor": "images/shoes/shoesOxfordBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesOxfordBurgundy.webp"
+        "imageColor": "images/shoes/shoesOxfordBurgundy.webp"
       }
     ]
   },
@@ -3919,7 +3938,7 @@
     "id": 39,
     "garment": "shoes",
     "name": "brogue shoes",
-    "image": "images/image-json/shoes/shoesBrogue.webp",
+    "image": "images/shoes/shoesBrogue.webp",
     "style": [
       "elegant"
     ],
@@ -3930,63 +3949,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesBrogueNavy.webp"
+        "imageColor": "images/shoes/shoesBrogueNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesBrogueWindsorTan.webp"
+        "imageColor": "images/shoes/shoesBrogueWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesBrogueChocolate.webp"
+        "imageColor": "images/shoes/shoesBrogueChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesBrogueCamel.webp"
+        "imageColor": "images/shoes/shoesBrogueCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesBrogueBeige.webp"
+        "imageColor": "images/shoes/shoesBrogueBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesBrogue.webp"
+        "imageColor": "images/shoes/shoesBrogue.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesBrogueLightGrey.webp"
+        "imageColor": "images/shoes/shoesBrogueLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesBrogueDarkGrey.webp"
+        "imageColor": "images/shoes/shoesBrogueDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesBrogueBlack.webp"
+        "imageColor": "images/shoes/shoesBrogueBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesBrogueBurgundy.webp"
+        "imageColor": "images/shoes/shoesBrogueBurgundy.webp"
       }
     ]
   },
@@ -3994,7 +4013,7 @@
     "id": 40,
     "garment": "shoes",
     "name": "canvas sneakers",
-    "image": "images/image-json/shoes/shoesCanvas.webp",
+    "image": "images/shoes/shoesCanvas.webp",
     "style": [
       "basic"
     ],
@@ -4007,91 +4026,91 @@
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/image-json/shoes/shoesCanvasAero.webp"
+        "imageColor": "images/shoes/shoesCanvasAero.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/image-json/shoes/shoesCanvasjean.webp"
+        "imageColor": "images/shoes/shoesCanvasjean.webp"
       },
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesCanvasNavy.webp"
+        "imageColor": "images/shoes/shoesCanvasNavy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue (2°)",
-        "imageColor": "images/image-json/shoes/shoesCanvasFrench.webp"
+        "imageColor": "images/shoes/shoesCanvasFrench.webp"
       },
       {
         "colorName": "emerald",
-        "hex": "#07463e",
+        "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/image-json/shoes/shoesCanvasEmerald.webp"
+        "imageColor": "images/shoes/shoesCanvasEmerald.webp"
       },
       {
         "colorName": "yellow",
-        "hex": "#efbe3d",
+        "hex": "#f2c649",
         "title": "yellow",
-        "imageColor": "images/image-json/shoes/shoesCanvasYellow.webp"
+        "imageColor": "images/shoes/shoesCanvasYellow.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesCanvasChocolate.webp"
+        "imageColor": "images/shoes/shoesCanvasChocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesCanvasBeige.webp"
+        "imageColor": "images/shoes/shoesCanvasBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesCanvas.webp"
+        "imageColor": "images/shoes/shoesCanvas.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesCanvasLightGrey.webp"
+        "imageColor": "images/shoes/shoesCanvasLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesCanvasDarkGrey.webp"
+        "imageColor": "images/shoes/shoesCanvasDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesCanvasBlack.webp"
+        "imageColor": "images/shoes/shoesCanvasBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesCanvasBurgundy.webp"
+        "imageColor": "images/shoes/shoesCanvasBurgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/image-json/shoes/shoesCanvasRed.webp"
+        "imageColor": "images/shoes/shoesCanvasRed.webp"
       },
       {
         "colorName": "oldPink",
-        "hex": "#966c6f",
+        "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/image-json/shoes/shoesCanvasOldPink.webp"
+        "imageColor": "images/shoes/shoesCanvasOldPink.webp"
       }
     ]
   },
@@ -4099,7 +4118,7 @@
     "id": 41,
     "garment": "shoes",
     "name": "chelsea",
-    "image": "images/image-json/shoes/shoesChelsea.webp",
+    "image": "images/shoes/shoesChelsea.webp",
     "style": [
       "elegant"
     ],
@@ -4110,63 +4129,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesChelseaNAvy.webp"
+        "imageColor": "images/shoes/shoesChelseaNAvy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesChelseaWindsorTan.webp"
+        "imageColor": "images/shoes/shoesChelseaWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesChelseaChocolate.webp"
+        "imageColor": "images/shoes/shoesChelseaChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesChelseaCamel.webp"
+        "imageColor": "images/shoes/shoesChelseaCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesChelseaBeige.webp"
+        "imageColor": "images/shoes/shoesChelseaBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesChelsea.webp"
+        "imageColor": "images/shoes/shoesChelsea.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesChelseaLightGrey.webp"
+        "imageColor": "images/shoes/shoesChelseaLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesChelseaDarkGrey.webp"
+        "imageColor": "images/shoes/shoesChelseaDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesChelseaBlack.webp"
+        "imageColor": "images/shoes/shoesChelseaBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesChelseaBurgundy.webp"
+        "imageColor": "images/shoes/shoesChelseaBurgundy.webp"
       }
     ]
   },
@@ -4174,7 +4193,7 @@
     "id": 42,
     "garment": "shoes",
     "name": "brogue shoes",
-    "image": "images/image-json/shoes/shoesBrogue.webp",
+    "image": "images/shoes/shoesBrogue.webp",
     "style": [
       "elegant"
     ],
@@ -4185,63 +4204,63 @@
     "colors": [
       {
         "colorName": "navy",
-        "hex": "#272b41",
+        "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/image-json/shoes/shoesBrogueNavy.webp"
+        "imageColor": "images/shoes/shoesBrogueNavy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#a47850",
         "title": "windsor tan",
-        "imageColor": "images/image-json/shoes/shoesBrogueWindsorTan.webp"
+        "imageColor": "images/shoes/shoesBrogueWindsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/image-json/shoes/shoesBrogueChocolate.webp"
+        "imageColor": "images/shoes/shoesBrogueChocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/image-json/shoes/shoesBrogueCamel.webp"
+        "imageColor": "images/shoes/shoesBrogueCamel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/image-json/shoes/shoesBrogueBeige.webp"
+        "imageColor": "images/shoes/shoesBrogueBeige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/image-json/shoes/shoesBrogue.webp"
+        "imageColor": "images/shoes/shoesBrogue.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/image-json/shoes/shoesBrogueLightGrey.webp"
+        "imageColor": "images/shoes/shoesBrogueLightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/image-json/shoes/shoesBrogueDarkGrey.webp"
+        "imageColor": "images/shoes/shoesBrogueDarkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/image-json/shoes/shoesBrogueBlack.webp"
+        "imageColor": "images/shoes/shoesBrogueBlack.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/image-json/shoes/shoesBrogueBurgundy.webp"
+        "imageColor": "images/shoes/shoesBrogueBurgundy.webp"
       }
     ]
   }

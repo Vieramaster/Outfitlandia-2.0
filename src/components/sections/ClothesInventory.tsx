@@ -27,7 +27,6 @@ export const ClothesInventory = ({
   onSelectClothes,
   onCreateOutfit,
 }: ClothesInventoryProps) => {
-  console.group(isActiveOutfitButton);
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
   if (!belt || !shoes) return null;
@@ -43,26 +42,12 @@ export const ClothesInventory = ({
 
   return (
     <section
-      className="
-        h-full 
-        lg:w-2/5 
-        grid 
-        place-content-center
-      
-        
-      "
+      className=" h-full lg:w-2/5 grid place-content-center"
       aria-labelledby="clothes-inventory"
     >
       <ul
         role="list"
-        className="
-          size-auto
-          grid 
-          grid-cols-2 
-          gap-5
-          place-items-center
-          
-        "
+        className="size-auto grid  grid-cols-2  gap-5 place-items-center"
       >
         {sortedClothes.map(({ colors, id, garment, name }) => (
           <ClothesButton
@@ -85,7 +70,7 @@ export const ClothesInventory = ({
             >
               <CombineGarmentIcon
                 className={
-                  isActiveOutfitButton ? "fill-background" : "fill-header"
+                  isActiveOutfitButton ? "fill-background" : "fill-layout"
                 }
               />
             </StandardButton>

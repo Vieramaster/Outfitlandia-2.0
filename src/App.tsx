@@ -11,7 +11,7 @@ import { combineColorsApiValidator } from "./api/main_clothes/combineColors/vali
 import { Home } from "./pages/Home";
 import { ErrorPage } from "./pages/ErrorPage";
 import { MainLayout } from "./components/layout/MainLayout";
-import { useFetch } from "./hooks/useFetch";
+import { LoaderIcon } from "./components/icons/LoaderIcon";
 
 //NUEVO
 
@@ -34,12 +34,9 @@ function App() {
     combineColorsApiValidator
   );
 
-
-
-
-
   const Content = () => {
-    if (garmentLoading || combineColorLoading) return <h1>Cargando...</h1>;
+    if (garmentLoading || combineColorLoading)
+      return <LoaderIcon className="m-auto size-1/4" />;
     if (
       garmentError ||
       combineColorError ||

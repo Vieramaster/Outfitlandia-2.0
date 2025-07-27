@@ -17,10 +17,15 @@ interface GeolocationResult {
   getCurrentPosition: () => void;
 }
 
+enum ERROR_MESSAGE {
+  BROWSER_SECURITY = "We couldn't access your location. You may have denied the permission request, or your browser might have a high privacy/security level that blocks geolocation features. Please check your browser's settings and allow location access.",
+  DENIED_LOCATION = "You denied location access. Please enable it in your browser settings.",
+}
+
 /** Fallback coordinates if the user hasn’t granted geolocation yet */
 const DEFAULT_COORDINATES: Coordinates = {
-  latitude: -35.96667,
-  longitude: -62.7,
+  latitude: -64.233,
+  longitude: -56.633,
 };
 
 /**
@@ -40,13 +45,29 @@ export const useGeolocation = (): GeolocationResult => {
 
   const getCurrentPosition = useCallback((): void => {
     if (!navigator.geolocation) {
-      setError("Geolocation is not supported by your browser");
+      const msg = "Geolocation is not supported by your browser.";
+      setError(msg);
+      alert(msg);
       return;
     }
 
     setLoading(true);
+
+    let didRespond = false;
+
+    const timeout = setTimeout(() => {
+      if (!didRespond) {
+        const msg = ERROR_MESSAGE.BROWSER_SECURITY;
+        setError(msg);
+        alert(msg);
+        setLoading(false);
+      }
+    }, 4000); // 4 segundos de espera
+
     navigator.geolocation.getCurrentPosition(
-      (position: GeolocationPosition) => {
+      (position) => {
+        didRespond = true;
+        clearTimeout(timeout);
         setCoordinates({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
@@ -54,9 +75,20 @@ export const useGeolocation = (): GeolocationResult => {
         setError(null);
         setLoading(false);
       },
-      (positionError: GeolocationPositionError) => {
-        setError(positionError.message);
+      (positionError) => {
+        didRespond = true;
+        clearTimeout(timeout);
+        const msg =
+          positionError.code === positionError.PERMISSION_DENIED
+            ? ERROR_MESSAGE.DENIED_LOCATION
+            : ERROR_MESSAGE.BROWSER_SECURITY;
+        setError(msg);
+        alert(msg);
         setLoading(false);
+      },
+      {
+        enableHighAccuracy: true,
+        maximumAge: 0,
       }
     );
   }, []);

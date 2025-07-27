@@ -10,8 +10,8 @@ export const OvercastIcon = (props: React.SVGProps<SVGSVGElement>) => (
         <path
           fill="none"
           stroke="#94a3b8"
-          stroke-linejoin="round"
-          stroke-width="15"
+          strokeLinejoin="round"
+          strokeWidth="15"
           d="M7.5 100.2a32.4 32.4 0 0032.4 32.4h129.8v-.1l2.3.1a34.8 34.8 0 006.5-68.9 32.4 32.4 0 00-48.5-33 48.6 48.6 0 00-88.6 37.1h-1.5a32.4 32.4 0 00-32.4 32.4Z"
         />
       </symbol>
@@ -19,14 +19,14 @@ export const OvercastIcon = (props: React.SVGProps<SVGSVGElement>) => (
         <path
           fill="none"
           stroke="#475569"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="15"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="15"
           d="M295.5 223.5a56 56 0 000-112l-2.5.1a83.9 83.9 0 00-153-64.2 56 56 0 00-84.6 48.1 56.6 56.6 0 00.8 9 60 60 0 0011.2 119"
         />
       </symbol>
       <symbol id="b" overflow="visible" viewBox="0 0 447.7 371.5">
-        <g clip-path="url(#a)">
+        <g clipPath="url(#a)">
           <use
             xlinkHref="#c"
             width="214.3"

@@ -13,7 +13,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         flex flex-col            
         flex-1                   
         overflow-auto               
-        background-color
+        bg-background
         relative
         items-center   
         lg:min-h-[38rem]           

@@ -5,12 +5,14 @@ import { consumeAPI } from "../../api/consumeAPI";
 //FUNCTIONS
 import { weatherApiValidator } from "../../api/weather/validators/weatherApiValidator";
 import { useGeolocation } from "../../hooks/useGeolocation";
-import { WeatherCard } from "../ui/cards/WeatherCard";
 import { StandardButton } from "../ui/buttons/StandardButton";
 import { GeoLocationIcon } from "../icons/GeoLocationIcon";
-import { transformedClimateData } from "../../helpers/weather/transformedClimateData";
-import { WindIcon } from "../icons/weather/WindIcon";
-import { WindCard } from "../ui/cards/WindCard";
+//COMPONENTS
+import { ValidFooterContent } from "../sections/ValidFooterContent";
+import { LoadingAndErrorFooter } from "../sections/LoadingAndErrorFooter";
+import { NotAvaliableIcon } from "../icons/weather/NotAvaliableIcon";
+import { LoaderIcon } from "../icons/LoaderIcon";
+
 
 export const Footer = () => {
   const buildWeatherUrl = (latitude: number, longitude: number): string =>
@@ -22,7 +24,7 @@ export const Footer = () => {
     loading: geoLoading,
     getCurrentPosition,
   } = useGeolocation();
-
+  console.log(currentCoors)
   const weatherURL = buildWeatherUrl(
     currentCoors.latitude,
     currentCoors.longitude
@@ -34,43 +36,31 @@ export const Footer = () => {
     validatedData: weatherData,
   } = consumeAPI<WeatherApiResponseType>(weatherURL, weatherApiValidator);
 
-  if (!weatherData) return;
 
-  const {
-    temperature,
-    windspeed,
-    weatherIcon: { title, SvgIcon },
-  } = transformedClimateData(weatherData);
+
+  const FooterContent = () => {
+    if (weatherLoading || geoLoading)
+      return (
+        <LoadingAndErrorFooter component={<LoaderIcon className="h-5/6" />} />
+      );
+    if (weatherError || geoError || !currentCoors || !weatherData)
+      return <LoadingAndErrorFooter component={<NotAvaliableIcon />} />;
+    //Final
+    return <ValidFooterContent data={weatherData} />;
+  };
 
   return (
-    <footer className="bg-footer h-20 flex gap-5 justify-center items-center lg:h-26">
+    <footer className="bg-layout h-20 flex gap-5 justify-center items-center lg:h-26">
       <ul className="flex gap-5">
         <li className="bg-background rounded-lg size-12 lg:size-14">
           <StandardButton
             variant="geoLocation"
             isEnabled={true}
             onClick={getCurrentPosition}
-            children={
-              <GeoLocationIcon className="fill-background w-full h-full " />
-            }
+            children={<GeoLocationIcon className="fill-background size-5/6 lg:size-3/5 " />}
           />
         </li>
-        <WeatherCard key="icon">
-          <SvgIcon aria-label={title} className="h-[140%]" />
-        </WeatherCard>
-
-        <WeatherCard key="temperature">
-          <p className="text-4xl text-white">{temperature} °C</p>
-        </WeatherCard>
-
-        <WeatherCard column={true} key="wind">
-          <WindCard size="icon">
-            <WindIcon className="h-[150%]" />
-          </WindCard>
-          <WindCard size="speed">
-            <p className="text-2xl text-white">{windspeed} k/m</p>
-          </WindCard>
-        </WeatherCard>
+        {<FooterContent />}
       </ul>
     </footer>
   );

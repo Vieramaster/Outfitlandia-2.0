@@ -29,11 +29,10 @@ export const ClothesDisplaySection = ({
       overflow-auto
       bg-background
       size-full
-      lg:bg-transparent
       lg:h-full
       lg:w-3/5
       lg:flex
-     lg:no-background
+
       
        
 `}
