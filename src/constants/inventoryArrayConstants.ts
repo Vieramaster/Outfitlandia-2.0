@@ -53,7 +53,7 @@ export const defaultInventoryArray: ClothesType[] = [
     id: 1003,
     garment: "belt",
     name: "default belt",
-    image: "/images/default/defaultBelt-lg.webp",
+    image: "/images/belt/leather/leather_white.webp",
     style: ["basic", "casual", "elegant"],
     weather: ["hot", "mild", "cold"],
     colors: [
@@ -61,7 +61,7 @@ export const defaultInventoryArray: ClothesType[] = [
         colorName: "default",
         hex: "#ffffff",
         title: "default",
-        imageColor: "/images/default/defaultBelt-lg.webp",
+        imageColor:  "/images/belt/leather/leather_white.webp",
       },
     ],
   },

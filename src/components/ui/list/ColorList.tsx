@@ -25,18 +25,24 @@ export const ColorList = ({ data, isShown, onSelectColor }: ColorListProps) =>
     place-content-center
     items-center
     gap-5
-    lg:gap-14
+    lg:gap-x-14
     "
     >
       {data[0]?.colors.flatMap(({ hex, colorName, title }) => {
         return (
-          <li key={colorName}>
+          <li
+            key={colorName}
+            className="  w-20 h-14 lg:w-28 lg:h-20 flex flex-col items-center select-none "
+          >
             <ColorButton
               hex={hex}
               aria-labelledby={title}
               onClick={() => onSelectColor(colorName)}
               title={colorName}
             />
+            <p className="text-off-white text-xl tracking-wide h-1/3">
+              {colorName}
+            </p>
           </li>
         );
       })}
