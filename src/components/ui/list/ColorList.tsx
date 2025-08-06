@@ -24,8 +24,9 @@ export const ColorList = ({ data, isShown, onSelectColor }: ColorListProps) =>
     grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] 
     place-content-center
     items-center
-    gap-5
-    lg:gap-x-14
+    gap-8
+    lg:grid-cols-[repeat(auto-fit,minmax(7rem,1fr))] 
+    
     "
     >
       {data[0]?.colors.flatMap(({ hex, colorName, title }) => {

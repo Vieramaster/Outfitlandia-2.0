@@ -2879,7 +2879,7 @@
     "id": 26,
     "garment": "pants",
     "name": "jeans",
-    "image": "images/pants/pantsJean.webp",
+    "image": "images/pants/jean/jean_white.webp",
     "style": [
       "casual",
       "basic"
@@ -2893,25 +2893,31 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/pants/pantsJeanSkyBlue.webp"
+        "imageColor": "images/pants/jean/jean_skyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/pants/pantsJeanJean.webp"
+        "imageColor": "images/pants/jean/jean_jean.webp"
+      },
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/pants/jean/jean_navy.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/pantsJeanLightGrey.webp"
+        "imageColor": "images/pants/jean/jean_lightGrey.webp"
       },
       {
         "colorName": "wornBlack",
-        "hex": "#2d2d2d",
-        "title": "worn black",
-        "imageColor": "images/pants/pantsJeanWornBlack.webp"
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/pants/jean/jean_wornBlack.webp"
       }
     ]
   },
@@ -2919,7 +2925,7 @@
     "id": 27,
     "garment": "pants",
     "name": "bermuda jean",
-    "image": "images/pants/pantsShortJean.webp",
+    "image": "images/pants/short_jean/short_jean_white.webp",
     "style": [
       "casual",
       "basic"
@@ -2932,25 +2938,31 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/pants/pantsshortJeanSkyBlue.webp"
+        "imageColor": "images/pants/short_jean/short_jean_skyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/pants/pantsShortJeanJean.webp"
+        "imageColor": "images/pants/short_jean/short_jean_jean.webp"
+      },
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/pants/short_jean/short_jean_navy.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/pantsshortJeanLightGrey.webp"
+        "imageColor": "images/pants/short_jean/short_jean_lightGrey.webp"
       },
       {
         "colorName": "wornBlack",
-        "hex": "#2d2d2d",
-        "title": "worn black",
-        "imageColor": "images/pants/pantsshortJeanWornBlack.webp"
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/pants/short_jean/short_jean_wornBlack.webp"
       }
     ]
   },
@@ -2958,7 +2970,7 @@
     "id": 28,
     "garment": "pants",
     "name": "gabardine pants",
-    "image": "images/pants/pantsGabardine.webp",
+    "image": "images/pants/gabardine/gabardine_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -2973,73 +2985,67 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/pantsGabardineNavy.webp"
+        "imageColor": "images/pants/gabardine/gabardine_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/pants/pantsGabardineArmy.webp"
+        "imageColor": "images/pants/gabardine/gabardine_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/pantsGabardineMustard.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/pants/pantsGabardineWindsorTan.webp"
+        "imageColor": "images/pants/gabardine/gabardine_mustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/pantsGabardineChocolate.webp"
+        "imageColor": "images/pants/gabardine/gabardine_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/pantsGabardineCamel.webp"
+        "imageColor": "images/pants/gabardine/gabardine_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/pantsGabardineBeige.webp"
+        "imageColor": "images/pants/gabardine/gabardine_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/pants/pantsGabardine.webp"
+        "imageColor": "images/pants/gabardine/gabardine_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/pantsGabardineLightGrey.webp"
+        "imageColor": "images/pants/gabardine/gabardine_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/pantsGabardineDarkGrey.webp"
+        "imageColor": "images/pants/gabardine/gabardine_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/pantsGabardineBlack.webp"
+        "imageColor": "images/pants/gabardine/gabardine_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/pantsGabardineBurgundy.webp"
+        "imageColor": "images/pants/gabardine/gabardine_burgundy.webp"
       }
     ]
   },
@@ -3047,7 +3053,7 @@
     "id": 29,
     "garment": "pants",
     "name": "gabardine bermuda",
-    "image": "images/pants/pantsShortsGab.webp",
+    "image": "images/pants/short_gabardine/short_gabardine_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -3060,73 +3066,73 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/pantsShortsGabNavy.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/pants/pantsShortsGabArmy.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/pantsShortsGabMustard.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/pants/pantsShortsGabWindsorTan.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/pantsShortsGabChocolate.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/pantsShortsGabCamel.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/pantsShortsGabBeige.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/pants/pantsShortsGab.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/pantsShortsGabLightGrey.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/pantsShortsGabDarkGrey.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/pantsShortsGabBlack.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/pantsShortsGabBurgundy.webp"
+        "imageColor": "images/pants/short_gabardine/short_gabardine_burgundy.webp"
       }
     ]
   },

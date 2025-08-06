@@ -61,7 +61,7 @@ export const hexColorKeys = [
   "#6de4cf",
   "#043b34",
   "#545e45",
-  "#f2c649",
+  "#f7d96c",
   "#cfa32e",
   "#be7b17",
   "#ea8510",
