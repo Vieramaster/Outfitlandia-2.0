@@ -3046,6 +3046,12 @@
         "hex": "#5e2a30",
         "title": "burgundy",
         "imageColor": "images/pants/gabardine/gabardine_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/pants/gabardine/gabardine_red.webp"
       }
     ]
   },
@@ -3133,6 +3139,12 @@
         "hex": "#5e2a30",
         "title": "burgundy",
         "imageColor": "images/pants/short_gabardine/short_gabardine_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/pants/short_gabardine/short_gabardine_red.webp"
       }
     ]
   },
