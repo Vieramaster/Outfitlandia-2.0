@@ -1388,6 +1388,6 @@
 
   { "clothes": { "top": "frenchBlue", "pants": "windsorTan", "coat": "navy"      }, "shoes": ["white","camel","chocolate"],         "id": 133 },
   { "clothes": { "top": "frenchBlue", "pants": "windsorTan", "coat": "darkGrey"  }, "shoes": ["black","camel","white"],             "id": 134 },
-  { "clothes": { "top": "frenchBlue", "pants": "windsorTan", "coat": "black"     }, "shoes": ["black","camel","chocolate"],         "id": 135 },
+  { "clothes": { "top": "frenchBlue", "pants": "windsorTan", "coat": "black"     }, "shoes": ["black","camel","chocolate"],         "id": 135 }
 
 ]
