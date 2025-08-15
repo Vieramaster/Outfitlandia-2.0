@@ -1,6 +1,7 @@
 // TYPES
 import {
   ClothesType,
+  ColorNameType,
   ListStructureType,
   ClothesListObject,
   GarmentButtonType,
@@ -13,12 +14,11 @@ import { isNonEmptyArray } from "../../utils/validators/isNonEmplyArray";
 import { searchFilter } from "./genericFunctions/searchFilter";
 import { getRandomElement } from "../../utils/getRandomElement";
 import { filterStyleAndWheater } from "./genericFunctions/filterStyleAndWheater";
-import { getShoesWithMatchingColors } from "./genericFunctions/getShoesWithMatchingColors";
+import { getFootwearWithMatchingColors } from "./genericFunctions/getFootwearWithMatchingColors";
 import { searchMatchColors } from "./genericFunctions/searchMatchColors";
 import { pickRandomClothes } from "./genericFunctions/pickRandomClothes";
 import { hasCommonStyleAndWeather } from "./genericFunctions/hasCommonStyleAndWeather";
 import { getBeltsWithMatchingColor } from "./genericFunctions/getBeltsWithMatchingColor";
-import { buildButtonImageArray } from "./genericFunctions/buildButtonImageArray";
 
 const MAX_ATTEMPTS = 400;
 const MAX_ATTEMPTS_REACHED = "Reached maximum attempts";
@@ -44,22 +44,27 @@ export const outfit = (
     const randomColor = getRandomElement(combienColorsData);
     if (!randomColor) continue;
 
-    // Destructure clothes and shoes from the random color combination.
-    const { clothes: colorcombineClothes, shoes: colorCombineShoes } =
+    // Destructure clothes and footwear from the random color combination.
+    const { clothes: colorcombineClothes, footwear: colorCombineFootwear } =
       randomColor;
     // Exclude the garment specified by the key to create a new combination.
     const { [SELECTED_GARMENT_GARMENT]: removed, ...newColorcombineClothes } =
       colorcombineClothes;
 
-    // Filter out shoes from the clothes array.
-    const shoesFiltered = searchFilter(clothes, "garment", "shoes", false);
+    // Filter out footwear from the clothes array.
+    const footwearFiltered = searchFilter(
+      clothes,
+      "garment",
+      "footwear",
+      false
+    );
 
     // Filter the sneakers and generate a variant for each color.
-    const shoesArray = getShoesWithMatchingColors(
-      shoesFiltered,
-      colorCombineShoes
+    const footwearArray = getFootwearWithMatchingColors(
+      footwearFiltered,
+      colorCombineFootwear
     );
-    if (!isNonEmptyArray(shoesArray)) continue;
+    if (!isNonEmptyArray(footwearArray)) continue;
 
     // Generate color matches for each garment based on the new combination.
     const results = searchMatchColors(newColorcombineClothes, clothes);
@@ -69,7 +74,7 @@ export const outfit = (
     const updatedCombineClothes: ClothesListObject[] = [
       {
         ...results,
-        shoes: shoesArray,
+        footwear: footwearArray,
       },
     ];
 
@@ -87,23 +92,23 @@ export const outfit = (
     // Verify that all garments share at least one common style and weather attribute.
     if (!hasCommonStyleAndWeather(addMainGarment)) continue;
 
-    const finalShoes = addMainGarment.shoes;
-    if (!finalShoes) continue;
+    const finalfootwear = addMainGarment.footwear;
+    if (!finalfootwear) continue;
 
     const {
       style: styleShoe,
-      weather: weatherShoe,
-      colors: colorsShoe,
-    } = finalShoes;
-    if (!colorsShoe[0]) continue;
-    const colorNameShoe = colorsShoe[0].colorName;
+      weather: weatherfootwear,
+      colors: colorsfootwear,
+    } = finalfootwear;
+    if (!colorsfootwear[0]) continue;
+    const colorNameShoe = colorsfootwear[0].colorName;
 
     // Filter belts based on style and weather.
     const chosenBelt = searchFilter(clothes, "garment", "belt", false);
     const beltFilter = filterStyleAndWheater(
       chosenBelt,
       styleShoe,
-      weatherShoe
+      weatherfootwear
     );
 
     // Ensure that pants exist in the outfit and extract its name.

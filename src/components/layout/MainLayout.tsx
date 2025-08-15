@@ -15,8 +15,9 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         overflow-auto               
         bg-background
         relative
-        items-center   
-        lg:min-h-[38rem]           
+        items-center
+
+        min-h-[42rem]           
         lg:flex-row lg:justify-between 
         lg:items-start
       "

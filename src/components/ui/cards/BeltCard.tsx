@@ -7,6 +7,6 @@ export const BeltCard = ({ image, arial }: BeltCardProps) => (
     className="w-1/2 h-full grid place-content-center rounded-lg "
     aria-label={arial}
   >
-    <img src={image} alt="shoes" className="w-5/6" />
+    <img src={image} alt="footwear" className="w-5/6" />
   </div>
 );

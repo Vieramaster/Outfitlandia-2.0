@@ -19,15 +19,17 @@ export const ValidFooterContent = ({ data }: ValidFooterContentProps) => {
 
   return (
     <>
-      <WeatherCard key="icon">
-        <SvgIcon aria-label={title} className="h-[140%]" />
+      <WeatherCard key="icon" description={title}>
+        <SvgIcon aria-labelledby={title} className="h-[140%]" />
       </WeatherCard>
 
-      <WeatherCard key="temperature">
-        <p className=" text-2xl md:text-4xl text-white">{temperature} °C</p>
+      <WeatherCard key="temperature" description="temperature">
+        <p className=" text-xl md:text-3xl xl:text-4xl text-white">
+          {temperature} °C
+        </p>
       </WeatherCard>
 
-      <WeatherCard column={true} key="wind">
+      <WeatherCard column={true} key="wind"  description="wind speed">
         <WindCard size="icon">
           <WindIcon className="h-[110%] md:h-[150%]" />
         </WindCard>

@@ -165,8 +165,8 @@
     "name": "sweatshirt",
     "image": "images/top/sweatshirt/sweatshirt_default.webp",
     "style": [
-      "basic",
-      "casual"
+      "casual",
+      "elegant"
     ],
     "weather": [
       "mild",
@@ -322,7 +322,7 @@
   {
     "id": 2,
     "garment": "top",
-    "name": "short sleeve t-shirt",
+    "name": "short t-shirt",
     "image": "images/top/short_t-shirt/short_t-shirt_white.webp",
     "style": [
       "basic",
@@ -778,7 +778,7 @@
   {
     "id": 5,
     "garment": "top",
-    "name": "turtle neck sweater",
+    "name": "turtle neck",
     "image": "images/top/turtleneck/turtleneck_white.webp",
     "style": [
       "casual",
@@ -895,7 +895,7 @@
   {
     "id": 6,
     "garment": "top",
-    "name": "short sleeve shirt",
+    "name": "short shirt",
     "image": "images/top/short_shirt/short_shirt_white.webp",
     "style": [
       "elegant",
@@ -1043,13 +1043,14 @@
   {
     "id": 7,
     "garment": "top",
-    "name": "long sleeve shirt",
+    "name": "long shirt",
     "image": "images/top/long_shirt/long_shirt_default.webp",
     "style": [
       "elegant"
     ],
     "weather": [
-      "mild"
+      "mild",
+      "cold"
     ],
     "colors": [
       {
@@ -1183,7 +1184,7 @@
   {
     "id": 8,
     "garment": "top",
-    "name": "long sleeve t-shirt",
+    "name": "long t-shirt",
     "image": "images/top/long_t-shirt/long_t-shirt_default.webp",
     "style": [
       "basic",
@@ -1330,7 +1331,7 @@
   {
     "id": 9,
     "garment": "coat",
-    "name": "denim & gabardine jacket",
+    "name": "denim & gabardine",
     "image": "images/coat/denim_jacket/denim_jacket_white.webp",
     "style": [
       "casual",
@@ -1509,7 +1510,8 @@
     "name": "inflatable jacket",
     "image": "images/coat/inflatable_jacket/inflatable_jacket_white.webp",
     "style": [
-      "basic"
+      "basic",
+      "casual"
     ],
     "weather": [
       "cold"
@@ -1804,7 +1806,8 @@
     "name": "bomber jacket",
     "image": "images/coat/bomber/bomber_white.webp",
     "style": [
-      "basic"
+      "casual",
+      "elegant"
     ],
     "weather": [
       "mild",
@@ -1894,7 +1897,7 @@
   {
     "id": 15,
     "garment": "coat",
-    "name": "winter gabardine jacket",
+    "name": "denim & gab. winter",
     "image": "images/coat/winter_denim_jacket/winter_denim_jacket_white.webp",
     "style": [
       "casual"
@@ -2762,8 +2765,8 @@
   {
     "id": 25,
     "garment": "pants",
-    "name": "bermuda joggin",
-    "image": "images/pants/short_joggin/short_joggin_white.webp",
+    "name": "joggin shorts",
+    "image": "images/pants/joggin_shorts/joggin_shorts_white.webp",
     "style": [
       "basic"
     ],
@@ -2775,103 +2778,103 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/pants/short_joggin/short_joggin_purple.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/pants/short_joggin/short_joggin_lilac.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/pants/short_joggin/short_joggin_aero.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_aero.webp"
       },
       {
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/short_joggin/short_joggin_navy.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue",
-        "imageColor": "images/pants/short_joggin/short_joggin_frenchBlue.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/pants/short_joggin/short_joggin_skyBlue.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_skyBlue.webp"
       },
       {
         "colorName": "emerald",
         "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/pants/short_joggin/short_joggin_emerald.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_emerald.webp"
       },
       {
         "colorName": "yellow",
         "hex": "#f7d96c",
         "title": "yellow",
-        "imageColor": "images/pants/short_joggin/short_joggin_yellow.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_yellow.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/short_joggin/short_joggin_chocolate.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_chocolate.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/pants/short_joggin/short_joggin_white.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/short_joggin/short_joggin_lightGrey.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/short_joggin/short_joggin_darkGrey.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/short_joggin/short_joggin_black.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/short_joggin/short_joggin_burgundy.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/pants/short_joggin/short_joggin_red.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_red.webp"
       },
       {
         "colorName": "babyPink",
         "hex": "#f4c2c2",
         "title": "baby pink",
-        "imageColor": "images/pants/short_joggin/short_joggin_babyPink.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_babyPink.webp"
       },
       {
         "colorName": "oldPink",
         "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/pants/short_joggin/short_joggin_oldPink.webp"
+        "imageColor": "images/pants/joggin_shorts/joggin_shorts_oldPink.webp"
       }
     ]
   },
@@ -2924,8 +2927,8 @@
   {
     "id": 27,
     "garment": "pants",
-    "name": "bermuda jean",
-    "image": "images/pants/short_jean/short_jean_white.webp",
+    "name": "denim shorts",
+    "image": "images/pants/denim_shorts/denim_shorts_white.webp",
     "style": [
       "casual",
       "basic"
@@ -2938,31 +2941,31 @@
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/pants/short_jean/short_jean_skyBlue.webp"
+        "imageColor": "images/pants/denim_shorts/denim_shorts_skyBlue.webp"
       },
       {
         "colorName": "jean",
         "hex": "#132b59",
         "title": "jean",
-        "imageColor": "images/pants/short_jean/short_jean_jean.webp"
+        "imageColor": "images/pants/denim_shorts/denim_shorts_jean.webp"
       },
       {
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/short_jean/short_jean_navy.webp"
+        "imageColor": "images/pants/denim_shorts/denim_shorts_navy.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/short_jean/short_jean_lightGrey.webp"
+        "imageColor": "images/pants/denim_shorts/denim_shorts_lightGrey.webp"
       },
       {
         "colorName": "wornBlack",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/short_jean/short_jean_wornBlack.webp"
+        "imageColor": "images/pants/denim_shorts/denim_shorts_wornBlack.webp"
       }
     ]
   },
@@ -3058,8 +3061,8 @@
   {
     "id": 29,
     "garment": "pants",
-    "name": "gabardine bermuda",
-    "image": "images/pants/short_gabardine/short_gabardine_white.webp",
+    "name": "gabardine shorts",
+    "image": "images/pants/gabardine_shorts/gabardine_shorts_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -3072,79 +3075,79 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_navy.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_army.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_mustard.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_windsorTan.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_chocolate.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_camel.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_beige.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_white.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_lightGrey.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_darkGrey.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_black.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_burgundy.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/pants/short_gabardine/short_gabardine_red.webp"
+        "imageColor": "images/pants/gabardine_shorts/gabardine_shorts_red.webp"
       }
     ]
   },
@@ -3238,8 +3241,8 @@
   {
     "id": 31,
     "garment": "pants",
-    "name": " bermuda chino",
-    "image": "images/pants/chino/chino_white.webp",
+    "name": "chino shorts",
+    "image": "images/pants/chino_shorts/chino_shorts_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -3252,73 +3255,73 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/chino/chino_navy.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/pants/chino/chino_army.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/chino/chino_mustard.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/pants/chino/chino_windsorTan.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/chino/chino_chocolate.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/chino/chino_camel.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/chino/chino_beige.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_beige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/chino/chino_lightGrey.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/chino/chino_darkGrey.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/chino/chino_black.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/chino/chino_burgundy.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/pants/chino/chino_red.webp"
+        "imageColor": "images/pants/chino_shorts/chino_shorts_red.webp"
       }
     ]
   },
@@ -3418,9 +3421,9 @@
   },
   {
     "id": 33,
-    "garment": "shoes",
+    "garment": "footwear",
     "name": "sports shoe",
-    "image": "images/shoes/sport/sport_white.webp",
+    "image": "images/footwear/sport/sport_white.webp",
     "style": [
       "basic"
     ],
@@ -3433,123 +3436,123 @@
         "colorName": "purple",
         "hex": "#5f2f82",
         "title": "purple",
-        "imageColor": "images/shoes/sport/sport_purple.webp"
+        "imageColor": "images/footwear/sport/sport_purple.webp"
       },
       {
         "colorName": "lilac",
         "hex": "#c9b8e1",
         "title": "lilac",
-        "imageColor": "images/shoes/sport/sport_lilac.webp"
+        "imageColor": "images/footwear/sport/sport_lilac.webp"
       },
       {
         "colorName": "aero",
         "hex": "#53718d",
         "title": "aero",
-        "imageColor": "images/shoes/sport/sport_aero.webp"
+        "imageColor": "images/footwear/sport/sport_aero.webp"
       },
       {
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/shoes/sport/sport_navy.webp"
+        "imageColor": "images/footwear/sport/sport_navy.webp"
       },
       {
         "colorName": "frenchBlue",
         "hex": "#2c81d4",
         "title": "french blue",
-        "imageColor": "images/shoes/sport/sport_frenchBlue.webp"
+        "imageColor": "images/footwear/sport/sport_frenchBlue.webp"
       },
       {
         "colorName": "skyBlue",
         "hex": "#afd8eb",
         "title": "sky blue",
-        "imageColor": "images/shoes/sport/sport_skyBlue.webp"
+        "imageColor": "images/footwear/sport/sport_skyBlue.webp"
       },
       {
         "colorName": "aquamarine",
         "hex": "#6de4cf",
         "title": "aquamarine",
-        "imageColor": "images/shoes/sport/sport_aquamarine.webp"
+        "imageColor": "images/footwear/sport/sport_aquamarine.webp"
       },
       {
         "colorName": "emerald",
         "hex": "#043b34",
         "title": "emerald",
-        "imageColor": "images/shoes/sport/sport_emerald.webp"
+        "imageColor": "images/footwear/sport/sport_emerald.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/shoes/sport/sport_army.webp"
+        "imageColor": "images/footwear/sport/sport_army.webp"
       },
       {
         "colorName": "yellow",
         "hex": "#f7d96c",
         "title": "yellow",
-        "imageColor": "images/shoes/sport/sport_yellow.webp"
+        "imageColor": "images/footwear/sport/sport_yellow.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/shoes/shoesSportMustard.webp"
+        "imageColor": "images/footwear/sport/sport_mustard.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/shoes/sport/sport_chocolate.webp"
+        "imageColor": "images/footwear/sport/sport_chocolate.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/shoes/sport/sport_beige.webp"
+        "imageColor": "images/footwear/sport/sport_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/shoes/sport/sport_white.webp"
+        "imageColor": "images/footwear/sport/sport_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/shoes/sport/sport_lightGrey.webp"
+        "imageColor": "images/footwear/sport/sport_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/shoes/sport/sport_darkGrey.webp"
+        "imageColor": "images/footwear/sport/sport_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/shoes/sport/sport_black.webp"
+        "imageColor": "images/footwear/sport/sport_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/shoes/sport/sport_burgundy.webp"
+        "imageColor": "images/footwear/sport/sport_burgundy.webp"
       },
       {
         "colorName": "oldPink",
         "hex": "#9e7070",
         "title": "old pink",
-        "imageColor": "images/shoes/sport/sport_oldPink.webp"
+        "imageColor": "images/footwear/sport/sport_oldPink.webp"
       }
     ]
   },
   {
     "id": 34,
-    "garment": "shoes",
+    "garment": "footwear",
     "name": "sneaker",
-    "image": "images/shoes/sneaker/sneaker_white.webp",
+    "image": "images/footwear/sneaker/sneaker_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -3564,63 +3567,63 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/shoes/sneaker/sneaker_navy.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_navy.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/shoes/sneaker/sneaker_chocolate.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_chocolate.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/shoes/sneaker/sneaker_windsorTan.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_windsorTan.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/shoes/sneaker/sneaker_beige.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/shoes/sneaker/sneaker_white.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/shoes/sneaker/sneaker_lightGrey.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/shoes/sneaker/sneaker_darkGrey.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/shoes/sneaker/sneaker_black.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/shoes/sneaker/sneaker_burgundy.webp"
+        "imageColor": "images/footwear/sneaker/sneaker_burgundy.webp"
       }
     ]
   },
   {
     "id": 35,
-    "garment": "shoes",
-    "name": "nautic shoes",
-    "image": "images/shoes/shoesNautic.webp",
+    "garment": "footwear",
+    "name": "nautic footwear",
+    "image": "images/footwear/nautic/nautic_white.webp",
     "style": [
       "elegant"
     ],
@@ -3632,69 +3635,143 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/shoes/shoesNauticNavy.webp"
+        "imageColor": "images/footwear/nautic/nautic_navy.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/shoes/shoesNauticWindsorTan.webp"
+        "imageColor": "images/footwear/nautic/nautic_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/shoes/shoesNauticChocolate.webp"
+        "imageColor": "images/footwear/nautic/nautic_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/shoes/shoesNauticCamel.webp"
+        "imageColor": "images/footwear/nautic/nautic_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/shoes/shoesNauticBeige.webp"
+        "imageColor": "images/footwear/nautic/nautic_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/shoes/shoesNautic.webp"
+        "imageColor": "images/footwear/nautic/nautic_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/shoes/shoesNauticLightGrey.webp"
+        "imageColor": "images/footwear/nautic/nautic_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/shoes/shoesNauticDarkGrey.webp"
+        "imageColor": "images/footwear/nautic/nautic_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/shoes/shoesNauticBlack.webp"
+        "imageColor": "images/footwear/nautic/nautic_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/shoes/shoesNauticBurgundy.webp"
+        "imageColor": "images/footwear/nautic/nautic_burgundy.webp"
       }
     ]
   },
   {
     "id": 36,
-    "garment": "shoes",
-    "name": "dress bots",
-    "image": "images/shoes/shoesShortBoots.webp",
+    "garment": "footwear",
+    "name": "dress boots",
+    "image": "images/footwear/dress_boots/dress_boots_white.webp",
+    "style": [
+      "elegant"
+    ],
+    "weather": [
+      "cold"
+    ],
+    "colors": [
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/footwear/dress_boots/dress_boots_navy.webp"
+      },
+      {
+        "colorName": "windsorTan",
+        "hex": "#996515",
+        "title": "windsor tan",
+        "imageColor": "images/footwear/dress_boots/dress_boots_windsorTan.webp"
+      },
+      {
+        "colorName": "chocolate",
+        "hex": "#493327",
+        "title": "chocolate",
+        "imageColor": "images/footwear/dress_boots/dress_boots_chocolate.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/footwear/dress_boots/dress_boots_camel.webp"
+      },
+      {
+        "colorName": "beige",
+        "hex": "#cbbba5",
+        "title": "beige",
+        "imageColor": "images/footwear/dress_boots/dress_boots_beige.webp"
+      },
+      {
+        "colorName": "white",
+        "hex": "#ffffff",
+        "title": "white",
+        "imageColor": "images/footwear/dress_boots/dress_boots_white.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/footwear/dress_boots/dress_boots_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/footwear/dress_boots/dress_boots_darkGrey.webp"
+      },
+      {
+        "colorName": "black",
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/footwear/dress_boots/dress_boots_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/footwear/dress_boots/dress_boots_burgundy.webp"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "garment": "footwear",
+    "name": "boots",
+    "image": "images/footwear/boots/boots_white.webp",
     "style": [
       "casual",
       "elegant"
@@ -3707,131 +3784,75 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/shoes/shoesShortBootsNavy.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/shoes/shoesShortBootsWindsorTan.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesShortBootsChocolate.webp"
-      },
-      {
-        "colorName": "camel",
-        "hex": "#c19a6b",
-        "title": "camel",
-        "imageColor": "images/shoes/shoesShortBootsCamel.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesShortBootsBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesShortBoots.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesShortBootsLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesShortBootsDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesShortBootsBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesShortBootsBurgundy.webp"
-      }
-    ]
-  },
-  {
-    "id": 37,
-    "garment": "shoes",
-    "name": "boots",
-    "image": "images/shoes/shoesBorcego.webp",
-    "style": [
-      "casual"
-    ],
-    "weather": [
-      "cold"
-    ],
-    "colors": [
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/shoes/shoesBorcegoNavy.webp"
+        "imageColor": "images/footwear/boots/boots_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/shoes/shoesBorcegoArmy.webp"
+        "imageColor": "images/footwear/boots/boots_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/shoes/shoesBorcegoMustard.webp"
+        "imageColor": "images/footwear/boots/boots_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/shoes/shoesBorcegoWindsorTan.webp"
+        "imageColor": "images/footwear/boots/boots_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/shoes/shoesBorcegoChocolate.webp"
+        "imageColor": "images/footwear/boots/boots_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/shoes/shoesBorcegoCamel.webp"
+        "imageColor": "images/footwear/boots/boots_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/shoes/shoesBorcegoBeige.webp"
+        "imageColor": "images/footwear/boots/boots_beige.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/footwear/boots/boots_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/footwear/boots/boots_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/shoes/shoesBorcegoBlack.webp"
+        "imageColor": "images/footwear/boots/boots_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/footwear/boots/boots_burgundy.webp"
       }
     ]
   },
   {
     "id": 38,
-    "garment": "shoes",
-    "name": "oxford shoe",
-    "image": "images/shoes/shoesOxford.webp",
+    "garment": "footwear",
+    "name": "oxford shoes",
+    "image": "images/footwear/oxford_shoes/oxford_shoes_white.webp",
     "style": [
       "elegant"
     ],
@@ -3844,485 +3865,69 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/shoes/shoesOxford.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/shoes/shoesOxfordWindsorTan.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesOxfordChocolate.webp"
-      },
-      {
-        "colorName": "camel",
-        "hex": "#c19a6b",
-        "title": "camel",
-        "imageColor": "images/shoes/shoesOxfordCamel.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesOxfordBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesOxford.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesOxfordLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesOxfordDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesOxfordBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesOxfordBurgundy.webp"
-      }
-    ]
-  },
-  {
-    "id": 39,
-    "garment": "shoes",
-    "name": "brogue shoes",
-    "image": "images/shoes/shoesBrogue.webp",
-    "style": [
-      "elegant"
-    ],
-    "weather": [
-      "mild",
-      "cold"
-    ],
-    "colors": [
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/shoes/shoesBrogueNavy.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/shoes/shoesBrogueWindsorTan.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesBrogueChocolate.webp"
-      },
-      {
-        "colorName": "camel",
-        "hex": "#c19a6b",
-        "title": "camel",
-        "imageColor": "images/shoes/shoesBrogueCamel.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesBrogueBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesBrogue.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesBrogueLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesBrogueDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesBrogueBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesBrogueBurgundy.webp"
-      }
-    ]
-  },
-  {
-    "id": 40,
-    "garment": "shoes",
-    "name": "canvas sneakers",
-    "image": "images/shoes/shoesCanvas.webp",
-    "style": [
-      "basic"
-    ],
-    "weather": [
-      "mild",
-      "hot"
-    ],
-    "colors": [
-      {
-        "colorName": "aero",
-        "hex": "#53718d",
-        "title": "aero",
-        "imageColor": "images/shoes/shoesCanvasAero.webp"
-      },
-      {
-        "colorName": "jean",
-        "hex": "#132b59",
-        "title": "jean",
-        "imageColor": "images/shoes/shoesCanvasjean.webp"
-      },
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/shoes/shoesCanvasNavy.webp"
-      },
-      {
-        "colorName": "frenchBlue",
-        "hex": "#2c81d4",
-        "title": "french blue",
-        "imageColor": "images/shoes/shoesCanvasFrench.webp"
-      },
-      {
-        "colorName": "emerald",
-        "hex": "#043b34",
-        "title": "emerald",
-        "imageColor": "images/shoes/shoesCanvasEmerald.webp"
-      },
-      {
-        "colorName": "yellow",
-        "hex": "#f7d96c",
-        "title": "yellow",
-        "imageColor": "images/shoes/shoesCanvasYellow.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesCanvasChocolate.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesCanvasBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesCanvas.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesCanvasLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesCanvasDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesCanvasBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesCanvasBurgundy.webp"
-      },
-      {
-        "colorName": "red",
-        "hex": "#9f0317",
-        "title": "red",
-        "imageColor": "images/shoes/shoesCanvasRed.webp"
-      },
-      {
-        "colorName": "oldPink",
-        "hex": "#9e7070",
-        "title": "old pink",
-        "imageColor": "images/shoes/shoesCanvasOldPink.webp"
-      }
-    ]
-  },
-  {
-    "id": 41,
-    "garment": "shoes",
-    "name": "chelsea",
-    "image": "images/shoes/shoesChelsea.webp",
-    "style": [
-      "elegant"
-    ],
-    "weather": [
-      "mild",
-      "cold"
-    ],
-    "colors": [
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/shoes/shoesChelseaNAvy.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/shoes/shoesChelseaWindsorTan.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesChelseaChocolate.webp"
-      },
-      {
-        "colorName": "camel",
-        "hex": "#c19a6b",
-        "title": "camel",
-        "imageColor": "images/shoes/shoesChelseaCamel.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesChelseaBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesChelsea.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesChelseaLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesChelseaDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesChelseaBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesChelseaBurgundy.webp"
-      }
-    ]
-  },
-  {
-    "id": 42,
-    "garment": "shoes",
-    "name": "brogue shoes",
-    "image": "images/shoes/shoesBrogue.webp",
-    "style": [
-      "elegant"
-    ],
-    "weather": [
-      "mild",
-      "cold"
-    ],
-    "colors": [
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/shoes/shoesBrogueNavy.webp"
-      },
-      {
-        "colorName": "windsorTan",
-        "hex": "#996515",
-        "title": "windsor tan",
-        "imageColor": "images/shoes/shoesBrogueWindsorTan.webp"
-      },
-      {
-        "colorName": "chocolate",
-        "hex": "#493327",
-        "title": "chocolate",
-        "imageColor": "images/shoes/shoesBrogueChocolate.webp"
-      },
-      {
-        "colorName": "camel",
-        "hex": "#c19a6b",
-        "title": "camel",
-        "imageColor": "images/shoes/shoesBrogueCamel.webp"
-      },
-      {
-        "colorName": "beige",
-        "hex": "#cbbba5",
-        "title": "beige",
-        "imageColor": "images/shoes/shoesBrogueBeige.webp"
-      },
-      {
-        "colorName": "white",
-        "hex": "#ffffff",
-        "title": "white",
-        "imageColor": "images/shoes/shoesBrogue.webp"
-      },
-      {
-        "colorName": "lightGrey",
-        "hex": "#c7c8ca",
-        "title": "light grey",
-        "imageColor": "images/shoes/shoesBrogueLightGrey.webp"
-      },
-      {
-        "colorName": "darkGrey",
-        "hex": "#4a4855",
-        "title": "dark grey",
-        "imageColor": "images/shoes/shoesBrogueDarkGrey.webp"
-      },
-      {
-        "colorName": "black",
-        "hex": "#000000",
-        "title": "black",
-        "imageColor": "images/shoes/shoesBrogueBlack.webp"
-      },
-      {
-        "colorName": "burgundy",
-        "hex": "#5e2a30",
-        "title": "burgundy",
-        "imageColor": "images/shoes/shoesBrogueBurgundy.webp"
-      }
-    ]
-  },
-  {
-    "id": 43,
-    "garment": "pants",
-    "name": "short chino",
-    "image": "images/pants/short_chino/short_chino_white.webp",
-    "style": [
-      "elegant"
-    ],
-    "weather": [
-      "hot"
-    ],
-    "colors": [
-      {
-        "colorName": "navy",
-        "hex": "#202a44",
-        "title": "blue navy",
-        "imageColor": "images/pants/short_chino/short_chino_navy.webp"
-      },
-      {
-        "colorName": "army",
-        "hex": "#545e45",
-        "title": "green army",
-        "imageColor": "images/pants/short_chino/short_chino_army.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_navy.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/short_chino/short_chino_mustard.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/pants/short_chino/short_chino_windsorTan.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/short_chino/short_chino_chocolate.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/short_chino/short_chino_camel.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/short_chino/short_chino_beige.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_beige.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/short_chino/short_chino_lightGrey.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/short_chino/short_chino_darkGrey.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/short_chino/short_chino_black.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/short_chino/short_chino_burgundy.webp"
-      },
-      {
-        "colorName": "red",
-        "hex": "#9f0317",
-        "title": "red",
-        "imageColor": "images/pants/short_chino/short_chino_red.webp"
+        "imageColor": "images/footwear/oxford_shoes/oxford_shoes_burgundy.webp"
       }
     ]
   },
   {
-    "id": 44,
+    "id": 39,
     "garment": "pants",
-    "name": "short cargo",
-    "image": "images/pants/short_cargo/short_cargo_white.webp",
+    "name": "cargo shorts",
+    "image": "images/pants/cargo_shorts/cargo_shorts_white.webp",
     "style": [
       "basic",
       "casual"
@@ -4335,79 +3940,419 @@
         "colorName": "navy",
         "hex": "#202a44",
         "title": "blue navy",
-        "imageColor": "images/pants/short_cargo/short_cargo_navy.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_navy.webp"
       },
       {
         "colorName": "army",
         "hex": "#545e45",
         "title": "green army",
-        "imageColor": "images/pants/short_cargo/short_cargo_army.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_army.webp"
       },
       {
         "colorName": "mustard",
         "hex": "#cfa32e",
         "title": "mustard",
-        "imageColor": "images/pants/short_cargo/short_cargo_mustard.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_mustard.webp"
       },
       {
         "colorName": "windsorTan",
         "hex": "#996515",
         "title": "windsor tan",
-        "imageColor": "images/pants/short_cargo/short_cargo_windsorTan.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_windsorTan.webp"
       },
       {
         "colorName": "chocolate",
         "hex": "#493327",
         "title": "chocolate",
-        "imageColor": "images/pants/short_cargo/short_cargo_chocolate.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_chocolate.webp"
       },
       {
         "colorName": "camel",
         "hex": "#c19a6b",
         "title": "camel",
-        "imageColor": "images/pants/short_cargo/short_cargo_camel.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_camel.webp"
       },
       {
         "colorName": "beige",
         "hex": "#cbbba5",
         "title": "beige",
-        "imageColor": "images/pants/short_cargo/short_cargo_beige.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_beige.webp"
       },
       {
         "colorName": "white",
         "hex": "#ffffff",
         "title": "white",
-        "imageColor": "images/pants/short_cargo/short_cargo_white.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_white.webp"
       },
       {
         "colorName": "lightGrey",
         "hex": "#c7c8ca",
         "title": "light grey",
-        "imageColor": "images/pants/short_cargo/short_cargo_lightGrey.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_lightGrey.webp"
       },
       {
         "colorName": "darkGrey",
         "hex": "#4a4855",
         "title": "dark grey",
-        "imageColor": "images/pants/short_cargo/short_cargo_darkGrey.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_darkGrey.webp"
       },
       {
         "colorName": "black",
         "hex": "#000000",
         "title": "black",
-        "imageColor": "images/pants/short_cargo/short_cargo_black.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_black.webp"
       },
       {
         "colorName": "burgundy",
         "hex": "#5e2a30",
         "title": "burgundy",
-        "imageColor": "images/pants/short_cargo/short_cargo_burgundy.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_burgundy.webp"
       },
       {
         "colorName": "red",
         "hex": "#9f0317",
         "title": "red",
-        "imageColor": "images/pants/short_cargo/short_cargo_red.webp"
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_red.webp"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "garment": "footwear",
+    "name": "canvas sneakers",
+    "image": "images/footwear/canvas/canvas_white.webp",
+    "style": [
+      "basic"
+    ],
+    "weather": [
+      "mild",
+      "hot"
+    ],
+    "colors": [
+      {
+        "colorName": "aero",
+        "hex": "#53718d",
+        "title": "aero",
+        "imageColor": "images/footwear/canvas/canvas_aero.webp"
+      },
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/footwear/canvas/canvas_navy.webp"
+      },
+      {
+        "colorName": "frenchBlue",
+        "hex": "#2c81d4",
+        "title": "french blue",
+        "imageColor": "images/footwear/canvas/canvas_frenchBlue.webp"
+      },
+      {
+        "colorName": "emerald",
+        "hex": "#043b34",
+        "title": "emerald",
+        "imageColor": "images/footwear/canvas/canvas_emerald.webp"
+      },
+      {
+        "colorName": "yellow",
+        "hex": "#f7d96c",
+        "title": "yellow",
+        "imageColor": "images/footwear/canvas/canvas_yellow.webp"
+      },
+      {
+        "colorName": "beige",
+        "hex": "#cbbba5",
+        "title": "beige",
+        "imageColor": "images/footwear/canvas/canvas_beige.webp"
+      },
+      {
+        "colorName": "white",
+        "hex": "#ffffff",
+        "title": "white",
+        "imageColor": "images/footwear/canvas/canvas_white.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/footwear/canvas/canvas_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/footwear/canvas/canvas_darkGrey.webp"
+      },
+      {
+        "colorName": "black",
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/footwear/canvas/canvas_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/footwear/canvas/canvas_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/footwear/canvas/canvas_red.webp"
+      },
+      {
+        "colorName": "oldPink",
+        "hex": "#9e7070",
+        "title": "old pink",
+        "imageColor": "images/footwear/canvas/canvas_oldPink.webp"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "garment": "footwear",
+    "name": "chelsea boots",
+    "image": "images/footwear/chelsea_boots/chelsea_boots_white.webp",
+    "style": [
+      "elegant"
+    ],
+    "weather": [
+      "cold"
+    ],
+    "colors": [
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_navy.webp"
+      },
+      {
+        "colorName": "windsorTan",
+        "hex": "#996515",
+        "title": "windsor tan",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_windsorTan.webp"
+      },
+      {
+        "colorName": "chocolate",
+        "hex": "#493327",
+        "title": "chocolate",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_chocolate.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_camel.webp"
+      },
+      {
+        "colorName": "beige",
+        "hex": "#cbbba5",
+        "title": "beige",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_beige.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_darkGrey.webp"
+      },
+      {
+        "colorName": "black",
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/footwear/chelsea_boots/chelsea_boots_burgundy.webp"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "garment": "pants",
+    "name": "short cargo",
+    "image": "images/pants/cargo_shorts/cargo_shorts_white.webp",
+    "style": [
+      "basic",
+      "casual"
+    ],
+    "weather": [
+      "hot"
+    ],
+    "colors": [
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_navy.webp"
+      },
+      {
+        "colorName": "army",
+        "hex": "#545e45",
+        "title": "green army",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_army.webp"
+      },
+      {
+        "colorName": "mustard",
+        "hex": "#cfa32e",
+        "title": "mustard",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_mustard.webp"
+      },
+      {
+        "colorName": "windsorTan",
+        "hex": "#996515",
+        "title": "windsor tan",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_windsorTan.webp"
+      },
+      {
+        "colorName": "chocolate",
+        "hex": "#493327",
+        "title": "chocolate",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_chocolate.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_camel.webp"
+      },
+      {
+        "colorName": "beige",
+        "hex": "#cbbba5",
+        "title": "beige",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_beige.webp"
+      },
+      {
+        "colorName": "white",
+        "hex": "#ffffff",
+        "title": "white",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_white.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_darkGrey.webp"
+      },
+      {
+        "colorName": "black",
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/pants/cargo_shorts/cargo_shorts_red.webp"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "garment": "pants",
+    "name": "short chino",
+    "image": "images/pants/chino_shorts/chino_shorts_white.webp",
+    "style": [
+      "elegant"
+    ],
+    "weather": [
+      "hot"
+    ],
+    "colors": [
+      {
+        "colorName": "navy",
+        "hex": "#202a44",
+        "title": "blue navy",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_navy.webp"
+      },
+      {
+        "colorName": "army",
+        "hex": "#545e45",
+        "title": "green army",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_army.webp"
+      },
+      {
+        "colorName": "mustard",
+        "hex": "#cfa32e",
+        "title": "mustard",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_mustard.webp"
+      },
+      {
+        "colorName": "windsorTan",
+        "hex": "#996515",
+        "title": "windsor tan",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_windsorTan.webp"
+      },
+      {
+        "colorName": "chocolate",
+        "hex": "#493327",
+        "title": "chocolate",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_chocolate.webp"
+      },
+      {
+        "colorName": "camel",
+        "hex": "#c19a6b",
+        "title": "camel",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_camel.webp"
+      },
+      {
+        "colorName": "beige",
+        "hex": "#cbbba5",
+        "title": "beige",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_beige.webp"
+      },
+      {
+        "colorName": "lightGrey",
+        "hex": "#c7c8ca",
+        "title": "light grey",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_lightGrey.webp"
+      },
+      {
+        "colorName": "darkGrey",
+        "hex": "#4a4855",
+        "title": "dark grey",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_darkGrey.webp"
+      },
+      {
+        "colorName": "black",
+        "hex": "#000000",
+        "title": "black",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_black.webp"
+      },
+      {
+        "colorName": "burgundy",
+        "hex": "#5e2a30",
+        "title": "burgundy",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_burgundy.webp"
+      },
+      {
+        "colorName": "red",
+        "hex": "#9f0317",
+        "title": "red",
+        "imageColor": "images/pants/chino_shorts/chino_shorts_red.webp"
       }
     ]
   }

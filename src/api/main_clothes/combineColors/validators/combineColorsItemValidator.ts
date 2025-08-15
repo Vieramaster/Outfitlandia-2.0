@@ -26,7 +26,7 @@ import { createIssue } from "../../../validators/utils_validations/validationUti
  *
  * Validation steps:
  *  1. Ensure that `objectItem` is a plain object.
- *  2. Validate top-level properties (e.g. `id`, `shoes`, `clothes`) using `COMBINE_COLOR_SCHEMA`,
+ *  2. Validate top-level properties (e.g. `id`, `footwear`, `clothes`) using `COMBINE_COLOR_SCHEMA`,
  *     narrowing the type to `CombineColorsShallow` (where `clothes` is still an object).
  *  3. Validate the nested `clothes` object using `COMBINE_COLORS_CLOTHES_SCHEMA`,
  *     narrowing it to the full `CombineColorsType`.

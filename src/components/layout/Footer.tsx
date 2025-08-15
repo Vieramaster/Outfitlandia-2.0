@@ -50,7 +50,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-layout h-20 flex gap-5 justify-center items-center lg:h-26">
+    <footer className="bg-layout min-h-20 flex gap-5 justify-center items-center lg:h-26">
       <ul className="flex gap-5">
         <li className="bg-background rounded-lg size-12 lg:size-14">
           <StandardButton

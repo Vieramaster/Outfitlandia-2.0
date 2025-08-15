@@ -13,6 +13,7 @@ import { CombineGarmentIcon } from "../icons/CombineGarmentIcon";
 
 // FUNCTIONS
 import { searchFilter } from "../../helpers/clothes/genericFunctions/searchFilter";
+import { InventoryAlignmentClothes } from "../../helpers/clothes/sorterdClothes";
 
 interface ClothesInventoryProps {
   clothesArray: ClothesType[];
@@ -27,18 +28,12 @@ export const ClothesInventory = ({
   onSelectClothes,
   onCreateOutfit,
 }: ClothesInventoryProps) => {
+  
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
-  const shoes = searchFilter(clothesArray, "garment", "shoes")[0];
-  if (!belt || !shoes) return null;
+  const footwear = searchFilter(clothesArray, "garment", "footwear")[0];
+  if (!belt || !footwear) return null;
 
-  const garmentOrder = ["top", "coat", "pants"];
-
-  const sortedClothes = clothesArray
-    .filter(({ garment }) => garmentOrder.includes(garment))
-    .sort(
-      (a, b) =>
-        garmentOrder.indexOf(a.garment) - garmentOrder.indexOf(b.garment)
-    );
+  const sortedClothes = InventoryAlignmentClothes(clothesArray);
 
   return (
     <section
@@ -55,6 +50,7 @@ export const ClothesInventory = ({
             image={colors[0]?.imageColor!}
             name={name}
             onClick={() => onSelectClothes(garment as GarmentButtonType)}
+            isNameVisible={false}
           />
         ))}
 
@@ -78,10 +74,10 @@ export const ClothesInventory = ({
 
           <SmallCard container={false}>
             <img
-              src={shoes.colors[0]?.imageColor}
-              alt={shoes.name}
+              src={footwear.colors[0]?.imageColor}
+              alt={footwear.name}
               className="h-5/6"
-              aria-label={shoes.name}
+              aria-label={footwear.name}
             />
           </SmallCard>
         </Card>

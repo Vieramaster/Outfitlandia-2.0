@@ -29,6 +29,7 @@ export const ClothesList = ({
             key={id}
             {...{ name, image }}
             onClick={() => onSelectGarment(id)}
+            isNameVisible={true}
           />
         );
       })}

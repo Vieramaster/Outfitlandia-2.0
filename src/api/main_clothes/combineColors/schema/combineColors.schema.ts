@@ -23,13 +23,13 @@ import { validateStringArray } from "../../../validators/object_validations/vali
  *
  * Fields and expected constraints:
  *   - clothes:    must be a plain object (to be validated with COMBINE_COLORS_CLOTHES_SCHEMA)
- *   - shoes:      must be a non-empty array of strings, each included in `colorNameKeys`
+ *   - footwear:      must be a non-empty array of strings, each included in `colorNameKeys`
  *   - id:         must be a number
  */
 export const COMBINE_COLOR_SCHEMA: ArraySchemaType[] = [
   { field: "clothes", validate: (v: unknown) => isPlainObject(v) },
   {
-    field: "shoes",
+    field: "footwear",
     validate: (v: unknown) =>
       isNonEmptyArray(v) && validateStringArray(v, colorNameKeys),
   },

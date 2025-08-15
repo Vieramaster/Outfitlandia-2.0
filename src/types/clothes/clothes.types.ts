@@ -43,7 +43,7 @@ export type MainButtonsProps = {
   coat: string;
   pants: string;
   belt: string;
-  shoes: string;
+  footwear: string;
 };
 
 export type ListStructureType = Record<string, ClothesType>;

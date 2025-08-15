@@ -27,7 +27,7 @@ export const getBeltsWithMatchingColor = (
           colors: [
             {
               ...belt.colors[0],
-              imageColor: "/images/default/emply.webp",
+              imageColor: "/images/belt/emply_belt.webp",
             },
           ],
         };

@@ -15,7 +15,7 @@ export const requiredMainKeys = [
   "colors",
 ] as const;
 
-export const garmentsKeys = ["top", "coat", "pants", "shoes", "belt"] as const;
+export const garmentsKeys = ["top", "coat", "pants", "footwear", "belt"] as const;
 export const styleKeys = ["basic", "casual", "elegant"] as const;
 export const weatherKeys = ["cold", "mild", "hot"] as const;
 

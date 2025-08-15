@@ -2,7 +2,7 @@ import { ColorNameType } from "./clothes.types";
 
 export type CombineColorsType = {
   clothes: CombineColorsClothes;
-  shoes: ColorNameType[];
+  footwear: ColorNameType[];
 };
 
 export type CombineColorsClothes = {

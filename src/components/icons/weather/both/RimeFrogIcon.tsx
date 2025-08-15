@@ -3,6 +3,7 @@ export const RimeFrogIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 512 512"
+    style={{ marginBottom: "1rem", scale: 0.9 }}
     {...props}
   >
     <defs>

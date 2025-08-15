@@ -1,4 +1,4 @@
-import { ListStructureType } from "../../../data/types/ClothesTypes";
+import { ListStructureType } from "../../../types/clothes/clothes.types";
 
 /**
  * Determines whether every garment group in the selection shares
