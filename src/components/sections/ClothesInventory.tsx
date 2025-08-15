@@ -28,7 +28,6 @@ export const ClothesInventory = ({
   onSelectClothes,
   onCreateOutfit,
 }: ClothesInventoryProps) => {
-  
   const belt = searchFilter(clothesArray, "garment", "belt")[0];
   const footwear = searchFilter(clothesArray, "garment", "footwear")[0];
   if (!belt || !footwear) return null;
@@ -54,7 +53,7 @@ export const ClothesInventory = ({
           />
         ))}
 
-        <Card>
+        <Card isdescription={false}>
           <SmallCard container={false}>
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
 

@@ -9,7 +9,7 @@ import {
 import { searchFilter } from "../clothes/genericFunctions/searchFilter";
 import { colorFilter } from "../clothes/genericFunctions/colorFilter";
 import { filterCompatibleGarments } from "../clothes/filterCompatibleGarments";
-import { outfit } from "../clothes/outfit";
+import { outfit } from "../clothes/Outfit";
 import { CombineColorsType } from "../../types/clothes/combineColors.types";
 
 interface HomeHandlersProps {
