@@ -18,7 +18,7 @@ export const ClothesButton = ({
 
   return (
     <>
-      <Card isdescription={isNameVisible}>
+      <Card isDescription={isNameVisible}>
         <button
           className={`
                    ${

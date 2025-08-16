@@ -53,7 +53,7 @@ export const ClothesInventory = ({
           />
         ))}
 
-        <Card isdescription={false}>
+        <Card isDescription={false}>
           <SmallCard container={false}>
             <BeltCard image={belt.colors[0]?.imageColor!} arial={belt.name} />
 

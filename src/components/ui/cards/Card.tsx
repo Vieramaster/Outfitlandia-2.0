@@ -1,14 +1,14 @@
 interface CardProps {
   children: React.ReactNode;
-  isdescription: boolean;
+  isDescription: boolean;
   arial?: string;
 }
-export const Card = ({ arial, isdescription, children }: CardProps) => {
+export const Card = ({ arial, isDescription, children }: CardProps) => {
   return (
     <li
       className={`
           ${
-            isdescription
+            isDescription
               ? "h-[18rem] md:h-[20.5rem] "
               : " h-[16rem] md:h-[18.2rem]"
           }

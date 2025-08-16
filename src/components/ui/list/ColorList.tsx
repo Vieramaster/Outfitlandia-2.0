@@ -16,24 +16,17 @@ export const ColorList = ({ data, isShown, onSelectColor }: ColorListProps) =>
     <ul
       role="list"
       className="
-   
     p-10
     min-h-full 
     w-full 
-    grid 
-    grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] 
-    place-content-center
-    items-center
-    gap-8
-    lg:grid-cols-[repeat(auto-fit,minmax(7rem,1fr))] 
-    
+    flex gap-8 flex-wrap justify-center items-center place-content-center
     "
     >
       {data[0]?.colors.flatMap(({ hex, colorName, title }) => {
         return (
           <li
             key={colorName}
-            className="  w-20 h-14 lg:w-28 lg:h-20 flex flex-col items-center select-none "
+            className="  w-20 h-14 lg:w-28 lg:h-20 flex flex-col text-center select-none"
           >
             <ColorButton
               hex={hex}

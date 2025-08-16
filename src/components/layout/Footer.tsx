@@ -13,7 +13,6 @@ import { LoadingAndErrorFooter } from "../sections/LoadingAndErrorFooter";
 import { NotAvaliableIcon } from "../icons/weather/NotAvaliableIcon";
 import { LoaderIcon } from "../icons/LoaderIcon";
 
-
 export const Footer = () => {
   const buildWeatherUrl = (latitude: number, longitude: number): string =>
     `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
@@ -24,7 +23,7 @@ export const Footer = () => {
     loading: geoLoading,
     getCurrentPosition,
   } = useGeolocation();
-  console.log(currentCoors)
+  console.log(currentCoors);
   const weatherURL = buildWeatherUrl(
     currentCoors.latitude,
     currentCoors.longitude
@@ -35,8 +34,6 @@ export const Footer = () => {
     loading: weatherLoading,
     validatedData: weatherData,
   } = consumeAPI<WeatherApiResponseType>(weatherURL, weatherApiValidator);
-
-
 
   const FooterContent = () => {
     if (weatherLoading || geoLoading)
@@ -50,18 +47,30 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-layout min-h-20 flex gap-5 justify-center items-center lg:h-26">
+    <footer className="relative bg-layout min-h-20 flex gap-5 justify-center items-center lg:h-26">
       <ul className="flex gap-5">
         <li className="bg-background rounded-lg size-12 lg:size-14">
           <StandardButton
             variant="geoLocation"
             isEnabled={true}
             onClick={getCurrentPosition}
-            children={<GeoLocationIcon className="fill-background size-5/6 lg:size-3/5 " />}
+            children={
+              <GeoLocationIcon className="fill-background size-5/6 lg:size-3/5 " />
+            }
           />
         </li>
         {<FooterContent />}
       </ul>
+      <p className="absolute bottom-2 right-2 text-center text-2xl text-background">
+        © Outfitland 2025{" "}
+        <a className="hover:text-detail duration-300"
+          href="https://martinviera.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Martín Viera
+        </a>
+      </p>
     </footer>
   );
 };
