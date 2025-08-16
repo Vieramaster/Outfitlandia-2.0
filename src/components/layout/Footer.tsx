@@ -12,6 +12,7 @@ import { ValidFooterContent } from "../sections/ValidFooterContent";
 import { LoadingAndErrorFooter } from "../sections/LoadingAndErrorFooter";
 import { NotAvaliableIcon } from "../icons/weather/NotAvaliableIcon";
 import { LoaderIcon } from "../icons/LoaderIcon";
+import { FooterSignature } from "../sections/FooterSignature";
 
 export const Footer = () => {
   const buildWeatherUrl = (latitude: number, longitude: number): string =>
@@ -47,7 +48,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-layout min-h-20 flex gap-5 justify-center items-center lg:h-26">
+    <footer className="relative bg-layout min-h-26 flex flex-col gap-1 justify-end items-center place-content-center lg:justify-center">
       <ul className="flex gap-5">
         <li className="bg-background rounded-lg size-12 lg:size-14">
           <StandardButton
@@ -55,22 +56,16 @@ export const Footer = () => {
             isEnabled={true}
             onClick={getCurrentPosition}
             children={
-              <GeoLocationIcon className="fill-background size-5/6 lg:size-3/5 " />
+              <GeoLocationIcon
+                className="fill-background size-5/6 lg:size-3/5 "
+                aria-label="Use my current location"
+              />
             }
           />
         </li>
         {<FooterContent />}
       </ul>
-      <p className="absolute bottom-2 right-2 text-center text-2xl text-background">
-        © Outfitland 2025{" "}
-        <a className="hover:text-detail duration-300"
-          href="https://martinviera.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Martín Viera
-        </a>
-      </p>
+      <FooterSignature />
     </footer>
   );
 };
